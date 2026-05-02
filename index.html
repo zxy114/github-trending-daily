@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending Daily</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .header { text-align: center; padding: 40px 0 20px; border-bottom: 1px solid #21262d; margin-bottom: 30px; }
+  .header h1 { font-size: 28px; color: #58a6ff; margin-bottom: 8px; }
+  .header .date { color: #8b949e; font-size: 14px; }
+  .section { margin-bottom: 40px; }
+  .section-title { font-size: 20px; color: #f0f6fc; border-left: 4px solid #58a6ff; padding-left: 12px; margin-bottom: 16px; }
+  .repo-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px; margin-bottom: 12px; transition: border-color 0.2s; }
+  .repo-card:hover { border-color: #58a6ff; }
+  .repo-name { font-size: 16px; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .repo-desc { color: #8b949e; font-size: 14px; margin: 8px 0; }
+  .repo-meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+  .repo-meta span { color: #8b949e; }
+  .stars { color: #f0c040; }
+  .lang-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .tag { background: #21262d; color: #c9d1d9; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+  .tag-hot { background: #da3633; color: white; }
+  .tag-new { background: #238636; color: white; }
+  .tag-ai { background: #8957e5; color: white; }
+  .tag-security { background: #f0883e; color: white; }
+  .footer { text-align: center; padding: 30px 0; color: #484f58; font-size: 12px; border-top: 1px solid #21262d; margin-top: 40px; }
+  .emoji { font-size: 1.2em; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>🐙 GitHub Trending Daily</h1>
+<div class="date">2026-05-02 · Saturday · Daily Open Source Highlights</div>
+</div>
+<div class="section">
+<h2 class="section-title">🚀 新星崛起 — 7天内新仓库</h2>
+</div>
+<div class="section">
+<h2 class="section-title">🔥 持续热门 — 最近活跃的明星项目</h2>
+</div>
+<div class="section">
+<h2 class="section-title">🤖 AI / LLM 前沿</h2>
+</div>
+<div class="footer">
+  <p>🐙 GitHub Trending Daily · Generated automatically</p>
+  <p>Data from GitHub API · Updated daily</p>
+</div>
+</div>
+</body>
+</html>
