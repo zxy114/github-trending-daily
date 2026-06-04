@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 - 2026-06-03</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 960px; margin: 0 auto; padding: 20px; }
+.header { background: linear-gradient(135deg, #24292e 0%, #0366d6 100%); color: #fff; padding: 30px; border-radius: 12px; margin-bottom: 24px; text-align: center; }
+.header h1 { font-size: 28px; margin-bottom: 8px; }
+.header .subtitle { font-size: 16px; opacity: 0.85; }
+.header .date { font-size: 14px; opacity: 0.75; margin-top: 4px; }
+.repo-card { background: #fff; border-radius: 10px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #0366d6; transition: transform 0.2s; }
+.repo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.repo-card.top { border-left-color: #e8443a; background: linear-gradient(to right, #fff8f7, #fff); }
+.repo-card h2 { font-size: 20px; margin-bottom: 4px; }
+.repo-card h2 a { color: #0366d6; text-decoration: none; }
+.repo-card h2 a:hover { text-decoration: underline; }
+.repo-rank { display: inline-block; background: #0366d6; color: #fff; border-radius: 50%; width: 28px; height: 28px; line-height: 28px; text-align: center; font-size: 14px; font-weight: bold; margin-right: 8px; vertical-align: middle; }
+.repo-card.top .repo-rank { background: #e8443a; }
+.meta { font-size: 13px; color: #666; margin-bottom: 10px; }
+.meta .stars { color: #e8443a; font-weight: 600; }
+.meta .lang { background: #f1f8ff; padding: 2px 8px; border-radius: 12px; margin-right: 6px; }
+.desc { font-size: 15px; color: #444; margin-bottom: 12px; }
+.analysis { background: #f6f8fa; border-radius: 8px; padding: 14px; font-size: 14px; color: #555; border-top: 2px solid #e1e4e8; }
+.analysis h3 { font-size: 13px; color: #0366d6; margin-bottom: 6px; }
+.analysis p { margin-bottom: 4px; }
+.analysis p:last-child { margin-bottom: 0; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 13px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+.tag-ai { background: #dbedff; color: #0366d6; }
+.tag-tool { background: #d1f5d3; color: #1a7f37; }
+.tag-voice { background: #fff3cd; color: #856404; }
+.tag-web { background: #f8d7da; color: #721c24; }
+.tag-security { background: #e2d5f1; color: #5a3e8e; }
+.tag-finance { background: #d4edda; color: #155724; }
+.tag-rag { background: #cce5ff; color: #004085; }
+.tag-memory { background: #f0e6ff; color: #6f42c1; }
+.tag-agent { background: #e8f5e9; color: #2e7d32; }
+.tag-voice { background: #fce4ec; color: #c62828; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <h1>🐙 GitHub 开源日报</h1>
+  <div class="subtitle">每日 GitHub Trending 精选解读</div>
+  <div class="date">2026年6月3日 · 星期三 · 共 11 个项目</div>
+</div>
+
+<!-- #1 chopratejas/headroom - TOP PICK -->
+<div class="repo-card top">
+  <h2><span class="repo-rank">1</span><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></h2>
+  <div class="meta">
+    <span class="tag tag-tool">工具</span>
+    <span class="lang">Python</span>
+    ⭐ 6,629 total · <span class="stars">📈 1,265 today</span>
+  </div>
+  <div class="desc">在工具输出、日志、文件和 RAG 数据块到达 LLM 之前进行压缩。Token 减少 60-95%，保持相同回答质量。提供库、代理服务和 MCP Server 三种集成方式。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>Headroom 直击 AI Agent 开发中最痛点问题——Context Window 被冗余信息塞满导致成本飙升。它不是简单的截断，而是智能压缩，在保持回答质量的前提下大幅减少 Token 消耗。</p>
+    <p><strong>关键数据：</strong>单日新增 1,265 stars，总量达 6,629，说明开发者对"降低 AI 使用成本"的需求极其强烈。</p>
+    <p><strong>影响范围：</strong>适用于所有基于 LLM 的应用场景，尤其是 RAG 系统和 Agent 工具链。支持 Library、Proxy、MCP Server 三种部署模式，几乎零门槛集成。</p>
+    <p><strong>后续动作：</strong>关注其压缩算法的开源策略和后续是否支持更多数据格式。对于自建 Agent 的开发者来说，这是必看的降本利器。</p>
+    <p><strong>解读：</strong>在 AI 成本持续被讨论的背景下，Headroom 的 60-95% 压缩率非常有吸引力。它解决的是一个"沉默的痛点"——大部分开发者不会主动优化 context，而是直接接受高昂的 token 费用。这个项目的流行说明开源社区正在从"能用 AI"向"高效用 AI"演进。</p>
+  </div>
+</div>
+
+<!-- #2 microsoft/markitdown -->
+<div class="repo-card">
+  <h2><span class="repo-rank">2</span><a href="https://github.com/microsoft/markitdown" target="_blank">microsoft/markitdown</a></h2>
+  <div class="meta">
+    <span class="tag tag-tool">工具</span>
+    <span class="lang">Python</span>
+    ⭐ 18,000+ total · <span class="stars">📈 3,618 today</span>
+  </div>
+  <div class="desc">微软出品的 Python 工具，可将各类文件和办公文档转换为 Markdown 格式。支持 PDF、Word、Excel、PPT、图片 OCR、音频转录等多种格式。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>微软开源的 markitdown 单日新增 3,618 stars 登顶，这是今天增长最快的项目。它定位为"通用文档→Markdown 转换器"，是 AI 工作流中的关键中间件。</p>
+    <p><strong>关键数据：</strong>3,618 的日增数据在 GitHub Trending 中极为罕见，说明市场需求巨大且此前缺乏好用的统一解决方案。</p>
+    <p><strong>影响范围：</strong>对 RAG 管道、文档处理自动化、知识库构建场景有直接价值。几乎所有需要"让 AI 读懂文档"的场景都可用。</p>
+    <p><strong>后续动作：</strong>值得关注其支持的格式扩展速度和 OCR 精度表现。</p>
+    <p><strong>解读：</strong>微软选择开源而非闭源商业化的策略值得赞赏。markitdown 实际上填补了"文件预处理→AI 理解"之间的空白地带，是构建企业级 AI 应用的刚需组件。对于做跨境电商知识库、产品文档管理的团队来说，这是可以直接集成到 RAG 管道的工具。</p>
+  </div>
+</div>
+
+<!-- #3 affaan-m/ECC -->
+<div class="repo-card">
+  <h2><span class="repo-rank">3</span><a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a></h2>
+  <div class="meta">
+    <span class="tag tag-agent">Agent</span>
+    <span class="lang">JavaScript</span>
+    ⭐ 2,500+ total · <span class="stars">📈 1,533 today</span>
+  </div>
+  <div class="desc">Agent Harness 性能优化系统。涵盖 Skills、Instincts、Memory、Security 和 Research-first 开发方法论，适用于 Claude Code、Codex、Opencode、Cursor 等 AI 编码工具。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>ECC（Effective Coding Copilot）是一套系统化的 AI Agent 性能优化框架。它不是单一工具，而是涵盖技能配置、记忆管理、安全策略和研究优先开发方法的完整方法论体系。</p>
+    <p><strong>关键数据：</strong>日增 1,533 stars，是今天增长第 3 快的项目，表明开发者对"如何更好地使用 AI 编码工具"的需求远超预期。</p>
+    <p><strong>影响范围：</strong>覆盖 Claude Code、Codex、Opencode、Cursor 等主流 AI 编码工具。对于日常使用 AI 辅助编程的开发者来说，直接可应用的优化建议。</p>
+    <p><strong>后续动作：</strong>关注社区贡献的新 Skill 模板和针对不同 LLM 的调优策略。</p>
+    <p><strong>解读：</strong>ECC 的走红反映了一个趋势：AI 编码工具本身已经足够强大，瓶颈在于"如何用"。这个项目的价值在于把散落在各处的最佳实践系统化，类似于"AI Agent 的使用手册 + 性能调优指南"。对于团队来说，可以作为新人 onboarding 的参考框架。</p>
+  </div>
+</div>
+
+<!-- #4 D4Vinci/Scrapling -->
+<div class="repo-card">
+  <h2><span class="repo-rank">4</span><a href="https://github.com/D4Vinci/Scrapling" target="_blank">D4Vinci/Scrapling</a></h2>
+  <div class="meta">
+    <span class="tag tag-web">爬虫</span>
+    <span class="lang">Python</span>
+    ⭐ 59,227 total · <span class="stars">📈 1,182 today</span>
+  </div>
+  <div class="desc">自适应 Web 爬取框架，从单个请求到全规模爬虫一站式处理。智能处理反爬、动态渲染、Cookie 管理等复杂场景。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>Scrapling 是一个成熟的 Python 爬虫框架，以"自适应"为核心卖点——自动处理反爬机制、动态内容加载、验证码等常见痛点。59,227 total stars 说明这是一个已经久经考验的项目。</p>
+    <p><strong>关键数据：</strong>接近 6 万星的总量 + 日增 1,182，说明老项目依然保持活力。</p>
+    <p><strong>影响范围：</strong>数据采集、竞品价格监控、电商选品分析、市场研究等场景的必备工具。</p>
+    <p><strong>后续动作：</strong>关注其对新一代反爬技术（如 Cloudflare Turnstile）的适配情况。</p>
+    <p><strong>解读：</strong>对于跨境电商从业者来说，Scrapling 是竞品监控、选品分析的基础设施。它的"自适应"特性意味着维护成本低——不需要为每个目标网站单独编写反爬对策。值得注意的是一直保持高活跃度，说明维护者持续在跟进最新的反爬对抗。</p>
+  </div>
+</div>
+
+<!-- #5 nesquena/hermes-webui -->
+<div class="repo-card">
+  <h2><span class="repo-rank">5</span><a href="https://github.com/nesquena/hermes-webui" target="_blank">nesquena/hermes-webui</a></h2>
+  <div class="meta">
+    <span class="tag tag-agent">Agent</span>
+    <span class="lang">Python</span>
+    ⭐ 12,581 total · <span class="stars">📈 1,722 today</span>
+  </div>
+  <div class="desc">Hermes Agent 的 Web UI 界面——从网页或手机使用 Hermes Agent 的最佳方式。提供可视化的 Agent 交互体验。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>nesquena（Instacart 前 CTO）开发的 Hermes Agent WebUI，日增 1,722 stars 成为今日增长最快的 Agent 项目。它为命令行 Agent 提供了一个移动端友好的 Web 界面。</p>
+    <p><strong>关键数据：</strong>1,722 的日增是今天最高的 Agent 类项目增长量，12,581 总量也说明其受欢迎程度。</p>
+    <p><strong>影响范围：</strong>降低了 AI Agent 的使用门槛，让非技术用户也能通过浏览器或手机与 Agent 交互。</p>
+    <p><strong>后续动作：</strong>关注其支持的 Agent 后端类型和移动端体验优化。</p>
+    <p><strong>解读：</strong>Hermes WebUI 的成功验证了一个判断：AI Agent 需要更好的交互层。命令行对开发者友好但对普通用户不友好。这个项目实际上在做 Agent 的"最后一公里"——把强大的后端能力包装成人人都能用的界面。对于想做 AI 产品的人来说，这个方向值得借鉴。</p>
+  </div>
+</div>
+
+<!-- #6 reconurge/flowsint -->
+<div class="repo-card">
+  <h2><span class="repo-rank">6</span><a href="https://github.com/reconurge/flowsint" target="_blank">reconurge/flowsint</a></h2>
+  <div class="meta">
+    <span class="tag tag-security">安全</span>
+    <span class="lang">TypeScript</span>
+    ⭐ 4,541 total · <span class="stars">📈 124 today</span>
+  </div>
+  <div class="desc">现代化的可视化、灵活且可扩展的图调查平台，专为网络安全分析师和调查人员设计。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>flowsint 将网络安全调查中的关系数据以图可视化的方式呈现，帮助分析师快速发现攻击路径和关联关系。</p>
+    <p><strong>关键数据：</strong>4,541 total stars 在安全工具中属于中等偏上，日增 124 保持稳定增长。</p>
+    <p><strong>影响范围：</strong>网络安全团队、SOC 分析师、渗透测试人员的调查工具。</p>
+    <p><strong>解读：</strong>虽然 niche 但专业。对于关注网络安全或需要自建威胁情报分析系统的团队有参考价值。</p>
+  </div>
+</div>
+
+<!-- #7 OpenBMB/VoxCPM -->
+<div class="repo-card">
+  <h2><span class="repo-rank">7</span><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></h2>
+  <div class="meta">
+    <span class="tag tag-voice">语音</span>
+    <span class="lang">Python</span>
+    ⭐ 4,500+ total · <span class="stars">📈 783 today</span>
+  </div>
+  <div class="desc">VoxCPM2：无 Tokenizer 的 TTS（文本转语音）方案，支持多语言语音生成、创意声音设计和真实克隆。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>VoxCPM2 采用无 Tokenizer 架构进行 TTS，这是与主流方案（如 CosyVoice、ChatTTS）不同的技术路线。支持多语言、创意声音和语音克隆。</p>
+    <p><strong>关键数据：</strong>日增 783 stars，来自清华 OpenBMB 实验室，学术背景强。</p>
+    <p><strong>影响范围：</strong>语音合成、虚拟主播、有声书生成、语音助手等场景。</p>
+    <p><strong>解读：</strong>无 Tokenizer 路线的优势是音质更自然、韵律更流畅。清华团队的学术背书保证了技术质量。值得关注其在中文场景的表现，对于做 AI 语音产品的团队来说是值得对比测试的方案。</p>
+  </div>
+</div>
+
+<!-- #8 stefan-jansen/machine-learning-for-trading -->
+<div class="repo-card">
+  <h2><span class="repo-rank">8</span><a href="https://github.com/stefan-jansen/machine-learning-for-trading" target="_blank">stefan-jansen/machine-learning-for-trading</a></h2>
+  <div class="meta">
+    <span class="tag tag-finance">量化</span>
+    <span class="lang">Jupyter Notebook</span>
+    ⭐ 18,511 total · <span class="stars">📈 574 today</span>
+  </div>
+  <div class="desc">《Machine Learning for Algorithmic Trading》第二版的配套代码仓库。涵盖量化交易中的机器学习应用。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>这本经典的量化交易 ML 教材配套代码库再次上榜，18,511 总量证明其长期价值。</p>
+    <p><strong>关键数据：</strong>日增 574，说明量化+AI 的学习需求持续增长。</p>
+    <p><strong>影响范围：</strong>量化交易者、金融数据科学家、算法交易开发者。</p>
+    <p><strong>解读：</strong>老项目常青。对于对 AI + 金融交叉领域感兴趣的开发者，这是最系统化的学习资源之一。在 AI Agent 开始渗透金融领域的今天，这本书的代码库提供了很好的 baseline 参考。</p>
+  </div>
+</div>
+
+<!-- #9 jamwithai/production-agentic-rag-course -->
+<div class="repo-card">
+  <h2><span class="repo-rank">9</span><a href="https://github.com/jamwithai/production-agentic-rag-course" target="_blank">jamwithai/production-agentic-rag-course</a></h2>
+  <div class="meta">
+    <span class="tag tag-rag">RAG</span>
+    <span class="lang">Python</span>
+    ⭐ 6,404 total · <span class="stars">📈 30 today</span>
+  </div>
+  <div class="desc">生产级 Agentic RAG 课程。从理论到实践，教你构建可投入生产环境的 Agent RAG 系统。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>专注于"生产级"的 RAG 课程，不只是 demo，而是教你如何构建可上线、可扩展的 Agentic RAG 系统。</p>
+    <p><strong>关键数据：</strong>6,404 total stars 说明课程质量获得认可，日增 30 为稳定状态。</p>
+    <p><strong>解读：</strong>RAG 正从"实验阶段"走向"生产阶段"。这个课程定位准确——市场上大量 RAG 教程停留在 demo 级别，而真正能部署到生产环境的少之又少。对于企业级 AI 应用开发者来说，这类课程比纯理论教程更有价值。</p>
+  </div>
+</div>
+
+<!-- #10 supermemoryai/supermemory -->
+<div class="repo-card">
+  <h2><span class="repo-rank">10</span><a href="https://github.com/supermemoryai/supermemory" target="_blank">supermemoryai/supermemory</a></h2>
+  <div class="meta">
+    <span class="tag tag-memory">记忆</span>
+    <span class="lang">TypeScript</span>
+    ⭐ 24,676 total · <span class="stars">📈 680 today</span>
+  </div>
+  <div class="desc">极速可扩展的记忆引擎和应用。AI 时代的 Memory API。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>Supermemory 定位为"AI Memory API"——为 AI 应用提供持久化记忆能力。接近 25,000 stars 说明社区对"AI 记忆"这个概念高度认可。</p>
+    <p><strong>关键数据：</strong>24,676 total + 680 today，持续增长中。</p>
+    <p><strong>解读：</strong>AI 记忆是 2026 年的热点方向。Supermemory 试图成为 AI 应用的"记忆层"基础设施，类似于数据库之于传统应用。这个方向值得长期关注，特别是随着 Agent 场景越来越复杂，记忆管理会成为核心竞争力。</p>
+  </div>
+</div>
+
+<!-- #11 Open-LLM-VTuber/Open-LLM-VTuber -->
+<div class="repo-card">
+  <h2><span class="repo-rank">11</span><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank">Open-LLM-VTuber/Open-LLM-VTuber</a></h2>
+  <div class="meta">
+    <span class="tag tag-voice">语音</span>
+    <span class="lang">Python</span>
+    ⭐ 8,405 total · <span class="stars">📈 66 today</span>
+  </div>
+  <div class="desc">免手操作语音交互 + 语音打断 + Live2D 虚拟形象，跨平台本地运行，可与任意 LLM 对话。</div>
+  <div class="analysis">
+    <h3>📊 解读分析</h3>
+    <p><strong>核心事件：</strong>将 LLM + TTS + ASR + Live2D 整合成一个完整的虚拟主播交互系统，支持语音打断（类似真人对话的自然交互）。</p>
+    <p><strong>关键数据：</strong>8,405 total stars，日增 66，是一个成熟稳定的项目。</p>
+    <p><strong>解读：</strong>这个项目验证了"AI 虚拟伴侣/主播"的社区需求。语音打断是一个被低估的功能——大部分语音 AI 需要你等它说完才能说，而这个项目支持随时打断，更接近真人对话体验。对于想做 AI 交互产品的团队来说，值得研究其打断机制的实现。</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>🐙 GitHub 开源日报 · 2026-06-03 · 数据来源：github.com/trending</p>
+  <p>由 OpenClaw AI 自动生成</p>
+</div>
+</div>
+</body>
+</html>
