@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-10</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --accent: #58a6ff; --green: #3fb950; --text: #e6edf3; --muted: #8b949e; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+  .container { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 1.8rem; margin-bottom: .3rem; }
+  h1 span { color: var(--accent); }
+  .date { color: var(--muted); font-size: .95rem; margin-bottom: 1.5rem; }
+  .summary { background: var(--card); border-left: 4px solid var(--green); padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; }
+  .summary h2 { font-size: 1.1rem; margin-bottom: .5rem; }
+  .summary ul { list-style: none; padding: 0; }
+  .summary li { padding: .3rem 0; color: var(--muted); }
+  .summary li::before { content: "✦ "; color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.5rem; margin-bottom: 1rem; transition: border-color .2s; }
+  .card:hover { border-color: var(--accent); }
+  .card-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem; margin-bottom: .4rem; }
+  .card-title a { color: var(--accent); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+  .card-title a:hover { text-decoration: underline; }
+  .stars { color: var(--green); font-size: .85rem; white-space: nowrap; }
+  .stars .today { color: #f0883e; font-weight: 600; }
+  .lang { display: inline-block; background: #21262d; color: var(--muted); font-size: .75rem; padding: .15rem .55rem; border-radius: 12px; margin-right: .4rem; }
+  .desc { color: var(--muted); font-size: .95rem; margin: .5rem 0; }
+  .tag { display: inline-block; background: #1a2332; color: var(--accent); font-size: .7rem; padding: .15rem .5rem; border-radius: 10px; margin-right: .3rem; }
+  .footer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🐙 GitHub <span>开源日报</span></h1>
+<p class="date">2026-06-10（周三）· 今日趋势精选</p>
+
+<div class="summary">
+  <h2>📌 今日看点</h2>
+  <ul>
+    <li>AI Agent 生态持续繁荣：跨平台信息聚合技能、本地 LLM 优选工具、求职自动化系统同时上榜</li>
+    <li>Rust 高性能向量索引项目 turbovec 引发关注，为本地向量检索提供新方案</li>
+    <li>基于 Wi-Fi CSI 的无摄像头人体检测系统——智能家居安全新思路</li>
+    <li>中文教育资源仓库 ChinaTextbook 收录全阶段教材 PDF，实用价值高</li>
+  </ul>
+</div>
+
+<!-- Card 1 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/santifer/career-ops">santifer/career-ops</a></span>
+    <span class="stars">⭐ 51,739 &nbsp;<span class="today">+1,110 今日</span></span>
+  </div>
+  <div><span class="lang">JavaScript</span></div>
+  <p class="desc">基于 Claude Code 构建的 AI 求职系统，内置 14 种技能模式、Go 语言数据面板、PDF 简历生成及批量投递处理。涵盖从职位发现到面试准备的全流程自动化。</p>
+  <div><span class="tag">AI Agent</span><span class="tag">求职自动化</span><span class="tag">Claude Code</span></div>
+</div>
+
+<!-- Card 2 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/mvanhorn/last30days-skill">mvanhorn/last30days-skill</a></span>
+    <span class="stars">⭐ 37,465 &nbsp;<span class="today">+3,191 今日</span></span>
+  </div>
+  <div><span class="lang">Python</span></div>
+  <p class="desc">AI Agent 技能：对任意主题在 Reddit、X、YouTube、Hacker News、Polymarket 及全网进行多源信息检索，然后自动综合生成结构化摘要。适合市场调研与趋势跟踪。</p>
+  <div><span class="tag">信息聚合</span><span class="tag">AI 技能</span><span class="tag">多源检索</span></div>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/RyanCodrai/turbovec">RyanCodrai/turbovec</a></span>
+    <span class="stars">⭐ 10,239 &nbsp;<span class="today">+1,801 今日</span></span>
+  </div>
+  <div><span class="lang">Python</span> <span class="lang">Rust</span></div>
+  <p class="desc">基于 TurboQuant 构建的高性能向量索引，Rust 内核 + Python 绑定。为本地向量检索提供低延迟方案，适合 RAG 和语义搜索场景。</p>
+  <div><span class="tag">向量检索</span><span class="tag">Rust</span><span class="tag">RAG</span></div>
+</div>
+
+<!-- Card 4 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/refactoringhq/tolaria">refactoringhq/tolaria</a></span>
+    <span class="stars">⭐ 14,374 &nbsp;<span class="today">+829 今日</span></span>
+  </div>
+  <div><span class="lang">TypeScript</span></div>
+  <p class="desc">桌面端 Markdown 知识库管理应用，支持文档组织、搜索和知识沉淀。适合个人笔记和团队文档管理。</p>
+  <div><span class="tag">知识库</span><span class="tag">Markdown</span><span class="tag">桌面应用</span></div>
+</div>
+
+<!-- Card 5 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/Andyyyy64/whichllm">Andyyyy64/whichllm</a></span>
+    <span class="stars">⭐ 4,126 &nbsp;<span class="today">+633 今日</span></span>
+  </div>
+  <div><span class="lang">Python</span></div>
+  <p class="desc">本地 LLM 硬件适配检测工具：根据实际硬件性能进行真实评测排名（而非仅看参数量），一键运行即出结果。帮助用户在本地部署时选择最合适的模型。</p>
+  <div><span class="tag">LLM</span><span class="tag">模型评测</span><span class="tag">本地部署</span></div>
+</div>
+
+<!-- Card 6 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/francescopace/espectre">francescopace/espectre</a></span>
+    <span class="stars">⭐ 8,228 &nbsp;<span class="today">+134 今日</span></span>
+  </div>
+  <div><span class="lang">Python</span></div>
+  <p class="desc">基于 Wi-Fi CSI（信道状态信息）光谱分析的运动检测系统，集成 Home Assistant。无需摄像头即可感知人体移动，为隐私保护型智能家居安防提供了新思路。</p>
+  <div><span class="tag">IoT</span><span class="tag">运动检测</span><span class="tag">Home Assistant</span></div>
+</div>
+
+<!-- Card 7 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/TapXWorld/ChinaTextbook">TapXWorld/ChinaTextbook</a></span>
+    <span class="stars">⭐ 资源丰富</span>
+  </div>
+  <div><span class="lang">PDF</span></div>
+  <p class="desc">收录中国小学、初中、高中及大学全阶段教材 PDF，覆盖多个学科。教育资源共享，实用性强。</p>
+  <div><span class="tag">教育</span><span class="tag">中文资源</span><span class="tag">教材</span></div>
+</div>
+
+<!-- Card 8 -->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title"><a href="https://github.com/maziyarpanahi/openmed">maziyarpanahi/openmed</a></span>
+    <span class="stars">⭐ 1,896 &nbsp;<span class="today">+191 今日</span></span>
+  </div>
+  <div><span class="lang">Python</span></div>
+  <p class="desc">开源医疗健康 AI 平台，整合多种医学模型和工具链，面向医疗研究及辅助诊断场景。</p>
+  <div><span class="tag">医疗健康</span><span class="tag">AI</span><span class="tag">开源平台</span></div>
+</div>
+
+<div class="footer">
+  <p>🐙 GitHub 开源日报 · 由 OpenClaw 自动生成 · 2026-06-10</p>
+</div>
+
+</div>
+</body>
+</html>
