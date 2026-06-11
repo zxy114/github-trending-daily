@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-11</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0d1117; color: #c9d1d9; padding: 2rem; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: #58a6ff; font-size: 1.8rem; margin-bottom: 0.3rem; }
+  .date { color: #8b949e; font-size: 0.95rem; margin-bottom: 2rem; }
+  .item { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.4rem; margin-bottom: 1rem; }
+  .item h2 { color: #58a6ff; font-size: 1.15rem; margin-bottom: 0.4rem; }
+  .item h2 a { color: #58a6ff; text-decoration: none; }
+  .item h2 a:hover { text-decoration: underline; }
+  .meta { color: #8b949e; font-size: 0.85rem; margin-bottom: 0.6rem; }
+  .meta span { margin-right: 1rem; }
+  .desc { color: #c9d1d9; line-height: 1.65; font-size: 0.95rem; }
+  .stars { color: #f0883e; }
+  .summary { background: #1c2333; border-left: 3px solid #58a6ff; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; }
+  .summary h2 { color: #58a6ff; font-size: 1.1rem; margin-bottom: 0.6rem; }
+  .summary ul { padding-left: 1.2rem; }
+  .summary li { margin-bottom: 0.4rem; line-height: 1.6; }
+  footer { margin-top: 2rem; text-align: center; color: #484f58; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📡 GitHub 开源日报</h1>
+  <div class="date">2026-06-11（北京时间）</div>
+
+  <div class="summary">
+    <h2>今日精选摘要</h2>
+    <ul>
+      <li><strong>Apple 开源 macOS 原生 Linux 容器工具</strong>：Swift 编写、Apple Silicon 专属的轻量容器方案，今日收获 1600+ 星，是 Apple 向开源开发者释放的重要信号。</li>
+      <li><strong>WiFi 信号变身空间感知系统</strong>：用 ESP32 读取 WiFi CSI 数据，实现穿墙人体姿态、心率/呼吸监测，无需摄像头，适合养老/安防等场景。</li>
+      <li><strong>开源医疗 AI 平台 OpenMed</strong>：面向 Healthcare 的一体化 AI 框架，集成影像、基因组、电子病历等多模态处理，500+ 星快速增长。</li>
+      <li><strong>Roboflow 计算机视觉工具库 Supervision</strong>：成熟的 CV 后处理和可视化工具，覆盖检测/分割/追踪全链路，是 CV 项目的实用"瑞士军刀"。</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/apple/container">🍎 apple/container — Apple 官方 Linux 容器工具</a></h2>
+    <div class="meta">
+      <span class="stars">⭐ 29,800+ stars</span>
+      <span>📈 +1,611 stars/day</span>
+      <span>🔖 Swift</span>
+    </div>
+    <div class="desc">
+      Apple 官方开源的 Linux 容器管理工具，专为 Apple Silicon Mac 设计。利用轻量级虚拟机在 macOS 上运行 Linux 容器，无需 Docker Desktop。Swift 编写，充分利用 Apple Silicon 的虚拟化框架。这是 Apple 首次将此类基础设施级工具开源，标志着 Mac 开发者体验的重要变化。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/ruvnet/RuView">📡 RuView — 用 WiFi 信号做空间感知与生命体征监测</a></h2>
+    <div class="meta">
+      <span>📈 695 stars/day</span>
+      <span>🔖 Python / Rust</span>
+    </div>
+    <div class="desc">
+      通过 ESP32 捕获 WiFi 信道状态信息（CSI），将普通 WiFi 信号转化为空间感知系统。可实现穿墙人体检测、姿态估计（17关键点）、呼吸频率与心率实时监测、跌倒检测等。模型仅 8KB（4-bit 量化），在树莓派上微秒级推理。已集成 Home Assistant、Apple Home、Google Home、Alexa、Matter 等主流智能家居平台。适合养老监护、零售客流、办公空间管理等场景，无需摄像头，避免隐私问题。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/maziyarpanahi/openmed">🏥 OpenMed — 开源医疗 AI 平台</a></h2>
+    <div class="meta">
+      <span>⭐ 2,320+ stars</span>
+      <span>📈 +527 stars/day</span>
+      <span>🔖 Python</span>
+    </div>
+    <div class="desc">
+      面向医疗行业的开源 AI 框架，覆盖影像分析、基因组学、电子病历处理等多模态场景。提供开箱即用的预训练模型和可配置流水线，支持临床研究与辅助诊断。增长迅速，社区活跃。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/roboflow/supervision">🔍 Roboflow Supervision — 计算机视觉工具库</a></h2>
+    <div class="meta">
+      <span>📈 热门 CV 库</span>
+      <span>🔖 Python</span>
+    </div>
+    <div class="desc">
+      Roboflow 出品的可复用计算机视觉工具集。提供检测框/分割掩码标注、目标追踪、区域计数、热力图、置信度过滤等丰富的后处理与可视化能力，兼容 YOLO、SAM、CLIP 等主流模型。是构建 CV 应用的"瑞士军刀"，降低从模型输出到业务逻辑的开发成本。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/refactoringhq/tolaria">📝 Tolaria — Markdown 知识库桌面管理应用</a></h2>
+    <div class="meta">
+      <span>⭐ 14,950+ stars</span>
+      <span>📈 +612 stars/day</span>
+      <span>🔖 TypeScript</span>
+    </div>
+    <div class="desc">
+      跨平台桌面应用，用于管理和浏览 Markdown 知识库。支持本地文件目录映射、全文搜索、标签分类、双向链接等，适合个人知识管理、团队文档协作等场景。近 1.5 万星，日增 600+，生态成熟。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/mvanhorn/last30days-skill">🔎 Last30Days — AI Agent 跨平台研究技能</a></h2>
+    <div class="meta">
+      <span>⭐ 39,100+ stars</span>
+      <span>📈 +2,535 stars/day</span>
+      <span>🔖 Python</span>
+    </div>
+    <div class="desc">
+      为 AI 编程代理设计的可复用技能：一键调研指定话题，覆盖 Reddit、X、YouTube、Hacker News、Polymarket 及全网搜索，自动综合生成有依据的分析报告。星数接近 4 万，是今天热度最高的项目之一。适合快速做行业扫描或竞品调研。
+    </div>
+  </div>
+
+  <div class="item">
+    <h2><a href="https://github.com/masterking32/MasterDnsVPN">🌐 MasterDnsVPN — 基于 DNS 隧道的网络连接工具</a></h2>
+    <div class="meta">
+      <span>⭐ 5,240+ stars</span>
+      <span>📈 +354 stars/day</span>
+      <span>🔖 Go</span>
+    </div>
+    <div class="desc">
+      高级 DNS 隧道 VPN，针对高丢包、高延迟场景做了大量优化。相比同类方案（DNSTT、SlipStream）实现了更低开销的 ARQ 重传机制、解析器负载均衡，在高丢包率网络下保持连接稳定。Go 语言编写，部署简单。
+    </div>
+  </div>
+
+  <footer>
+    <p>GitHub 开源日报 · 2026-06-11 · 数据来源 <a href="https://github.com/trending" style="color:#58a6ff;">github.com/trending</a></p>
+  </footer>
+</div>
+</body>
+</html>
