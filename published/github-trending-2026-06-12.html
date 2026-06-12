@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 | 2026-06-12</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --heading: #58a6ff;
+    --accent: #3fb950;
+    --muted: #8b949e;
+    --star: #f0c040;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 30px 0 20px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  header h1 {
+    font-size: 1.8em;
+    color: var(--heading);
+    letter-spacing: 1px;
+  }
+  header .date {
+    color: var(--muted);
+    font-size: 0.95em;
+    margin-top: 6px;
+  }
+  .digest {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    font-size: 0.95em;
+  }
+  .digest h2 {
+    color: var(--accent);
+    font-size: 1.05em;
+    margin-bottom: 8px;
+  }
+  .digest ul {
+    list-style: none;
+    padding: 0;
+  }
+  .digest li {
+    padding: 3px 0;
+  }
+  .digest li::before {
+    content: "▸ ";
+    color: var(--accent);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .card:hover {
+    border-color: var(--heading);
+  }
+  .card .repo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card .repo a {
+    color: var(--heading);
+    font-size: 1.15em;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .card .repo a:hover { text-decoration: underline; }
+  .card .badge {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #1f6feb33;
+    color: #58a6ff;
+    font-weight: 500;
+  }
+  .card .stars {
+    margin-left: auto;
+    color: var(--star);
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  .card .stars .delta {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .card .desc {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: var(--text);
+  }
+  .card .meta {
+    margin-top: 8px;
+    font-size: 0.82em;
+    color: var(--muted);
+  }
+  .card .tags {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .card .tag {
+    font-size: 0.72em;
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: #23863633;
+    color: var(--accent);
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8em;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🐙 GitHub 开源日报</h1>
+  <div class="date">2026 年 6 月 12 日 · 星期五 · 北京时间</div>
+</header>
+
+<div class="digest">
+  <h2>📌 今日精选摘要</h2>
+  <ul>
+    <li><strong>Apple 开源原生容器工具</strong>——基于 Swift 编写、专为 Apple Silicon 优化的 Linux 容器运行方案，有望成为 Docker Desktop 的官方后端</li>
+    <li><strong>AI Agent 工程化加速</strong>——Addy Osmani 的生产级 Agent 技能库突破 5.4 万星，NVIDIA 推出 Agent 技能安全扫描器 SkillSpector</li>
+    <li><strong>开源医疗 AI 走向端侧</strong>——OpenMed 提供 1000+ 医疗专用模型，完全本地运行，覆盖 12 种语言的实体识别与隐私脱敏</li>
+    <li><strong>AI 编程 Agent 可观测性</strong>——agentsview 提供本地优先的会话分析仪表板，支持 20+ 编码 Agent，速度比 ccusage 快 100 倍</li>
+    <li><strong>Markdown 知识库桌面应用 Tolaria</strong>——Tauri + React 构建，离线优先、Git 原生，作者用它管理 10000+ 笔记</li>
+  </ul>
+</div>
+
+<!-- 1 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/apple/container">apple/container</a>
+    <span class="badge">Swift</span>
+    <span class="stars">⭐ 32,681 · <span class="delta">+2,430 今日</span></span>
+  </div>
+  <div class="desc">
+    Apple 官方开源的 Linux 容器工具，使用轻量虚拟机在 Mac 上创建和运行容器。采用 Swift 编写，针对 Apple Silicon 深度优化，支持 <code>container machine</code> 管理持久化 Linux 环境。社区已在讨论将其作为 Docker Desktop for macOS 的后端方案。
+  </div>
+  <div class="tags">
+    <span class="tag">容器</span>
+    <span class="tag">macOS</span>
+    <span class="tag">Apple Silicon</span>
+    <span class="tag">基础设施</span>
+  </div>
+  <div class="meta">语言: Swift · Star: 32,681 · Fork: 913</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a>
+    <span class="badge">Shell</span>
+    <span class="stars">⭐ 54,901 · <span class="delta">+3,278 今日</span></span>
+  </div>
+  <div class="desc">
+    Google/Anthropic 工程师 Addy Osmani 打造的 AI 编码 Agent 生产级工程技能集。将软件开全生命周期（需求→规划→构建→验证→审查→发布）编码为 20 个结构化技能文件和 7 个斜杠命令（/spec、/plan、/build、/test、/review 等），兼容 Claude Code、Codex CLI 等 SKILL.md 格式的 Agent。核心理念：把高级工程师的质量门禁和工作流程固化为 Agent 的默认行为。
+  </div>
+  <div class="tags">
+    <span class="tag">AI Agent</span>
+    <span class="tag">工程化</span>
+    <span class="tag">开发流程</span>
+    <span class="tag">Claude Code</span>
+  </div>
+  <div class="meta">语言: Shell · Star: 54,901 · Fork: 5,958</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/refactoringhq/tolaria">refactoringhq/tolaria</a>
+    <span class="badge">TypeScript</span>
+    <span class="stars">⭐ 15,426 · <span class="delta">+604 今日</span></span>
+  </div>
+  <div class="desc">
+    跨平台桌面 Markdown 知识库管理应用，基于 Tauri + React + TypeScript 构建。离线优先、文件即存储、Git 原生，笔记以纯 Markdown + YAML frontmatter 格式存储。支持 AI Agent（Claude Code、Codex）协作，键盘优先的命令面板设计。作者用它管理 10,000+ 笔记和 300+ 文章。
+  </div>
+  <div class="tags">
+    <span class="tag">桌面应用</span>
+    <span class="tag">Markdown</span>
+    <span class="tag">知识库</span>
+    <span class="tag">Tauri</span>
+  </div>
+  <div class="meta">语言: TypeScript · Star: 15,426 · Fork: 1,062</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/maziyarpanahi/openmed">maziyarpanahi/openmed</a>
+    <span class="badge">Python</span>
+    <span class="stars">⭐ 2,795 · <span class="delta">+426 今日</span></span>
+  </div>
+  <div class="desc">
+    开源医疗 AI 工具包，提供 1000+ 专用医疗模型，支持 12 种语言。功能包括临床实体提取、隐私信息（PII）脱敏（247 个检测点），可在本地设备完全离线运行，包括通过 Apple MLX 在 iPhone 上原生执行。支持 Python API、REST 服务和批量处理，Apache-2.0 许可。
+  </div>
+  <div class="tags">
+    <span class="tag">医疗</span>
+    <span class="tag">NLP</span>
+    <span class="tag">隐私保护</span>
+    <span class="tag">端侧AI</span>
+  </div>
+  <div class="meta">语言: Python · Star: 2,795 · Fork: 275</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/NVIDIA/SkillSpector">NVIDIA/SkillSpector</a>
+    <span class="badge">Python</span>
+    <span class="stars">⭐ 2,714 · <span class="delta">+319 今日</span></span>
+  </div>
+  <div class="desc">
+    NVIDIA 官方出品的 AI Agent 技能安全扫描器。研究发现有 26.1% 的 Agent 技能存在漏洞、5.2% 显示出恶意意图。SkillSpector 覆盖 16 个类别共 64 种漏洞模式，包括提示注入、数据外泄、权限提升和供应链攻击等。可为 Claude Code、Codex CLI、Gemini CLI 等 Agent 技能提供安装前审计，支持 CI/CD 集成和 OSV.dev 在线漏洞库查询。
+  </div>
+  <div class="tags">
+    <span class="tag">安全</span>
+    <span class="tag">AI Agent</span>
+    <span class="tag">漏洞扫描</span>
+    <span class="tag">NVIDIA</span>
+  </div>
+  <div class="meta">语言: Python · Star: 2,714 · Fork: 215</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/kenn-io/agentsview">kenn-io/agentsview</a>
+    <span class="badge">Go</span>
+    <span class="stars">⭐ 1,679 · <span class="delta">+114 今日</span></span>
+  </div>
+  <div class="desc">
+    本地优先的 AI 编码 Agent 会话智能分析工具，支持 Claude Code、Codex 等 20 余种 Agent。提供完整的 Web 仪表板：项目过滤、热力图、会话浏览器、指标卡片。支持 SQLite 本地存档和 PostgreSQL 共享后端，内置 DuckDB 镜像加速。号称比 ccusage 快 100 倍的替代方案。
+  </div>
+  <div class="tags">
+    <span class="tag">可观测性</span>
+    <span class="tag">AI Agent</span>
+    <span class="tag">分析工具</span>
+    <span class="tag">本地优先</span>
+  </div>
+  <div class="meta">语言: Go · Star: 1,679 · Fork: 174</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/hexo-ai/sia">hexo-ai/sia</a>
+    <span class="badge">Python</span>
+    <span class="stars">⭐ 1,301 · <span class="delta">+199 今日</span></span>
+  </div>
+  <div class="desc">
+    自我改进 AI 框架（SIA），可自主提升任意 AI 系统（模型/Agent）在基准任务上的性能。通过自动化反馈循环持续优化策略和执行路径，适用于需要持续迭代的 AI 工作流场景。
+  </div>
+  <div class="tags">
+    <span class="tag">AI框架</span>
+    <span class="tag">自我改进</span>
+    <span class="tag">自动化优化</span>
+  </div>
+  <div class="meta">语言: Python · Star: 1,301 · Fork: 159</div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/mattermost/mattermost">mattermost/mattermost</a>
+    <span class="badge">TypeScript</span>
+    <span class="stars">⭐ 37,315 · <span class="delta">+53 今日</span></span>
+  </div>
+  <div class="desc">
+    开源的企业级安全协作平台，覆盖软件开发全生命周期的团队协作。作为 Slack 的开源替代方案，提供即时通讯、文件共享、集成扩展等功能，支持私有化部署，强调数据安全与合规。
+  </div>
+  <div class="tags">
+    <span class="tag">协作</span>
+    <span class="tag">即时通讯</span>
+    <span class="tag">企业级</span>
+    <span class="tag">Slack替代</span>
+  </div>
+  <div class="meta">语言: TypeScript · Star: 37,315 · Fork: 8,697</div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/restic/restic">restic/restic</a>
+    <span class="badge">Go</span>
+    <span class="stars">⭐ 26,000+ · <span class="delta">+40+ 今日</span></span>
+  </div>
+  <div class="desc">
+    快速、安全、高效的备份程序。支持去重、加密、增量备份，可将数据备份到本地存储、S3、SFTP、REST 服务器等多种后端。Go 语言编写，单二进制文件部署简单，是个人和服务器备份的可靠选择。
+  </div>
+  <div class="tags">
+    <span class="tag">备份</span>
+    <span class="tag">安全</span>
+    <span class="tag">运维工具</span>
+  </div>
+  <div class="meta">语言: Go</div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+  <div class="repo">
+    <a href="https://github.com/chatwoot/chatwoot">chatwoot/chatwoot</a>
+    <span class="badge">Ruby</span>
+    <span class="stars">⭐ 22,000+ · <span class="delta">+60+ 今日</span></span>
+  </div>
+  <div class="desc">
+    开源全渠道客户支持平台，覆盖在线聊天、邮件工单等多渠道接入。作为 Intercom、Zendesk 的开源替代方案，支持多品牌、多团队管理，提供 API 和 Webhook 集成能力，适合自建客服系统。
+  </div>
+  <div class="tags">
+    <span class="tag">客服</span>
+    <span class="tag">全渠道</span>
+    <span class="tag">SaaS替代</span>
+  </div>
+  <div class="meta">语言: Ruby</div>
+</div>
+
+<footer>
+  数据来源: GitHub Trending · 生成时间: 2026-06-12 10:07 CST<br>
+  <a href="https://github.com/trending" style="color: var(--heading);">查看原始榜单 →</a>
+</footer>
+
+</body>
+</html>
