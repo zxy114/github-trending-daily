@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-13</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --orange: #d29922; --red: #f85149; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  header h1 { font-size: 1.6rem; color: #f0f6fc; }
+  header .date { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; }
+  .repo { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.2rem; }
+  .repo h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .repo h2 a { color: var(--accent); text-decoration: none; }
+  .repo h2 a:hover { text-decoration: underline; }
+  .meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.8rem; }
+  .meta .stars { color: var(--orange); font-weight: 600; }
+  .desc { font-size: 0.95rem; margin-bottom: 0.6rem; }
+  .lang { display: inline-block; background: #21262d; border: 1px solid var(--border); border-radius: 12px; padding: 0.15rem 0.6rem; font-size: 0.78rem; color: var(--muted); }
+  .why { margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--border); font-size: 0.9rem; }
+  .why strong { color: var(--green); }
+  footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📡 GitHub 开源日报</h1>
+  <div class="date">2026 年 6 月 13 日（周六）· 当日趋势精选</div>
+</header>
+
+<!-- 1 -->
+<div class="repo">
+  <h2><a href="https://github.com/apple/container">apple/container</a></h2>
+  <div class="meta">⭐ 35,170 · 今日 +3,504 · <span class="lang">Swift</span></div>
+  <p class="desc">Apple 官方推出的 Linux 容器运行工具，基于轻量级虚拟机在 Mac 上直接运行 OCI 容器，针对 Apple Silicon 深度优化。需 macOS 26 及以上版本。</p>
+  <div class="why"><strong>值得关注：</strong>Apple 首次以官方身份提供原生容器方案，Swift 编写、无需 Docker Desktop，与 Apple 虚拟化框架深度集成。对 Mac 开发者的本地容器化工作流是重要补充。</div>
+</div>
+
+<!-- 2 -->
+<div class="repo">
+  <h2><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a></h2>
+  <div class="meta">⭐ 56,867 · 今日 +2,656 · <span class="lang">Shell</span></div>
+  <p class="desc">面向 AI 编码助手的工程级技能集合，覆盖需求访谈、规格编写、任务拆解、增量实现、TDD、代码审查、安全加固、性能优化、CI/CD 等 24 个完整开发流程技能。</p>
+  <div class="why"><strong>值得关注：</strong>由 Google 工程师 Addy Osmani 维护，兼容 Claude Code、Cursor、Gemini CLI、Copilot 等主流编码工具。每个技能都是可执行的工作流而非文档参考，自带反惰性检查表和验证门槛，对提升 AI 辅助开发质量有直接帮助。</div>
+</div>
+
+<!-- 3 -->
+<div class="repo">
+  <h2><a href="https://github.com/obra/superpowers">obra/superpowers</a></h2>
+  <div class="meta">⭐  trending · MIT · <span class="lang">Multi-agent framework</span></div>
+  <p class="desc">一套完整的 AI 编码助手开发方法论，通过可组合的技能模块实现自动化的头脑→规格→计划→子代理执行→代码审查→合并工作流。支持 Claude Code、Codex、Gemini CLI、Cursor 等。</p>
+  <div class="why"><strong>值得关注：</strong>核心创新是"子代理驱动开发"（Subagent-Driven Development）——每个任务由独立子代理执行并经过两轮审查（规格符合性 + 代码质量），AI 可连续自主工作数小时不偏离计划。与 agent-skills 思路相近但更侧重多代理编排。</div>
+</div>
+
+<!-- 4 -->
+<div class="repo">
+  <h2><a href="https://github.com/refactoringhq/tolaria">refactoringhq/tolaria</a></h2>
+  <div class="meta">⭐ 15,788 · 今日 +369 · <span class="lang">TypeScript</span></div>
+  <p class="desc">跨平台桌面应用（macOS / Windows / Linux），用于管理 Markdown 知识库。文件优先（纯 .md）、Git 优先、离线优先，支持为 AI 助手组织上下文文档。</p>
+  <div class="why"><strong>值得关注：</strong>作者用 Tolaria 管理万级笔记的"第二大脑"，数据完全以 Markdown + YAML frontmatter 存储，零锁定。内置 AGENTS 文件让 AI 编码工具直接理解知识库结构。Tauri + React 技术栈，AGPL 开源。</div>
+</div>
+
+<!-- 5 -->
+<div class="repo">
+  <h2><a href="https://github.com/maziyarpanahi/openmed">maziyarpanahi/openmed</a></h2>
+  <div class="meta">⭐ 3,202 · 今日 +515 · <span class="lang">Python</span></div>
+  <p class="desc">开源医疗 AI 工具包，提供 1,000+ 专用医学模型，支持临床实体提取、隐私信息去标识化（覆盖 12 种语言、247 类 PII 检查点），可完全在本地运行，包括 iPhone 上的 Apple MLX 加速。</p>
+  <div class="why"><strong>值得关注：</strong>Apache-2.0 许可，患者数据不离开设备。支持 Python 一行调用、Docker REST 服务、iOS 原生 Swift SDK（OpenMedKit）。MLX 加速在 Apple Silicon 上比 CPU PyTorch 快 24-33 倍。对医疗合规场景有实际落地价值。</div>
+</div>
+
+<footer>
+  数据来源：<a href="https://github.com/trending" style="color:var(--accent)">github.com/trending</a> · 生成时间 2026-06-13 10:11 CST
+</footer>
+</body>
+</html>
