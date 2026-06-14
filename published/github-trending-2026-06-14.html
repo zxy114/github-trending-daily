@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-14</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --title: #58a6ff; --accent: #3fb950; --muted: #8b949e; --link: #58a6ff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; max-width: 860px; margin: 0 auto; padding: 32px 16px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 28px; }
+  header h1 { font-size: 24px; color: var(--accent); margin-bottom: 4px; }
+  header p { color: var(--muted); font-size: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .card h2 { font-size: 18px; margin-bottom: 6px; }
+  .card h2 a { color: var(--title); text-decoration: none; }
+  .card h2 a:hover { text-decoration: underline; }
+  .meta { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .meta span { margin-right: 14px; }
+  .stars { color: var(--accent); }
+  .desc { font-size: 15px; margin-bottom: 10px; }
+  .highlight { background: rgba(63,185,80,0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 8px; font-size: 14px; color: var(--accent); }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📡 GitHub 开源日报</h1>
+  <p>2026-06-14（周六）· 精选今日趋势项目 · 质量优先</p>
+</header>
+
+<!-- 1. agent-skills -->
+<div class="card">
+  <h2><a href="https://github.com/addyosmani/agent-skills">1. addyosmani/agent-skills</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 58,452</span><span>📈 +1,514 今日</span><span>🔧 Shell</span>
+  </div>
+  <div class="desc">
+    由 Google 工程师 Addy Osmani 发布的 AI 编程代理工程技能集。将成熟软件工程的规范流程——需求澄清、架构设计、TDD 测试驱动、代码审查——封装为可插拔技能，直接注入 Claude Code、Codex 等编程代理，使其从"直接写代码"升级为"先对齐需求再动手"。
+  </div>
+  <div class="highlight">💡 亮点：不需要额外框架，即装即用；今日热度第一，反映开发者对提升 AI 编程质量的刚需。</div>
+</div>
+
+<!-- 2. superpowers -->
+<div class="card">
+  <h2><a href="https://github.com/obra/superpowers">2. obra/superpowers</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 热门</span><span>🔧 多平台</span>
+  </div>
+  <div class="desc">
+    一套完整的编程代理开发方法论。核心思路：代理接到任务后不急于编码，而是先通过问答明确真实需求，生成可阅读的设计文档，确认后再做实现计划，最后以"子代理驱动开发"模式分步执行。支持 Claude Code、Codex CLI/ App、Gemini CLI、Cursor、GitHub Copilot CLI 等多种代理平台，各有独立安装方式。
+  </div>
+  <div class="highlight">💡 亮点：强调真红绿 TDD、YAGNI 原则，能让 Claude 连续自主工作数小时不偏离计划，适合团队标准化 AI 编程流程。</div>
+</div>
+
+<!-- 3. apple/container -->
+<div class="card">
+  <h2><a href="https://github.com/apple/container">3. apple/container</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 36,341</span><span>📈 +1,487 今日</span><span>🔧 Swift</span>
+  </div>
+  <div class="desc">
+    Apple 官方开源项目：基于轻量虚拟机在 Mac 上创建和运行 Linux 容器的工具。用 Swift 编写，针对 Apple Silicon 芯片深度优化。标志着 Apple 在容器领域的官方布局，为 Mac 开发者提供原生替代 Docker Desktop 的方案。
+  </div>
+  <div class="highlight">💡 亮点：Apple 官方出品 + 针对 M 系列芯片优化，意味着 Mac 上跑 Linux 容器的性能和体验会有显著提升。</div>
+</div>
+
+<!-- 4. NVIDIA/SkillSpector -->
+<div class="card">
+  <h2><a href="https://github.com/NVIDIA/SkillSpector">4. NVIDIA/SkillSpector</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 4,493</span><span>📈 +804 今日</span><span>🐍 Python</span>
+  </div>
+  <div class="desc">
+    NVIDIA 出品的 AI 代理技能安全扫描器。用于检测 AI agent 技能包中的安全漏洞、恶意模式和潜在风险。随着 agent 生态快速扩张，安全审计成为刚需，该工具填补了这一空白。
+  </div>
+  <div class="highlight">💡 亮点：AI 代理安全领域的基础设施级工具，适合在团队引入 agent 插件/技能时做安全审查。</div>
+</div>
+
+<!-- 5. kenn-io/agentsview -->
+<div class="card">
+  <h2><a href="https://github.com/kenn-io/agentsview">5. kenn-io/agentsview</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 2,376</span><span>📈 +190 今日</span><span>🔧 Go</span>
+  </div>
+  <div class="desc">
+    本地优先的编程代理会话智能与分析工具，支持 Claude Code、Codex 等 20 多种代理。可追踪代理行为、分析使用模式，性能是同类工具 ccusage 的 100 倍。数据全部本地存储，注重隐私。
+  </div>
+  <div class="highlight">💡 亮点：如果你在用多个 AI 编程工具，它是统一分析面板；100x 性能提升 + 本地优先，适合对数据隐私敏感的开发团队。</div>
+</div>
+
+<!-- 6. andrewyng/aisuite -->
+<div class="card">
+  <h2><a href="https://github.com/andrewyng/aisuite">6. andrewyng/aisuite</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 热门</span><span>🐍 Python</span>
+  </div>
+  <div class="desc">
+    吴恩达团队的统一 AI 模型接口库。一套 Chat Completions API 兼容 OpenAI、Anthropic、Google、Ollama 等主流提供商，更换模型只需改一个字符串。还包含 Agents API（支持 MCP、工具包）和桌面 AI 协作者 OpenCoworker（macOS/Windows 可用）。
+  </div>
+  <div class="highlight">💡 亮点：轻量、实用，降低多模型切换成本；附带的 OpenCoworker 桌面应用可直接用于日常工作。</div>
+</div>
+
+<!-- 7. iptv-org/iptv -->
+<div class="card">
+  <h2><a href="https://github.com/iptv-org/iptv">7. iptv-org/iptv</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 119,182</span><span>📈 +530 今日</span><span>🔧 TypeScript</span>
+  </div>
+  <div class="desc">
+    全球公开 IPTV 频道合集。按国家、语言、分类整理，持续维护更新。是构建流媒体应用、电视聚合平台的数据源基础。
+  </div>
+  <div class="highlight">💡 亮点：11.9 万星，社区活跃，适合想做流媒体内容聚合的开发者作为数据基础。</div>
+</div>
+
+<!-- 8. chatwoot/chatwoot -->
+<div class="card">
+  <h2><a href="https://github.com/chatwoot/chatwoot">8. chatwoot/chatwoot</a></h2>
+  <div class="meta">
+    <span class="stars">⭐ 热门</span><span>🔧 全渠道</span>
+  </div>
+  <div class="desc">
+    开源全渠道客户支持平台，可替代 Intercom、Zendesk 等商业方案。支持网站实时聊天、邮件、Facebook、WhatsApp、Telegram 等多渠道统一收件箱，内置 AI 客服 Captain 可自动回复常见问题。
+  </div>
+  <div class="highlight">💡 亮点：自托管、数据可控，内置 AI 自动客服功能，适合中小团队搭建客服体系。</div>
+</div>
+
+<!-- 精选摘要 -->
+<div class="card" style="border-color: var(--accent);">
+  <h2 style="color: var(--accent);">🏆 今日精选</h2>
+  <ol style="padding-left: 20px; font-size: 15px; line-height: 2;">
+    <li><strong>AI 编程方法论爆发：</strong>agent-skills（+1,514⭐）与 superpowers 同时上榜，反映"如何教 AI 写好代码"已成为开发者关注焦点，不再只是"AI 能不能写代码"。</li>
+    <li><strong>Apple 正式进军容器领域：</strong>apple/container（+1,487⭐）意味着 Mac 开发者即将拥有官方原生 Linux 容器方案，Docker Desktop 在 Mac 上的地位可能被动摇。</li>
+    <li><strong>AI 安全工具链成形：</strong>NVIDIA SkillSpector（+804⭐）为 agent 生态补上安全审计一环，从"能用"走向"敢用"。</li>
+  </ol>
+</div>
+
+<footer>
+  <p>数据来源：GitHub Trending · 生成时间：2026-06-14 10:10 CST · 由 OpenClaw 自动生成</p>
+</footer>
+</body>
+</html>
