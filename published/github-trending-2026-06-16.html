@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-16</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+  .container { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
+  .header { text-align: center; margin-bottom: 48px; border-bottom: 1px solid #21262d; padding-bottom: 32px; }
+  .header h1 { font-size: 28px; color: #58a6ff; margin-bottom: 8px; }
+  .header .date { color: #8b949e; font-size: 15px; }
+  .header .subtitle { color: #8b949e; font-size: 13px; margin-top: 4px; }
+  .repo-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px 32px; margin-bottom: 20px; transition: border-color 0.2s; }
+  .repo-card:hover { border-color: #58a6ff; }
+  .repo-title { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .repo-name { font-size: 20px; font-weight: 600; color: #58a6ff; }
+  .repo-name a { color: inherit; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .repo-lang { font-size: 12px; padding: 2px 10px; border-radius: 9999px; background: #238636; color: #fff; white-space: nowrap; }
+  .repo-stats { font-size: 13px; color: #8b949e; margin-bottom: 10px; }
+  .repo-stats span { margin-right: 16px; }
+  .repo-stats .hot { color: #f0883e; font-weight: 600; }
+  .repo-desc-zh { font-size: 17px; font-weight: 500; color: #e6edf3; margin-bottom: 8px; }
+  .repo-desc { font-size: 14px; color: #8b949e; }
+  .highlight { border-left: 3px solid #58a6ff; padding-left: 12px; margin-top: 10px; }
+  .summary-section { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px 32px; margin-top: 40px; }
+  .summary-section h2 { color: #58a6ff; font-size: 20px; margin-bottom: 16px; }
+  .summary-section ul { list-style: none; padding: 0; }
+  .summary-section li { padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 15px; color: #c9d1d9; }
+  .summary-section li:last-child { border-bottom: none; }
+  .summary-section .emoji { margin-right: 8px; }
+  .footer { text-align: center; margin-top: 48px; color: #484f58; font-size: 12px; border-top: 1px solid #21262d; padding-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🐙 GitHub 开源日报</h1>
+  <div class="date">2026-06-16（北京时间）</div>
+  <div class="subtitle">数据来源：GitHub Trending · 每日精选</div>
+</div>
+
+<!-- 1. Agent-Reach -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">Panniantong / Agent-Reach</a></span>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 30,322</span>
+    <span>🍴 2,459</span>
+    <span class="hot">🔥 +1,100 今日</span>
+  </div>
+  <div class="repo-desc-zh">一键为 AI Agent 装上互联网能力</div>
+  <div class="repo-desc">让 AI Agent 通过一行命令即可读取 Twitter、Reddit、YouTube、GitHub、B站、小红书等平台内容。采用可插拔脚手架架构，各渠道使用独立上游工具（twitter-cli、rdt-cli、yt-dlp 等），不满意可随时替换。自带诊断工具，支持全自动/安全模式安装。</div>
+</div>
+
+<!-- 2. NVIDIA SkillSpector -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank">NVIDIA / SkillSpector</a></span>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 6,418</span>
+    <span>🍴 468</span>
+    <span class="hot">🔥 +1,079 今日</span>
+  </div>
+  <div class="repo-desc-zh">NVIDIA 开源的 AI Agent 技能安全扫描器</div>
+  <div class="repo-desc">针对 Claude Code、Codex CLI 等 AI Agent 的技能包进行安全审计，检测 64 种漏洞模式，涵盖提示注入、数据外泄、权限提升、供应链风险等 16 个类别。支持 OpenAI / Anthropic / NVIDIA 多模型后端进行语义分析，并对接 OSV.dev 实时查询依赖漏洞。风险评分 0-100，给出安装建议。</div>
+</div>
+
+<!-- 3. trycua/cua -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/trycua/cua" target="_blank">trycua / cua</a></span>
+    <span class="repo-lang">Multi</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 持续热门</span>
+    <span>📦 520 次 Release</span>
+  </div>
+  <div class="repo-desc-zh">电脑操作智能体的开源基础设施</div>
+  <div class="repo-desc">提供完整的 Computer-Use Agent 工具链：Cua Driver 让 Agent 在后台操控桌面应用（不抢焦点），支持 macOS / Windows / Linux；Cua Sandbox 提供多操作系统沙箱环境（Linux、macOS、Windows、Android）；Cua Bench 提供评估基准和强化学习环境；Lume 提供 Apple Silicon 上的 macOS 虚拟化方案。3500+ 次提交，生态成熟。</div>
+</div>
+
+<!-- 4. iptv-org/iptv -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/iptv-org/iptv" target="_blank">iptv-org / iptv</a></span>
+    <span class="repo-lang">TypeScript</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 123,000</span>
+    <span>🍴 6,606</span>
+    <span class="hot">🔥 +2,657 今日</span>
+  </div>
+  <div class="repo-desc-zh">全球公开 IPTV 频道合集</div>
+  <div class="repo-desc">收录来自世界各地的公开 IPTV 频道流媒体链接，提供 M3U 播放列表和电子节目单（EPG）。今日暴增 2600+ 星，可能受到新源添加或社区推广影响。Unlicense 许可，可直接粘贴到任何支持直播流的播放器中使用。</div>
+</div>
+
+<!-- 5. Introduction-to-Autonomous-Robots -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots" target="_blank">Introduction-to-Autonomous-Robots</a></span>
+    <span class="repo-lang">TeX</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 3,082</span>
+    <span>🍴 658</span>
+    <span class="hot">🔥 +489 今日</span>
+  </div>
+  <div class="repo-desc-zh">MIT Press 出版的自主机器人开源教材</div>
+  <div class="repo-desc">涵盖自主机器人的计算原理，包括机构、传感器、执行器和算法。CC-BY-NC-ND 许可，可用于教学和非商业用途。源代码开放，支持 Overleaf 在线编译和本地 LaTeX 编译。纸质版由 MIT Press 发行。</div>
+</div>
+
+<!-- 6. itsfatduck/optimizerDuck -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/itsfatduck/optimizerDuck" target="_blank">itsfatduck / optimizerDuck</a></span>
+    <span class="repo-lang">C#</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 3,711</span>
+    <span>🍴 161</span>
+    <span class="hot">🔥 +340 今日</span>
+  </div>
+  <div class="repo-desc-zh">免费开源的 Windows 系统优化工具</div>
+  <div class="repo-desc">面向性能、隐私和简洁的 Windows 优化方案，集成多项调优功能于一款轻量工具中。适合需要快速优化 Windows 体验的用户。</div>
+</div>
+
+<!-- 7. music-assistant/server -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/music-assistant/server" target="_blank">music-assistant / server</a></span>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 2,388</span>
+    <span>🍴 444</span>
+    <span class="hot">🔥 +225 今日</span>
+  </div>
+  <div class="repo-desc-zh">开源媒体库管理器，智能家居音乐中枢</div>
+  <div class="repo-desc">连接流媒体服务和各类音箱的免费媒体库管理方案。作为 Home Assistant 插件运行在树莓派、NAS 等常开设备上，由 Open Home Foundation 支持。921 次 Release，持续活跃维护。</div>
+</div>
+
+<!-- 8. mikeroyal/Self-Hosting-Guide -->
+<div class="repo-card">
+  <div class="repo-title">
+    <span class="repo-name"><a href="https://github.com/mikeroyal/Self-Hosting-Guide" target="_blank">mikeroyal / Self-Hosting-Guide</a></span>
+    <span class="repo-lang">Dockerfile</span>
+  </div>
+  <div class="repo-stats">
+    <span>⭐ 21,066</span>
+    <span>🍴 1,067</span>
+    <span class="hot">🔥 +188 今日</span>
+  </div>
+  <div class="repo-desc-zh">自托管服务完全指南</div>
+  <div class="repo-desc">涵盖本地服务器和私有 Web 服务的自托管方案，包括云服务、大模型部署、WireGuard、Home Assistant 自动化和网络配置等。适合作为搭建个人基础设施的参考手册。</div>
+</div>
+
+<!-- Summary -->
+<div class="summary-section">
+  <h2>📌 今日精选摘要</h2>
+  <ul>
+    <li><span class="emoji">🤖</span><strong>AI Agent 生态爆发：</strong>Agent-Reach 一日千星，为 Agent 提供覆盖 Twitter/Reddit/YouTube/小红书等多平台的互联网访问能力；NVIDIA 推出 SkillSpector 安全扫描器，检测 64 种 Agent 技能漏洞模式，填补了 Agent 生态的安全审计空白。</li>
+    <li><span class="emoji">🖥️</span><strong>Computer-Use Agent 基础设施成熟：</strong>trycua/cua 提供从后台桌面操控、多系统沙箱、评估基准到 macOS 虚拟化的全栈方案，已发布 520 个版本，支持 macOS/Windows/Linux/Android，可直接对接 Claude Code/Cursor/OpenClaw 等编码智能体。</li>
+    <li><span class="emoji">📺</span><strong>自托管与开源媒体：</strong>IPTV 频道集单日增星 2600+，Music Assistant 持续迭代。自托管指南涵盖大模型本地部署、智能家居等场景，反映出开发者对个人数据掌控的重视。</li>
+  </ul>
+</div>
+
+<div class="footer">
+  GitHub 开源日报 · 由 OpenClaw 自动生成 · 2026-06-16
+</div>
+
+</div>
+</body>
+</html>
