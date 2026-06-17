@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 | 2026-06-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --orange: #d29922; --red: #f85149; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; }
+  header { text-align: center; padding: 30px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  header h1 { font-size: 1.8em; margin-bottom: 6px; }
+  header h1 span { color: var(--accent); }
+  header p { color: var(--muted); font-size: 0.95em; }
+  .tag { display: inline-block; background: #1f6feb33; color: var(--accent); padding: 2px 10px; border-radius: 12px; font-size: 0.8em; margin-left: 8px; vertical-align: middle; }
+  .entry { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; transition: border-color 0.2s; }
+  .entry:hover { border-color: var(--accent); }
+  .entry-header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .entry-header h2 { font-size: 1.15em; }
+  .entry-header h2 a { color: var(--accent); text-decoration: none; }
+  .entry-header h2 a:hover { text-decoration: underline; }
+  .stars { color: var(--orange); font-size: 0.9em; white-space: nowrap; }
+  .stars .today { color: var(--green); font-weight: 600; }
+  .lang { display: inline-block; background: #21262d; border: 1px solid var(--border); border-radius: 6px; padding: 1px 8px; font-size: 0.78em; color: var(--muted); }
+  .entry p { color: var(--muted); margin-top: 8px; font-size: 0.95em; }
+  .summary { background: linear-gradient(135deg, #1f6feb22, #23863622); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+  .summary h3 { color: var(--green); margin-bottom: 10px; font-size: 1.05em; }
+  .summary ul { list-style: none; padding: 0; }
+  .summary li { padding: 6px 0; padding-left: 18px; position: relative; color: var(--text); font-size: 0.93em; }
+  .summary li::before { content: "◆"; position: absolute; left: 0; color: var(--accent); font-size: 0.7em; top: 9px; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82em; padding: 20px 0; border-top: 1px solid var(--border); margin-top: 30px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📡 GitHub <span>开源日报</span></h1>
+  <p>2026-06-17 · 当日 Trending 精选</p>
+</header>
+
+<div class="summary">
+  <h3>🔍 今日看点</h3>
+  <ul>
+    <li>IPTV 开源频道集合突破 12.4 万 Star，日增近 1200，持续领跑趋势榜</li>
+    <li>Rust 生态大放异彩：iroh 分布式网络栈日增 334，Android 去预装工具、SWC 编译器同日上榜</li>
+    <li>WhatsApp 自托管 API 网关 OpenWA 热度攀升，自建消息通道成新趋势</li>
+    <li>阿里开源轻量向量数据库 zvec 表现抢眼，RAG 基础设施持续进化</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/iptv-org/iptv">iptv-org/iptv</a></h2>
+    <span class="lang">TypeScript</span>
+    <span class="stars">⭐ 124,164 · 今日 +1,197</span>
+  </div>
+  <p>全球公开 IPTV 频道合集，覆盖各国电视频道流地址，日增近千 Star，是媒体聚合与流媒体开发者的基础设施级项目。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/n0-computer/iroh">n0-computer/iroh</a></h2>
+    <span class="lang">Rust</span>
+    <span class="stars">⭐ 9,311 · 今日 +334</span>
+  </div>
+  <p>用密钥而非 IP 地址建立连接的去中心化网络栈。解决 NAT 穿透、动态 IP 等痛点，为 P2P 应用提供模块化底层，设计思路值得关注。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/meshery/meshery">meshery/meshery</a></h2>
+    <span class="lang">TypeScript</span>
+    <span class="stars">⭐ 10,862 · 今日 +228</span>
+  </div>
+  <p>云原生服务网格管理器，支持 Istio、Linkerd 等多种网格的统一可视化管理与性能测试，适合 Kubernetes 运维团队参考。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/teslamate-org/teslamate">teslamate-org/teslamate</a></h2>
+    <span class="lang">Elixir</span>
+    <span class="stars">⭐ 8,421 · 今日 +215</span>
+  </div>
+  <p>Tesla 车辆自托管数据记录器，支持充电、行驶、能耗等数据的可视化分析。Elixir 编写，资源占用极低，树莓派即可运行。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/rmyndharis/OpenWA">rmyndharis/OpenWA</a></h2>
+    <span class="lang">TypeScript</span>
+    <span class="stars">⭐ 9,106 · 今日 +185</span>
+  </div>
+  <p>免费开源的 WhatsApp API 网关，支持自托管部署，适合需要集成 WhatsApp 消息能力但不想依赖第三方付费服务的团队。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/music-assistant/server">music-assistant/server</a></h2>
+    <span class="lang">Python</span>
+    <span class="stars">⭐ 2,574 · 今日 +157</span>
+  </div>
+  <p>免费开源的音乐库管理器，对接各大流媒体服务和智能音箱。可在树莓派、NAS 等设备上常驻运行，适合家庭音乐中枢方案。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/alibaba/zvec">alibaba/zvec</a></h2>
+    <span class="lang">C++</span>
+    <span class="stars">⭐ 10,497 · 今日 +156</span>
+  </div>
+  <p>阿里开源的轻量级高性能进程内向量数据库，适用于 RAG 检索、语义搜索等场景，嵌入式部署无需额外服务，适合对延迟敏感的应用。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation">Universal Android Debloater NG</a></h2>
+    <span class="lang">Rust</span>
+    <span class="stars">⭐ 7,336 · 今日 +146</span>
+  </div>
+  <p>跨平台图形化工具，通过 ADB 对非 Root 安卓设备卸除预装应用，提升隐私保护和电池续航，Rust 实现性能优秀。</p>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <h2><a href="https://github.com/swc-project/swc">swc-project/swc</a></h2>
+    <span class="lang">Rust</span>
+    <span class="stars">⭐ Trending</span>
+  </div>
+  <p>基于 Rust 的 Web 平台工具链（编译器/压缩器/打包器），速度远超传统 JavaScript 工具，已成为 Next.js 等框架的底层核心。</p>
+</div>
+
+<footer>
+  <p>数据来源：<a href="https://github.com/trending" style="color:var(--accent)">GitHub Trending</a> · 由 OpenClaw 自动生成</p>
+</footer>
+</body>
+</html>
