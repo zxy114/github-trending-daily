@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 — 2026-06-23</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --purple: #bc8cff; --orange: #f0883e;
+    --pink: #f778ba; --yellow: #d29922; --red: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", "Noto Sans", sans-serif; line-height: 1.7; padding: 2rem 1rem; }
+  .container { max-width: 780px; margin: 0 auto; }
+  header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+  header h1 { font-size: 1.6rem; font-weight: 700; }
+  header h1 span { color: var(--accent); }
+  header p { color: var(--muted); font-size: .9rem; margin-top: .3rem; }
+  .intro { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.5rem; margin-bottom: 2rem; font-size: .95rem; color: var(--muted); }
+  .repo { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1.2rem; transition: border-color .2s; }
+  .repo:hover { border-color: var(--accent); }
+  .repo-header { display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap; }
+  .repo-title { font-size: 1.15rem; font-weight: 600; }
+  .repo-title a { color: var(--accent); text-decoration: none; }
+  .repo-title a:hover { text-decoration: underline; }
+  .meta { font-size: .8rem; color: var(--muted); }
+  .lang { display: inline-block; padding: .15em .55em; border-radius: 999px; font-size: .75rem; font-weight: 500; margin-right: .4rem; }
+  .lang-Python { background: #23863622; color: var(--green); }
+  .lang-Swift { background: #f0883e22; color: var(--orange); }
+  .lang-TypeScript { background: #58a6ff22; color: var(--accent); }
+  .lang-Clojure { background: #bc8cff22; color: var(--purple); }
+  .lang-Rust { background: #f8514922; color: var(--red); }
+  .lang-C { background: #d2992222; color: var(--yellow); }
+  .stars-today { color: var(--green); font-weight: 600; }
+  .desc { margin: .7rem 0 .5rem; color: var(--text); font-size: .95rem; }
+  .highlights { margin-top: .5rem; padding-left: 1.2rem; }
+  .highlights li { margin-bottom: .3rem; color: var(--muted); font-size: .88rem; }
+  .highlights li strong { color: var(--text); }
+  footer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .badge { display: inline-block; padding: .1em .5em; border-radius: 4px; font-size: .7rem; font-weight: 600; vertical-align: middle; margin-left: .5rem; }
+  .badge-hot { background: var(--red); color: #fff; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报 <span>· 精选</span></h1>
+    <p>2026-06-23 ｜ 当日 GitHub Trending 精选项目</p>
+  </header>
+
+  <div class="intro">
+    今日趋势呈现 <strong>AI Agent 工具链全面升级</strong> 的特征——视频生产、语音合成、代码智能等领域涌现一批高质量开源项目。字节跳动的 <strong>DeerFlow 2.0</strong> 以 SuperAgent 架构持续领跑，开源视频编辑赛道也开始进入成熟期。
+  </div>
+
+  <!-- 1. OpenMontage -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio / OpenMontage</a></span>
+      <span class="badge badge-hot">🔥 +2,938</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-Python">Python</span>
+      开源智能体视频制作系统
+    </div>
+    <div class="desc">号称全球首个开源的 Agent 驱动视频生产系统，内置 12 条流水线、52 种工具和 500+ 代理技能。把 AI 编程助手直接变成视频制作工作室。</div>
+    <ul class="highlights">
+      <li><strong>后期管线：</strong>剪辑、拼接、画中画、字幕烧录、调色（LUT）、音频混音与降噪</li>
+      <li><strong>AI 增强：</strong>Real-ESRGAN 超分、rembg 抠图、CodeFormer/GFPGAN 人脸修复</li>
+      <li><strong>口型同步 &amp; 虚拟人：</strong>SadTalker / MuseTalk 驱动、Wav2Lip 口型对齐</li>
+      <li><strong>Remotion 渲染引擎：</strong>React 编程式视频，支持 TikTok 风格逐字字幕和场景转场</li>
+    </ul>
+  </div>
+
+  <!-- 2. Palmier Pro -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/palmier-io/palmier-pro" target="_blank">palmier-io / palmier-pro</a></span>
+      <span class="badge badge-hot">🔥 +2,463</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-Swift">Swift</span>
+      macOS 原生 AI 视频编辑器
+    </div>
+    <div class="desc">对标 Premiere Pro 的 macOS 视频编辑器，用 Swift 从零构建。支持在时间线中直接调用 Seedance、Kling 等 SOTA 生成模型，也可通过 MCP 与 Claude Code / Cursor 等代理协同编辑。</div>
+    <ul class="highlights">
+      <li><strong>Swift 原生：</strong>Apple Silicon + macOS Tahoe 起，性能对标专业剪辑软件</li>
+      <li><strong>生成式 AI 集成：</strong>时间线内直接生成视频/图像素材</li>
+      <li><strong>编辑器本体完全开源：</strong>无登录即可使用，仅 AI 生成部分需订阅</li>
+    </ul>
+  </div>
+
+  <!-- 3. DeerFlow 2.0 -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/bytedance/deer-flow" target="_blank">bytedance / deer-flow</a></span>
+      <span class="badge badge-hot">🔥 +738</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-Python">Python</span>
+      字节跳动开源 SuperAgent 编排框架
+    </div>
+    <div class="desc">DeerFlow 2.0 重构为全功能 SuperAgent 调度器——内置沙箱、记忆、技能系统、子代理派生和消息网关。基于 LangGraph / LangChain 构建，适合长链路研究、编码和创意任务。</div>
+    <ul class="highlights">
+      <li><strong>开箱即用：</strong>文件系统、记忆、沙箱感知执行、子代理派生，一次到位</li>
+      <li><strong>技能驱动：</strong>可扩展的 Skills 体系，覆盖搜索、编码、多媒体等多种场景</li>
+      <li><strong>2026 年 2 月曾登顶 GitHub Trending #1</strong>，社区活跃度高</li>
+    </ul>
+  </div>
+
+  <!-- 4. Voicebox -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/jamiepine/voicebox" target="_blank">jamiepine / voicebox</a></span>
+      <span class="badge badge-hot">🔥 +529</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-TypeScript">TypeScript</span>
+      开源 AI 语音工作室
+    </div>
+    <div class="desc">本地优先的 AI 语音 I/O 全栈方案，可视为 ElevenLabs + WisprFlow 的开源替代品。支持从几秒音频克隆语音、23 种语言语音合成、全局快捷键听写输入，以及为 MCP 感知代理分配语音。</div>
+    <ul class="highlights">
+      <li><strong>7 种 TTS 引擎：</strong>按需切换，各有侧重（质量 / 速度 / 语言覆盖）</li>
+      <li><strong>全平台：</strong>macOS / Windows / Docker，Linux 可源码编译</li>
+      <li><strong>端到端语音 LLM：</strong>Moshi、GLM-4-Voice、Qwen2.5 Omni，语音对语音零中转</li>
+    </ul>
+  </div>
+
+  <!-- 5. codebase-memory-mcp -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank">DeusData / codebase-memory-mcp</a></span>
+      <span class="badge badge-hot">🔥 +1,185</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-C">C</span>
+      高性能代码智能 MCP 服务器
+    </div>
+    <div class="desc">将代码库索引为持久化知识图谱的 MCP Server，单静态二进制、零依赖。平均索引毫秒级完成，覆盖 158 种语言，查询时 token 消耗降低 99%。</div>
+    <ul class="highlights">
+      <li><strong>极致性能：</strong>毫秒级索引与查询，适合超大仓库</li>
+      <li><strong>零依赖单二进制：</strong>无需额外运行时，部署极简</li>
+      <li><strong>知识图谱结构：</strong>超越简单向量检索，保留代码结构语义</li>
+    </ul>
+  </div>
+
+  <!-- 6. Turso -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/tursodatabase/turso" target="_blank">tursodatabase / turso</a></span>
+      <span class="badge badge-hot">🔥 +540</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-Rust">Rust</span>
+      进程内 SQL 数据库（SQLite 兼容）
+    </div>
+    <div class="desc">用 Rust 重写的下一代 SQLite，完全兼容 SQL 方言与文件格式，新增原生异步 I/O、向量搜索、CDC 变更数据捕获等特性。目前处于 Beta 阶段，但演进速度极快。</div>
+    <ul class="highlights">
+      <li><strong>SQLite 兼容：</strong>SQL 方言、文件格式、C API 三层兼容</li>
+      <li><strong>向量搜索 &amp; MVCC：</strong>内置向量检索与 BEGIN CONCURRENT 并发写入</li>
+      <li><strong>多语言 SDK：</strong>Go / JS / Java / .NET / Python / Rust / WASM</li>
+    </ul>
+  </div>
+
+  <!-- 7. Cybersecurity Skills -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank">mukul975 / Anthropic-Cybersecurity-Skills</a></span>
+      <span class="badge badge-hot">🔥 +956</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-Python">Python</span>
+      面向 AI 代理的结构化安全技能库
+    </div>
+    <div class="desc">817 条结构化网络安全技能，映射 MITRE ATT&amp;CK、NIST CSF 2.0 等 6 大框架。填补了"代理能写代码但缺少安全分析师实战经验"的空白，Apache 2.0 许可。</div>
+    <ul class="highlights">
+      <li><strong>6 大框架映射：</strong>ATT&amp;CK / NIST CSF 2.0 / ATLAS / D3FEND / AI RMF / F3</li>
+      <li><strong>29 个安全域：</strong>覆盖内存取证、Kerberoasting、云入侵等多场景</li>
+      <li><strong>兼容 20+ 代理平台：</strong>Claude Code / Copilot / Cursor / Gemini CLI 等</li>
+    </ul>
+  </div>
+
+  <!-- 8. Stirling-PDF -->
+  <div class="repo">
+    <div class="repo-header">
+      <span class="repo-title"><a href="https://github.com/Stirling-Tools/Stirling-PDF" target="_blank">Stirling-Tools / Stirling-PDF</a></span>
+      <span class="badge badge-hot">🔥 +547</span>
+    </div>
+    <div class="meta">
+      <span class="lang lang-TypeScript">TypeScript</span>
+      GitHub 排名第一的开源 PDF 应用平台
+    </div>
+    <div class="desc">功能全面的 PDF 编辑平台，可作为桌面应用、浏览器应用或私有服务器部署。编辑、签名、脱敏、转换、自动化处理一应俱全，文档不出本地。</div>
+    <ul class="highlights">
+      <li><strong>私有部署：</strong>文档无需上传第三方服务，适合合规要求</li>
+      <li><strong>多形态：</strong>桌面 / 浏览器 / Docker / Kubernetes 均可部署</li>
+      <li><strong>成熟度高：</strong>5,000+ commits，社区活跃，持续迭代</li>
+    </ul>
+  </div>
+
+  <footer>
+    数据来源：GitHub Trending · 生成时间 2026-06-23 (UTC+8)<br>
+    仅收录有学习价值的开源项目，已排除纯论文、fork-only 仓库和基准测试
+  </footer>
+</div>
+</body>
+</html>
