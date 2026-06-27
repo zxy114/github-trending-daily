@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending 日报 · 2026-06-27</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --rank-top: #f85149;
+  --rank-normal: #3fb950;
+  --link: #58a6ff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.header {
+  text-align: center;
+  padding: 40px 0 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.header .date {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.header .subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.project-list { list-style: none; }
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.project-card:hover { border-color: var(--accent); }
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.rank-top { background: rgba(248,81,73,0.15); color: var(--rank-top); border: 1px solid rgba(248,81,73,0.3); }
+.rank-normal { background: rgba(63,185,80,0.15); color: var(--rank-normal); border: 1px solid rgba(63,185,80,0.3); }
+.project-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.project-title a {
+  color: var(--link);
+  text-decoration: none;
+}
+.project-title a:hover { text-decoration: underline; }
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 12px;
+  background: rgba(110,118,129,0.1);
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--text);
+  margin: 8px 0;
+  line-height: 1.6;
+}
+.project-insight {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: rgba(110,118,129,0.06);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+.project-insight strong { color: var(--accent); }
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer a { color: var(--link); text-decoration: none; }
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  .header h1 { font-size: 22px; }
+  .project-card { padding: 16px; }
+  .stars { margin-left: 0; margin-top: 4px; width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <h1>🔥 GitHub Trending 日报</h1>
+  <div class="date">2026-06-27（周五）</div>
+  <div class="subtitle">数据来源：GitHub Trending · 每日精选</div>
+</div>
+
+<ul class="project-list">
+
+<!-- #1 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-top">1</span>
+    <span class="project-title"><a href="https://github.com/google-labs-code/design.md" target="_blank">google-labs-code/design.md</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+    <span class="stars">⭐ 19,712 · 今日 +1,475</span>
+  </div>
+  <div class="project-desc">Google Labs 出品的设计系统规范格式——让 AI 编程代理拥有对视觉设计系统的持久、结构化理解。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>解决了一个真实痛点：AI 写代码时设计风格反复漂移。DESIGN.md 本质上是一种「设计宪法」，让 Claude Code、Cursor 等工具在多轮对话中保持视觉一致性。谷歌出品，规范性强，适合团队协作场景。</div>
+</li>
+
+<!-- #2 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-top">2</span>
+    <span class="project-title"><a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio/OpenMontage</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+    <span class="stars">⭐ 22,457 · 今日 +3,434</span>
+  </div>
+  <div class="project-desc">全球首个开源 Agent 视频制作系统——12 条流水线、52 个工具、500+ 技能，将 AI 编程助手变成完整的视频制作工作室。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>把 Agent 架构引入视频生产流程，覆盖从素材采集到剪辑输出的全链路。500+ 技能的粒度设计值得关注，适合研究 Agent 编排模式的开发者。今日 3,400+ stars 说明市场对「Agent + 创意工具」方向高度认可。</div>
+</li>
+
+<!-- #3 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-top">3</span>
+    <span class="project-title"><a href="https://github.com/xbtlin/ai-berkshire" target="_blank">xbtlin/ai-berkshire</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+    <span class="stars">⭐ 2,248 · 今日 +309</span>
+  </div>
+  <div class="project-desc">AI 时代的伯克希尔——基于 Claude Code 的价值投资研究框架，融合巴菲特、芒格、段永平、李录四位大师方法论，多 Agent 对抗式分析。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>华人开发者出品，将价值投资经典框架代码化。多 Agent 对抗分析的设计有新意（类似法庭辩论模式），对金融研究自动化有参考价值。中文社区驱动的优质项目。</div>
+</li>
+
+<!-- #4 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">4</span>
+    <span class="project-title"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">Panniantong/Agent-Reach</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+    <span class="stars">⭐ 本周 +1,194</span>
+  </div>
+  <div class="project-desc">给 AI Agent 装上「眼睛」——一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B 站、小红书等平台内容，零 API 费用。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>解决了 Agent 工具链中「信息采集层」的成本问题。不依赖各平台付费 API，直接爬取公开内容，对独立开发者和小团队非常实用。支持中文平台（B 站、小红书）是加分项。</div>
+</li>
+
+<!-- #5 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">5</span>
+    <span class="project-title"><a href="https://github.com/JCodesMore/ai-website-cloner-template" target="_blank">JCodesMore/ai-website-cloner-template</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+    <span class="stars">⭐ 本周 +1,088</span>
+  </div>
+  <div class="project-desc">一条命令克隆任意网站——使用 AI 编程代理自动分析并重建前端页面。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>前端学习和原型设计的效率工具。核心思路是用 Agent 拆解目标网站的 DOM 结构和样式，再生成可维护的代码。适合快速做竞品分析或设计参考。</div>
+</li>
+
+<!-- #6 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">6</span>
+    <span class="project-title"><a href="https://github.com/mauriceboe/TREK" target="_blank">mauriceboe/TREK</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+    <span class="stars">⭐ 6,901 · 今日 +241</span>
+  </div>
+  <div class="project-desc">自托管旅行规划工具——支持实时协作、交互式地图、PWA、SSO 登录、预算管理和打包清单等功能。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>功能完整的自托管项目，可作为学习现代 Web 全栈技术的参考实现。实时协作 + PWA + SSO 的组合在同类项目中不常见，技术栈覆盖面广，适合作为毕业设计或团队项目模板。</div>
+</li>
+
+<!-- #7 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">7</span>
+    <span class="project-title"><a href="https://github.com/garrytan/gstack" target="_blank">garrytan/gstack</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+    <span class="stars">⭐ 本周 +950</span>
+  </div>
+  <div class="project-desc">Garry Tan（Y Combinator 总裁）的 Claude Code 完整配置——23 个工具，扮演 CEO、设计师、工程经理、发布经理、文档工程师和 QA 等角色。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>名人效应 + 实用配置。把软件开发流程拆解为 23 个 Agent 角色，体现了「AI 团队」的组织思路。对想用 Claude Code 搭建开发工作流的团队有直接参考价值。</div>
+</li>
+
+<!-- #8 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">8</span>
+    <span class="project-title"><a href="https://github.com/opendatalab/MinerU" target="_blank">opendatalab/MinerU</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+    <span class="stars">⭐ 69,782 · 今日 +644</span>
+  </div>
+  <div class="project-desc">将 PDF、Office 文档等复杂文档转换为 LLM 可用的 Markdown/JSON，为 Agent 工作流提供数据预处理。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>文档解析领域的标杆项目，7 万 stars 说明刚需明确。支持表格、公式、版面还原等复杂场景，是构建 RAG 系统和文档智能管线的基础设施级工具。</div>
+</li>
+
+<!-- #9 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">9</span>
+    <span class="project-title"><a href="https://github.com/NanmiCoder/MediaCrawler" target="_blank">NanmiCoder/MediaCrawler</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+    <span class="stars">⭐ 本周 +673</span>
+  </div>
+  <div class="project-desc">多平台内容爬虫——支持小红书、抖音、快手、B 站、微博、百度贴吧、知乎等平台的帖子和评论采集。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>中文社交媒体数据采集的瑞士军刀。覆盖国内主流平台，对舆情分析、学术研究和竞品监测有直接实用价值。使用时注意遵守各平台爬虫政策和数据合规要求。</div>
+</li>
+
+<!-- #10 -->
+<li class="project-card">
+  <div class="project-header">
+    <span class="rank rank-normal">10</span>
+    <span class="project-title"><a href="https://github.com/IceWhaleTech/CasaOS" target="_blank">IceWhaleTech/CasaOS</a></span>
+    <span class="lang-badge"><span class="lang-dot" style="background:#00ADD8"></span>Go</span>
+    <span class="stars">⭐ 34,931 · 今日 +223</span>
+  </div>
+  <div class="project-desc">简洁优雅的开源个人云系统——提供文件管理、应用商店、媒体中心等功能。</div>
+  <div class="project-insight"><strong>💡 解读：</strong>NAS 轻量化替代方案，3.5 万 stars 验证了市场需求。Go 语言编写，资源占用低，适合在树莓派或旧设备上部署。UI 设计在同类型项目中属于上乘水准。</div>
+</li>
+
+</ul>
+
+<div class="footer">
+  <p>📅 每日自动生成 · 数据来源 <a href="https://github.com/trending" target="_blank">GitHub Trending</a></p>
+  <p>由 OpenClaw · GitHub Trending Daily Skill 驱动</p>
+</div>
+
+</div>
+</body>
+</html>
