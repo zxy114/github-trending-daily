@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-06-29</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --red: #f85149;
+  --green: #3fb950;
+  --yellow: #d29922;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 1.8em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.header .date {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+.header .subtitle {
+  color: var(--accent);
+  font-size: 0.85em;
+  margin-top: 6px;
+}
+.repo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.repo-card:hover { border-color: var(--accent); }
+.repo-card.top3 { border-left: 3px solid var(--red); }
+.repo-card.normal { border-left: 3px solid var(--green); }
+.repo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.repo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+.rank.top3 { background: var(--red); color: #fff; }
+.rank.normal { background: #238636; color: #fff; }
+.repo-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+.repo-link:hover { text-decoration: underline; }
+.repo-desc {
+  color: var(--text);
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+.repo-insight {
+  background: rgba(88, 166, 255, 0.08);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+.repo-insight::before {
+  content: "💡 ";
+}
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars-today {
+  color: var(--yellow);
+  font-weight: 600;
+}
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 0.85em;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🔥 GitHub 开源日报</h1>
+  <div class="date">2026-06-29（周一）</div>
+  <div class="subtitle">每日精选 · 质量优先 · 实用导向</div>
+</div>
+
+<!-- 1. xbtlin/ai-berkshire -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">1</span>
+      <a class="repo-link" href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire</a>
+    </div>
+    <span class="stars-today">⭐ +1,445 stars today</span>
+  </div>
+  <div class="repo-desc">AI 时代的伯克希尔——基于 Claude Code / Codex 构建的价值投资研究框架。融合巴菲特、芒格、段永平、李录四位投资大师的方法论，采用多 Agent 并行对抗分析。</div>
+  <div class="repo-insight">将价值投资体系工程化的有趣尝试。多 Agent 分角色模拟大师思维做交叉验证，思路可迁移到任何需要多视角决策的场景，不限于投资。对学习 Agent 编排和 prompt 架构有参考价值。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+    <span>⭐ 5,426</span>
+    <span>🍴 729</span>
+  </div>
+</div>
+
+<!-- 2. DeusData/codebase-memory-mcp -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">2</span>
+      <a class="repo-link" href="https://github.com/DeusData/codebase-memory-mcp">DeusData/codebase-memory-mcp</a>
+    </div>
+    <span class="stars-today">⭐ +2,190 stars today</span>
+  </div>
+  <div class="repo-desc">高性能代码智能 MCP 服务。将代码库索引为持久化知识图谱，支持 158 种语言，亚毫秒级查询，声称减少 99% 的 token 消耗。单一静态二进制，零依赖。</div>
+  <div class="repo-insight">解决 AI 编程工具的核心痛点：上下文窗口有限。用知识图谱替代暴力灌入代码，思路对路。零依赖单二进制部署友好，适合在本地或 CI 中集成。MCP 生态正在快速扩张，这类基础设施级工具有长期价值。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#555555"></span> C</span>
+    <span>🚀 今日新增最多</span>
+  </div>
+</div>
+
+<!-- 3. simplex-chat/simplex-chat -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">3</span>
+      <a class="repo-link" href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat</a>
+    </div>
+    <span class="stars-today">⭐ +1,180 stars today</span>
+  </div>
+  <div class="repo-desc">SimpleX——首个不依赖任何用户标识符的消息网络。100% 隐私优先设计，支持 iOS、Android 和桌面端。</div>
+  <div class="repo-insight">在端到端加密基础上进一步去标识化，消息路由不关联用户身份。对学习分布式系统和隐私架构设计有很高参考价值。Haskell 实现也使其成为函数式编程实战案例。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#5d506a"></span> Haskell</span>
+    <span>⭐ 15,120</span>
+    <span>🍴 867</span>
+  </div>
+</div>
+
+<!-- 4. Robbyant/lingbot-map -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">4</span>
+      <a class="repo-link" href="https://github.com/Robbyant/lingbot-map">Robbyant/lingbot-map</a>
+    </div>
+    <span class="stars-today">⭐ +372 stars today</span>
+  </div>
+  <div class="repo-desc">前馈式 3D 基础模型，从流式数据重建场景。无需后处理迭代，单次前向推理生成 3D 场景。</div>
+  <div class="repo-insight">3D 场景重建从迭代优化转向前馈推理是当前趋势。对理解 3D vision foundation model 和实时 SLAM 有帮助，可关注其在 AR/VR 和机器人场景的落地。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+    <span>⭐ 8,257</span>
+    <span>🍴 805</span>
+  </div>
+</div>
+
+<!-- 5. altic-dev/FluidVoice -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">5</span>
+      <a class="repo-link" href="https://github.com/altic-dev/FluidVoice">altic-dev/FluidVoice</a>
+    </div>
+    <span class="stars-today">⭐ +365 stars today</span>
+  </div>
+  <div class="repo-desc">FluidVoice——最快的 macOS 离线语音听写应用，完全本地化运行，语音转文字。</div>
+  <div class="repo-insight">端侧 AI 落地的典型案例：隐私友好、零延迟、无订阅费。Swift 原生开发，对 macOS 开发者有学习价值。在 Whisper 等开源模型基础上做工程优化值得研究。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#F05138"></span> Swift</span>
+    <span>⭐ 3,776</span>
+    <span>🍴 240</span>
+  </div>
+</div>
+
+<!-- 6. opendatalab/MinerU -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">6</span>
+      <a class="repo-link" href="https://github.com/opendatalab/MinerU">opendatalab/MinerU</a>
+    </div>
+    <span class="stars-today">⭐ +380 stars today</span>
+  </div>
+  <div class="repo-desc">将 PDF、Office 等复杂文档转换为 LLM 可用的 Markdown/JSON 格式，面向 Agentic 工作流设计。</div>
+  <div class="repo-insight">RAG 和 Agent 应用的刚需基础设施。文档解析的准确度直接决定下游 LLM 效果。支持表格、公式、多栏布局的提取，是构建知识库时的首选工具之一。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<!-- 7. browser-use/video-use -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">7</span>
+      <a class="repo-link" href="https://github.com/browser-use/video-use">browser-use/video-use</a>
+    </div>
+    <span class="stars-today">⭐ +196 stars today</span>
+  </div>
+  <div class="repo-desc">用编程 Agent 编辑视频——通过代码而非拖拽时间线来完成视频剪辑。</div>
+  <div class="repo-insight">将视频编辑从 GUI 操作变为代码操作，思路新颖。对自动化批量视频处理、视频流水线集成有实际价值。也展示了 Agent 在创意工具领域的应用可能性。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<!-- 8. usestrix/strix -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">8</span>
+      <a class="repo-link" href="https://github.com/usestrix/strix">usestrix/strix</a>
+    </div>
+    <span class="stars-today">⭐ +122 stars today</span>
+  </div>
+  <div class="repo-desc">开源 AI 安全工具——自动发现并修复应用中的漏洞。</div>
+  <div class="repo-insight">AI 驱动的安全审计工具，开源方案可以降低安全扫描门槛。对学习漏洞模式和安全编码实践有帮助，适合集成到 CI/CD 流水线中做自动化安全检查。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<div class="footer">
+  <p>📡 数据来源：<a href="https://github.com/trending">GitHub Trending</a> · 自动生成 · 仅供学习参考</p>
+  <p style="margin-top:6px;">由 OpenClaw · GitHub Trending Daily Skill 生成</p>
+</div>
+
+</div>
+</body>
+</html>
