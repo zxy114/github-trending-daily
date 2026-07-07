@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-07</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --red: #f85149;
+  --green: #3fb950;
+  --yellow: #d29922;
+  --purple: #a371f7;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 1.8em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.header .date {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+.header .subtitle {
+  color: var(--accent);
+  font-size: 0.85em;
+  margin-top: 6px;
+}
+.repo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.repo-card:hover { border-color: var(--accent); }
+.repo-card.top3 { border-left: 3px solid var(--red); }
+.repo-card.normal { border-left: 3px solid var(--green); }
+.repo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+.repo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+.rank.top3 { background: var(--red); color: #fff; }
+.rank.normal { background: #238636; color: #fff; }
+.repo-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+.repo-link:hover { text-decoration: underline; }
+.repo-desc {
+  color: var(--text);
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+.repo-insight {
+  background: rgba(88, 166, 255, 0.08);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+.repo-insight::before {
+  content: "💡 ";
+}
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars-today {
+  color: var(--yellow);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.special-tag {
+  color: var(--purple);
+  font-weight: 500;
+}
+.hot-tag {
+  color: var(--red);
+  font-weight: 600;
+}
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 0.85em;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🔥 GitHub 开源日报</h1>
+  <div class="date">2026-07-07（周二）</div>
+  <div class="subtitle">每日精选 · 质量优先 · 实用导向</div>
+</div>
+
+<!-- 1. addyosmani/agent-skills -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">1</span>
+      <a class="repo-link" href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a>
+    </div>
+    <span class="stars-today">⭐ +1.1k stars today</span>
+  </div>
+  <div class="repo-desc">面向生产环境的 AI 编程代理技能集：把 Google 工程实践沉淀为可被 Agent 直接调用的 skill。</div>
+  <div class="repo-insight">Google Chrome 团队 Addy Osmani 主导的「生产级 AI 编程技能库」：把大型前端工程里反复出现的代码评审、PR 模板、变更日志、依赖升级、发布检查等流程沉淀为可被 Claude Code / Cursor / Codex 等 Agent 直接加载的 skill。JavaScript 轻量实现，按子目录拆分即装即用。对中大型团队来说，最实用的价值在于「用同一套规范驱动不同 Agent」，避免每个工程师各自造 prompt 的混乱局面；本质是把组织工程文化做成 Agent 可消费的资产。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span>
+      <span>⭐ 70.9k</span>
+      <span class="hot-tag">🚀 当日新增最多</span>
+  </div>
+</div>
+
+<!-- 2. ruvnet/RuView -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">2</span>
+      <a class="repo-link" href="https://github.com/ruvnet/RuView">ruvnet/RuView</a>
+    </div>
+    <span class="stars-today">⭐ +1.0k stars today</span>
+  </div>
+  <div class="repo-desc">把普通 WiFi 信号变成实时空间感知、生命体征监测和存在检测——全程无需任何摄像头。</div>
+  <div class="repo-insight">把消费级 WiFi 设备变成「无摄像头的感知层」：通过信道状态信息（CSI）做人形存在检测、姿势识别、呼吸/心率估计与跌倒告警，全程无图像、无穿戴。信号处理与机器学习推理在本地完成，是「智能家居/养老监护/酒店无感入住」场景里绕过隐私争议的硬件友好型方案。对做 IoT、智慧空间、隐私优先健康监测的工程师，是当下把「感知能力下沉到既有基础设施」最现实的参考实现之一。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#dea584"></span> Rust</span>
+      <span>⭐ 19.3k</span>
+      <span class="special-tag">📡 信号感知</span>
+  </div>
+</div>
+
+<!-- 3. Zackriya-Solutions/meetily -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">3</span>
+      <a class="repo-link" href="https://github.com/Zackriya-Solutions/meetily">Zackriya-Solutions/meetily</a>
+    </div>
+    <span class="stars-today">⭐ +865 stars today</span>
+  </div>
+  <div class="repo-desc">本地优先的 AI 会议助手：Parakeet/Whisper 实时转写 + 说话人分离 + Ollama 摘要，100% 离线。</div>
+  <div class="repo-insight">连续多日稳居趋势榜的本地 AI 会议助手：基于 Parakeet/Whisper 的实时转写、说话人分离，再接 Ollama 做总结与待办抽取，100% 离线运行。Rust 实现保证低占用与高吞吐，跨平台支持 macOS 与 Windows，开箱即用。在数据合规、保密会议、客户访谈等不能上云的场景里，是当下最完整的开源替代方案；社区活跃度表明「本地优先 + 全栈可自托管」正在成为隐私敏感型生产力工具的明确趋势。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#dea584"></span> Rust</span>
+      <span>⭐ 18.1k</span>
+      <span class="special-tag">⚡ Rust 实现</span>
+  </div>
+</div>
+
+<!-- 4. openai/codex-plugin-cc -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">4</span>
+      <a class="repo-link" href="https://github.com/openai/codex-plugin-cc">openai/codex-plugin-cc</a>
+    </div>
+    <span class="stars-today">⭐ +906 stars today</span>
+  </div>
+  <div class="repo-desc">OpenAI 官方插件：在 Claude Code 里直接调用 Codex，承担代码审查、子任务委派与跨模型协同。</div>
+  <div class="repo-insight">OpenAI 官方出品的「跨模型插件」：在 Claude Code 会话里直接拉起 Codex 子代理，让它处理代码审查、长上下文 diff 解读、子任务委派等更擅长的工作。代表了一种新的工作流范式——CLI Agent 不再绑定单一模型，而是一组 Agent 联邦可互相调用、各取所长。JavaScript 实现，安装一行命令即可生效；对关注 IDE 自动化、PR 流水线、Agent 互操作标准的团队，这种「边界打破」将是接下来半年的关键信号。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span>
+      <span>⭐ 26.3k</span>
+      <span class="special-tag">🤖 Agent 互操作</span>
+  </div>
+</div>
+
+<!-- 5. firecrawl/firecrawl -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">5</span>
+      <a class="repo-link" href="https://github.com/firecrawl/firecrawl">firecrawl/firecrawl</a>
+    </div>
+    <span class="stars-today">⭐ +867 stars today</span>
+  </div>
+  <div class="repo-desc">一站式网页抓取与结构化 API：把任意网站转成可被 LLM 直接消费的干净 Markdown/JSON。</div>
+  <div class="repo-insight">当下最热门的「LLM 友好型爬虫」开源实现：把任意网站转成结构化 Markdown/JSON，配套爬取、清洗、反爬绕过与批量抓取能力。TypeScript 实现，API 设计极简，是构建 RAG 语料、Agent 检索增强、数据集准备的「水电煤」级基础设施。对做知识库、智能客服、Agent 工具链的团队来说，是把「网页 → 干净数据」这段最脏最累的工作彻底外包的成熟方案；近期版本在渲染稳定性与大站成功率上改进明显。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span> TypeScript</span>
+      <span>⭐ 146.3k</span>
+      <span class="special-tag">🕷️ 网页抓取</span>
+  </div>
+</div>
+
+<!-- 6. ogulcancelik/herdr -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">6</span>
+      <a class="repo-link" href="https://github.com/ogulcancelik/herdr">ogulcancelik/herdr</a>
+    </div>
+    <span class="stars-today">⭐ +779 stars today</span>
+  </div>
+  <div class="repo-desc">终端里的「Agent 多路复用器」：统一编排、隔离、切换多个 AI Agent 会话。</div>
+  <div class="repo-insight">定位像 tmux、但专为 AI Agent 设计的终端复用器：把多个 Agent 会话统一编排、上下文隔离、快捷切换、支持并发处理任务。Rust 实现，性能与内存占用比通用 tmux 方案更克制。对每天要同时跑多个 coding agent、调试多个分支任务的开发者来说，这种「终端级 Agent 编排」几乎是必备件，也是「Agent 基础设施」细分赛道的早期代表项目；按工作流组织会话的能力明显领先于临时拼凑的 shell 脚本。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#dea584"></span> Rust</span>
+      <span>⭐ 12.9k</span>
+      <span class="special-tag">⚡ Rust 实现</span>
+  </div>
+</div>
+
+<!-- 7. alibaba/zvec -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">7</span>
+      <a class="repo-link" href="https://github.com/alibaba/zvec">alibaba/zvec</a>
+    </div>
+    <span class="stars-today">⭐ +382 stars today</span>
+  </div>
+  <div class="repo-desc">阿里开源的轻量进程内向量数据库：毫秒级检索，直接嵌入应用进程，无需额外部署。</div>
+  <div class="repo-insight">阿里开源的进程内向量数据库：把 ANN 检索做成可被任何 C++/Python/Node 应用直接 link 的轻量库，免去单独部署 Milvus/Qdrant 等独立服务的运维负担。C++ 实现，主打「毫秒级响应、进程内嵌入、低资源占用」，对端侧、嵌入式、桌面工具、SaaS 单租户等「不想为向量检索单独起一套集群」的场景非常友好。在 RAG、推荐、语义搜索需求全面爆发的当下，是「轻量端向量栈」方向一个被严重低估的拼图。</div>
+  <div class="repo-meta">
+      <span class="lang-badge"><span class="lang-dot" style="background:#f34b7d"></span> C++</span>
+      <span>⭐ 13.5k</span>
+      <span class="special-tag">🏢 阿里官方</span>
+  </div>
+</div>
+
+<div class="footer">
+  <p>📡 数据来源：<a href="https://github.com/trending">GitHub Trending</a> · 自动生成 · 仅供学习参考</p>
+  <p style="margin-top:6px;">由 OpenClaw · GitHub Trending Daily Skill 生成</p>
+</div>
+
+</div>
+</body>
+</html>
