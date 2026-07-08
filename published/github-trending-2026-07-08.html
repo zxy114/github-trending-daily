@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub 趋势日报 · 2026-07-08</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #ff6b6b;
+    --green: #2ea043;
+    --link: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 32px 20px 80px; }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 { margin: 0 0 6px; font-size: 28px; }
+  .subtitle { color: var(--muted); font-size: 14px; }
+  .badge {
+    display: inline-block;
+    background: #1f6feb22;
+    color: var(--link);
+    border: 1px solid #1f6feb55;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  .grid { display: grid; gap: 14px; }
+  .card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover {
+    border-color: #58a6ff;
+    transform: translateY(-1px);
+  }
+  .row1 { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .rank {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 14px;
+    background: #2ea04322;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .rank.top {
+    color: #fff;
+    background: var(--accent);
+  }
+  .title { font-size: 17px; font-weight: 600; flex: 1; }
+  .stars { font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .repo code { color: var(--link); font-size: 13px; }
+  .desc { color: var(--muted); font-size: 13px; margin: 6px 0 8px; }
+  .comment {
+    background: #0d1117;
+    border-left: 3px solid #f0883e;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    margin: 8px 0;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .lang { display: inline-flex; align-items: center; gap: 6px; }
+  .dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+  .goto { color: var(--link); }
+  footer {
+    margin-top: 36px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 趋势日报</h1>
+    <div class="subtitle">
+      <span class="badge">2026-07-08</span>
+      <span class="badge">每日精选</span>
+      Top 9 个有学习价值的开源项目 · 按本周 star 增量排序
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank top">#1</span>
+        <span class="title">AI 求职助手框架</span>
+        <span class="stars">⭐ +2514/周</span>
+      </div>
+      <div class="repo"><code>MadsLorentzen/ai-job-search</code></div>
+      <div class="desc">AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write co…</div>
+      <div class="comment">💡 基于 Claude Code 的求职自动化：填一次个人资料，AI 自动评估岗位匹配度、改简历、写求职信、模拟面试。Fork 即用，适合被秋招/海外求职淹没的同学。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Zackriya-Solutions/meetily" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank top">#2</span>
+        <span class="title">本地化 AI 会议助手</span>
+        <span class="stars">⭐ +1777/周</span>
+      </div>
+      <div class="repo"><code>Zackriya-Solutions/meetily</code></div>
+      <div class="desc">Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built …</div>
+      <div class="comment">💡 Rust 写的自托管会议笔记工具，集成 Parakeet/Whisper 实时转写(比常规快 4 倍)、说话人分离、Ollama 本地摘要。数据不出本机，对会议隐私敏感的企业/团队特别友好。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#dea584"></span>Rust</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank top">#3</span>
+        <span class="title">AI 编码代理工程技能集</span>
+        <span class="stars">⭐ +1317/周</span>
+      </div>
+      <div class="repo"><code>addyosmani/agent-skills</code></div>
+      <div class="desc">Production-grade engineering skills for AI coding agents.</div>
+      <div class="comment">💡 Google 工程效能团队出品的、生产可用的 AI 编码代理技能库。涵盖代码评审、测试、重构等场景，是把 AI agent 从玩具变成生产力的工程化参考。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#f1e05a"></span>JavaScript</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ruvnet/RuView" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#4</span>
+        <span class="title">WiFi 信号感知引擎</span>
+        <span class="stars">⭐ +1129/周</span>
+      </div>
+      <div class="repo"><code>ruvnet/RuView</code></div>
+      <div class="desc">π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a sin…</div>
+      <div class="comment">💡 把普通家用 WiFi 信号变成空间感知能力：呼吸/心率监测、存在检测、人流统计，全程无摄像头、无像素采集。是隐私友好型智能家居/养老监护的可玩方案。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#dea584"></span>Rust</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/TencentCloud/CubeSandbox" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#5</span>
+        <span class="title">AI Agent 安全沙箱</span>
+        <span class="stars">⭐ +664/周</span>
+      </div>
+      <div class="repo"><code>TencentCloud/CubeSandbox</code></div>
+      <div class="desc">Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.</div>
+      <div class="comment">💡 腾讯云开源的轻量级 AI Agent 沙箱：即时启动、并发隔离、安全加固。让 Agent 执行任意代码/命令时不污染宿主，做 Agent 平台底座可参考。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#dea584"></span>Rust</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/steipete/CodexBar" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#6</span>
+        <span class="title">Codex 用量菜单栏</span>
+        <span class="stars">⭐ +376/周</span>
+      </div>
+      <div class="repo"><code>steipete/CodexBar</code></div>
+      <div class="desc">Show usage stats for OpenAI Codex and Claude Code, without having to login.</div>
+      <div class="comment">💡 macOS 菜单栏小工具,免登录显示 OpenAI Codex 和 Claude Code 的配额/速率限制。重度 Codex/Claude 用户必备,避免打到限额才察觉。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#F05138"></span>Swift</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#7</span>
+        <span class="title">面向 Agent 的 Office CLI</span>
+        <span class="stars">⭐ +893/周</span>
+      </div>
+      <div class="repo"><code>iOfficeAI/OfficeCLI</code></div>
+      <div class="desc">OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free…</div>
+      <div class="comment">💡 首个专为 AI Agent 设计的 Office 套件 CLI:读写编辑 Word/Excel/PPT,单二进制无 Office 依赖。把 Office 自动化塞进 Agent 工作流的现成桥梁。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#178600"></span>C#</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#8</span>
+        <span class="title">让 Claude 看视频</span>
+        <span class="stars">⭐ +965/周</span>
+      </div>
+      <div class="repo"><code>bradautomates/claude-video</code></div>
+      <div class="desc">Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.</div>
+      <div class="comment">💡 给 Claude Code 加一个 /watch 命令:自动下载视频、抽关键帧、转写音轨、再丢给 Claude 分析。处理教程视频、长会议录像、监控回放都很方便。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#3572A5"></span>Python</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/kyutai-labs/pocket-tts" target="_blank" rel="noopener">
+      <div class="row1">
+        <span class="rank">#9</span>
+        <span class="title">口袋级 CPU TTS</span>
+        <span class="stars">⭐ +531/周</span>
+      </div>
+      <div class="repo"><code>kyutai-labs/pocket-tts</code></div>
+      <div class="desc">A TTS that fits in your CPU (and pocket)</div>
+      <div class="comment">💡 Kyutai 实验室出的小型语音合成模型,纯 CPU 推理,模型小到能塞进笔记本/边缘设备。适合做本地语音播报、设备端配音、无 GPU 环境的 TTS 需求。</div>
+      <div class="meta">
+        <span class="lang"><span class="dot" style="background:#3572A5"></span>Python</span>
+        <span class="goto">查看仓库 →</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    数据来源: github.com/trending · 仅收录真正能上手用的工具/框架/库
+  </footer>
+</div>
+</body>
+</html>
