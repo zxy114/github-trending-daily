@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-09</title>
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --border:#262b36; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; --good:#5dd39e; --warn:#ffb454; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 24px}
+  header{margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:20px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--text)}
+  .grid{display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+  .card:hover{border-color:#3a4356}
+  .rank{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;background:#2a3142;border-radius:6px;font-weight:600;color:var(--accent);margin-right:10px;font-size:13px}
+  .repo-title{font-size:17px;font-weight:600;margin:0 0 4px;display:flex;align-items:center;flex-wrap:wrap}
+  .repo-title a{color:#cfd6e4;text-decoration:none}
+  .repo-title a:hover{color:var(--accent)}
+  .repo-path{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+  .stars{font-size:12px;color:var(--good);margin-left:auto;background:rgba(93,211,158,.1);padding:2px 8px;border-radius:10px}
+  .desc{color:#c5cad4;margin:8px 0 10px;font-size:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+  .tag{background:#222837;color:var(--muted);padding:3px 9px;border-radius:10px}
+  .tag.lang{color:var(--accent);background:rgba(124,156,255,.1)}
+  .tag.hot{color:var(--warn);background:rgba(255,180,84,.1)}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="sub">每日精选真正能上手用、有学习价值的开源项目</div>
+    <div class="meta">
+      <span><b>日期</b> 2026-07-09 (Asia/Shanghai)</span>
+      <span><b>来源</b> github.com/trending</span>
+      <span><b>收录</b> 10 个仓库</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">1</span><a href="https://github.com/iOfficeAI/OfficeCLI">iOfficeAI/OfficeCLI</a><span class="repo-path">— AI 代理专属的 Office 工具链</span><span class="stars">🔥 1,717 ⭐ today</span></h3>
+      <p class="desc">首个面向 AI 代理的 Office 套件：让模型读取、编辑、自动化处理 Word / Excel / PowerPoint 文件。开源、单二进制、零 Office 安装依赖,直接通过命令行或 MCP 调用即可。对于做文档自动化、报告生成的代理非常实用。</p>
+      <div class="tags"><span class="tag lang">C#</span><span class="tag hot">今日最热</span><span class="tag">AI 工具</span><span class="tag">办公自动化</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">2</span><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a><span class="repo-path">— 生产级 AI 编码代理技能库</span><span class="stars">🔥 1,297 ⭐ today</span></h3>
+      <p class="desc">Google Chrome 团队负责人 Addy Osmani 维护的生产级工程实践技能集,专为 AI 编码代理设计。涵盖代码审查、测试、重构、调试等场景,可作为 Claude / Cursor / Codex 等代理的 system prompt / skill 模板直接使用。</p>
+      <div class="tags"><span class="tag lang">JavaScript</span><span class="tag hot">高价值</span><span class="tag">AI Agent</span><span class="tag">工程实践</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">3</span><a href="https://github.com/ruvnet/RuView">ruvnet/RuView</a><span class="repo-path">— WiFi 信号感知空间情报</span></h3>
+      <p class="desc">把普通 WiFi 信号变成实时空间感知:无需摄像头,通过信道状态信息(CSI)实现人员存在检测、生命体征(呼吸/心率)监测、姿态识别。适合做无摄像头隐私场景下的智能家居/养老监护 demo。</p>
+      <div class="tags"><span class="tag">Rust</span><span class="tag">WiFi 感知</span><span class="tag">IoT</span><span class="tag">隐私友好</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">4</span><a href="https://github.com/bradautomates/claude-video">bradautomates/claude-video</a><span class="repo-path">— 给 Claude 看视频的能力</span><span class="stars">🔥 951 ⭐ today</span></h3>
+      <p class="desc">通过 <code>/watch</code> 命令让 Claude 下载视频、抽帧、转录、再统一交给模型分析。等于把任意 YouTube/本地视频变成 Claude 可消费的多模态输入,适合做视频内容总结、课程摘要、长视频 QA。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">多模态</span><span class="tag">Claude 生态</span><span class="tag">视频理解</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">5</span><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><span class="repo-path">— AI 代理专用沙箱</span><span class="stars">🔥 564 ⭐ today</span></h3>
+      <p class="desc">面向 AI 代理的即时、并发、安全、轻量级沙箱。基于 Rust 实现,主打低开销启动与隔离执行,可作为 Agent 执行不可信代码、跑工具调用时的安全层。腾讯云出品,生产可用度高。</p>
+      <div class="tags"><span class="tag lang">Rust</span><span class="tag">沙箱安全</span><span class="tag">Agent 基建</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">6</span><a href="https://github.com/alibaba/zvec">alibaba/zvec</a><span class="repo-path">— 进程内向量数据库</span><span class="stars">🔥 395 ⭐ today</span></h3>
+      <p class="desc">阿里巴巴开源的轻量级进程内向量数据库,C++ 实现,主打"零部署、开箱即用"的嵌入式体验。可作为本地 RAG、边缘端语义检索、单机 Agent 记忆引擎使用,无需起额外服务。</p>
+      <div class="tags"><span class="tag lang">C++</span><span class="tag">向量检索</span><span class="tag">嵌入式</span><span class="tag">RAG</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">7</span><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">TencentCloud/TencentDB-Agent-Memory</a><span class="repo-path">— Agent 本地长期记忆</span><span class="stars">🔥 318 ⭐ today</span></h3>
+      <p class="desc">为 AI 代理提供完全本地化的长期记忆能力,采用四级渐进式流水线,无需任何外部 API 依赖。对自托管 Agent、隐私敏感场景下的"记忆持久化"提供开箱即用的方案。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">Agent 记忆</span><span class="tag">本地化</span><span class="tag">隐私</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">8</span><a href="https://github.com/obra/superpowers">obra/superpowers</a><span class="repo-path">— 代理技能框架 + 软件开发方法论</span></h3>
+      <p class="desc">一个真正能落地的"代理技能框架 + 软件开发方法论"组合项目,把需求拆解、TDD、代码评审等实践结构化为代理可调用的 Skills。适合给团队级 AI 编码工作流做标准化。</p>
+      <div class="tags"><span class="tag">Agent 框架</span><span class="tag">方法论</span><span class="tag">TDD</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">9</span><a href="https://github.com/prisma/prisma">prisma/prisma</a><span class="repo-path">— Node/TS 下一代 ORM</span></h3>
+      <p class="desc">老牌但仍然常青的 TypeScript ORM,支持 PostgreSQL、MySQL、SQLite、MongoDB 等主流数据库。类型安全的查询构造器 + 自动生成 client,适合 Node.js 全栈项目的标准选型。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">ORM</span><span class="tag">数据库</span><span class="tag">经典</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">10</span><a href="https://github.com/Diolinux/PhotoGIMP">Diolinux/PhotoGIMP</a><span class="repo-path">— 让 GIMP 3 用起来像 Photoshop</span><span class="stars">🔥 1,125 ⭐ today</span></h3>
+      <p class="desc">面向 GIMP 3+ 的一键补丁包:重新映射快捷键、调整界面布局、安装常用滤镜,把 GIMP 变成 Photoshop 用户熟悉的体验。免费开源的图像处理工作流,设计/插画从业者值得收藏。</p>
+      <div class="tags"><span class="tag lang">CSS</span><span class="tag">图像处理</span><span class="tag">GIMP</span><span class="tag">设计师友好</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    报告由 GitHub Trending 自动整理 · 仅收录有学习价值的工具/库/框架 · 排除模型 benchmark 与纯学术论文
+  </footer>
+</div>
+</body>
+</html>
