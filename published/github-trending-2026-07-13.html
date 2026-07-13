@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-13</title>
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --border:#262b36; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; --good:#5dd39e; --warn:#ffb454; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 24px}
+  header{margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:20px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--text)}
+  .grid{display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+  .card:hover{border-color:#3a4356}
+  .rank{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;background:#2a3142;border-radius:6px;font-weight:600;color:var(--accent);margin-right:10px;font-size:13px}
+  .repo-title{font-size:17px;font-weight:600;margin:0 0 4px;display:flex;align-items:center;flex-wrap:wrap}
+  .repo-title a{color:#cfd6e4;text-decoration:none}
+  .repo-title a:hover{color:var(--accent)}
+  .repo-path{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+  .stars{font-size:12px;color:var(--good);margin-left:auto;background:rgba(93,211,158,.1);padding:2px 8px;border-radius:10px}
+  .desc{color:#c5cad4;margin:8px 0 10px;font-size:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+  .tag{background:#222837;color:var(--muted);padding:3px 9px;border-radius:10px}
+  .tag.lang{color:var(--accent);background:rgba(124,156,255,.1)}
+  .tag.hot{color:var(--warn);background:rgba(255,180,84,.1)}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="sub">每日精选真正能上手用、有学习价值的开源项目</div>
+    <div class="meta">
+      <span><b>日期</b> 2026-07-13 (Asia/Shanghai)</span>
+      <span><b>来源</b> github.com/trending</span>
+      <span><b>收录</b> 8 个仓库</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">1</span><a href="https://github.com/malisper/pgrust">malisper/pgrust</a><span class="repo-path">— 用 Rust 重写 Postgres</span><span class="stars">🔥 518 ⭐ today</span></h3>
+      <p class="desc">把 PostgreSQL 内核用 Rust 重写的实验项目,目前已经跑通 100% 的官方回归测试集。对想深入学习数据库内部实现、查询优化器、存储引擎的工程师来说,这是不可多得的实战教科书;也能让我们具体看到『在系统编程语言里移植 C 代码库』的真实工作量与权衡。</p>
+      <div class="tags"><span class="tag lang">Rust</span>
+      <span class="tag">数据库</span>
+      <span class="tag">系统编程</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag hot">今日爆款</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">2</span><a href="https://github.com/anthropics/claude-cookbooks">anthropics/claude-cookbooks</a><span class="repo-path">— 官方 Claude 用法案例集</span><span class="stars">🔥 459 ⭐ today</span></h3>
+      <p class="desc">Anthropic 官方维护的可运行 notebook 集合,覆盖 RAG、tool use、agents、long context、code review、多模态等典型场景。每个 notebook 都能直接打开复制跑通,适合当作 Claude 应用开发的『菜谱』——遇到新需求先来这里搜一下模板。</p>
+      <div class="tags"><span class="tag lang">Jupyter Notebook</span>
+      <span class="tag">Claude</span>
+      <span class="tag">RAG</span>
+      <span class="tag">Agent</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">3</span><a href="https://github.com/Dicklesworthstone/destructive_command_guard">Dicklesworthstone/destructive_command_guard</a><span class="repo-path">— 给 AI 代理加一层命令闸门</span><span class="stars">🔥 444 ⭐ today</span></h3>
+      <p class="desc">dcg(Destructive Command Guard)在 shell / git 层面统一拦截危险命令(rm -rf、强制 push、dd 写盘、chmod 777 等),给 Claude / Codex 这类会自行跑命令的代理加一道兜底防线。可作为 hook 接入各类 Agent 运行时,做权限治理和审计的现成组件。</p>
+      <div class="tags"><span class="tag lang">Rust</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">安全</span>
+      <span class="tag">沙箱</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">4</span><a href="https://github.com/par274/sharpemu">par274/sharpemu</a><span class="repo-path">— 实验性 PS5 模拟器</span><span class="stars">🔥 314 ⭐ today</span></h3>
+      <p class="desc">C# 写的 PlayStation 5 模拟器实验项目,目标是把 PS5 的 CPU/GPU 行为摸清楚。对逆向、系统模拟、GPU 指令翻译感兴趣的开发者值得围观;同步也能学到 C# 高性能数值计算、JIT 优化、对现代主机硬件架构的理解。</p>
+      <div class="tags"><span class="tag lang">C#</span>
+      <span class="tag">模拟器</span>
+      <span class="tag">逆向工程</span>
+      <span class="tag">图形学</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">5</span><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP">wonderwhy-er/DesktopCommanderMCP</a><span class="repo-path">— 桌面 Claude 的瑞士军刀 MCP</span><span class="stars">🔥 210 ⭐ today</span></h3>
+      <p class="desc">为 Claude Desktop 提供的 MCP server,把终端执行、文件系统搜索、diff 编辑这类桌面编程助手最常用的能力打包暴露成工具接口。接入 Cursor / Claude Desktop 后,模型就能像本地工程师一样直接读写文件、跑命令、看 diff。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span>
+      <span class="tag">MCP</span>
+      <span class="tag">桌面代理</span>
+      <span class="tag">AI 工具</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">6</span><a href="https://github.com/Nutlope/hallmark">Nutlope/hallmark</a><span class="repo-path">— 反 AI 味设计技能包</span><span class="stars">🔥 155 ⭐ today</span></h3>
+      <p class="desc">给 Claude Code / Cursor / Codex 准备的 anti-AI-slop 设计 skill,把『多彩渐变、emoji 堆砌、过度卡片化』这类一眼 AI 的视觉套路全部列入黑名单。对于任何想做品牌差异化、想让 AI 输出更人味的团队,这是个开箱即用的『设计守门员』。</p>
+      <div class="tags"><span class="tag lang">CSS</span>
+      <span class="tag">设计系统</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">提示工程</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">7</span><a href="https://github.com/Crosstalk-Solutions/project-nomad">Crosstalk-Solutions/project-nomad</a><span class="repo-path">— 离线生存电脑</span><span class="stars">🔥 125 ⭐ today</span></h3>
+      <p class="desc">Project N.O.M.A.D. 把关键离线工具、知识库、本地 AI 助手打包到一台自包含设备上,目标是断网断电都能继续工作。对户外、应急、本地优先(offline-first)产品的开发者是个完整参考实现,也适合用来学习如何做去依赖化部署。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span>
+      <span class="tag">离线优先</span>
+      <span class="tag">本地 AI</span>
+      <span class="tag">应急工具</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">8</span><a href="https://github.com/pingdotgg/t3code">pingdotgg/t3code</a><span class="repo-path">— T3 出品的编码代理 CLI</span><span class="stars">🔥 75 ⭐ today</span></h3>
+      <p class="desc">Theo(t3.gg)团队做的开源 AI 编码代理 CLI,主打轻量、终端原生、可扩展。对比 Claude Code / Codex CLI,核心思路是把 Agent 放到本地 shell 里跑,容易审计和定制,适合想自己拼一套 coding workflow 的工程师。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span>
+      <span class="tag">CLI</span>
+      <span class="tag">AI 编码</span>
+      <span class="tag">开发工具</span></div>
+    </div>
+  </div>
+
+  <footer>
+    报告由 GitHub Trending 自动整理 · 仅收录有学习价值的工具/库/框架 · 排除模型 benchmark 与纯学术论文
+  </footer>
+</div>
+</body>
+</html>
