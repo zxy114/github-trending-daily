@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-21</title>
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --border:#262b36; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; --good:#5dd39e; --warn:#ffb454; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 24px}
+  header{margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:20px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--text)}
+  .grid{display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+  .card:hover{border-color:#3a4356}
+  .rank{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;background:#2a3142;border-radius:6px;font-weight:600;color:var(--accent);margin-right:10px;font-size:13px}
+  .repo-title{font-size:17px;font-weight:600;margin:0 0 4px;display:flex;align-items:center;flex-wrap:wrap}
+  .repo-title a{color:#cfd6e4;text-decoration:none}
+  .repo-title a:hover{color:var(--accent)}
+  .repo-path{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+  .stars{font-size:12px;color:var(--good);margin-left:auto;background:rgba(93,211,158,.1);padding:2px 8px;border-radius:10px}
+  .desc{color:#c5cad4;margin:8px 0 10px;font-size:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+  .tag{background:#222837;color:var(--muted);padding:3px 9px;border-radius:10px}
+  .tag.lang{color:var(--accent);background:rgba(124,156,255,.1)}
+  .tag.hot{color:var(--warn);background:rgba(255,180,84,.1)}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="sub">每日精选真正能上手用、有学习价值的开源项目</div>
+    <div class="meta">
+      <span><b>日期</b> 2026-07-21 (Asia/Shanghai · 周二)</span>
+      <span><b>来源</b> github.com/trending</span>
+      <span><b>收录</b> 8 个仓库</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">1</span><a href="https://github.com/bojieli/ai-agent-book">bojieli/ai-agent-book</a><span class="repo-path">— 《深入理解 AI Agent》中文开源书(今日榜首)</span><span class="stars">🔥 4,434 ⭐ today</span></h3>
+      <p class="desc">今天趋势榜首,李博杰(bojieli)主笔的中文开源书籍《深入理解 AI Agent:设计原理与工程实践》主仓库,正文 + 编译版 PDF + 按章配套代码全公开。对正在做 Agent / RAG / 工具调用 / 多 Agent 编排的工程同学,这是少有的"中文 + 系统 + 带代码"的一手资料,可直接当内部培训教材。亮点是覆盖从 LLM 基础、记忆机制、工具调用、规划与反思,到 Agent 评测与上线运维的完整链路,比零散博客更适合做知识结构化沉淀,建议 Star 跟进作者后续更新。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">中文开源书</span><span class="tag">Agent 工程</span><span class="tag hot">今日最热</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">2</span><a href="https://github.com/tirth8205/code-review-graph">tirth8205/code-review-graph</a><span class="repo-path">— 本地优先的代码理解图谱(高潜新项目)</span><span class="stars">🔥 1,833 ⭐ today</span></h3>
+      <p class="desc">专为 AI 编码工具设计的"代码上下文引擎":把代码库预先构建成可遍历的图谱,AI Agent / MCP / CLI 调用时只读真正相关的文件,在 code review 与大仓库场景里有公开基准的上下文缩减数据。定位与之前热过的 Graphify 类似但更聚焦"审查工作流":支持 PR diff → 影响面分析 → 评审要点提炼。对每天被 Claude Code / Cursor / Codex 上下文窗口折磨的同学,是把"丢给 AI 一整个 repo"变成"按需喂图谱节点"的实用解法,适合研究和生产接入。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">Code Intelligence</span><span class="tag">MCP</span><span class="tag">Code Review</span><span class="tag hot">本日新晋</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">3</span><a href="https://github.com/oblien/openship">oblien/openship</a><span class="repo-path">— 自托管一站式部署平台</span><span class="stars">🔥 1,641 ⭐ today</span></h3>
+      <p class="desc">今天悄悄冲到前列的自托管部署平台(类 Vercel / Netlify 的开源替代),从仓库到公网 HTTPS 一条龙。适合不想把生产部署交给闭源 SaaS、又要给小团队 / 内部项目做"push 部署"的场景:TypeScript 全栈、配置极简、自带域名/证书/反向代理。对折腾 NAS / 家庭实验室 / 独立开发者的同学尤其友好——一个 docker compose 就能跑出比 Vercel 更自由的自托管 PaaS,今天再次走红值得重点围观。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">自托管</span><span class="tag">PaaS</span><span class="tag">DevOps</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">4</span><a href="https://github.com/diegosouzapw/OmniRoute">diegosouzapw/OmniRoute</a><span class="repo-path">— 268+ 厂商的统一 AI 网关</span><span class="stars">🔥 1,107 ⭐ today</span></h3>
+      <p class="desc">MIT 协议的"AI 网关终结者":单一 endpoint 统一接 268+ 厂商 / 500+ 模型(Claude / GPT / Gemini / Kimi K3 / GLM / DeepSeek 全在),对 Claude Code / Codex / Cursor / Cline / Copilot 完全兼容。关键能力是 quota-aware 自动 fallback + RTK + Caveman 压缩(实测节省 15-95% tokens),同时跑通 MCP / A2A / 多模态,还提供桌面端 + PWA 客户端。已有 500+ 贡献者,是中小团队"AI 调用统一收口 + 成本可控"的一次性解法,适合做企业内 AI 代理层或自建 API 中转。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">AI Gateway</span><span class="tag">MCP / A2A</span><span class="tag">多模型路由</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">5</span><a href="https://github.com/every-app/open-seo">every-app/open-seo</a><span class="repo-path">— Semrush / Ahrefs 的开源替身</span><span class="stars">🔥 939 ⭐ today</span></h3>
+      <p class="desc">面向独立开发者 / 小团队的 SEO 工作台,定位就是"把 Semrush / Ahrefs 中最常用的功能做成可自托管的开源版":关键词挖掘、竞品分析、收录监控、外链追踪、技术审计等模块化组合。和 SaaS 巨头相比没有花哨 AI 包装,但胜在数据自主、不被锁死配额、API 友好。对做内容站 / 联盟站 / 外贸独立站的运营同学,这是降低长期订阅成本的可选方案,TypeScript 全栈也方便二次定制,适合纳入个人站长工具箱。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">SEO</span><span class="tag">自托管</span><span class="tag">站长工具</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">6</span><a href="https://github.com/msitarzewski/agency-agents">msitarzewski/agency-agents</a><span class="repo-path">— 一整套 AI Agent 角色库</span><span class="stars">🔥 862 ⭐ today</span></h3>
+      <p class="desc">"把一家 AI 数字机构装进你的 IDE":仓库内提供一套可直接套用的 Agent 角色集——前端高手、Reddit 社区运营、文案润色、现实校验官、奇思妙想注入器……每个角色都有专属人格、流程和"可交付物清单",挂到 Claude Code / Cursor / Codex 立即生效。和零散的 system prompt 模板相比,这套更系统化,适合做 AI 工作室 / 自动化运营 / 数字营销团队的同学抄作业,也是研究"如何设计垂直领域 Agent"的好样本。</p>
+      <div class="tags"><span class="tag lang">Shell</span><span class="tag">Agent 模板</span><span class="tag">Prompt 设计</span><span class="tag">Claude Code</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">7</span><a href="https://github.com/rohitg00/ai-engineering-from-scratch">rohitg00/ai-engineering-from-scratch</a><span class="repo-path">— 从零搭建 AI 工程的实战教程</span><span class="stars">🔥 823 ⭐ today</span></h3>
+      <p class="desc">作者把"学—做—发给他人用"三个阶段写进一个仓库:从最基础的 RAG、向量检索、Agent 编排,一直走到部署与上线分发,每一步都配可跑代码。区别于纯讲理论的课程,这里强调"ship it for others",即鼓励把学到的产物做成可分享的应用。对正在转岗 AI 工程、或想把 LLM 能力落地为产品的小团队,这是一份按图索骥的"工程化脚手架",可以直接 fork 改造,Python 全栈 + Jupyter 友好的演示结构。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">AI 工程</span><span class="tag">教程</span><span class="tag">RAG</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">8</span><a href="https://github.com/jamiepine/voicebox">jamiepine/voicebox</a><span class="repo-path">— 开源 AI 语音工作室(本日黑马)</span><span class="stars">🔥 821 ⭐ today</span></h3>
+      <p class="desc">定位"开源版 AI 语音工坊":支持声音克隆、口述听写、AI 创作有声内容,UI 与工程结构都对个人创作者友好。比商用 ElevenLabs / PlayHT 更适合数据敏感或预算有限的小工作室——TypeScript 全栈、可自托管、可直接接 Whisper / TTS / Voice clone 一整套能力。今天首次冲进前 10,意味着社区对"开源语音 AI"的需求正在爆发,对做有声书、播客、配音工具的开发者是直接可用的起点。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">语音 AI</span><span class="tag">自托管</span><span class="tag hot">本日黑马</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>每日由 Cron 自动抓取 github.com/trending,过滤纯学术论文 / benchmark / fork-only 仓库后整理。<br>本报告仅做信息整理与推荐,不构成投资或使用建议;模拟器等内容请遵守当地法律法规。</p>
+  </footer>
+</div>
+</body>
+</html>
