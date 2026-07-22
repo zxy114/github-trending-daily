@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-22</title>
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --border:#262b36; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; --good:#5dd39e; --warn:#ffb454; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 24px}
+  header{margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:20px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--text)}
+  .grid{display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+  .card:hover{border-color:#3a4356}
+  .rank{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;background:#2a3142;border-radius:6px;font-weight:600;color:var(--accent);margin-right:10px;font-size:13px}
+  .repo-title{font-size:17px;font-weight:600;margin:0 0 4px;display:flex;align-items:center;flex-wrap:wrap}
+  .repo-title a{color:#cfd6e4;text-decoration:none}
+  .repo-title a:hover{color:var(--accent)}
+  .repo-path{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+  .stars{font-size:12px;color:var(--good);margin-left:auto;background:rgba(93,211,158,.1);padding:2px 8px;border-radius:10px}
+  .desc{color:#c5cad4;margin:8px 0 10px;font-size:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+  .tag{background:#222837;color:var(--muted);padding:3px 9px;border-radius:10px}
+  .tag.lang{color:var(--accent);background:rgba(124,156,255,.1)}
+  .tag.hot{color:var(--warn);background:rgba(255,180,84,.1)}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="sub">每日精选真正能上手用、有学习价值的开源项目</div>
+    <div class="meta">
+      <span><b>日期</b> 2026-07-22 (Asia/Shanghai · 周三)</span>
+      <span><b>来源</b> github.com/trending</span>
+      <span><b>收录</b> 9 个仓库</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">1</span><a href="https://github.com/bojieli/ai-agent-book">bojieli/ai-agent-book</a><span class="repo-path">— 《深入理解 AI Agent》中文开源书(连续两天登顶)</span><span class="stars">🔥 4,624 ⭐ today</span></h3>
+      <p class="desc">今日趋势冠军,李博杰主笔的中文开源书籍《深入理解 AI Agent:设计原理与工程实践》主仓库,正文 + 编译版 PDF + 按章配套代码全公开。对正在做 Agent / RAG / 工具调用 / 多 Agent 编排的工程同学,这是少有的"中文 + 系统 + 带代码"的一手资料,可直接当内部培训教材。覆盖从 LLM 基础、记忆机制、工具调用、规划与反思,到 Agent 评测与上线运维的完整链路,比零散博客更适合做知识结构化沉淀,连续两天热度不减,作者正在加速更新,值得 Star 跟进。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">中文开源书</span><span class="tag">Agent 工程</span><span class="tag hot">今日最热</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">2</span><a href="https://github.com/diegosouzapw/OmniRoute">diegosouzapw/OmniRoute</a><span class="repo-path">— 268+ 厂商的统一 AI 网关(势头最猛)</span><span class="stars">🔥 2,034 ⭐ today</span></h3>
+      <p class="desc">MIT 协议的"AI 网关终结者":单一 endpoint 统一接 268+ 厂商 / 500+ 模型(Claude / GPT / Gemini / Kimi K2 / GLM / DeepSeek 全在),对 Claude Code / Codex / Cursor / Cline / Copilot 完全兼容。关键能力是 quota-aware 自动 fallback + RTK + Caveman 压缩(实测节省 15-95% tokens),同时跑通 MCP / A2A / 多模态,还提供桌面端 + PWA 客户端。已有 500+ 贡献者,是中小团队"AI 调用统一收口 + 成本可控"的一次性解法,适合做企业内 AI 代理层或自建 API 中转,今天加星翻倍说明正在进入主流采用阶段。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">AI Gateway</span><span class="tag">MCP / A2A</span><span class="tag">多模型路由</span><span class="tag hot">加速增长</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">3</span><a href="https://github.com/tirth8205/code-review-graph">tirth8205/code-review-graph</a><span class="repo-path">— 本地优先的代码理解图谱(MCP 友好)</span><span class="stars">🔥 1,925 ⭐ today</span></h3>
+      <p class="desc">专为 AI 编码工具设计的"代码上下文引擎":把代码库预先构建成可遍历的图谱,AI Agent / MCP / CLI 调用时只读真正相关的文件,在 code review 与大仓库场景里有公开基准的上下文缩减数据。定位与之前热过的 Graphify 类似但更聚焦"审查工作流":支持 PR diff → 影响面分析 → 评审要点提炼。对每天被 Claude Code / Cursor / Codex 上下文窗口折磨的同学,是把"丢给 AI 一整个 repo"变成"按需喂图谱节点"的实用解法,适合研究和生产接入,本地优先意味着零数据外泄。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">Code Intelligence</span><span class="tag">MCP</span><span class="tag">Code Review</span><span class="tag hot">本日新晋</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">4</span><a href="https://github.com/AstrBotDevs/AstrBot">AstrBotDevs/AstrBot</a><span class="repo-path">— 多平台 AI Agent 机器人框架(国内团队)</span><span class="stars">🔥 416 ⭐ today</span></h3>
+      <p class="desc">国内团队维护的 AI Agent 机器人框架,主打"一个框架打通多个 IM 平台 + 多个 LLM + 插件市场"。对想在 QQ / 微信 / 飞书 / Telegram / Discord / Slack / OneBot v11 等多端做智能机器人,又不想每个平台重写适配层的开发者非常友好:支持 LLM 接入、工具调用、多 Agent 编排、可视化插件市场、WebUI 管理后台,Python 生态好接入。中文文档 + 中文社区群 + 持续迭代,适合做客服机器人、个人助手、企业内部知识库 Bot 的同学直接 fork 上手。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">Agent 框架</span><span class="tag">多 IM 平台</span><span class="tag">插件市场</span><span class="tag">国内开源</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">5</span><a href="https://github.com/oblien/openship">oblien/openship</a><span class="repo-path">— 自托管一站式部署平台(开源 Vercel)</span><span class="stars">🔥 1,562 ⭐ today</span></h3>
+      <p class="desc">连续两天走红的自托管部署平台,定位就是"开源 Vercel / Netlify":从仓库到公网 HTTPS 一条龙,TypeScript 全栈、配置极简、自带域名 / 证书 / 反向代理。适合不想把生产部署交给闭源 SaaS、又要给小团队 / 内部项目做"push 部署"的场景;一个 docker compose 就能跑出比 Vercel 更自由的自托管 PaaS。对折腾 NAS / 家庭实验室 / 独立开发者的同学尤其友好,两天累计加星超过 3000,生态成熟度肉眼可见。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">自托管</span><span class="tag">PaaS</span><span class="tag">DevOps</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">6</span><a href="https://github.com/1jehuang/jcode">1jehuang/jcode</a><span class="repo-path">— Rust 写的高智商编码 Agent Harness</span><span class="stars">🔥 843 ⭐ today</span></h3>
+      <p class="desc">用 Rust 写的"最聪明的编码 Agent Harness",目标是把 LLM 编码工作流的调度、上下文管理、工具调度做到生产级。和 Python 系的 Claude Code / Codex CLI / Aider 相比,Rust 单二进制部署 + 启动速度 + 内存占用都对长期跑任务友好,适合作为自托管 / 内网部署的 AI 编码中枢。今天 800+ 加星说明开发者社区在认真寻找"非 Node 生态"的高性能替代品,是值得长期观察的早期项目。</p>
+      <div class="tags"><span class="tag lang">Rust</span><span class="tag">Agent Harness</span><span class="tag">编码助手</span><span class="tag">高性能</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">7</span><a href="https://github.com/every-app/open-seo">every-app/open-seo</a><span class="repo-path">— Semrush / Ahrefs 的开源替身</span><span class="stars">🔥 849 ⭐ today</span></h3>
+      <p class="desc">面向独立开发者 / 小团队的 SEO 工作台,定位就是"把 Semrush / Ahrefs 中最常用的功能做成可自托管的开源版":关键词挖掘、竞品分析、收录监控、外链追踪、技术审计等模块化组合。和 SaaS 巨头相比没有花哨 AI 包装,但胜在数据自主、不被锁死配额、API 友好。对做内容站 / 联盟站 / 外贸独立站的运营同学,这是降低长期订阅成本的可选方案,TypeScript 全栈也方便二次定制。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">SEO</span><span class="tag">自托管</span><span class="tag">站长工具</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">8</span><a href="https://github.com/KnockOutEZ/wigolo">KnockOutEZ/wigolo</a><span class="repo-path">— AI 编码 Agent 的本地搜索 / 抓取工具集</span><span class="stars">🔥 642 ⭐ today</span></h3>
+      <p class="desc">AI 编码 Agent 的"万能网络工具集":本地优先的 search / fetch / crawl / research,通过 MCP 暴露给 Claude Code / Cursor / Codex 等 Agent。和云端搜索方案不同,所有抓取与索引都在本地完成,既保护隐私又能离线工作。对做"让 AI 写代码 + AI 读文档"双链路自动化的同学,wigolo 是补齐"Agent 上网能力"那块拼图的实用工具,TypeScript 实现方便接入现有 Node 工具链。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag">MCP</span><span class="tag">本地搜索</span><span class="tag">Agent 工具</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">9</span><a href="https://github.com/AlexsJones/llmfit">AlexsJones/llmfit</a><span class="repo-path">— 一条命令找出你硬件能跑的 LLM</span><span class="stars">🔥 129 ⭐ today</span></h3>
+      <p class="desc">解决"我手上这台机器到底能跑哪个开源大模型"这个经典难题:聚合数百个模型与多家供应商信息,一条命令扫描你的 CPU/GPU/内存,推荐能跑、跑得动的最佳组合。Rust 写的 CLI 启动飞快,适合做本地 LLM 选型决策,也是 ollama / LM Studio 用户在"模型海洋"里快速筛选的实用小工具。新项目但定位精准,值得收藏备用。</p>
+      <div class="tags"><span class="tag lang">Rust</span><span class="tag">LLM 选型</span><span class="tag">CLI</span><span class="tag">本地推理</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    生成于 2026-07-22 · 数据源 github.com/trending · 仅收录可上手 / 有学习价值的项目
+  </footer>
+</div>
+</body>
+</html>
