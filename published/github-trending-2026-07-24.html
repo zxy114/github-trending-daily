@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Trending 热门日报 · 2026-07-24</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel2:#1c2230;
+  --border:#30363d;
+  --text:#e6edf3;
+  --muted:#8b949e;
+  --accent:#f78166;
+  --link:#58a6ff;
+  --rank1:#ff7b72;
+  --rank2:#f0883e;
+  --rank3:#d29922;
+  --rankN:#3fb950;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:32px 16px}
+.wrap{max-width:960px;margin:0 auto}
+header{text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
+h1{font-size:28px;font-weight:700;margin-bottom:6px}
+.subtitle{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--muted);margin-top:10px}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:28px;color:var(--muted);font-size:14px}
+.intro strong{color:var(--text)}
+.repo{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;transition:border-color .2s}
+.repo:hover{border-color:var(--link)}
+.repo-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rank{font-size:13px;font-weight:700;padding:2px 10px;border-radius:12px;color:#0d1117;flex-shrink:0}
+.r1{background:var(--rank1)}.r2{background:var(--rank2)}.r3{background:var(--rank3)}.rN{background:var(--rankN)}
+.repo-name{font-size:18px;font-weight:600;color:var(--link);text-decoration:none;word-break:break-all}
+.repo-name:hover{text-decoration:underline}
+.stars{margin-left:auto;color:var(--accent);font-size:13px;font-weight:600;white-space:nowrap}
+.lang{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.desc{color:var(--text);font-size:14px;margin:10px 0 8px;line-height:1.55}
+.note{color:var(--muted);font-size:13px;border-left:3px solid var(--border);padding-left:12px;margin-top:8px}
+.note::before{content:"💡 ";opacity:.85}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🔥 GitHub Trending 热门日报</h1>
+  <div class="subtitle">2026-07-24 · 北京时间 · 每日精选 Top 10</div>
+  <div class="badge">数据源：github.com/trending · 当日趋势快照</div>
+</header>
+
+<div class="intro">
+  本期收录 <strong>10</strong> 个高质量仓库，已过滤基础模型/纯学术项目，优先挑选<strong>可直接使用、值得学习</strong>的工具、库与框架。
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#1</span>
+    <a class="repo-name" href="https://github.com/koala73/worldmonitor" target="_blank">koala73/worldmonitor</a>
+    <span class="stars">⭐ +3,175 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">实时全球情报仪表盘：AI 驱动的新闻聚合、地缘政治监测与基础设施追踪，统一呈现态势感知。</div>
+  <div class="note">本周热度最高。TypeScript 全栈实战范例，含多源数据整合、可视化大屏、定时任务调度。适合想搭监控面板/数据看板的同学拆解学习。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#2</span>
+    <a class="repo-name" href="https://github.com/block/buzz" target="_blank">block/buzz</a>
+    <span class="stars">⭐ +2,162 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">类蜂群思维的协作通讯平台，用 Rust 构建的高性能通信基础设施。</div>
+  <div class="note">Block（Square 母公司）出品。Rust 写协作/同步通信中间件的好样本，关注 CRDT、实时同步、消息分发等场景的工程实现。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#3</span>
+    <a class="repo-name" href="https://github.com/diegosouzapw/OmniRoute" target="_blank">diegosouzapw/OmniRoute</a>
+    <span class="stars">⭐ +1,929 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">开源免费的 AI 网关：一个端点对接 290+ 服务商、500+ 模型，支持 Claude Code / Codex / Cursor / Cline 等编码代理，具备配额感知自动切换与上下文压缩。</div>
+  <div class="note">想统一管理多家 LLM 供应商、按配额自动 fallback 的团队必备。协议网关 + 流量调度思路值得借鉴。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#4</span>
+    <a class="repo-name" href="https://github.com/ruvnet/RuView" target="_blank">ruvnet/RuView</a>
+    <span class="stars">⭐ +1,708 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">π RuView 利用普通 WiFi 信号做实时空间感知、人员存在检测与生命体征监测，无需任何摄像头画面。</div>
+  <div class="note">把"信号处理 + 神经网络"塞进 Rust，工程亮点：CSI 信号采集、感知模型推理、隐私友好型室内感知方案。IoT / 边缘 AI 方向极具启发。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#5</span>
+    <a class="repo-name" href="https://github.com/Automattic/harper" target="_blank">Automattic/harper</a>
+    <span class="stars">⭐ +624 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">离线、隐私优先的英语语法检查器，速度快、开源、Rust 实现。</div>
+  <div class="note">Automattic（WordPress 母公司）出品。可作为 Rust 写自然语言处理工具链的参考：词典加载、规则匹配、混淆集处理、性能优化都到位。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#6</span>
+    <a class="repo-name" href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank">ComposioHQ/awesome-claude-skills</a>
+    <span class="stars">⭐ +636 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">精选的 Claude Skills、资源与工作流定制工具集合。</div>
+  <div class="note">想给 Claude / 编码代理装"技能"必看。涵盖 MCP、tool-use、子代理编排等实用模式，可直接拿来扩展自己的代理工作流。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#7</span>
+    <a class="repo-name" href="https://github.com/Pumpkin-MC/Pumpkin" target="_blank">Pumpkin-MC/Pumpkin</a>
+    <span class="stars">⭐ +565 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">用 Rust 实现的高效 Minecraft 服务器，致力于让每个人都能自托管快速、稳定的 MC 服务。</div>
+  <div class="note">学习 Rust 处理高并发网络协议栈的优质案例：协议解析、实体调度、插件系统、性能优化全都有，可读性也不错。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#8</span>
+    <a class="repo-name" href="https://github.com/likec4/likec4" target="_blank">likec4/likec4</a>
+    <span class="stars">⭐ +472 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">从代码自动生成活的架构图，支持可视化协作与持续演进。</div>
+  <div class="note">把架构图当作"代码产物"而非一次性 PPT。基于 DSL 描述 + AST 分析自动出图，非常适合中大型团队的架构治理。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#9</span>
+    <a class="repo-name" href="https://github.com/agegr/pi-web" target="_blank">agegr/pi-web</a>
+    <span class="stars">⭐ +315 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">为 pi 编程代理打造的 Web 用户界面。</div>
+  <div class="note">轻量级的"代理 + Web 控制台"模板。终端代理套 Web UI 的工程实现思路可复用：会话流式渲染、工具调用可视化、远程控制面板。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#10</span>
+    <a class="repo-name" href="https://github.com/earthtojake/text-to-cad" target="_blank">earthtojake/text-to-cad</a>
+    <span class="stars">⭐ +230 stars/week</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#f1e05a"></span>JavaScript</div>
+  <div class="desc">面向 CAD、机器人与硬件设计的代理技能合集。</div>
+  <div class="note">把"文本 → 实体建模"这条链路打通：自然语言生成 OpenSCAD/Three.js 代码等。硬件创客 + 编程代理结合的实验性项目，值得玩一玩。</div>
+</div>
+
+<footer>
+  📅 报告日期：2026-07-24 · 由 OpenClaw 自动生成<br>
+  🌐 部署：<a href="https://zxy114.github.io/github-trending-daily/published/github-trending-2026-07-24.html" target="_blank">https://zxy114.github.io/github-trending-daily/published/github-trending-2026-07-24.html</a><br>
+  📊 数据：GitHub Trending Top 15 · 精选 10 · 已过滤低学习价值项目
+</footer>
+</div>
+</body>
+</html>
