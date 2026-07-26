@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Trending 热门日报 · 2026-07-26</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel2:#1c2230;
+  --border:#30363d;
+  --text:#e6edf3;
+  --muted:#8b949e;
+  --accent:#f78166;
+  --link:#58a6ff;
+  --rank1:#ff7b72;
+  --rank2:#f0883e;
+  --rank3:#d29922;
+  --rankN:#3fb950;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:32px 16px}
+.wrap{max-width:960px;margin:0 auto}
+header{text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
+h1{font-size:28px;font-weight:700;margin-bottom:6px}
+.subtitle{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--muted);margin-top:10px}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:28px;color:var(--muted);font-size:14px}
+.intro strong{color:var(--text)}
+.repo{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;transition:border-color .2s}
+.repo:hover{border-color:var(--link)}
+.repo-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rank{font-size:13px;font-weight:700;padding:2px 10px;border-radius:12px;color:#0d1117;flex-shrink:0}
+.r1{background:var(--rank1)}.r2{background:var(--rank2)}.r3{background:var(--rank3)}.rN{background:var(--rankN)}
+.repo-name{font-size:18px;font-weight:600;color:var(--link);text-decoration:none;word-break:break-all}
+.repo-name:hover{text-decoration:underline}
+.stars{margin-left:auto;color:var(--accent);font-size:13px;font-weight:600;white-space:nowrap}
+.lang{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.desc{color:var(--text);font-size:14px;margin:10px 0 8px;line-height:1.55}
+.note{color:var(--muted);font-size:13px;border-left:3px solid var(--border);padding-left:12px;margin-top:8px}
+.note::before{content:"💡 ";opacity:.85}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🔥 GitHub Trending 热门日报</h1>
+  <div class="subtitle">2026-07-26 · 北京时间 · 每日精选 Top 10</div>
+  <div class="badge">数据源：github.com/trending · 当日趋势快照</div>
+</header>
+
+<div class="intro">
+  本期收录 <strong>10</strong> 个高质量仓库，已过滤纯学术论文与大模型基线项目，优先挑选<strong>可直接使用、值得学习</strong>的工具、库与框架。
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#1</span>
+    <a class="repo-name" href="https://github.com/block/buzz" target="_blank">block/buzz</a>
+    <span class="stars">⭐ +2,491 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">蜂群式实时协作通讯平台：把团队沟通当成一个可被搜索、被治理的共享大脑。</div>
+  <div class="note">Block（Square 母公司）出品。学习 Rust 写实时协作中间件的优质样本：CRDT/事件溯源、消息分发、会话治理、权限模型等工程细节均值得拆解。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#2</span>
+    <a class="repo-name" href="https://github.com/permissionlesstech/bitchat" target="_blank">permissionlesstech/bitchat</a>
+    <span class="stars">⭐ +1,720 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#F05138"></span>Swift</div>
+  <div class="desc">基于蓝牙 mesh 的去中心化聊天应用，致敬 IRC 的极简交互风格，无需联网即可通信。</div>
+  <div class="note">Apple 平台 Swift 工程范例：BLE mesh 协议栈、端到端消息加密、离线组网、设备发现与中继。对应急通信/隐私社交/IoT 场景非常有借鉴价值。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#3</span>
+    <a class="repo-name" href="https://github.com/citrolabs/ego-lite" target="_blank">citrolabs/ego-lite</a>
+    <span class="stars">⭐ +986 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#f1e05a"></span>JavaScript</div>
+  <div class="desc">为 AI 代理打造的高速浏览器：零配置、零成本，把你真实的登录态"借给" Codex / Claude Code 等代理执行网页自动化。</div>
+  <div class="note">Agent 时代的新型浏览器入口。共享本地浏览器 profile/CDP 通道，让代理既能复用登录态又不会打断用户，是当前"代理上 Web"工程化的最佳实践之一。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#4</span>
+    <a class="repo-name" href="https://github.com/Automattic/harper" target="_blank">Automattic/harper</a>
+    <span class="stars">⭐ +503 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">离线、隐私优先的英语语法检查器，开源、Rust 实现、性能极佳。</div>
+  <div class="note">Automattic（WordPress 母公司）出品。用 Rust 写自然语言处理工具的范本：词典加载、规则匹配、混淆集处理、增量解析与并行优化一应俱全。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#5</span>
+    <a class="repo-name" href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review</a>
+    <span class="stars">⭐ +431 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#00ADD8"></span>Go</div>
+  <div class="desc">开源免费的代码审查工具：阿里巴巴规模验证过的"确定性流水线 + LLM 代理"混合架构，定位到行级评论，内置 NPE、线程安全、XSS、SQL 注入等调优规则。</div>
+  <div class="note">面向工程落地的代码审查方案。Go 服务端 + 规则引擎 + LLM 协作的工程分层清晰，对想自建团队级 Code Review 平台的开发者来说是高质量参考实现。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#6</span>
+    <a class="repo-name" href="https://github.com/CoreBunch/Instatic" target="_blank">CoreBunch/Instatic</a>
+    <span class="stars">⭐ +426 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">Webflow / Framer / WordPress 的开源替身：代理驱动、可自托管、可视化 CMS，输出干净静态站点，用户、角色、插件、内容、数据库一应俱全。</div>
+  <div class="note">把"代理 + 可视化建站 + 静态产物"三条线串起来。CMS 模型、插件机制、生成器渲染管线都值得学习，适合做建站平台/Headless CMS 二次开发。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#7</span>
+    <a class="repo-name" href="https://github.com/palmier-io/palmier-pro" target="_blank">palmier-io/palmier-pro</a>
+    <span class="stars">⭐ +412 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#F05138"></span>Swift</div>
+  <div class="desc">macOS 原生 AI 视频编辑器，面向 AI 时代的剪辑工作流。</div>
+  <div class="note">桌面端 Swift/SwiftUI 实战：视频解码、时间线、代理编排与本地模型协作。对 macOS 桌面开发、AI 媒体工具链感兴趣的工程师很有借鉴价值。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#8</span>
+    <a class="repo-name" href="https://github.com/Pumpkin-MC/Pumpkin" target="_blank">Pumpkin-MC/Pumpkin</a>
+    <span class="stars">⭐ +358 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#dea584"></span>Rust</div>
+  <div class="desc">用 Rust 实现的高效 Minecraft 服务器，让每个人都能自托管快速、稳定的 MC 服务。</div>
+  <div class="note">Rust 写高并发网络协议栈的优质范例：协议解析、实体调度、Tick 循环、插件系统、性能调优全都有，社区活跃、注释清晰。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#9</span>
+    <a class="repo-name" href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a>
+    <span class="stars">⭐ +328 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">一套"代理技能框架 + 软件开发方法论"，把 AI 编码代理变成可复用的工程伙伴。</div>
+  <div class="note">给 AI 代理装"超能力"的项目：以 Skills 形式沉淀经验、TDD、调试、文档等流程化方法论。可作为个人/团队自定义代理工作流的起点。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#10</span>
+    <a class="repo-name" href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank">ComposioHQ/awesome-claude-skills</a>
+    <span class="stars">⭐ +286 stars/day</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">精选的 Claude Skills、资源与工作流定制工具合集。</div>
+  <div class="note">想给 Claude / 编码代理加"技能"必看。覆盖 MCP、Tool-use、子代理编排等实用模式，可直接 fork 用来扩展自家代理的工作流。</div>
+</div>
+
+<footer>
+  📅 报告日期：2026-07-26 · 由 OpenClaw 自动生成<br>
+  🌐 部署：<a href="https://zxy114.github.io/github-trending-daily/published/github-trending-2026-07-26.html" target="_blank">https://zxy114.github.io/github-trending-daily/published/github-trending-2026-07-26.html</a><br>
+  📊 数据：GitHub Trending Top 18 · 精选 10 · 已过滤基础模型/学术论文/低学习价值项目
+</footer>
+</div>
+</body>
+</html>
