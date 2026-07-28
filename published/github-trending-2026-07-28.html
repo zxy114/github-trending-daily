@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-28</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --red: #f85149;
+  --green: #3fb950;
+  --yellow: #d29922;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 1.8em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.header .date {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+.header .subtitle {
+  color: var(--accent);
+  font-size: 0.85em;
+  margin-top: 6px;
+}
+.repo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.repo-card:hover { border-color: var(--accent); }
+.repo-card.top3 { border-left: 3px solid var(--red); }
+.repo-card.normal { border-left: 3px solid var(--green); }
+.repo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.repo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+.rank.top3 { background: var(--red); color: #fff; }
+.rank.normal { background: #238636; color: #fff; }
+.repo-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+.repo-link:hover { text-decoration: underline; }
+.repo-desc {
+  color: var(--text);
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+.repo-insight {
+  background: rgba(88, 166, 255, 0.08);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+.repo-insight::before {
+  content: "💡 ";
+}
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars-today {
+  color: var(--yellow);
+  font-weight: 600;
+}
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 0.85em;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🔥 GitHub 开源日报</h1>
+  <div class="date">2026-07-28（周二）</div>
+  <div class="subtitle">每日精选 · 质量优先 · 实用导向</div>
+</div>
+
+<!-- 1. permissionlesstech/bitchat -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">1</span>
+      <a class="repo-link" href="https://github.com/permissionlesstech/bitchat">permissionlesstech/bitchat</a>
+    </div>
+    <span class="stars-today">⭐ +2,346 stars today</span>
+  </div>
+  <div class="repo-desc">基于蓝牙 mesh 的离线即时聊天工具，类 IRC 风格，断网环境下节点之间仍可互相通信。Swift 实现，跨 iOS / Android / macOS。</div>
+  <div class="repo-insight">无服务器、无互联网、纯 BLE 自组网的去中心化通信实战案例。适合应急通信、户外场景与隐私敏感环境。协议栈设计精简，可作为学习 mesh 网络和 Swift 跨平台 UI 的优秀素材。代码量不大，适合拆解阅读。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#F05138"></span> Swift</span>
+    <span>🚀 今日新增最多</span>
+  </div>
+</div>
+
+<!-- 2. alibaba/open-code-review -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">2</span>
+      <a class="repo-link" href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a>
+    </div>
+    <span class="stars-today">⭐ +979 stars today</span>
+  </div>
+  <div class="repo-desc">阿里巴巴开源的代码评审工具：确定性流水线 + LLM Agent 混合架构，支持行级别精确评论，内置空指针、并发安全、XSS、SQL 注入等规则集，兼容 OpenAI / Anthropic 接口。</div>
+  <div class="repo-insight">工业级代码评审的开源代表。"规则兜底 + LLM 兜模糊"的混合思路是当前 AI 落地的最佳实践之一。已在大厂内部大规模验证，可直接接入 CI/CD 替换部分人工评审，对中型研发团队尤其有价值。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#00ADD8"></span> Go</span>
+  </div>
+</div>
+
+<!-- 3. pbakaus/impeccable -->
+<div class="repo-card top3">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank top3">3</span>
+      <a class="repo-link" href="https://github.com/pbakaus/impeccable">pbakaus/impeccable</a>
+    </div>
+    <span class="stars-today">⭐ +847 stars today</span>
+  </div>
+  <div class="repo-desc">一套面向 AI 编程助手（Cursor、Claude Code 等）的设计与工程规范，让 AI 生成的前端代码在视觉与交互上更专业、更一致。</div>
+  <div class="repo-insight">用"可被 Agent 读取的设计语言"约束 AI 输出质量，直击"AI 写 UI 总是丑"的痛点。把 Less/More 风格、间距、动效做成约定，对前端工程师和 prompt 工程师都是高质量参考资产，可立即套用。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span>
+  </div>
+</div>
+
+<!-- 4. yorukot/superfile -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">4</span>
+      <a class="repo-link" href="https://github.com/yorukot/superfile">yorukot/superfile</a>
+    </div>
+    <span class="stars-today">⭐ +600 stars today</span>
+  </div>
+  <div class="repo-desc">美观、现代的终端文件管理器，支持多面板、主题、插件与云存储集成，Go 编写，单二进制部署，跨平台。</div>
+  <div class="repo-insight">日常终端用户可直接换掉的 mc / ranger 替代品。TUI 体验现代化，操作直观，又保持了纯终端的轻量。单二进制 + Go 性能 + 主题生态成熟，工程实践也值得参考。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#00ADD8"></span> Go</span>
+  </div>
+</div>
+
+<!-- 5. moeru-ai/airi -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">5</span>
+      <a class="repo-link" href="https://github.com/moeru-ai/airi">moeru-ai/airi</a>
+    </div>
+    <span class="stars-today">⭐ +572 stars today</span>
+  </div>
+  <div class="repo-desc">自托管、可拥有的 AI 互动伙伴项目，支持实时语音聊天、接入 Minecraft / Factorio 等游戏场景，提供 Web / macOS / Windows 多端客户端。</div>
+  <div class="repo-insight">面向"陪伴型 AI Agent"的开源实现，强调用户对模型和数据的可控性。涉及实时语音、WebRTC、长时记忆、游戏 Agent 接口等多个热门方向，对学习 LLM Agent 工程化、桌面端 AI 应用有参考价值。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span> TypeScript</span>
+  </div>
+</div>
+
+<!-- 6. amnezia-vpn/amnezia-client -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">6</span>
+      <a class="repo-link" href="https://github.com/amnezia-vpn/amnezia-client">amnezia-vpn/amnezia-client</a>
+    </div>
+    <span class="stars-today">⭐ +515 stars today</span>
+  </div>
+  <div class="repo-desc">跨平台加密网络客户端，整合多种主流协议，支持自建服务端与一键部署，桌面与移动端一体化。</div>
+  <div class="repo-insight">"客户端 + 自建服务端"是它和主流商业 VPN 的最大区别——数据完全自托管。协议插件化设计便于扩展，C++/Qt 跨端实现成熟，对学习 VPN 协议、网络编程、跨端 UI 都是很好的工程样本。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#f34b7d"></span> C++</span>
+  </div>
+</div>
+
+<!-- 7. shiyu-coder/Kronos -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">7</span>
+      <a class="repo-link" href="https://github.com/shiyu-coder/Kronos">shiyu-coder/Kronos</a>
+    </div>
+    <span class="stars-today">⭐ +441 stars today</span>
+  </div>
+  <div class="repo-desc">面向金融时序的预测模型，将 K 线、订单流等市场语言作为训练语料，提供开箱即用的推理接口与示例。</div>
+  <div class="repo-insight">把"金融时序"当作一种语言来建模，区别于传统技术指标和统计模型。对量化研究者和策略开发者有直接复用价值。提供完整推理流程，可快速接入回测或实时预测链路进行二次验证。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<!-- 8. bradautomates/claude-video -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">8</span>
+      <a class="repo-link" href="https://github.com/bradautomates/claude-video">bradautomates/claude-video</a>
+    </div>
+    <span class="stars-today">⭐ +434 stars today</span>
+  </div>
+  <div class="repo-desc">为 Claude 补齐视频理解能力的本地工具：自动下载视频、抽帧、提取转写文本，统一交给 Claude 进行长视频问答与摘要。</div>
+  <div class="repo-insight">"补齐 Claude 多模态短板"的最小可行方案。本地预处理链路清晰，视频→关键帧→转写→Claude 上下文拼接，全程可本地完成，避免上传第三方。对做长视频分析、会议回放、教学内容的个人/团队很实用。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<!-- 9. opengeos/GeoLibre -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">9</span>
+      <a class="repo-link" href="https://github.com/opengeos/GeoLibre">opengeos/GeoLibre</a>
+    </div>
+    <span class="stars-today">⭐ +420 stars today</span>
+  </div>
+  <div class="repo-desc">轻量级、云原生的地理信息平台，支持在浏览器、桌面、移动端以及 Jupyter Notebook 中可视化、探索和分析空间数据。</div>
+  <div class="repo-insight">对不想重度依赖 ArcGIS / QGIS 桌面栈的开发者很友好。TypeScript 全栈实现，前后端可独立部署，多端一致性高。Jupyter 集成是亮点，可直接和 Python 数据科学生态串起来，做空间分析 demo 非常顺手。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3178c6"></span> TypeScript</span>
+  </div>
+</div>
+
+<!-- 10. NanmiCoder/MediaCrawler -->
+<div class="repo-card normal">
+  <div class="repo-header">
+    <div class="repo-title">
+      <span class="rank normal">10</span>
+      <a class="repo-link" href="https://github.com/NanmiCoder/MediaCrawler">NanmiCoder/MediaCrawler</a>
+    </div>
+    <span class="stars-today">⭐ +362 stars today</span>
+  </div>
+  <div class="repo-desc">多平台公开内容聚合工具，覆盖图文、视频、问答等主流站点，支持笔记、视频、评论等字段的批量抓取与导出。</div>
+  <div class="repo-insight">对舆情分析、选题研究和数据归档场景非常实用。封装了多个常见站点的抓取逻辑（登录态、签名、反爬策略），开箱即用。注意：使用前请遵守目标站点的 robots 协议与相关条款，仅用于学习与合规研究。</div>
+  <div class="repo-meta">
+    <span class="lang-badge"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+  </div>
+</div>
+
+<div class="footer">
+  <p>📡 数据来源：<a href="https://github.com/trending">GitHub Trending</a> · 自动生成 · 仅供学习参考</p>
+  <p style="margin-top:6px;">由 OpenClaw · GitHub Trending Daily Skill 生成</p>
+</div>
+
+</div>
+</body>
+</html>
