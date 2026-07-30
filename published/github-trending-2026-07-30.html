@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Trending 热门日报 · 2026-07-30</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel2:#1c2230;
+  --border:#30363d;
+  --text:#e6edf3;
+  --muted:#8b949e;
+  --accent:#f78166;
+  --link:#58a6ff;
+  --rank1:#ff7b72;
+  --rank2:#f0883e;
+  --rank3:#d29922;
+  --rankN:#3fb950;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:32px 16px}
+.wrap{max-width:960px;margin:0 auto}
+header{text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
+h1{font-size:28px;font-weight:700;margin-bottom:6px}
+.subtitle{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--muted);margin-top:10px}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:28px;color:var(--muted);font-size:14px}
+.intro strong{color:var(--text)}
+.repo{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;transition:border-color .2s}
+.repo:hover{border-color:var(--link)}
+.repo-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rank{font-size:13px;font-weight:700;padding:2px 10px;border-radius:12px;color:#0d1117;flex-shrink:0}
+.r1{background:var(--rank1)}.r2{background:var(--rank2)}.r3{background:var(--rank3)}.rN{background:var(--rankN)}
+.repo-name{font-size:18px;font-weight:600;color:var(--link);text-decoration:none;word-break:break-all}
+.repo-name:hover{text-decoration:underline}
+.stars{margin-left:auto;color:var(--accent);font-size:13px;font-weight:600;white-space:nowrap}
+.lang{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.desc{color:var(--text);font-size:14px;margin:10px 0 8px;line-height:1.55}
+.note{color:var(--muted);font-size:13px;border-left:3px solid var(--border);padding-left:12px;margin-top:8px}
+.note::before{content:"💡 ";opacity:.85}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🔥 GitHub Trending 热门日报</h1>
+  <div class="subtitle">2026-07-30 · 北京时间 · 每日精选 Top 10</div>
+  <div class="badge">数据源：github.com/trending · 当日趋势快照</div>
+</header>
+
+<div class="intro">
+  本期收录 <strong>10</strong> 个高质量仓库，已过滤基础模型 benchmark / 纯学术项目 / fork-only 仓库，优先挑选<strong>可直接使用、值得学习</strong>的工具、库与框架。今日整体风向：<strong>智能体技能工程化</strong>与<strong>开源语音 AI</strong>继续走热，3D 创作与地理信息工具也保持热度。
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#1</span>
+    <a class="repo-name" href="https://github.com/virgiliojr94/book-to-skill" target="_blank">virgiliojr94/book-to-skill</a>
+    <span class="stars">⭐ +1,421 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">把任意技术书 PDF 一键转成 Claude Code 可用的 skill，可边学边查、边工作边引用。</div>
+  <div class="note">今日热度第一。把长 PDF 拆解 + 索引化喂给 coding agent，看技术书/参考手册的体验被重新做了一遍。对做 RAG / 文档切片 / Agent 工具调用编排的同学，是一份值得抄思路的现成样例。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#2</span>
+    <a class="repo-name" href="https://github.com/pascalorg/editor" target="_blank">pascalorg/editor</a>
+    <span class="stars">⭐ +1,022 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">面向建筑场景的 3D 项目编辑器：在线创建与分享三维建筑方案，浏览器即开即用。</div>
+  <div class="note">亮点是 Three.js / WebGL 在专业领域(建筑设计)的工程化封装：场景树、几何编辑、协作分享一条龙。可作为"Web 端 3D 编辑器架构"的实战参考。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#3</span>
+    <a class="repo-name" href="https://github.com/huggingface/speech-to-speech" target="_blank">huggingface/speech-to-speech</a>
+    <span class="stars">⭐ +827 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">Hugging Face 官方开源的本地语音代理 SDK：基于开源模型即可搭建端到端语音对话。</div>
+  <div class="note">把 STT → LLM → TTS 串成一条可本地跑的语音对话管线，对想做"语音助手 / 数字人 / 实时陪伴"项目，是目前最省事的开源起点。注意依赖开源语音模型版本，本地显存要求不低。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#4</span>
+    <a class="repo-name" href="https://github.com/moeru-ai/airi" target="_blank">moeru-ai/airi</a>
+    <span class="stars">⭐ +682 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">自托管的实时语音交互代理，支持 Web / macOS / Windows，并可接入 Minecraft、Factorio 等游戏场景。</div>
+  <div class="note">亮点是端到端实时语音管线 + 跨平台桌面壳 + 游戏 hook 集成。对想搭"可对话的桌面 AI / 数字生命"的工程实现，是一份比较完整的开源参考；技术栈用得也现代。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#5</span>
+    <a class="repo-name" href="https://github.com/opengeos/GeoLibre" target="_blank">opengeos/GeoLibre</a>
+    <span class="stars">⭐ +671 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">轻量、云原生的 GIS 平台：浏览器、桌面、移动端、Jupyter 都能跑同一份地理可视化代码。</div>
+  <div class="note">把地理空间数据可视化做成了"一份代码到处跑"。做地理分析的同学可以直接当 deck.gl + Leaflet 的现代化替代品；做数据可视化的同学也能借鉴其多端分发思路。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#6</span>
+    <a class="repo-name" href="https://github.com/grokability/snipe-it" target="_blank">grokability/snipe-it</a>
+    <span class="stars">⭐ 持续上榜 · 老牌 IT 资产/许可证管理工具</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#f1e05a"></span>PHP</div>
+  <div class="desc">免费开源的 IT 资产与许可证管理系统，适合公司做设备/账号/SaaS 凭证的统一台账。</div>
+  <div class="note">运维老朋友了，自托管版 IT 资产管理的事实标准之一。对要做企业内网设备台账、SaaS 凭证回收、安全审计的同学，几乎是开箱即用。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#7</span>
+    <a class="repo-name" href="https://github.com/microsoft/VibeVoice" target="_blank">microsoft/VibeVoice</a>
+    <span class="stars">⭐ 微软开源前沿语音 AI · 持续上榜</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript / Python</div>
+  <div class="desc">微软开源的前沿语音 AI 项目，提供从模型权重到推理服务的端到端方案。</div>
+  <div class="note">微软在语音 AI 方向的开源新动作，关注实时对话、长时记忆、多说话人等场景。做语音产品或本地 ASR/TTS 集成的同学建议跟踪一手。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank rN">#8</span>
+    <a class="repo-name" href="https://github.com/different-ai/openwork" target="_blank">different-ai/openwork</a>
+    <span class="stars">⭐ +97 stars today · 持续攀升</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">开源协作工作台，定位为闭源 Cowork 工具的本地化替代品，底层对接开源代码代理。</div>
+  <div class="note">把"代码代理 + 文档协作"装进一个本地工作台。对想自托管团队 Copilot 类工具、又不想把代码上云的同学，可以直接拿来部署。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank rN">#9</span>
+    <a class="repo-name" href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a>
+    <span class="stars">⭐ 持续上榜 · 智能体技能工程框架</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">面向 AI 编码代理的技能框架与软件开发方法论，强调可复用的"技能包"与流程规范。</div>
+  <div class="note">不是又一个聊天机器人，而是给 agent 装"工作流手册"：技能、技能组合、触发条件。适合想把 Claude Code / Codex / Cursor 这类代理落到严肃工程里、又能复用流程的团队。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank rN">#10</span>
+    <a class="repo-name" href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review</a>
+    <span class="stars">⭐ 阿里开源 · 经内部规模化验证</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">阿里巴巴开源的代码审查工具：确定性流水线 + LLM Agent 的混合架构，支持行级精确批注，内置 NPE / 线程安全 / XSS / SQL 注入等规则，兼容 OpenAI / Anthropic 接口。</div>
+  <div class="note">不是简单的"AI 评审 demo"，而是真在阿里内部跑过的工程化方案。亮点是规则集 + Agent 协同 + 行级定位：CR 工具链的同学可以重点拆一下它的架构。</div>
+</div>
+
+<footer>
+  报告生成于 2026-07-30 北京时间 · 数据快照源自 github.com/trending · 仅供学习参考
+</footer>
+</div>
+</body>
+</html>
