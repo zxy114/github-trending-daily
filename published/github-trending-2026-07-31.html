@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-07-31</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-07-31（北京时间）· 精选 7 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：AI Agent 工具链 / 开发者效率 / 实用库与框架
+  </p>
+</header>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/different-ai/openwork" target="_blank">different-ai/openwork</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +915/日</span>
+  </div>
+  <div class="zh-title">开源版 Claude Cowork 替代品</div>
+  <div class="desc-en">The open-source alternative to Claude Cowork (powered by opencode)</div>
+  <div class="takeaway">
+    对标 Anthropic 推出的 Cowork 桌面 Agent 产品，用 opencode 作为底层执行引擎，让本地/自托管的桌面代理工作流成为可能。
+    对希望自建 Agent 协作工具、又不想被单一云服务绑定的团队很有价值。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 18.8k</span>
+    <span class="meta-item">🍴 1.9k forks</span>
+    <span class="meta-item">📅 创建 2026-01</span>
+    <span class="meta-item"><a class="nav" href="https://openworklabs.com" target="_blank">openworklabs.com</a></span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/affaan-m/everything-claude-code" target="_blank">affaan-m/ECC</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +804/日</span>
+  </div>
+  <div class="zh-title">AI Agent 性能优化与开发范式集合</div>
+  <div class="desc-en">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</div>
+  <div class="takeaway">
+    把"Agent Harness"当成一个系统工程来对待：覆盖技能注入、经验沉淀、记忆管理、安全约束和以研究为先的开发流程。
+    兼容 Claude Code / Codex / Cursor 等主流 Agent IDE，适合作为团队 Agent 工作流的参考实现。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 236k</span>
+    <span class="meta-item">🍴 35.9k forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://ecc.tools" target="_blank">ecc.tools</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agents</span>
+    <span class="topic">claude-code</span>
+    <span class="topic">mcp</span>
+    <span class="topic">productivity</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/huggingface/speech-to-speech" target="_blank">huggingface/speech-to-speech</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +628/日</span>
+  </div>
+  <div class="zh-title">本地化语音 Agent 工具包</div>
+  <div class="desc-en">Build local voice agents with open-source models</div>
+  <div class="takeaway">
+    Hugging Face 官方维护的语音 Agent 工具：把 STT → LLM → TTS 三段流水线串成可本地部署的语音助手，
+    支持多种开源语音模型。可作为"端侧语音交互"的入门样板。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 8.9k</span>
+    <span class="meta-item">🍴 1.1k forks</span>
+    <span class="meta-item">📜 Apache 2.0</span>
+  </div>
+  <div class="topics">
+    <span class="topic">speech-to-text</span>
+    <span class="topic">speech-synthesis</span>
+    <span class="topic">assistant</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +378/日</span>
+  </div>
+  <div class="zh-title">跨平台"近 30 天"研究型 Agent 技能</div>
+  <div class="desc-en">AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web — then synthesizes a grounded summary.</div>
+  <div class="takeaway">
+    把"近 30 天热点调研"封装成一个标准化的 Agent Skill：自动覆盖社交平台、长视频、预测市场与通用网页，
+    最后汇总成带引用的事实型结论。可作为"研究型 Agent"提示词工程模板。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 55.6k</span>
+    <span class="meta-item">🍴 4.8k forks</span>
+    <span class="meta-item">📜 MIT</span>
+  </div>
+  <div class="topics">
+    <span class="topic">deep-research</span>
+    <span class="topic">claude-code</span>
+    <span class="topic">hackernews</span>
+    <span class="topic">polymarket</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/agavra/tuicr" target="_blank">agavra/tuicr</a></span>
+    <span class="badge lang">Rust</span>
+    <span class="badge stars">⭐ +190/日</span>
+  </div>
+  <div class="zh-title">Vim 键位的代码评审 TUI 工具</div>
+  <div class="desc-en">A code review TUI with vim keybindings.</div>
+  <div class="takeaway">
+    Rust 写就的终端代码评审界面，把 PR diff 装进 Vim 操作习惯：键位、跳转、批注一体化。
+    适合习惯命令行、不想在浏览器里来回切换的工程师。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 1.9k</span>
+    <span class="meta-item">🍴 161 forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://tuicr.dev" target="_blank">tuicr.dev</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">code-review</span>
+    <span class="topic">rust</span>
+    <span class="topic">tui</span>
+    <span class="topic">ai-tools</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank">ChromeDevTools/chrome-devtools-mcp</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +80/日</span>
+  </div>
+  <div class="zh-title">Chrome DevTools 的 MCP Server（给 Coding Agent 用）</div>
+  <div class="desc-en">Chrome DevTools for coding agents.</div>
+  <div class="takeaway">
+    官方出品的 DevTools MCP：把 Chrome 调试协议（DOM、网络、性能、控制台）以 MCP 形式暴露给 Claude Code、
+    Cursor 等 Coding Agent，前端调试从此可以由 Agent 自动驱动。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 48.1k</span>
+    <span class="meta-item">🍴 3.3k forks</span>
+    <span class="meta-item">📜 Apache 2.0</span>
+    <span class="meta-item"><a class="nav" href="https://npmjs.org/package/chrome-devtools-mcp" target="_blank">npm</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">mcp</span>
+    <span class="topic">chrome-devtools</span>
+    <span class="topic">puppeteer</span>
+    <span class="topic">debugging</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/WhiskeySockets/Baileys" target="_blank">WhiskeySockets/Baileys</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +19/日</span>
+  </div>
+  <div class="zh-title">WhatsApp Web 非官方 Socket 客户端</div>
+  <div class="desc-en">Socket-based TS/JavaScript API for WhatsApp Web</div>
+  <div class="takeaway">
+    老牌但活跃维护的 WhatsApp Web 反向工程 SDK，Node/Deno/Bun 通吃，常用于客服机器人、消息聚合等场景。
+    上手成本低，文档生态成熟。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 10.4k</span>
+    <span class="meta-item">🍴 3.3k forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://baileys.wiki" target="_blank">baileys.wiki</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">whatsapp-web</span>
+    <span class="topic">nodejs</span>
+    <span class="topic">websockets</span>
+    <span class="topic">typescript</span>
+  </div>
+</div>
+
+<footer>
+  <p>Generated on 2026-07-31 · 数据源：<a class="nav" href="https://github.com/trending" target="_blank">github.com/trending</a></p>
+  <p style="margin-top:6px">GitHub 开源日报 · 自动生成 · 北京时间</p>
+</footer>
+</div>
+</body>
+</html>
