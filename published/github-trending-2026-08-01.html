@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-01</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-01（北京时间）· 精选 7 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：官方 SDK 集成 / 开发者效率 / 实用库与框架
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>GitHub 官方下场做 Copilot Agent SDK、Microsoft 把 AI 入门课刷到 1.5k+ 日增、客服与 PM 工具继续在 TypeScript 圈层爆发。
+  Lang/Rust/嵌入式都有新面孔出现，整体偏"工程化、生态集成"。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/github/copilot-sdk" target="_blank">github/copilot-sdk</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ 高位入选</span>
+  </div>
+  <div class="zh-title">GitHub 官方出品：多平台 Copilot Agent 集成 SDK</div>
+  <div class="desc-en">Multi-platform SDK for integrating GitHub Copilot Agent into apps and services</div>
+  <div class="takeaway">
+    GitHub 自家推出的 Copilot Agent SDK，目标是把 Copilot 的编程/推理能力像 LLM API 一样嵌进任意应用。
+    比以往任何社区桥接方案都更"官方"，对做 IDE 插件、内部 Copilot 代理、桌面 Agent 工具的团队是关键参考。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 近期高热度</span>
+    <span class="meta-item">🍴 官方维护</span>
+    <span class="meta-item">📜 官方协议</span>
+  </div>
+  <div class="topics">
+    <span class="topic">github-copilot</span>
+    <span class="topic">sdk</span>
+    <span class="topic">agent</span>
+    <span class="topic">ai-coding</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/microsoft/AI-For-Beginners" target="_blank">microsoft/AI-For-Beginners</a></span>
+    <span class="badge lang">Jupyter Notebook</span>
+    <span class="badge stars">⭐ +1.5k/日</span>
+  </div>
+  <div class="zh-title">微软 12 周 AI 入门课程（24 节课）</div>
+  <div class="desc-en">12 Weeks, 24 Lessons, AI for All!</div>
+  <div class="takeaway">
+    微软维护的 AI 系列入门课：12 周 24 节，覆盖经典 ML / 深度学习 / NLP / CV / 生成式 AI 基础概念，
+    配套 Jupyter Notebook 与实验。适合给团队新人做"AI 扫盲"统一教材，也可作为高校教学参考。
+    当日 +1.5k 星说明暑期学习潮效应明显。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 55.4k</span>
+    <span class="meta-item">🍴 11.2k forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://microsoft.github.io/AI-For-Beginners/" target="_blank">课程主页</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai</span>
+    <span class="topic">machine-learning</span>
+    <span class="topic">deep-learning</span>
+    <span class="topic">education</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/usekaneo/kaneo" target="_blank">usekaneo/kaneo</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +194/日</span>
+  </div>
+  <div class="zh-title">极简开源项目管理工具</div>
+  <div class="desc-en">All you need. Nothing you don't. Open source project management that works for you, not against you.</div>
+  <div class="takeaway">
+    把"项目协作"做减法：核心是任务、看板、协作三件套，强调配置少、UI 干净、自托管友好。
+    对想要替代 Jira/Linear 但又嫌复杂的小团队/独立开发者尤为合适。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.1k</span>
+    <span class="meta-item">🍴 452 forks</span>
+    <span class="meta-item">📜 OSS</span>
+  </div>
+  <div class="topics">
+    <span class="topic">project-management</span>
+    <span class="topic">self-hosted</span>
+    <span class="topic">kanban</span>
+    <span class="topic">typescript</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/chatwoot/chatwoot" target="_blank">chatwoot/chatwoot</a></span>
+    <span class="badge lang">Ruby</span>
+    <span class="badge stars">⭐ 持续上榜</span>
+  </div>
+  <div class="zh-title">成熟开源客户支持与多渠道客服平台</div>
+  <div class="desc-en">Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud.</div>
+  <div class="takeaway">
+    老牌开源客服系统，把网站聊天、邮件、WhatsApp、Instagram 等渠道聚合到一个工作台。
+    适合自托管、特别是有数据合规需求的中小企业替代商业客服 SaaS。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 25k+</span>
+    <span class="meta-item">🍴 5k+ forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://www.chatwoot.com" target="_blank">chatwoot.com</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">customer-support</span>
+    <span class="topic">ruby</span>
+    <span class="topic">rails</span>
+    <span class="topic">saas-alternative</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/paperswithbacktest/awesome-systematic-trading" target="_blank">paperswithbacktest/awesome-systematic-trading</a></span>
+    <span class="badge lang">资源合集</span>
+    <span class="badge stars">⭐ 持续上榜</span>
+  </div>
+  <div class="zh-title">系统化交易资源精选清单</div>
+  <div class="desc-en">A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.</div>
+  <div class="takeaway">
+    整合量化/系统化交易方向的库、策略、书籍、博客与教程，分类清晰、可做"入门到上手"导航。
+    对想从阅读转向实盘回测的量化学习者很实用。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 数 k</span>
+    <span class="meta-item">🍴 数百 forks</span>
+    <span class="meta-item">📜 资源合集</span>
+  </div>
+  <div class="topics">
+    <span class="topic">quant</span>
+    <span class="topic">systematic-trading</span>
+    <span class="topic">awesome-list</span>
+    <span class="topic">backtesting</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">zhaoxuya520/reverse-skill</a></span>
+    <span class="badge lang">PowerShell</span>
+    <span class="badge stars">⭐ +335/日</span>
+  </div>
+  <div class="zh-title">安全研究技能路由包（授权测试方向）</div>
+  <div class="desc-en">Authorized penetration testing / security research skill router pack — AI auto-routing + on-demand toolchain + self-evolving knowledge base.</div>
+  <div class="takeaway">
+    把"安全研究 / 授权测试"流程封装成 AI Agent 技能：自动路由到合适的工具链、按需自举、
+    沉淀经验库。兼容 Claude Code / Cursor / Cline 等主流 AI 编程客户端。
+    适合作为安全工程师进行"AI 化工作流"的参考实现。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 10.8k</span>
+    <span class="meta-item">🍴 1.7k forks</span>
+    <span class="meta-item">📜 授权研究用</span>
+  </div>
+  <div class="topics">
+    <span class="topic">security-research</span>
+    <span class="topic">claude-code</span>
+    <span class="topic">agent</span>
+    <span class="topic">toolchain</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/geo-tp/ESP32-Bit-Pirate" target="_blank">geo-tp/ESP32-Bit-Pirate</a></span>
+    <span class="badge lang">C++</span>
+    <span class="badge stars">⭐ +83/日</span>
+  </div>
+  <div class="zh-title">ESP32 多协议硬件调试/通信工具</div>
+  <div class="desc-en">A hardware tool with web-based CLI that speaks many serial protocols.</div>
+  <div class="takeaway">
+    基于 ESP32 的硬件前端，通过 Web CLI 暴露多种通用串行/总线协议交互能力，
+    适合嵌入式调试、固件测试与教学场景。开源 + Web 控制对硬件零基础也很友好。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.0k</span>
+    <span class="meta-item">🍴 408 forks</span>
+    <span class="meta-item">📜 OSS</span>
+  </div>
+  <div class="topics">
+    <span class="topic">esp32</span>
+    <span class="topic">embedded</span>
+    <span class="topic">hardware</span>
+    <span class="topic">protocol</span>
+  </div>
+</div>
+
+<footer>
+  <p>Generated on 2026-08-01 · 数据源：<a class="nav" href="https://github.com/trending" target="_blank">github.com/trending</a></p>
+  <p style="margin-top:6px">GitHub 开源日报 · 自动生成 · 北京时间</p>
+</footer>
+</div>
+</body>
+</html>
