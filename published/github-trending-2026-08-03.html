@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-03</title>
+<meta name="description" content="GitHub Trending 当日精选开源项目（2026-08-03），聚焦工具、库与框架的学习价值。">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    color: #e6edf3; min-height: 100vh;
+  }
+  .container { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+  header.page-header {
+    text-align: center; padding: 24px 0 32px;
+    border-bottom: 1px solid #30363d; margin-bottom: 32px;
+  }
+  header.page-header h1 {
+    font-size: 28px; margin: 0 0 8px;
+    background: linear-gradient(90deg, #58a6ff 0%, #a5a5ff 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  header.page-header .date { color: #8b949e; font-size: 14px; }
+  .intro {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 16px 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.7;
+  }
+  .repo-card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+    padding: 20px 24px; margin-bottom: 18px; transition: border-color .2s;
+  }
+  .repo-card:hover { border-color: #58a6ff; }
+  .repo-header {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    font-size: 12px; color: #8b949e; margin-bottom: 8px;
+  }
+  .rank {
+    background: #58a6ff; color: #0d1117; font-weight: 700;
+    padding: 2px 8px; border-radius: 12px; font-size: 12px;
+  }
+  .rank.top { background: #f85149; }
+  .category {
+    background: rgba(110, 118, 129, 0.2); padding: 2px 8px;
+    border-radius: 12px; color: #c9d1d9;
+  }
+  .lang {
+    background: rgba(56, 139, 253, 0.15); color: #79c0ff;
+    padding: 2px 8px; border-radius: 12px;
+  }
+  .stars-today { color: #f0883e; font-weight: 600; }
+  .repo-title { font-size: 18px; margin: 6px 0 6px; line-height: 1.4; }
+  .repo-title a { color: #58a6ff; text-decoration: none; }
+  .repo-title a:hover { text-decoration: underline; }
+  .repo-meta { font-size: 13px; color: #8b949e; margin-bottom: 10px; }
+  .repo-meta code { background: #0d1117; padding: 2px 6px; border-radius: 4px; }
+  .repo-desc {
+    font-size: 14px; line-height: 1.7; color: #c9d1d9;
+    margin: 8px 0 12px;
+  }
+  .repo-tags {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    font-size: 12px;
+  }
+  .tag {
+    background: rgba(110, 118, 129, 0.15); color: #8b949e;
+    padding: 2px 8px; border-radius: 10px;
+  }
+  .repo-link {
+    margin-left: auto; color: #58a6ff; text-decoration: none; font-size: 13px;
+  }
+  .repo-link:hover { text-decoration: underline; }
+  footer {
+    text-align: center; margin-top: 40px; padding-top: 20px;
+    border-top: 1px solid #30363d; color: #8b949e; font-size: 12px;
+  }
+  footer a { color: #58a6ff; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="page-header">
+    <h1>🚀 GitHub 开源日报</h1>
+    <div class="date">2026-08-03（北京时间）</div>
+  </header>
+
+  <div class="intro">
+    当日 GitHub Trending 精选，筛选标准：<strong>工具 / 库 / 框架优先</strong>，
+    排除纯学术论文、模型评测与单纯 fork 仓库。共收录 <strong>9</strong> 个具备学习价值的开源项目。
+  </div>
+
+  
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank top">#1</span>
+        <span class="category">AI 推理</span>
+        <span class="lang">Jupyter Notebook</span>
+        <span class="stars-today">⭐ +819 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/lyogavin/airllm" target="_blank" rel="noopener">AirLLM: 单卡 4GB 显存跑 70B 大模型</a>
+      </h2>
+      <div class="repo-meta">
+        <code>lyogavin/airlllm</code>
+      </div>
+      <p class="repo-desc">通过分层加载与计算，把 70B 级大模型推理压到 4GB 单卡上运行。适合本地机器学习爱好者、无独立显卡资源的研究者与轻量化部署场景，让低配设备也能体验大模型能力。</p>
+      <div class="repo-tags">
+        <span class="tag">#LLM</span><span class="tag">#推理优化</span><span class="tag">#低显存</span><span class="tag">#Python</span>
+        <a class="repo-link" href="https://github.com/lyogavin/airllm" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank top">#2</span>
+        <span class="category">项目协作</span>
+        <span class="lang">TypeScript</span>
+        <span class="stars-today">⭐ +496 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/usekaneo/kaneo" target="_blank" rel="noopener">Kaneo: 极简开源项目管理平台</a>
+      </h2>
+      <div class="repo-meta">
+        <code>usekaneo/kaneo</code>
+      </div>
+      <p class="repo-desc">定位「只保留必要功能」的开源项目管理工具，专注任务、看板与协作流，不臃肿、不打扰。适合中小团队、远程小组与追求简洁协作体验的个人开发者，可自托管替代部分商业 SaaS。</p>
+      <div class="repo-tags">
+        <span class="tag">#项目管理</span><span class="tag">#看板</span><span class="tag">#自托管</span><span class="tag">#TypeScript</span>
+        <a class="repo-link" href="https://github.com/usekaneo/kaneo" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank top">#3</span>
+        <span class="category">AI Agent 工具</span>
+        <span class="lang">TypeScript</span>
+        <span class="stars-today">⭐ +602 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank" rel="noopener">TencentDB Agent Memory: 团队级 Agent 记忆中枢</a>
+      </h2>
+      <div class="repo-meta">
+        <code>TencentCloud/TencentDB-Agent-Memory</code>
+      </div>
+      <p class="repo-desc">把对话、文档、代码转成四类可复用资产（聊天记忆、技能、LLM-Wiki、代码图谱），供多 Agent 与多框架共享治理。面向需要长期记忆、跨会话知识沉淀的企业级 Agent 系统。</p>
+      <div class="repo-tags">
+        <span class="tag">#Agent</span><span class="tag">#记忆系统</span><span class="tag">#知识库</span><span class="tag">#腾讯云</span>
+        <a class="repo-link" href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#4</span>
+        <span class="category">AI Agent 工具</span>
+        <span class="lang">Python</span>
+        <span class="stars-today">⭐ +659 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener">Agent-Reach: 一个 CLI 帮 Agent 读取各大平台</a>
+      </h2>
+      <div class="repo-meta">
+        <code>Panniantong/Agent-Reach</code>
+      </div>
+      <p class="repo-desc">为 AI Agent 提供统一的网络读取能力，覆盖 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书等平台。零 API 费用，一条 CLI 命令就能让 Agent 拿到任意站点的内容与搜索结果。</p>
+      <div class="repo-tags">
+        <span class="tag">#Agent</span><span class="tag">#CLI</span><span class="tag">#社交检索</span><span class="tag">#零成本</span>
+        <a class="repo-link" href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#5</span>
+        <span class="category">AI 编程</span>
+        <span class="lang">Go</span>
+        <span class="stars-today">⭐ +333 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" rel="noopener">DeepSeek-Reasonix: 终端常驻的 AI 编程助手</a>
+      </h2>
+      <div class="repo-meta">
+        <code>esengine/DeepSeek-Reasonix</code>
+      </div>
+      <p class="repo-desc">基于 DeepSeek 原生能力打造的命令行 AI 编程 Agent，围绕前缀缓存稳定性深度优化。强调「挂后台不关」，适合长时间运行的开发会话与持续重构场景，开发者能在终端里持续协作。</p>
+      <div class="repo-tags">
+        <span class="tag">#AI编程</span><span class="tag">#CLI</span><span class="tag">#DeepSeek</span><span class="tag">#Go</span>
+        <a class="repo-link" href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#6</span>
+        <span class="category">AI 推理</span>
+        <span class="lang">C</span>
+        <span class="stars-today">⭐ +139 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/antirez/ds4" target="_blank" rel="noopener">ds4: DeepSeek 4 本地推理引擎</a>
+      </h2>
+      <div class="repo-meta">
+        <code>antirez/ds4</code>
+      </div>
+      <p class="repo-desc">由知名开发者 antirez 推出的 DeepSeek 4 Flash / Pro 本地推理引擎，统一支持 Metal、CUDA 与 ROCm 三大 GPU 平台。一份代码可在 Mac、 NVIDIA 与 AMD 工作站上同时运行本地大模型推理。</p>
+      <div class="repo-tags">
+        <span class="tag">#本地推理</span><span class="tag">#DeepSeek</span><span class="tag">#多GPU后端</span><span class="tag">#C</span>
+        <a class="repo-link" href="https://github.com/antirez/ds4" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#7</span>
+        <span class="category">AI 桌面工具</span>
+        <span class="lang">TypeScript</span>
+        <span class="stars-today">⭐ +280 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/different-ai/openwork" target="_blank" rel="noopener">OpenWork: Claude Cowork 的开源平替</a>
+      </h2>
+      <div class="repo-meta">
+        <code>different-ai/openwork</code>
+      </div>
+      <p class="repo-desc">对标 Claude Cowork 的开源桌面端 AI 协作工具，由 opencode 提供底层能力。提供文件、代码、对话一体的工作空间，可作为本地替代方案来运行自定义 Agent 工作流。</p>
+      <div class="repo-tags">
+        <span class="tag">#桌面应用</span><span class="tag">#AI协作</span><span class="tag">#开源替代</span><span class="tag">#opencode</span>
+        <a class="repo-link" href="https://github.com/different-ai/openwork" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#8</span>
+        <span class="category">视频工具</span>
+        <span class="lang">Crystal</span>
+        <span class="stars-today">⭐ +305 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/iv-org/invidious" target="_blank" rel="noopener">Invidious: 第三方 YouTube 网页前端</a>
+      </h2>
+      <div class="repo-meta">
+        <code>iv-org/invidious</code>
+      </div>
+      <p class="repo-desc">无广告、可自托管的 YouTube 替代前端，支持订阅、播放列表与隐私模式浏览。对于希望绕开官方广告与追踪、或自建视频站的开发者与运维人员，是长期稳定的开源方案。</p>
+      <div class="repo-tags">
+        <span class="tag">#YouTube</span><span class="tag">#无广告</span><span class="tag">#自托管</span><span class="tag">#Crystal</span>
+        <a class="repo-link" href="https://github.com/iv-org/invidious" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    
+    <article class="repo-card">
+      <div class="repo-header">
+        <span class="rank">#9</span>
+        <span class="category">AI 研究助手</span>
+        <span class="lang">Python</span>
+        <span class="stars-today">⭐ +206 / week</span>
+      </div>
+      <h2 class="repo-title">
+        <a href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener">last30days: 跨平台话题研究 Agent 技能</a>
+      </h2>
+      <div class="repo-meta">
+        <code>mvanhorn/last30days-skill</code>
+      </div>
+      <p class="repo-desc">让 AI Agent 自动跑通 Reddit、X、YouTube、Hacker News、Polymarket 与全网搜索，输出一份带引用的事实摘要。适合做选题调研、热点追踪、产品竞品扫描等需要「最近 30 天」时效信息的工作。</p>
+      <div class="repo-tags">
+        <span class="tag">#Agent技能</span><span class="tag">#调研</span><span class="tag">#多平台</span><span class="tag">#Python</span>
+        <a class="repo-link" href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+  <footer>
+    <p>📅 报告日期：2026-08-03 · 数据源：<a href="https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a></p>
+    <p>由 OpenClaw 自动整理 · 仅收录工具 / 库 / 框架类高质量项目</p>
+  </footer>
+</div>
+</body>
+</html>
