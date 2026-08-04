@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-04</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-04（北京时间）· 精选 6 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：本地大模型推理 / 实战型教程 / 实用工具与开源替代
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>"小显存跑大模型"成最强主线（airllm、ds4 双双上榜），可动手的工程教程（build-your-own-x）继续霸榜，
+  Microsoft AI 入门课暑期热度依旧。YouTube 替代、项目管理这类"老牌刚需型"工具也保持稳定上榜。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/lyogavin/airllm" target="_blank">lyogavin/airllm</a></span>
+    <span class="badge lang">Jupyter Notebook</span>
+    <span class="badge stars">⭐ +242/日</span>
+  </div>
+  <div class="zh-title">AirLLM：4GB 显存跑 70B 大模型</div>
+  <div class="desc-en">AirLLM 70B inference with single 4GB GPU</div>
+  <div class="takeaway">
+    通过把模型权重切片流式加载到显存，把"运行 70B 量级大模型"的硬件门槛砍到单卡 4GB。
+    思路类似把模型"按页读取"，不追求速度但追求"能跑"，对没有 H100/A100 的个人开发者非常友好。
+    配合量化版本可以本机做长文档推理/摘要实验。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 25.3k</span>
+    <span class="meta-item">🍴 2.8k forks</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+  </div>
+  <div class="topics">
+    <span class="topic">llm</span>
+    <span class="topic">inference</span>
+    <span class="topic">low-vram</span>
+    <span class="topic">70b</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/microsoft/AI-For-Beginners" target="_blank">microsoft/AI-For-Beginners</a></span>
+    <span class="badge lang">Jupyter Notebook</span>
+    <span class="badge stars">⭐ +2.6k/日</span>
+  </div>
+  <div class="zh-title">微软 12 周 AI 入门课程（24 节课）</div>
+  <div class="desc-en">12 Weeks, 24 Lessons, AI for All!</div>
+  <div class="takeaway">
+    微软官方维护的 AI 系列入门课：12 周 24 节，覆盖经典 ML / 深度学习 / NLP / CV / 生成式 AI 基础概念，
+    配套 Jupyter Notebook 与实验。适合给团队新人做"AI 扫盲"统一教材，也可作为高校教学参考。
+    当日 +2.6k 星说明暑期学习潮效应明显。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 58.5k+</span>
+    <span class="meta-item">🍴 11.5k forks</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://microsoft.github.io/AI-For-Beginners/" target="_blank">课程主页</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai</span>
+    <span class="topic">machine-learning</span>
+    <span class="topic">deep-learning</span>
+    <span class="topic">education</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank">codecrafters-io/build-your-own-x</a></span>
+    <span class="badge lang">Markdown</span>
+    <span class="badge stars">⭐ +710/日</span>
+  </div>
+  <div class="zh-title">手写轮子系列：从零再造主流技术</div>
+  <div class="desc-en">Master programming by recreating your favorite technologies from scratch.</div>
+  <div class="takeaway">
+    经典 awesome-list：把"从头实现 BitTorrent / Docker / Git / Redis / HTTP server / 神经网络"等热门项目按语言分类，
+    每条都附教程链接。是"想深入理解某个系统到底怎么工作"的极佳索引，质量多年沉淀下来的资源汇总。
+    对中级以上工程师补齐底层认知非常有用。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 534k+</span>
+    <span class="meta-item">🍴 50k forks</span>
+    <span class="meta-item">📜 教程合集</span>
+  </div>
+  <div class="topics">
+    <span class="topic">awesome-list</span>
+    <span class="topic">tutorial</span>
+    <span class="topic">systems-programming</span>
+    <span class="topic">learning</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/usekaneo/kaneo" target="_blank">usekaneo/kaneo</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +491/日</span>
+  </div>
+  <div class="zh-title">极简开源项目管理工具</div>
+  <div class="desc-en">All you need. Nothing you don't. Open source project management that works for you, not against you.</div>
+  <div class="takeaway">
+    把"项目协作"做减法：核心是任务、看板、协作三件套，强调配置少、UI 干净、自托管友好。
+    对想要替代 Jira/Linear 但又嫌复杂的小团队/独立开发者尤为合适。
+    日增近 500 星显示 PM 工具赛道仍有不少刚需型用户。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.9k</span>
+    <span class="meta-item">🍴 504 forks</span>
+    <span class="meta-item">📜 OSS</span>
+  </div>
+  <div class="topics">
+    <span class="topic">project-management</span>
+    <span class="topic">self-hosted</span>
+    <span class="topic">kanban</span>
+    <span class="topic">typescript</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/iv-org/invidious" target="_blank">iv-org/invidious</a></span>
+    <span class="badge lang">Crystal</span>
+    <span class="badge stars">⭐ +307/日</span>
+  </div>
+  <div class="zh-title">Invidious：开源 YouTube 替代前端</div>
+  <div class="desc-en">Invidious is an alternative front-end to YouTube</div>
+  <div class="takeaway">
+    长期维护的开源项目：不依赖 Google 账号、无广告、可自部署、可接入 SponsorBlock/Invidious API。
+    既能做"干净看视频"的个人前端，也是研究 YouTube 数据接入、构建自有媒体聚合服务的基础设施。
+    Crystal + PostgreSQL 栈也对想看高性能 Web 后端写法的同学有参考价值。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 21.8k</span>
+    <span class="meta-item">🍴 2.4k forks</span>
+    <span class="meta-item">📜 AGPL-3.0</span>
+    <span class="meta-item"><a class="nav" href="https://invidious.io" target="_blank">invidious.io</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">youtube</span>
+    <span class="topic">alternative-front-end</span>
+    <span class="topic">crystal</span>
+    <span class="topic">self-hosted</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/antirez/ds4" target="_blank">antirez/ds4</a></span>
+    <span class="badge lang">C</span>
+    <span class="badge stars">⭐ +150/日</span>
+  </div>
+  <div class="zh-title">antirez 出品：DeepSeek 4 本地推理引擎（Metal/CUDA/ROCm）</div>
+  <div class="desc-en">DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm</div>
+  <div class="takeaway">
+    Redis 作者 antirez 开的新坑：面向 DeepSeek 4 Flash / Pro 的本地推理引擎，覆盖 Apple Silicon（Metal）、
+    NVIDIA（CUDA）、AMD（ROCm）三大硬件后端。对关注"开源本地推理生态"的人来说，是观察
+    "大模型推理能否像 Redis 一样做成小巧、稳定、跨平台组件"的窗口项目。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 19.8k</span>
+    <span class="meta-item">🍴 1.7k forks</span>
+    <span class="meta-item">📜 OSS</span>
+    <span class="meta-item"><a class="nav" href="http://antirez.com" target="_blank">作者博客</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">deepseek</span>
+    <span class="topic">local-inference</span>
+    <span class="topic">cuda</span>
+    <span class="topic">metal</span>
+    <span class="topic">rocm</span>
+  </div>
+</div>
+
+<footer>
+  <p>Generated on 2026-08-04 · 数据源：<a class="nav" href="https://github.com/trending" target="_blank">github.com/trending</a></p>
+  <p style="margin-top:6px">GitHub 开源日报 · 自动生成 · 北京时间</p>
+</footer>
+</div>
+</body>
+</html>
