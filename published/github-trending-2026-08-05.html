@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-05</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-05（北京时间）· 精选 6 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：Agent 工程化落地 / PDF 智能处理 / 实时语音 AI / 企业级安全
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>"AI Agent 工程化"是绝对主线 —— 腾讯云、obra、livekit、Uber 四家从不同切面给出当下最热的 Agent 基础设施答案：
+  团队记忆、Skills 方法论、语音 Agent、企业级安全可观测。同时 firecrawl/pdf-inspector 单日 +2.5k 星，是少见的高质量 Rust 工具链。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/firecrawl/pdf-inspector" target="_blank">firecrawl/pdf-inspector</a></span>
+    <span class="badge lang">Rust</span>
+    <span class="badge stars">⭐ +2,540/周</span>
+  </div>
+  <div class="zh-title">Firecrawl 出品：智能 PDF 检测与分类 Rust 库</div>
+  <div class="desc-en">Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.</div>
+  <div class="takeaway">
+    Firecrawl 团队把自家爬虫里"如何判断一份 PDF 该走 OCR 还是直接抽文本"的能力开源出来。
+    核心能力：自动区分扫描件 vs 文本 PDF，给出结构化分类结果，让下游 RAG / 数据管道能"按 PDF 类型分而治之"。
+    对做企业文档抽取、知识库入库、RAG 预处理的人来说，可以直接少写一套判断逻辑；当周 +2.5k 星，Rust 工具链里少见的高热度。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 10.1k</span>
+    <span class="meta-item">🍴 661 forks</span>
+    <span class="meta-item">📜 AGPL-3.0</span>
+    <span class="meta-item"><a class="nav" href="https://github.com/firecrawl" target="_blank">Firecrawl 组织主页</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">pdf</span>
+    <span class="topic">rust</span>
+    <span class="topic">ocr</span>
+    <span class="topic">rag</span>
+    <span class="topic">text-extraction</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">TencentCloud/TencentDB-Agent-Memory</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +1,111/周</span>
+  </div>
+  <div class="zh-title">腾讯云：Agent 团队级记忆中枢</div>
+  <div class="desc-en">TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph).</div>
+  <div class="takeaway">
+    把 Agent 长期记忆这件事做到"团队级"而不是单 Agent：把对话、文档、代码分别沉淀为 Chat Memory / Skill / LLM-Wiki / Code-Graph
+    四类可治理、可共享、可在不同 Agent / 框架间复用的资产。亮点是"治理 + 共享"——传统 Agent 记忆往往止步于单 Agent 内的向量库，
+    这套设计明确面向多 Agent 协作与跨项目复用。腾讯云开源生态里偏开发者体验的一个项目。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 13.7k</span>
+    <span class="meta-item">🍴 1.3k forks</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+    <span class="meta-item"><a class="nav" href="https://github.com/TencentCloud" target="_blank">TencentCloud 开源主页</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agent</span>
+    <span class="topic">memory</span>
+    <span class="topic">knowledge-graph</span>
+    <span class="topic">multi-agent</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></span>
+    <span class="badge lang">Shell</span>
+    <span class="badge stars">⭐ +653/周</span>
+  </div>
+  <div class="zh-title">Superpowers：给编码 Agent 加一套工程化"超能力"</div>
+  <div class="desc-en">An agentic skills framework & software development methodology that works. Composable skills + initial instructions that make sure your agent uses them.</div>
+  <div class="takeaway">
+    一套面向"用 AI 写代码"工作流的 Skills 框架：覆盖需求澄清 → 分块规格评审 → TDD 实现计划 → 子 Agent 实施 → 自审复查，
+    强制红绿循环 / YAGNI / DRY。亮点是"插件化 + 跨工具"，同时适配 Claude Code、Codex CLI、Cursor、Copilot CLI、Gemini CLI、Kimi Code 等
+    十余种编码 Agent。"让 Agent 不再上来就乱写代码"这个痛点被它正面解决了。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 高活跃新项目</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item"><a class="nav" href="https://github.com/obra/superpowers" target="_blank">README / 安装指南</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">agent</span>
+    <span class="topic">skills-framework</span>
+    <span class="topic">tdd</span>
+    <span class="topic">claude-code</span>
+    <span class="topic">cursor</span>
+    <span class="topic">codex</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/livekit/agents" target="_blank">livekit/agents</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +432/周</span>
+  </div>
+  <div class="zh-title">LiveKit Agents：实时语音/视频 AI Agent 框架</div>
+  <div class="desc-en">A framework for building realtime voice AI agents 🤖🎙️📹</div>
+  <div class="takeaway">
+    LiveKit 把自家"实时音视频基础设施"的能力开放给 Agent 开发：内置 STT / LLM / TTS 流水线、可插拔管线、
+    支持多模态（语音 + 视频帧输入）。和 Pipecat / Vocode 这类同类型框架相比，优势在于和 LiveKit 房间 / WebRTC
+    深度打通，几乎是"做电话客服、视频陪练、实时语音助手"的现成底座。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 高活跃项目</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+    <span class="meta-item"><a class="nav" href="https://livekit.io" target="_blank">livekit.io</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">voice-ai</span>
+    <span class="topic">realtime</span>
+    <span class="topic">webrtc</span>
+    <span class="topic">stt-tts</span>
+    <span class="topic">agent-framework</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">zhaoxuya520/reverse-skill</a></span>
+    <span class="badge lang">PowerShell</span>
+    <span class="badge stars">⭐ +2,297/周</span>
+  </div>
+  <div class="zh-title">安全研究技能路由包：AI 自动路由 + 按需工具链 + 自进化知识库</div>
+  <div class="desc-en">Security Research Skill Router Pack — AI-powered routing + on-demand toolchain bootstrapping + self-evolving knowledge base; supports Claude Code, Kiro, Cursor, Cline and other AI coding clients.</div>
+  <div class="takeaway">
+    一套把"AI 编码客户端"升级为"安全研究工作站"的 Skill 路由包：按用户意图自动判断该走哪条分析路径，按需拉起对应工具链，
+    并把每次分析经验沉淀到可自进化的知识库。覆盖 Claude Code / Kiro / Cursor / Cline 等多种 AI 客户端。
+    思路和 obra/superpowers 类似，但定位垂直在安全研究场景；适合做代码审计、漏洞复盘、样本分析这类工作的人，把它当作"开箱即用的工作流"。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 18.0k</span>
+    <span class="meta-item">🍴 2.5k forks</span>
+    <span class="meta-item">📜 安全研究 / 授权测试用途</span>
+  </div>
+  <div class="topics">
+    <span class="topic">skill-router</span>
+    <span class="topic">ai-coding-client</span>
+    <span class="topic">toolchain</span>
+    <span class="topic">knowledge-base</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/uber/ADR" target="_blank">uber/ADR</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +148/周</span>
+  </div>
+  <div class="zh-title">Uber ADR：企业级 AI Agent 安全可观测与威胁检测</div>
+  <div class="desc-en">ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.</div>
+  <div class="takeaway">
+    Uber 把自家"在生产环境跑 AI Agent 时如何做安全审计"的方案开源出来：覆盖可观测性、安全基准、威胁检测三层能力，
+    直接接入 Uber 内部已经在用的 Agent 流量。Agent 进入企业生产后，"谁能调用、调用了谁、做了什么、是否越权"
+    这一套是绝大多数团队还没补齐的能力，ADR 提供了可参考的工程样板和评测基线。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 703</span>
+    <span class="meta-item">🍴 69 forks</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+    <span class="meta-item"><a class="nav" href="https://github.com/uber" target="_blank">Uber 开源主页</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agent</span>
+    <span class="topic">security</span>
+    <span class="topic">observability</span>
+    <span class="topic">threat-detection</span>
+    <span class="topic">enterprise</span>
+  </div>
+</div>
+
+<footer>
+  <p>Generated on 2026-08-05 · 数据源：<a class="nav" href="https://github.com/trending" target="_blank">github.com/trending</a></p>
+  <p style="margin-top:6px">GitHub 开源日报 · 自动生成 · 北京时间</p>
+</footer>
+</div>
+</body>
+</html>
