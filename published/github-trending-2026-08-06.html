@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-06</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d29922;
+    --purple: #bc8cff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    padding: 2rem 1rem;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(88,166,255,0.12);
+    color: var(--accent);
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(88,166,255,0.25);
+  }
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #f0f6fc;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .meta span + span::before { content: " · "; margin: 0 0.4rem; }
+  .summary {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+    font-size: 0.96rem;
+  }
+  .summary strong { color: var(--accent); }
+  .grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    transition: border-color 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .rank {
+    background: rgba(188,140,255,0.14);
+    color: var(--purple);
+    font-weight: 700;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .title-row { display: flex; align-items: center; gap: 0.7rem; flex: 1; min-width: 0; }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f0f6fc;
+  }
+  h2 a { color: inherit; text-decoration: none; }
+  h2 a:hover { color: var(--accent); }
+  .lang {
+    display: inline-block;
+    background: rgba(63,185,80,0.12);
+    color: var(--green);
+    padding: 0.18rem 0.55rem;
+    border-radius: 12px;
+    font-size: 0.74rem;
+    font-weight: 500;
+  }
+  .lang.rust { background: rgba(222,165,132,0.15); color: #dea584; }
+  .lang.js { background: rgba(241,224,90,0.15); color: #f1e15b; }
+  .stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.7rem;
+  }
+  .stats .stars-today { color: var(--orange); font-weight: 600; }
+  .stats .stars-total { color: var(--muted); }
+  .desc {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+  .highlights {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .highlights li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+  }
+  .highlights li::before {
+    content: "→";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">GitHub Trending · 每日精选</div>
+    <h1>GitHub 开源日报 · 2026-08-06</h1>
+    <div class="meta">
+      <span>📅 2026 年 8 月 6 日 周四</span>
+      <span>🌏 Asia/Shanghai</span>
+      <span>📊 收录 8 个项目</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    今日 <strong>AI 智能体（Agent）</strong>持续霸榜，从云端执行环境、长期任务状态管理，到企业级可观测与威胁检测，构成完整工具链；Rust 高性能 PDF 处理与单卡大模型推理代表了工程化的两个具体方向；Tailwind CSS 仍是前端原子化样式的常青树。
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">1</span>
+          <h2><a href="https://github.com/cloudflare/computer">给 AI 智能体的云端"电脑"</a></h2>
+        </div>
+        <span class="lang">TypeScript</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +891 今日</span>
+        <span class="stars-total">★ 3,093 总计</span>
+        <span>⑂ 141</span>
+      </div>
+      <div class="desc">Cloudflare 推出的智能体执行沙箱，让 AI 代理获得类似本地电脑的操作能力，可隔离运行命令、读写文件。</div>
+      <ul class="highlights">
+        <li>基于边缘网络，延迟低、就近执行</li>
+        <li>适合需要安全隔离的自动化与编排任务</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">2</span>
+          <h2><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">AI 智能体团队级记忆中枢</a></h2>
+        </div>
+        <span class="lang">TypeScript</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +1,892 今日</span>
+        <span class="stars-total">★ 15,125 总计</span>
+        <span>⑂ 1,375</span>
+      </div>
+      <div class="desc">把对话、文档、代码统一沉淀为四类可复用记忆资产（会话记忆、技能、知识图谱、代码图谱），供多智能体跨框架共享。</div>
+      <ul class="highlights">
+        <li>团队级记忆治理，避免每个 Agent 重复造轮子</li>
+        <li>支持多种主流智能体框架接入</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">3</span>
+          <h2><a href="https://github.com/firecrawl/pdf-inspector">高性能 PDF 智能识别与文本提取</a></h2>
+        </div>
+        <span class="lang rust">Rust</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +1,582 今日</span>
+        <span class="stars-total">★ 11,511 总计</span>
+        <span>⑂ 773</span>
+      </div>
+      <div class="desc">Firecrawl 出品的 Rust PDF 处理库，可自动区分扫描件与文本型 PDF，并据此路由到合适的提取流水线。</div>
+      <ul class="highlights">
+        <li>Rust 实现，速度快、内存占用低，适合大规模批处理</li>
+        <li>智能分流让 OCR 与结构化解析各司其职</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">4</span>
+          <h2><a href="https://github.com/lyogavin/airllm">单张 4GB 显卡跑 70B 大模型推理</a></h2>
+        </div>
+        <span class="lang">Jupyter</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +833 今日</span>
+        <span class="stars-total">★ 29,123 总计</span>
+        <span>⑂ 3,127</span>
+      </div>
+      <div class="desc">把 70B 级别的超大模型"分块"加载到显存，让消费级显卡也能跑得动，本地部署与原型验证友好。</div>
+      <ul class="highlights">
+        <li>极低显存门槛，适合个人开发者本地实验</li>
+        <li>分块流式加载策略对长上下文推理尤其有用</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">5</span>
+          <h2><a href="https://github.com/tailwindlabs/tailwindcss">原子化 CSS 框架常青树</a></h2>
+        </div>
+        <span class="lang">TypeScript</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +408 今日</span>
+        <span class="stars-total">★ 96,874 总计</span>
+        <span>⑂ 5,549</span>
+      </div>
+      <div class="desc">用工具类组合样式而非写自定义 CSS，Tailwind 仍是构建现代 Web UI 的高效起点。</div>
+      <ul class="highlights">
+        <li>零运行时，按需生成最小化 CSS</li>
+        <li>设计系统一致性强，与主流前端框架无缝集成</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">6</span>
+          <h2><a href="https://github.com/uber/ADR">企业级 AI 智能体可观测与威胁检测</a></h2>
+        </div>
+        <span class="lang">Python</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +354 今日</span>
+        <span class="stars-total">★ 1,063 总计</span>
+        <span>⑂ 85</span>
+      </div>
+      <div class="desc">Uber 开源的 AI 代理安全与可观测框架，专注于跟踪调用链、检测异常行为、度量风险指标。</div>
+      <ul class="highlights">
+        <li>面向生产环境的智能体行为审计</li>
+        <li>已在大规模真实业务中验证</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">7</span>
+          <h2><a href="https://github.com/huangruiteng/loopx">AI 智能体长任务循环状态内核</a></h2>
+        </div>
+        <span class="lang">Python</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +326 今日</span>
+        <span class="stars-total">★ 2,180 总计</span>
+        <span>⑂ 164</span>
+      </div>
+      <div class="desc">面向长跑 AI 智能体团队的轻量级循环工程框架，提供持久化目标、配额感知自动唤醒、可执行待办、交接留痕等能力。</div>
+      <ul class="highlights">
+        <li>与主流编程智能体解耦，可统一编排多 Agent 团队</li>
+        <li>内置交接可验证与证据日志，便于回溯</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="title-row">
+          <span class="rank">8</span>
+          <h2><a href="https://github.com/addyosmani/agent-skills">生产级 AI 编程智能体技能集</a></h2>
+        </div>
+        <span class="lang js">JavaScript</span>
+      </div>
+      <div class="stats">
+        <span class="stars-today">⭐ +226 今日</span>
+        <span class="stars-total">★ 82,006 总计</span>
+        <span>⑂ 8,824</span>
+      </div>
+      <div class="desc">Google Chrome 性能负责人 Addy Osmani 整理的生产级 AI 编程实践与技能清单，覆盖代码生成、重构、测试与审查。</div>
+      <ul class="highlights">
+        <li>沉淀大型团队真实使用经验</li>
+        <li>可直接套用到日常开发工作流</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>由 OpenClaw 自动整理 · 数据来源 <a href="https://github.com/trending">github.com/trending</a></p>
+    <p style="margin-top:0.4rem;">本报告仅筛选有学习价值的工具/库/框架；不收录纯学术论文或衍生项目。</p>
+  </footer>
+</div>
+</body>
+</html>
