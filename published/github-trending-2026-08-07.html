@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-07</title>
+<style>
+  :root{
+    --bg:#0d1117;
+    --surface:#161b22;
+    --border:#30363d;
+    --text:#c9d1d9;
+    --muted:#8b949e;
+    --accent:#58a6ff;
+    --rank-hot:#ff7b72;
+    --rank-ok:#3fb950;
+    --link:#58a6ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+  header{
+    border-bottom:1px solid var(--border);
+    padding-bottom:20px;
+    margin-bottom:28px;
+  }
+  .tag{
+    display:inline-block;
+    font-size:12px;
+    padding:2px 8px;
+    border-radius:999px;
+    background:#1f6feb22;
+    color:var(--accent);
+    border:1px solid #1f6feb55;
+    margin-right:8px;
+  }
+  h1{
+    margin:8px 0 4px;
+    font-size:28px;
+    color:#f0f6fc;
+  }
+  .meta{color:var(--muted);font-size:13px}
+  .summary{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:16px 18px;
+    margin:20px 0 28px;
+    color:var(--text);
+  }
+  .summary strong{color:#f0f6fc}
+  ol.list{list-style:none;padding:0;margin:0}
+  li.item{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:18px 20px;
+    margin-bottom:14px;
+    transition:border-color .2s;
+  }
+  li.item:hover{border-color:#58a6ff55}
+  .head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .rank{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:28px;height:28px;
+    border-radius:50%;
+    font-weight:700;
+    font-size:13px;
+    flex-shrink:0;
+  }
+  .rank.hot{background:#ff7b7222;color:var(--rank-hot);border:1px solid #ff7b7255}
+  .rank.normal{background:#3fb95022;color:var(--rank-ok);border:1px solid #3fb95055}
+  .name{
+    font-size:16px;
+    font-weight:600;
+    color:#f0f6fc;
+    text-decoration:none;
+  }
+  .name:hover{color:var(--accent)}
+  .lang{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-size:12px;
+    color:var(--muted);
+    margin-left:auto;
+  }
+  .dot{
+    width:10px;height:10px;border-radius:50%;
+    display:inline-block;
+  }
+  .desc{
+    color:var(--text);
+    margin:10px 0 8px;
+    font-size:14px;
+  }
+  .takeaway{
+    background:#0d1117;
+    border-left:3px solid var(--accent);
+    padding:8px 12px;
+    margin:10px 0;
+    color:var(--text);
+    font-size:13px;
+    border-radius:0 6px 6px 0;
+  }
+  .takeaway b{color:var(--accent)}
+  .meta-row{
+    display:flex;
+    gap:14px;
+    font-size:12px;
+    color:var(--muted);
+    margin-top:10px;
+    flex-wrap:wrap;
+  }
+  .meta-row a{color:var(--link);text-decoration:none}
+  .meta-row a:hover{text-decoration:underline}
+  footer{
+    margin-top:32px;
+    color:var(--muted);
+    font-size:12px;
+    text-align:center;
+    border-top:1px solid var(--border);
+    padding-top:18px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">GitHub Trending</span>
+    <h1>GitHub 开源日报 · 2026-08-07</h1>
+    <div class="meta">Beijing 时间 · 抓取当日 Top 10 趋势仓库 · 9 条精选</div>
+  </header>
+
+  <div class="summary">
+    <strong>今日主线：</strong>AI 代理生态继续狂飙——Cloudflare 把"给代理一台电脑"做成基础设施；Rust 写的 PDF 解析库用速度杀出重围；面向编码代理的"技能包"项目集体爆发。本期挑选的工具/库/框架均可直接落地，跳过纯学术 benchmark。
+  </div>
+
+  <ol class="list">
+
+    <li class="item">
+      <div class="head">
+        <span class="rank hot">1</span>
+        <a class="name" href="https://github.com/cloudflare/computer" target="_blank">Cloudflare · Computer</a>
+        <span class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript · +2,802 ★/周</span>
+      </div>
+      <div class="desc">给 AI 代理一台"云端电脑"：在隔离容器里执行命令、跑浏览器、读写文件。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>Cloudflare 边缘网络 + 沙箱化执行环境，把"代理需要长时运行/调用真实工具"这件事基础设施化。是 Agent 走向生产环境的拼图。</div>
+      <div class="meta-row">
+        <a href="https://github.com/cloudflare/computer" target="_blank">仓库</a>
+        <span>本周 +2,802 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank hot">2</span>
+        <a class="name" href="https://github.com/mattpocock/skills" target="_blank">Matt Pocock · Skills</a>
+        <span class="lang"><span class="dot" style="background:#89e051"></span>Shell · +1,873 ★/周</span>
+      </div>
+      <div class="desc">TypeScript 工程师 Matt Pocock 公开的 <code>.agents</code> 技能集：面向真实工程任务。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>不是"演示级" prompt 集合，是带 TS 类型校验、最佳实践、踩坑总结的工程师向技能包。学习 Claude/编码代理工作流可直接拿来当参考模板。</div>
+      <div class="meta-row">
+        <a href="https://github.com/mattpocock/skills" target="_blank">仓库</a>
+        <span>本周 +1,873 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank hot">3</span>
+        <a class="name" href="https://github.com/firecrawl/pdf-inspector" target="_blank">Firecrawl · PDF Inspector</a>
+        <span class="lang"><span class="dot" style="background:#dea584"></span>Rust · +1,190 ★/周</span>
+      </div>
+      <div class="desc">Rust 写的 PDF 检测/分类/文本提取库；自动判断扫描件 vs 文本 PDF，决定路由策略。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>RAG 和文档处理流水线的痛点之一就是"混合 PDF"——扫描件要 OCR、文本要解析。这库只做"识别和分类"，体积小、速度极快，是构建文档 RAG 的理想前置组件。</div>
+      <div class="meta-row">
+        <a href="https://github.com/firecrawl/pdf-inspector" target="_blank">仓库</a>
+        <span>本周 +1,190 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">4</span>
+        <a class="name" href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">腾讯云 · TencentDB Agent Memory</a>
+        <span class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript · +1,057 ★/周</span>
+      </div>
+      <div class="desc">企业级代理记忆中枢：把对话、文档、代码提炼成 Chat Memory / Skill / LLM-Wiki / Code-Graph 四类可复用资产，跨代理与框架共享。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>单代理记忆已有方案，团队级/跨框架的"记忆治理"是真正缺位的一环。腾讯云把它做成了可治理、可共享的产品形态，比各家自造轮子更接近生产可用。</div>
+      <div class="meta-row">
+        <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">仓库</a>
+        <span>本周 +1,057 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">5</span>
+        <a class="name" href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank">esengine · DeepSeek Reasonix</a>
+        <span class="lang"><span class="dot" style="background:#00ADD8"></span>Go · +888 ★/周</span>
+      </div>
+      <div class="desc">DeepSeek 原生终端 AI 编码代理，围绕 prefix-cache 稳定性设计——可以挂机跑。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>大部分 CLI 编码代理每轮都重建上下文，浪费 token 且不稳。围绕 prefix-cache 做工程的国产代理，长期任务下的成本和稳定性有明显优势。</div>
+      <div class="meta-row">
+        <a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank">仓库</a>
+        <span>本周 +888 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">6</span>
+        <a class="name" href="https://github.com/obra/superpowers" target="_blank">Obra · Superpowers</a>
+        <span class="lang"><span class="dot" style="background:#89e051"></span>Shell · +858 ★/周</span>
+      </div>
+      <div class="desc">代理技能框架 + 软件开发方法论：以"可复用技能包 + 工作流"形式定义代理如何交付代码。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>不是又一个 prompt 模板库，而是把"需求评审→拆解→实现→回归"做成结构化方法论。当你想让代理不只是写代码、而是按工程节奏交付，这是当下最完整的开源方案之一。</div>
+      <div class="meta-row">
+        <a href="https://github.com/obra/superpowers" target="_blank">仓库</a>
+        <span>本周 +858 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">7</span>
+        <a class="name" href="https://github.com/huangruiteng/loopx" target="_blank">huangruiteng · loopx</a>
+        <span class="lang"><span class="dot" style="background:#3572A5"></span>Python · +847 ★/周</span>
+      </div>
+      <div class="desc">面向长任务 AI 代理团队的轻量"循环工程状态内核"：跨 Codex / Claude Code 等代理，持久目标、配额感知自动唤醒、可执行待办、证据日志、可验证交接。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>长任务代理最大的痛点不是模型能力，是"上下文丢了/状态断了/无人接力"。loopx 直接对症下药，把"循环"这件事做成跨代理的内核层。</div>
+      <div class="meta-row">
+        <a href="https://github.com/huangruiteng/loopx" target="_blank">仓库</a>
+        <span>本周 +847 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">8</span>
+        <a class="name" href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani · agent-skills</a>
+        <span class="lang"><span class="dot" style="background:#f1e05a"></span>JavaScript · +593 ★/周</span>
+      </div>
+      <div class="desc">Google Chrome 团队工程师 Addy Osmani 出品的"生产级编码代理工程技能集"。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>Addy Osmani 是前端性能/工程化领域的知名作者，他公开的技能包强调"production-grade"，对想把代理用到真实项目的工程团队价值很高。</div>
+      <div class="meta-row">
+        <a href="https://github.com/addyosmani/agent-skills" target="_blank">仓库</a>
+        <span>本周 +593 星</span>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="head">
+        <span class="rank normal">9</span>
+        <a class="name" href="https://github.com/tirth8205/code-review-graph" target="_blank">tirth8205 · code-review-graph</a>
+        <span class="lang"><span class="dot" style="background:#3572A5"></span>Python · +237 ★/周</span>
+      </div>
+      <div class="desc">本地优先的代码智能图谱（MCP + CLI）：给 AI 编码工具一张"代码库持久地图"，只读它真正需要的上下文。</div>
+      <div class="takeaway"><b>为什么值得关注：</b>大代码库上做 PR/review，代理往往被"全量塞上下文"拖垮。这工具把仓库建成可查询的图，号称对 review 工作流有显著 context 缩减——是 MCP 生态里很实用的"代码检索层"。</div>
+      <div class="meta-row">
+        <a href="https://github.com/tirth8205/code-review-graph" target="_blank">仓库</a>
+        <span>本周 +237 星</span>
+      </div>
+    </li>
+
+  </ol>
+
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank" style="color:var(--link)">github.com/trending</a> · 由 Agent 自动整理 · 仅收录可学习、可落地的工具/库/框架
+  </footer>
+</div>
+</body>
+</html>
