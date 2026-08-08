@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-08</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+    background: #fafafa;
+    color: #1f2328;
+    line-height: 1.7;
+  }
+  header {
+    border-bottom: 2px solid #1f2328;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+  .meta {
+    color: #57606a;
+    font-size: 14px;
+  }
+  .summary {
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+  }
+  .summary p { margin: 6px 0; }
+  .repo {
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    transition: box-shadow .15s ease;
+  }
+  .repo:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .repo h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+  .repo h2 a {
+    color: #0969da;
+    text-decoration: none;
+  }
+  .repo h2 a:hover { text-decoration: underline; }
+  .repo .title-zh {
+    color: #57606a;
+    font-size: 14px;
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  .repo p.desc {
+    margin: 8px 0 12px;
+    color: #1f2328;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    color: #1f2328;
+  }
+  .tag.lang { background: #ddf4ff; border-color: #54aeff; }
+  .tag.star { background: #fff8c5; border-color: #d4a72c; }
+  .tag.why { background: #dafbe1; border-color: #1f883d; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #d0d7de;
+    color: #57606a;
+    font-size: 13px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📦 GitHub 开源日报 · 2026-08-08</h1>
+  <div class="meta">Beijing 时间 · 今日 GitHub Trending 精选 · 共 8 个仓库</div>
+</header>
+
+<section class="summary">
+  <p><strong>今日主题：AI Agent 工程化</strong></p>
+  <p>今日 trending 几乎被"Agent 技能框架 / 自主任务代理 / 沙箱执行环境"占据。值得注意的是，<code>authentik</code>、<code>mise</code>、<code>celld</code> 等传统基础设施类项目仍保持稳定热度，说明工程化需求与 AI 热潮并行。</p>
+</section>
+
+<article class="repo">
+  <h2><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">PrimeIntellect-ai/prime-agent</a></h2>
+  <div class="title-zh">可自我进化的编码代理（基于递归语言模型）</div>
+  <p class="desc">一个面向长链路编码任务与持续自主执行的智能体框架，支持自我改进循环，适合做"长任务"代理实验。TypeScript 实现。</p>
+  <div class="tags">
+    <span class="tag lang">TypeScript</span>
+    <span class="tag star">⭐ +2,293 today</span>
+    <span class="tag why">推荐：当日热度第一；研究自主代理演进的好样本</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills</a></h2>
+  <div class="title-zh">实战派工程师的 Agent Skills 合集</div>
+  <p class="desc">直接来自作者本地 <code>.agents</code> 目录：面向真实工程场景的 AI 代理技能集，强调"开箱即用、不掺水"。Shell 形式组织，便于直接接入 Claude/Cursor 等 IDE 代理。</p>
+  <div class="tags">
+    <span class="tag lang">Shell</span>
+    <span class="tag star">⭐ +2,152 today</span>
+    <span class="tag why">推荐：技能模板可直接复用，落地成本最低</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></h2>
+  <div class="title-zh">Google 工程效能负责人开源的代理技能集</div>
+  <p class="desc">面向 AI 编码代理的生产级工程技能，覆盖代码评审、依赖管理、性能分析等场景。JavaScript 生态，作者为 Chrome 团队的 Addy Osmani。</p>
+  <div class="tags">
+    <span class="tag lang">JavaScript</span>
+    <span class="tag star">⭐ +1,131 today</span>
+    <span class="tag why">推荐：技能设计思路清晰，可作为写自己 skills 的参考</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/cloudflare/computer" target="_blank">cloudflare/computer</a></h2>
+  <div class="title-zh">给代理一台"云端电脑"</div>
+  <p class="desc">Cloudflare 开源的沙箱执行环境，让你的 AI 代理拥有完整的远程计算能力（浏览器、终端、文件系统）。TypeScript 实现，基于 Cloudflare 边缘网络。</p>
+  <div class="tags">
+    <span class="tag lang">TypeScript</span>
+    <span class="tag star">⭐ +872 today</span>
+    <span class="tag why">推荐：把代理从"只聊天"变成"真干活"的关键拼图</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></h2>
+  <div class="title-zh">代理协作的工作流框架与开发方法论</div>
+  <p class="desc">一套经过验证的 AI 代理协作流程与软件工程方法论，覆盖从需求拆解到交付的完整工作流。Shell 实现，强调"流程优先"。</p>
+  <div class="tags">
+    <span class="tag lang">Shell</span>
+    <span class="tag star">⭐ +782 today</span>
+    <span class="tag why">推荐：方法论层面的差异化项目，适合团队引入</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/goauthentik/authentik" target="_blank">goauthentik/authentik</a></h2>
+  <div class="title-zh">一站式身份认证与 SSO 中台</div>
+  <p class="desc">开源的身份提供方（IdP），支持 OIDC、SAML、LDAP、SSO、SCIM，是 Keycloak 之外最值得关注的现代替代品。Python/Go 实现，文档与 UI 都比较现代。</p>
+  <div class="tags">
+    <span class="tag lang">Python</span>
+    <span class="tag star">⭐ +530 today</span>
+    <span class="tag why">推荐：自建企业 SSO / 统一认证的首选方案</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/denoland/celld" target="_blank">denoland/celld</a></h2>
+  <div class="title-zh">自托管的分布式 Durable Objects</div>
+  <p class="desc">Deno 团队出品的分布式有状态对象运行时，让你可以在自己的基础设施上跑类似 Cloudflare Durable Objects 的模型——强一致、低延迟、自动迁移。Rust 实现。</p>
+  <div class="tags">
+    <span class="tag lang">Rust</span>
+    <span class="tag star">⭐ +516 today</span>
+    <span class="tag why">推荐：想自建 Cloudflare 风格边缘计算的话值得研究</span>
+  </div>
+</article>
+
+<article class="repo">
+  <h2><a href="https://github.com/jdx/mise" target="_blank">jdx/mise</a></h2>
+  <div class="title-zh">一站式开发工具与运行时版本管理</div>
+  <p class="desc">继 asdf 之后的下一代版本管理工具，支持 Node/Python/Go/Rust/Elixir 等多语言版本切换、env vars、任务运行。Rust 实现，速度快，配置即代码。</p>
+  <div class="tags">
+    <span class="tag lang">Rust</span>
+    <span class="tag star">⭐ +135 today</span>
+    <span class="tag why">推荐：替代 asdf/nvm/pyenv 的现代选择</span>
+  </div>
+</article>
+
+<footer>
+  数据来源：<a href="https://github.com/trending">github.com/trending</a> · 自动整理于 Beijing 时间 2026-08-08 上午
+</footer>
+</body>
+</html>
