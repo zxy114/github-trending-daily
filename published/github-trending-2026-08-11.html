@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-11</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1f2630;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-2: #d2a8ff;
+    --orange: #ffa657;
+    --green: #56d364;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+  header {
+    text-align: center;
+    padding: 24px 0 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .subtitle { color: var(--text-muted); font-size: 14px; }
+  .meta { color: var(--text-muted); font-size: 13px; margin-top: 8px; }
+  .summary-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding: 16px;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .stat {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .repo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    transition: all 0.2s;
+  }
+  .repo-card:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .repo-rank {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #000;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .repo-title { font-size: 20px; margin: 0 0 4px; }
+  .repo-title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .repo-title a:hover { text-decoration: underline; }
+  .repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: rgba(88,166,255,0.15);
+    color: var(--accent);
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .badge.cat { background: rgba(210,168,255,0.15); color: var(--accent-2); }
+  .badge.stars { background: rgba(255,166,87,0.15); color: var(--orange); }
+  .repo-why {
+    color: var(--text);
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  .repo-desc {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-style: italic;
+    border-left: 2px solid var(--border);
+    padding-left: 12px;
+    margin-top: 8px;
+  }
+  .lang-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background: #58a6ff;
+  }
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 32px 0 16px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📈 GitHub 开源日报</h1>
+    <div class="subtitle">每日精选 · 学习价值优先</div>
+    <div class="meta">📅 2026-08-11 · 北京时间 · 数据来源 github.com/trending</div>
+  </header>
+
+  <div class="summary-strip">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">精选仓库</div></div>
+    <div class="stat"><div class="stat-num">+6,700</div><div class="stat-label">今日累计 star</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">覆盖语言</div></div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">1</span>
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">Prime Agent — 自进化编码智能体</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 工程化</span>
+      <span class="badge stars">⭐ +2,642/day</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 13,146 stars · 1,334 forks</span>
+      <span>👤 PrimeIntellect-ai</span>
+    </div>
+    <div class="repo-why">面向长时自主任务的 RLM 智能体，强调在编码工作流里自我改进，适合研究智能体编排与长期记忆机制。</div>
+    <div class="repo-desc">A self-improving RLM agent for coding workflows and long-running autonomous tasks.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">2</span>
+      <a href="https://github.com/semantica-agi/semantica" target="_blank" rel="noopener">Semantica — 上下文与可追溯 AI 系统的图原生基础设施</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI 基础设施 / 图谱</span>
+      <span class="badge stars">⭐ +970/day</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 4,167 stars · 484 forks</span>
+      <span>👤 semantica-agi</span>
+    </div>
+    <div class="repo-why">把上下文与决策链路建成图结构，强调可追溯与可问责，是构建可控 AI 工作流的工程参考。</div>
+    <div class="repo-desc">Graph-Native Infrastructure for Context and Accountable AI Systems</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">3</span>
+      <a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">Firecrawl — 面向 AI 的网页抓取与交互 API</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">数据采集 / API</span>
+      <span class="badge stars">⭐ +835/day</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 165,132 stars · 9,287 forks</span>
+      <span>👤 firecrawl</span>
+    </div>
+    <div class="repo-why">把抓取、清洗、结构化封装成统一 API，可直接喂给 LLM/RAG，是构建数据管道最省事的开源方案之一。</div>
+    <div class="repo-desc">The context API to search, scrape, and interact with the web at scale.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">4</span>
+      <a href="https://github.com/vitali87/code-graph-rag" target="_blank" rel="noopener">Code Graph RAG — 单仓多语言代码检索增强</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">开发者工具 / RAG</span>
+      <span class="badge stars">⭐ +682/day</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 3,556 stars · 548 forks</span>
+      <span>👤 vitali87</span>
+    </div>
+    <div class="repo-why">用知识图谱对 monorepo 做查询、理解与编辑，适合给代码评审/重构场景接入 AI 问答。</div>
+    <div class="repo-desc">The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">5</span>
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">Agent Skills — 生产可用 AI 编程代理技能集</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 工程实践</span>
+      <span class="badge stars">⭐ +659/day</span>
+      <span><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+      <span>📊 总 85,776 stars · 9,231 forks</span>
+      <span>👤 addyosmani</span>
+    </div>
+    <div class="repo-why">Google 工程主管整理的实战级 skill 模板，能直接拼到 Claude/Cursor 这类代理上，少踩 prompt 工程的坑。</div>
+    <div class="repo-desc">Production-grade engineering skills for AI coding agents.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">6</span>
+      <a href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">T3 Code — T3 生态下的代码协作工具</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">开发者工具 / 协作</span>
+      <span class="badge stars">⭐ +389/day</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 18,039 stars · 4,076 forks</span>
+      <span>👤 pingdotgg</span>
+    </div>
+    <div class="repo-why">Theo 团队（T3 Stack 出品）面向现代 Web 工程打造的代码协作工具，可作为工程化编程体验的参考实现。</div>
+    <div class="repo-desc"></div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">7</span>
+      <a href="https://github.com/google-deepmind/weathernext" target="_blank" rel="noopener">WeatherNext — 谷歌 DeepMind 天气预报模型</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">气象 / 深度学习</span>
+      <span class="badge stars">⭐ +325/day</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 7,363 stars · 954 forks</span>
+      <span>👤 google-deepmind</span>
+    </div>
+    <div class="repo-why">DeepMind 出品的下一代天气预报模型开源实现，可学习其数据接入、推理接口与时序模型设计。</div>
+    <div class="repo-desc"></div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">8</span>
+      <a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener">ComfyUI — 模块化扩散模型工作台</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">图像生成 / GUI</span>
+      <span class="badge stars">⭐ 高热度</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 长期热门项目 · 持续上榜</span>
+      <span>👤 Comfy-Org</span>
+    </div>
+    <div class="repo-why">节点式工作流把扩散模型流水线可视化、可 API 化，是创作与工程化兼顾的代表，几乎是 AI 绘图的事实标准之一。</div>
+    <div class="repo-desc">The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">9</span>
+      <a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">Paperclip — 开源智能体任务管理平台</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 任务编排</span>
+      <span class="badge stars">⭐ +198/day</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 76,538 stars · 14,210 forks</span>
+      <span>👤 paperclipai</span>
+    </div>
+    <div class="repo-why">面向团队的智能体任务/调度管理台，适合需要让多个 AI 代理协同作业的工作流搭建。</div>
+    <div class="repo-desc">The open-source app everyone uses to manage agents at work</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">10</span>
+      <a href="https://github.com/LadybirdBrowser/ladybird" target="_blank" rel="noopener">Ladybird — 真正独立的 Web 浏览器</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">系统软件 / 浏览器</span>
+      <span class="badge stars">⭐ 高关注</span>
+      <span><span class="lang-dot" style="background:#f34b7d"></span>C++</span>
+      <span>📊 长期热门项目</span>
+      <span>👤 LadybirdBrowser</span>
+    </div>
+    <div class="repo-why">从零构建的独立浏览器内核（非基于 Chromium/WebKit），适合研究浏览器架构、渲染管线与前端规范实现。</div>
+    <div class="repo-desc">Truly independent web browser</div>
+  </div>
+
+  <footer>
+    精选自 GitHub Trending · 排除纯学术论文/基准测试/fork 仓库<br>
+    生成时间 2026-08-11 · 仅收录具备学习价值的开源项目
+  </footer>
+</div>
+</body>
+</html>
