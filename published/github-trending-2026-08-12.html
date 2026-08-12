@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-12</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1f2630;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-2: #d2a8ff;
+    --orange: #ffa657;
+    --green: #56d364;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+  header {
+    text-align: center;
+    padding: 24px 0 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .subtitle { color: var(--text-muted); font-size: 14px; }
+  .meta { color: var(--text-muted); font-size: 13px; margin-top: 8px; }
+  .summary-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding: 16px;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .stat {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .repo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    transition: all 0.2s;
+  }
+  .repo-card:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .repo-rank {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #000;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .repo-title { font-size: 20px; margin: 0 0 4px; }
+  .repo-title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .repo-title a:hover { text-decoration: underline; }
+  .repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: rgba(88,166,255,0.15);
+    color: var(--accent);
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .badge.cat { background: rgba(210,168,255,0.15); color: var(--accent-2); }
+  .badge.stars { background: rgba(255,166,87,0.15); color: var(--orange); }
+  .repo-why {
+    color: var(--text);
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  .repo-desc {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-style: italic;
+    border-left: 2px solid var(--border);
+    padding-left: 12px;
+    margin-top: 8px;
+  }
+  .lang-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background: #58a6ff;
+  }
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 32px 0 16px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📈 GitHub 开源日报</h1>
+    <div class="subtitle">每日精选 · 学习价值优先</div>
+    <div class="meta">📅 2026-08-12 · 北京时间 · 数据来源 github.com/trending</div>
+  </header>
+
+  <div class="summary-strip">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">精选仓库</div></div>
+    <div class="stat"><div class="stat-num">+7,286</div><div class="stat-label">今日累计 star</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">覆盖语言</div></div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">1</span>
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">Prime Agent — 自进化编码智能体</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 工程化</span>
+      <span class="badge stars">⭐ +1,138/周</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 14,150 stars · 1,460 forks</span>
+      <span>👤 PrimeIntellect-ai</span>
+    </div>
+    <div class="repo-why">面向长时自主任务的 RLM 智能体，强调在编码工作流里自我改进，适合研究智能体编排与长期记忆机制，连续两天霸榜第一。</div>
+    <div class="repo-desc">A self-improving RLM agent for coding workflows and long-running autonomous tasks.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">2</span>
+      <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">Agency Agents — 一支完整的 AI 代理团队</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 角色编排</span>
+      <span class="badge stars">⭐ +958/周</span>
+      <span><span class="lang-dot" style="background:#89e051"></span>Shell</span>
+      <span>📊 总 143,328 stars · 23,282 forks</span>
+      <span>👤 msitarzewski</span>
+    </div>
+    <div class="repo-why">把"前端工程师、Reddit 运营、现实核查员"等角色封装成可直接调度的智能体集合，每位都有自己的流程与可交付物，适合作为多代理协作的灵感模板。</div>
+    <div class="repo-desc">A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">3</span>
+      <a href="https://github.com/semantica-agi/semantica" target="_blank" rel="noopener">Semantica — 面向可追溯 AI 的图原生基础设施</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI 基础设施 / 图谱</span>
+      <span class="badge stars">⭐ +893/周</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 4,935 stars · 531 forks</span>
+      <span>👤 semantica-agi</span>
+    </div>
+    <div class="repo-why">把上下文与决策链路建成图结构，强调可追溯与可问责，是构建可控 AI 工作流的工程参考，能解决"AI 决策说不清楚"的痛点。</div>
+    <div class="repo-desc">Graph-Native Infrastructure for Context and Accountable AI Systems</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">4</span>
+      <a href="https://github.com/stablyai/orca" target="_blank" rel="noopener">Orca — 并行代理开发环境</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">开发者工具 / Agent IDE</span>
+      <span class="badge stars">⭐ +875/周</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 42,848 stars · 2,983 forks</span>
+      <span>👤 stablyai</span>
+    </div>
+    <div class="repo-why">为多代理并行编程而生的 IDE，支持用自有订阅运行任意编码代理，桌面/移动/VPS 全端可用，想体验"一支代理队伍"协作开发可以试试。</div>
+    <div class="repo-desc">Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">5</span>
+      <a href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener">DeepTutor — 终身个性化辅导智能体</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">教育 / AI Agent</span>
+      <span class="badge stars">⭐ +812/周</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 34,774 stars · 4,421 forks</span>
+      <span>👤 HKUDS</span>
+    </div>
+    <div class="repo-why">港大数据智能实验室出品，做的是"长期个性化学习"，比单纯问答更接近真人导师，对教育场景的工程化与多轮状态管理值得参考。</div>
+    <div class="repo-desc">DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">6</span>
+      <a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">Paperclip — 团队级智能体管理平台</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 任务编排</span>
+      <span class="badge stars">⭐ +748/周</span>
+      <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+      <span>📊 总 77,198 stars · 14,255 forks</span>
+      <span>👤 paperclipai</span>
+    </div>
+    <div class="repo-why">"大家都在用"的开源代理管理台，把多个 AI 代理像员工一样派活、跟踪、考核，适合团队把 AI 工作流落到日常运营里。</div>
+    <div class="repo-desc">The open-source app everyone uses to manage agents at work</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">7</span>
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">Agent Skills — 生产级 AI 编程代理技能集</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 工程实践</span>
+      <span class="badge stars">⭐ +578/周</span>
+      <span><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+      <span>📊 总 86,247 stars · 9,267 forks</span>
+      <span>👤 addyosmani</span>
+    </div>
+    <div class="repo-why">Google 工程主管整理的实战级 skill 模板，能直接拼到 Claude/Cursor 这类代理上，少踩 prompt 工程的坑，是快速提升代理可靠性的捷径。</div>
+    <div class="repo-desc">Production-grade engineering skills for AI coding agents.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">8</span>
+      <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">Anthropic Skills — 官方代理技能仓库</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">AI Agent / 官方资源</span>
+      <span class="badge stars">⭐ +485/周</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 168,165 stars · 20,036 forks</span>
+      <span>👤 anthropics</span>
+    </div>
+    <div class="repo-why">Anthropic 官方维护的代理技能集，代表厂商对"代理该怎么写 skill"的最新看法，是研究 Claude Code 风格代理的第一手资料。</div>
+    <div class="repo-desc">Public repository for Agent Skills</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">9</span>
+      <a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">OpenMontage — 开源代理式视频生产系统</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">视频生成 / 多模态</span>
+      <span class="badge stars">⭐ +458/周</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 47,377 stars · 5,905 forks</span>
+      <span>👤 calesthio</span>
+    </div>
+    <div class="repo-why">号称"世界首个开源代理视频生产系统"，12 条流水线、100+ 工具、700+ 技能文件，能把 AI 编程助手变成视频制作工作室，想玩自动化短片可以入手。</div>
+    <div class="repo-desc">World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill files.</div>
+  </div>
+
+  <div class="repo-card">
+    <h2 class="repo-title">
+      <span class="repo-rank">10</span>
+      <a href="https://github.com/vitali87/code-graph-rag" target="_blank" rel="noopener">Code Graph RAG — 单仓多语言代码检索增强</a>
+    </h2>
+    <div class="repo-meta">
+      <span class="badge cat">开发者工具 / RAG</span>
+      <span class="badge stars">⭐ +341/周</span>
+      <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+      <span>📊 总 3,848 stars · 563 forks</span>
+      <span>👤 vitali87</span>
+    </div>
+    <div class="repo-why">用知识图谱对 monorepo 做查询、理解与编辑，是把 AI 接进代码评审/重构场景的轻量方案，比通用 RAG 更懂"代码到底改了什么"。</div>
+    <div class="repo-desc">The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with AI and knowledge graphs.</div>
+  </div>
+
+  <footer>
+    精选自 GitHub Trending · 排除纯学术论文/基准测试/fork 仓库<br>
+    生成时间 2026-08-12 · 仅收录具备学习价值的开源项目
+  </footer>
+</div>
+</body>
+</html>
