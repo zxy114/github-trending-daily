@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-13</title>
+<style>
+  :root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #59636e;
+    --accent: #0969da;
+    --accent-bg: #ddf4ff;
+    --tag-bg: #dafbe1;
+    --tag-text: #1a7f37;
+    --warn-bg: #fff8c5;
+    --warn-text: #9a6700;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  header.page {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  header.page .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+  }
+  .summary h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .summary ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .summary li { margin: 4px 0; }
+
+  .repo {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.15s;
+  }
+  .repo:hover { border-color: var(--accent); }
+  .repo .rank {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .repo h3 {
+    display: inline;
+    margin: 0;
+    font-size: 19px;
+    vertical-align: middle;
+  }
+  .repo h3 a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .repo h3 a:hover { text-decoration: underline; }
+  .repo .title-cn {
+    display: block;
+    font-size: 15px;
+    color: var(--muted);
+    margin: 6px 0 10px;
+  }
+  .repo .desc {
+    margin: 10px 0 12px;
+    color: var(--text);
+    font-size: 14.5px;
+  }
+  .repo .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .repo .meta .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .repo .meta .lang {
+    background: #f0f0f0;
+    color: #444;
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+  .repo .meta .stars-today {
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .repo .why {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f6f8fa;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 13.5px;
+    color: #444;
+  }
+  .repo .why strong { color: var(--text); }
+
+  footer.page {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer.page a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="page">
+    <h1>📊 GitHub 开源日报</h1>
+    <div class="meta">
+      2026-08-13（北京时间） · 当日 Trending Top 8 · 筛选：工具/库/框架优先
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>今日速览</h2>
+    <ul>
+      <li><strong>Claude Code 配菜</strong>：cathrynlavery/diagram-design 收录 29 种编辑级图表模板，纯 HTML+SVG，无 Mermaid 廉价感，单日 +2,855 ⭐。</li>
+      <li><strong>多 Agent 编排</strong>：stablyai/orca 把任意订阅的 coding agent 统一调度到桌面/移动/VPS，单日 +1,235 ⭐。</li>
+      <li><strong>JVM Agent 框架</strong>：embabel/embabel-agent 给 Spring/Kotlin 生态补上原生 Agent 抽象。</li>
+      <li><strong>AI 文档→PPT</strong>：hugohe3/ppt-master 用原生 PowerPoint 形状/动画/图表直接出片。</li>
+      <li><strong>RAG / OSINT / 局域网传输</strong>三个老牌项目仍稳定上榜，体现长期工程价值。</li>
+    </ul>
+  </section>
+
+  <article class="repo">
+    <span class="rank">#1</span>
+    <h3><a href="https://github.com/cathrynlavery/diagram-design">cathrynlavery/diagram-design</a></h3>
+    <span class="title-cn">Claude Code 编辑级图表模板库（29 种 · 纯 HTML+SVG）</span>
+    <p class="desc">为 Claude Code 准备的 29 种"出版级"图表模板，输出是自包含的 HTML+SVG，没有阴影、没有 Mermaid 那种粗糙感。</p>
+    <div class="meta">
+      <span class="tag">可视化</span>
+      <span class="lang">HTML</span>
+      <span class="stars-today">今日 +2,855 ⭐</span>
+      <span>总 10,704 ⭐ · 686 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>解决 Agent 生成图表"AI 味太重"的痛点；模板直接 drop-in 到 Claude Code 工作流即可出片。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#2</span>
+    <h3><a href="https://github.com/stablyai/orca">stablyai/orca</a></h3>
+    <span class="title-cn">多 Agent 协同开发桌面（桌面/移动/VPS）</span>
+    <p class="desc">并行调度多组 AI 编程 Agent 的 ADE（Agent Development Environment），兼容任意 coding agent 与个人订阅。</p>
+    <div class="meta">
+      <span class="tag">Agent 工具</span>
+      <span class="lang">TypeScript</span>
+      <span class="stars-today">今日 +1,235 ⭐</span>
+      <span>总 43,957 ⭐ · 3,058 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>"用自己订阅的 Claude/Codex/Cursor 多开"是真实刚需；产品形态（桌面+移动+自托管 VPS）已经跑通。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#3</span>
+    <h3><a href="https://github.com/semantica-agi/semantica">semantica-agi/semantica</a></h3>
+    <span class="title-cn">面向上下文与可问责 AI 的图原生基础设施</span>
+    <p class="desc">Graph-Native Infrastructure for Context and Accountable AI Systems，用图结构组织上下文，让 Agent 行为可追溯。</p>
+    <div class="meta">
+      <span class="tag">Agent 框架</span>
+      <span class="lang">Python</span>
+      <span class="stars-today">今日 +845 ⭐</span>
+      <span>总 5,764 ⭐ · 629 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>把"上下文管理+审计"做成图原生，是企业级 Agent 落地的关键缺口。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#4</span>
+    <h3><a href="https://github.com/paperclipai/paperclip">paperclipai/paperclip</a></h3>
+    <span class="title-cn">开源版"Agent 员工管理后台"</span>
+    <p class="desc">The open-source app everyone uses to manage agents at work —— 把 Agent 当员工一样管理、派活、考核。</p>
+    <div class="meta">
+      <span class="tag">Agent 平台</span>
+      <span class="lang">TypeScript</span>
+      <span class="stars-today">今日 +571 ⭐</span>
+      <span>总 77,758 ⭐ · 14,299 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>已属头部稳定项目；想做"AI 员工团队"的团队可直接 fork 改造。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#5</span>
+    <h3><a href="https://github.com/NVIDIA-NeMo/Switchyard">NVIDIA-NeMo/Switchyard</a></h3>
+    <span class="title-cn">NVIDIA NeMo 出品的 Rust 基础设施组件</span>
+    <p class="desc">NeMo 团队开源的 Rust 项目，定位为模型/训练流水线相关的基础设施组件。</p>
+    <div class="meta">
+      <span class="tag">基础设施</span>
+      <span class="lang">Rust</span>
+      <span class="stars-today">今日 +421 ⭐</span>
+      <span>总 852 ⭐ · 89 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>NVIDIA 官方背书 + Rust 实现，对训练/推理调度层感兴趣的可以关注。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#6</span>
+    <h3><a href="https://github.com/embabel/embabel-agent">embabel/embabel-agent</a></h3>
+    <span class="title-cn">JVM 上的原生 Agent 框架（Spring/Kotlin 友好）</span>
+    <p class="desc">Agent framework for the JVM —— 给 Java/Kotlin/Spring 生态补齐 Agent 编程范式的脚手架。</p>
+    <div class="meta">
+      <span class="tag">Agent 框架</span>
+      <span class="lang">Kotlin</span>
+      <span class="stars-today">今日 +40 ⭐</span>
+      <span>总 4,232 ⭐ · 411 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>Java 企业栈想做 Agent 化、又不想换 Python 技术栈的首选候选。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#7</span>
+    <h3><a href="https://github.com/hugohe3/ppt-master">hugohe3/ppt-master</a></h3>
+    <span class="title-cn">AI 一键生成原生 PowerPoint 文档</span>
+    <p class="desc">把文档或主题转为真正的 PowerPoint 文件——保留原生形状、过渡、动画、可选数据图表、语音旁白，并支持自定义 .pptx 模板。</p>
+    <div class="meta">
+      <span class="tag">办公自动化</span>
+      <span class="lang">—</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>"AI 生成 PPT"里少数输出是 <code>.pptx</code> 原生格式（而非图片/PDF），可二次编辑。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#8</span>
+    <h3><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a></h3>
+    <span class="title-cn">主流开源 RAG + Agent 一体化引擎</span>
+    <p class="desc">把前沿 RAG 与 Agent 能力融合，构建 LCM（大模型上下文层）的开源引擎。</p>
+    <div class="meta">
+      <span class="tag">RAG / LLM</span>
+      <span class="lang">Python</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>反复上榜说明稳定性极强；想自建知识库+Agent 的团队几乎绕不开它。
+    </div>
+  </article>
+
+  <footer class="page">
+    数据来源：<a href="https://github.com/trending">github.com/trending</a> ·
+    生成时间：2026-08-13 10:07 CST ·
+    筛选策略：剔除纯基线/论文/fork-only 仓库，优先可落地工具
+  </footer>
+
+</div>
+</body>
+</html>
