@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-14</title>
+<style>
+  :root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #59636e;
+    --accent: #0969da;
+    --accent-bg: #ddf4ff;
+    --tag-bg: #dafbe1;
+    --tag-text: #1a7f37;
+    --warn-bg: #fff8c5;
+    --warn-text: #9a6700;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  header.page {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  header.page .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+  }
+  .summary h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .summary ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .summary li { margin: 4px 0; }
+
+  .repo {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.15s;
+  }
+  .repo:hover { border-color: var(--accent); }
+  .repo .rank {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .repo h3 {
+    display: inline;
+    margin: 0;
+    font-size: 19px;
+    vertical-align: middle;
+  }
+  .repo h3 a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .repo h3 a:hover { text-decoration: underline; }
+  .repo .title-cn {
+    display: block;
+    font-size: 15px;
+    color: var(--muted);
+    margin: 6px 0 10px;
+  }
+  .repo .desc {
+    margin: 10px 0 12px;
+    color: var(--text);
+    font-size: 14.5px;
+  }
+  .repo .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .repo .meta .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .repo .meta .lang {
+    background: #f0f0f0;
+    color: #444;
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+  .repo .meta .stars-today {
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .repo .why {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f6f8fa;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 13.5px;
+    color: #444;
+  }
+  .repo .why strong { color: var(--text); }
+
+  footer.page {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer.page a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="page">
+    <h1>📊 GitHub 开源日报</h1>
+    <div class="meta">
+      2026-08-14（北京时间） · 当日 Trending Top 8 · 筛选：工具/库/框架优先
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>今日速览</h2>
+    <ul>
+      <li><strong>Claude Code 图表模板</strong>：cathrynlavery/diagram-design 收录 29 种编辑级图表模板，纯 HTML+SVG，单日 +4,475 ⭐，继续蝉联榜首。</li>
+      <li><strong>端侧小模型</strong>：cactus-compute/needle 14MB 基础模型，目标手机/可穿戴/智能家居/机器人。</li>
+      <li><strong>LLM 流量网关</strong>：NVIDIA-NeMo/Switchyard 用 Rust 实现的模型路由层，兼容 OpenAI/Anthropic 协议。</li>
+      <li><strong>本地 AI 语音听写</strong>：altic-dev/FluidVoice 给出 macOS 上的本地 STT + 自训练 AI 增强方案。</li>
+      <li><strong>RAG / 数学动画经典</strong>：infiniflow/ragflow 与 3b1b/manim 长期上榜，工程价值稳定。</li>
+    </ul>
+  </section>
+
+  <article class="repo">
+    <span class="rank">#1</span>
+    <h3><a href="https://github.com/cathrynlavery/diagram-design">cathrynlavery/diagram-design</a></h3>
+    <span class="title-cn">Claude Code 编辑级图表模板库（29 种 · 纯 HTML+SVG）</span>
+    <p class="desc">为 Claude Code 准备的 29 种"出版级"图表模板，输出是自包含的 HTML+SVG，没有阴影，没有 Mermaid 那种粗糙感。</p>
+    <div class="meta">
+      <span class="tag">可视化</span>
+      <span class="lang">HTML</span>
+      <span class="stars-today">今日 +4,475 ⭐</span>
+      <span>总 14,716 ⭐ · 885 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>解决 Agent 生成图表"AI 味太重"的痛点；模板直接 drop-in 到 Claude Code 工作流即可出片。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#2</span>
+    <h3><a href="https://github.com/cactus-compute/needle">cactus-compute/needle</a></h3>
+    <span class="title-cn">14MB 端侧基础模型（手机/可穿戴/智能家居/机器人）</span>
+    <p class="desc">为边缘设备量身打造的 14MB 基础模型，目标在手机、可穿戴、智能家居、机器人等算力受限场景本地运行推理。</p>
+    <div class="meta">
+      <span class="tag">端侧模型</span>
+      <span class="lang">Python</span>
+      <span class="stars-today">今日 +769 ⭐</span>
+      <span>总 4,983 ⭐ · 334 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>端侧 AI 是 2026 主流方向；14MB 体量意味着可在不联网的廉价硬件上跑通基础任务。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#3</span>
+    <h3><a href="https://github.com/semantica-agi/semantica">semantica-agi/semantica</a></h3>
+    <span class="title-cn">面向上下文与可问责 AI 的图原生基础设施</span>
+    <p class="desc">Graph-Native Infrastructure for Context and Accountable AI Systems —— 用图结构组织上下文，让 Agent 行为可追溯。</p>
+    <div class="meta">
+      <span class="tag">Agent 框架</span>
+      <span class="lang">Python</span>
+      <span class="stars-today">今日 +713 ⭐</span>
+      <span>总 6,722 ⭐ · 703 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>把"上下文管理 + 审计"做成图原生，是企业级 Agent 落地的关键缺口。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#4</span>
+    <h3><a href="https://github.com/anthropics/skills">anthropics/skills</a></h3>
+    <span class="title-cn">Anthropic 官方 Agent Skills 公共仓库</span>
+    <p class="desc">Anthropic 官方维护的 Agent Skills 公共仓库，用于沉淀和发布可在 Claude 系列模型上调用的技能模板。</p>
+    <div class="meta">
+      <span class="tag">Agent 工具</span>
+      <span class="lang">—</span>
+      <span class="stars-today">官方仓库</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>Anthropic 首次把 Skills 集中开源，对所有 Agent 开发者都是必读参考。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#5</span>
+    <h3><a href="https://github.com/NVIDIA-NeMo/Switchyard">NVIDIA-NeMo/Switchyard</a></h3>
+    <span class="title-cn">LLM 流量路由网关（OpenAI / Anthropic 协议兼容）</span>
+    <p class="desc">让 LLM 应用可以跨模型、跨厂商路由流量，保留原生 OpenAI 与 Anthropic API 兼容，用于灵活选型、压测、成本/性能调优。</p>
+    <div class="meta">
+      <span class="tag">基础设施</span>
+      <span class="lang">Rust</span>
+      <span class="stars-today">今日 +408 ⭐</span>
+      <span>总 1,232 ⭐ · 109 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>多模型混部是生产刚需；Rust 实现 + 协议兼容 = 拿来即用的 LLM 网关。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#6</span>
+    <h3><a href="https://github.com/altic-dev/FluidVoice">altic-dev/FluidVoice</a></h3>
+    <span class="title-cn">macOS 本地 AI 语音听写应用</span>
+    <p class="desc">macOS 平台上最快且"独此一家"的本地语音听写 App，本地 STT + 自训练 AI 增强模型；定位为 Wispr Flow 的本地替代。</p>
+    <div class="meta">
+      <span class="tag">桌面应用</span>
+      <span class="lang">Swift</span>
+      <span class="stars-today">今日 +76 ⭐</span>
+      <span>总 9,874 ⭐ · 662 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>完全本地化的语音输入方案，隐私 + 延迟双优；Swift 栈对 macOS 开发者有直接参考价值。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#7</span>
+    <h3><a href="https://github.com/3b1b/manim">3b1b/manim</a></h3>
+    <span class="title-cn">数学科普动画引擎（3Blue1Brown 同款）</span>
+    <p class="desc">3Blue1Brown 频道作者 Grant Sanderson 开源的解释性数学动画引擎，Python 编程即可生成专业级数学视频。</p>
+    <div class="meta">
+      <span class="tag">可视化</span>
+      <span class="lang">Python</span>
+      <span class="stars-today">今日上榜</span>
+      <span>经典项目</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>教学、科普、技术分享场景"无可替代"的开源动画工具；今天再次回到 trending，说明仍有持续讨论热度。
+    </div>
+  </article>
+
+  <article class="repo">
+    <span class="rank">#8</span>
+    <h3><a href="https://github.com/lightningpixel/modly">lightningpixel/modly</a></h3>
+    <span class="title-cn">图片一键生成 3D 模型的本地桌面应用</span>
+    <p class="desc">桌面端从图片生成 3D 模型的本地 AI 工具，全程跑在用户自己的 GPU 上，零云端依赖。</p>
+    <div class="meta">
+      <span class="tag">3D / AIGC</span>
+      <span class="lang">TypeScript</span>
+      <span class="stars-today">今日 +118 ⭐</span>
+      <span>总 5,448 ⭐ · 576 fork</span>
+    </div>
+    <div class="why">
+      <strong>为什么值得看：</strong>本地 3D 生成是 2026 桌面端 AIGC 的热门形态；TypeScript 栈意味着前端工程师更容易二次开发。
+    </div>
+  </article>
+
+  <footer class="page">
+    数据来源：<a href="https://github.com/trending">github.com/trending</a> ·
+    生成时间：2026-08-14 10:05 CST ·
+    筛选策略：剔除纯基线/论文/fork-only 仓库，优先可落地工具
+  </footer>
+
+</div>
+</body>
+</html>
