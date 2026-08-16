@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-16</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-16（北京时间）· 精选 10 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：AI 代理工程化 / 端侧小模型 / 规范驱动开发 / 本地化创作工具
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>"AI 代理的工具栈"继续向纵深推进 —— Cursor 官方推出 plugins 规范（为代理生态立规矩）、
+  HKUDS 的 CLI-Anything 试图把所有软件"代理化"、citrolabs 的 ego-lite 让浏览器可被代理接管，
+  整个链路都在解决"代理如何真正动手做事"的问题。
+  同时 unsloth 和 Soup 把 LLM 微调门槛降到单 YAML / 单 GPU，公共 API 索引 public-apis 单日再涨 2260 星，
+  工具生态持续繁荣。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/public-apis/public-apis" target="_blank">public-apis/public-apis</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +2,260/日</span>
+  </div>
+  <div class="zh-title">Public APIs：精选免费 API 资源大全</div>
+  <div class="desc-en">A collective list of free APIs</div>
+  <div class="takeaway">
+    堪称 GitHub 上最经典的"开发者工具清单"——社区共同维护的免费 API 索引，
+    覆盖天气、金融、地理、音乐、动漫、新闻、游戏等数十个领域，每个都标注是否需要 API Key、是否支持 HTTPS。
+    单日 2,260 星属于现象级热度（可能是被某个爆款视频/博文带火），
+    但项目本身长期可用：做 Side Project、Hackathon、原型验证时随手翻一翻就能找到合适的接口。
+    老牌项目，质量经过长期检验。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 350k+</span>
+    <span class="meta-item">🍴 36k+ forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🌐 跨领域 API 索引</span>
+  </div>
+  <div class="topics">
+    <span class="topic">api</span>
+    <span class="topic">free-api</span>
+    <span class="topic">awesome-list</span>
+    <span class="topic">developer-tools</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">cathrynlavery/diagram-design</a></span>
+    <span class="badge lang">HTML</span>
+    <span class="badge stars">⭐ +1,607/日</span>
+  </div>
+  <div class="zh-title">Diagram Design：编辑级 Claude Code 图表模板库</div>
+  <div class="desc-en">29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.</div>
+  <div class="takeaway">
+    直接针对"AI 生成图表审美差"的痛点：29 种编辑级图表模板（流程图、时序图、架构图、状态机等），
+    全部是独立 HTML + SVG，自包含可下载，刻意不用阴影/渐变、规避 Mermaid 默认风格的"程序员感"。
+    适合做产品文档、技术博客、PPT 时"快速拿到一张能直接用的图"。
+    对内容创作者和技术博主尤其友好——比起让 AI 现编一张图，给它一套排版规范靠谱得多。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 1.6k+</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🎨 29 模板</span>
+    <span class="meta-item">🖼️ SVG + HTML</span>
+  </div>
+  <div class="topics">
+    <span class="topic">diagram</span>
+    <span class="topic">editorial-design</span>
+    <span class="topic">claude-code</span>
+    <span class="topic">svg</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/github/spec-kit" target="_blank">github/spec-kit</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +892/日</span>
+  </div>
+  <div class="zh-title">Spec Kit：GitHub 官方"规范驱动开发"工具箱</div>
+  <div class="desc-en">💫 Toolkit to help you get started with Spec-Driven Development</div>
+  <div class="takeaway">
+    GitHub 亲自下场推"规范驱动开发"（Spec-Driven Development），配套工具箱直接开源。
+    理念：先写清楚"要做什么、为什么、怎么做"的规范，再让 AI 代理去执行 —— 与 vibe coding 形成鲜明对比。
+    本质是想解决"AI 写代码没人能 review、最后变成屎山"的工程难题。
+    配套提供 /specify、/plan、/tasks 等命令模板，从需求到落地的链路全打通。
+    适合想严肃把 AI 编码纳入工程流程的团队。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 官方力推</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item">🤖 兼容主流 AI 编码代理</span>
+  </div>
+  <div class="topics">
+    <span class="topic">spec-driven-development</span>
+    <span class="topic">ai-coding</span>
+    <span class="topic">spec-kit</span>
+    <span class="topic">github</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/cactus-compute/needle" target="_blank">cactus-compute/needle</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +547/日</span>
+  </div>
+  <div class="zh-title">Needle：14MB 极小端侧 AI 模型</div>
+  <div class="desc-en">14MB foundation model for tiny devices; phones, wearables, smart home, and robots.</div>
+  <div class="takeaway">
+    在动辄数十 GB 的大模型时代，cactus-compute 反其道而行：14MB 的基础模型，专为手机、可穿戴、智能家居、机器人设计。
+    轻量到足以在端侧实时推理，离线可用，对隐私敏感场景（家庭、医疗、工业）是真正可落地的方案。
+    配套还发布了一整套端侧 AI 推理优化工具链。
+    关注"模型小型化 + 端侧推理"的同学不容错过。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.6k+</span>
+    <span class="meta-item">🍴 374 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">📦 14MB · 端侧推理</span>
+  </div>
+  <div class="topics">
+    <span class="topic">edge-ai</span>
+    <span class="topic">small-model</span>
+    <span class="topic">on-device</span>
+    <span class="topic">tiny-ml</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/citrolabs/ego-lite" target="_blank">citrolabs/ego-lite</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +545/日</span>
+  </div>
+  <div class="zh-title">ego-lite：AI 代理专用的浏览器</div>
+  <div class="desc-en">The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.</div>
+  <div class="takeaway">
+    浏览器自动化（Playwright/Puppeteer）跑 AI 代理经常卡在登录态、profile 隔离、调试麻烦这三大痛点。
+    ego-lite 直接做"为 AI 代理原生"的浏览器：共享你的登录态、零配置、零费用，代理操作时你完全不受打扰。
+    对做"代理接管浏览器"类应用（自动测试、数据采集、网页操作 AI）的开发者特别友好。
+    开源 + 轻量，避免付费 Browserless、Steel 之类 SaaS。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 10.3k+</span>
+    <span class="meta-item">🍴 528 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🆓 零成本</span>
+  </div>
+  <div class="topics">
+    <span class="topic">browser-automation</span>
+    <span class="topic">ai-agent</span>
+    <span class="topic">playwright</span>
+    <span class="topic">session-sharing</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/ToolJet/ToolJet" target="_blank">ToolJet/ToolJet</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +544/日</span>
+  </div>
+  <div class="zh-title">ToolJet：开源企业应用 / 内部工具平台</div>
+  <div class="desc-en">ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀</div>
+  <div class="takeaway">
+    老牌开源低代码平台（35k+ Star 长期活跃），专攻企业内部工具、仪表盘、业务应用、工作流、AI 代理的搭建。
+    拖拽式 UI + JS 前端 + Node.js/Python 后端，能直接连 50+ 数据源（Postgres、MySQL、MongoDB、Stripe、Slack 等），
+    自托管友好，比 Retool / Appsmith 更"开源纯净"。
+    对想自建内部工具、不愿意把业务数据交给 SaaS 的中小团队是首选方案。
+    近期接入 AI 代理，工作流编排能力又上了一个台阶。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 35.6k+</span>
+    <span class="meta-item">🍴 4.7k forks</span>
+    <span class="meta-item">📜 AGPL-3.0</span>
+    <span class="meta-item">🔌 50+ 数据源</span>
+  </div>
+  <div class="topics">
+    <span class="topic">low-code</span>
+    <span class="topic">internal-tools</span>
+    <span class="topic">workflow</span>
+    <span class="topic">ai-agents</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/unslothai/unsloth" target="_blank">unslothai/unsloth</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +434/日</span>
+  </div>
+  <div class="zh-title">Unsloth：本地训练/运行 LLM 与扩散模型的轻量栈</div>
+  <div class="desc-en">Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.</div>
+  <div class="takeaway">
+    想在本地一张消费级显卡上跑 Qwen、Kimi、Gemma、DeepSeek、FLUX 这些模型？
+    Unsloth 把底层优化（量化、内核、显存调度）打包好，再加一个图形化界面。
+    训练侧重点：比官方快 2–5 倍、显存占用显著降低，4GB 显存的笔记本也能微调 7B 模型。
+    对个人研究者、独立开发者、本地化部署需求，是当下事实上的"开箱即用"选择。
+    注意：仓库热度来自其发布的旗舰版本号（Qwen3.8 / MiniMax-H3），模型版本是开发代号表述。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 45k+</span>
+    <span class="meta-item">🍴 3.7k forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">⚡ 训练加速 2–5×</span>
+  </div>
+  <div class="topics">
+    <span class="topic">llm</span>
+    <span class="topic">fine-tuning</span>
+    <span class="topic">local-ai</span>
+    <span class="topic">diffusion-models</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">8</span>
+    <span class="repo-name"><a href="https://github.com/MakazhanAlpamys/Soup" target="_blank">MakazhanAlpamys/Soup</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +297/日</span>
+  </div>
+  <div class="zh-title">Soup：单 YAML 配置文件微调 LLM</div>
+  <div class="desc-en">Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.</div>
+  <div class="takeaway">
+    "一碗汤"就能微调大模型：把数据集、模型路径、超参全部写进一个 YAML，
+    配套"分层流式"（layer streaming）技术让 4GB 显存的入门级笔电也能微调 8B 参数模型。
+    直接对标 Unsloth、Axolotl 这类框架，主打"配置即代码"——给懒得读几百行 CLI 参数的人。
+    对个人开发者、研究者快速验证想法很有吸引力。
+    适合微调实验、数据科学家快速跑 baseline。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 3.2k+</span>
+    <span class="meta-item">🍴 187 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🧪 4GB GPU 微调 8B</span>
+  </div>
+  <div class="topics">
+    <span class="topic">llm-finetune</span>
+    <span class="topic">yaml-config</span>
+    <span class="topic">low-vram</span>
+    <span class="topic">layer-streaming</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">9</span>
+    <span class="repo-name"><a href="https://github.com/cursor/plugins" target="_blank">cursor/plugins</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +149/日</span>
+  </div>
+  <div class="zh-title">Cursor Plugins：Cursor 编辑器官方插件规范</div>
+  <div class="desc-en">Cursor plugin specification and official plugins</div>
+  <div class="takeaway">
+    Cursor 官方发布"插件规范"——意味着 Cursor 编辑器开始像 VS Code / JetBrains 一样走"扩展生态"路线。
+    仓库本身既是规范文档的存放地，也是官方插件的集合入口。
+    对所有 Cursor 用户是利好：未来第三方开发者能基于这套规范扩展编辑器能力（语言服务、调试器、主题等）。
+    也可视为"AI 编辑器从工具向平台演进"的信号——和 GitHub Copilot 的扩展市场战略一脉相承。
+    关注编辑器生态、做 AI 编程工具的开发者值得持续跟进。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 官方规范</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🧩 插件生态</span>
+    <span class="meta-item">🤖 AI 编辑器</span>
+  </div>
+  <div class="topics">
+    <span class="topic">cursor</span>
+    <span class="topic">plugin-spec</span>
+    <span class="topic">editor-extension</span>
+    <span class="topic">ai-coding</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">10</span>
+    <span class="repo-name"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">HKUDS/CLI-Anything</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +118/日</span>
+  </div>
+  <div class="zh-title">CLI-Anything：把任意软件"代理化"的 CLI 工具</div>
+  <div class="desc-en">"CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/</div>
+  <div class="takeaway">
+    香港大学数据智能实验室（HKUDS）出品，目标是让任何 GUI / SaaS 软件都能被 AI 代理以 CLI 形式调用。
+    对只暴露图形界面或 HTTP API 的软件，自动生成稳定的命令行包装，
+    让代理能像操作 Linux 工具一样操作它们——彻底打通"代理 → 软件"的最后一公里。
+    配合 ego-lite（浏览器代理化）和 cursor/plugins（编辑器代理化），
+    "AI 代理的工具链基础设施"基本完整。
+    学术风格但工程化做得扎实，适合做企业代理平台、自动化的团队参考。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.1k+</span>
+    <span class="meta-item">🍴 612 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🎓 HKUDS</span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agent</span>
+    <span class="topic">cli</span>
+    <span class="topic">software-automation</span>
+    <span class="topic">agent-native</span>
+  </div>
+</div>
+
+<footer>
+  <p>📅 生成于 2026-08-16 · 数据来源 <a class="nav" href="https://github.com/trending" target="_blank">GitHub Trending</a></p>
+  <p style="margin-top:6px">📧 精选 10 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库</p>
+  <p style="margin-top:6px">🤖 由 GitHub 趋势日报自动汇总</p>
+</footer>
+</div>
+</body>
+</html>
