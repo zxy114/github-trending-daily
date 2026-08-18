@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 - 2026-08-18</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+  .header p { font-size: 1.1em; opacity: 0.9; }
+  .content { padding: 40px 30px; }
+  .repo-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .repo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .repo-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #0366d6;
+    text-decoration: none;
+    flex: 1;
+  }
+  .repo-title:hover { text-decoration: underline; }
+  .repo-stars {
+    background: #ffd33d;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .repo-desc {
+    color: #586069;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .repo-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: #e1e4e8;
+    color: #586069;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: #586069;
+    font-size: 0.9em;
+    border-top: 1px solid #e1e4e8;
+  }
+  .highlight {
+    background: linear-gradient(120deg, #ffe082 0%, #ffe082 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 88%;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>⭐ GitHub 开源日报</h1>
+    <p>2026-08-18 · 精选当日热门开源项目</p>
+  </div>
+  <div class="content">
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/harry0703/MoneyPrinterTurbo" class="repo-title" target="_blank">harry0703/MoneyPrinterTurbo</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。适合内容创作者快速批量产出视频素材，支持多平台分发。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">AI 视频</span>
+        <span class="tag">自动化</span>
+        <span class="tag">内容创作</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/usestrix/strix" class="repo-title" target="_blank">usestrix/strix</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        开源 AI 渗透测试工具，帮助发现并修复应用安全漏洞。适合安全工程师和开发者在 CI/CD 流程中集成自动化安全检测。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">安全</span>
+        <span class="tag">渗透测试</span>
+        <span class="tag">AI</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/nautechsystems/nautilus_trader" class="repo-title" target="_blank">nautechsystems/nautilus_trader</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        生产级 Rust 原生交易引擎，采用确定性事件驱动架构。适合金融科技和量化交易场景，具备高性能和低延迟特性。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">Rust</span>
+        <span class="tag">交易系统</span>
+        <span class="tag">高性能</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/akitaonrails/ai-memory" class="repo-title" target="_blank">akitaonrails/ai-memory</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        为 AI 编程助手提供长期记忆方案，解决不同 agent 之间的上下文传递问题。支持多种编程 agent 平台，提升多轮交互体验。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">AI 助手</span>
+        <span class="tag">开发者工具</span>
+        <span class="tag">上下文管理</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" class="repo-title" target="_blank">mukul975/Anthropic-Cybersecurity-Skills</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        收录 817 个结构化网络安全技能，映射到 MITRE ATT&CK、NIST CSF 2.0 等框架。支持主流 AI 编程工具，覆盖 29 个安全领域。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">安全</span>
+        <span class="tag">技能库</span>
+        <span class="tag">框架集成</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/AlexsJones/llmfit" class="repo-title" target="_blank">AlexsJones/llmfit</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        一键检测数百个模型和提供商在当前硬件上的运行能力。帮助开发者在本地部署大模型前快速评估硬件兼容性。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">LLM</span>
+        <span class="tag">硬件检测</span>
+        <span class="tag">部署工具</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/immich-app/immich" class="repo-title" target="_blank">immich-app/immich</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        高性能自托管照片和视频管理方案，支持智能相册、人脸识别、多端同步。是 Google Photos 的开源替代品。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">自托管</span>
+        <span class="tag">照片管理</span>
+        <span class="tag">隐私优先</span>
+      </div>
+    </div>
+
+    <div class="repo-card">
+      <div class="repo-header">
+        <a href="https://github.com/agalwood/Motrix" class="repo-title" target="_blank">agalwood/Motrix</a>
+        <span class="repo-stars">⭐ 热门</span>
+      </div>
+      <p class="repo-desc">
+        全功能下载管理器，支持 HTTP/FTP/BT/磁力链接等多种协议。界面简洁，跨平台可用，是日常下载任务的实用工具。
+      </p>
+      <div class="repo-tags">
+        <span class="tag">下载工具</span>
+        <span class="tag">跨平台</span>
+        <span class="tag">BT/磁力</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <p>📊 数据来源：GitHub Trending | 生成时间：2026-08-18 10:00 (北京时间)</p>
+    <p style="margin-top: 8px;">🤖 由 GitHub 开源日报自动生成</p>
+  </div>
+</div>
+</body>
+</html>
