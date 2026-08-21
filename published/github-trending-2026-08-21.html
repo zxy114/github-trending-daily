@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 开源日报 · 2026-08-21</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --heading: #f0f6fc;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --muted: #8b949e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      color: var(--heading);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .repo-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .repo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .repo-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    .repo-title {
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .repo-title:hover { text-decoration: underline; }
+    .repo-stats {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+    .repo-stats span { white-space: nowrap; }
+    .repo-desc {
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    .repo-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: #21262d;
+      color: var(--accent2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.8rem;
+    }
+    .tag.hot {
+      background: #3d1f1f;
+      color: #f85149;
+      border-color: #5c2b2b;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GitHub 开源日报</h1>
+      <p>2026-08-21 · 精选当日 trending 仓库 · 质量优先</p>
+    </header>
+
+    <main>
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">harry0703 / MoneyPrinterTurbo</a>
+          <div class="repo-stats">
+            <span>⭐ 112,017</span>
+            <span>🍴 16,966</span>
+            <span class="hot">🔥 +2,221</span>
+          </div>
+        </div>
+        <p class="repo-desc">基于 AI 大模型与自动化工作流，支持按主题或关键词一键生成高清短视频。适合想快速搭建内容生产流水架的开发者与创作者。</p>
+        <div class="repo-tags">
+          <span class="tag">Python</span>
+          <span class="tag">AI 视频生成</span>
+          <span class="tag hot">今日榜首</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/volcengine/OpenViking" target="_blank">volcengine / OpenViking</a>
+          <div class="repo-stats">
+            <span>⭐ 30,641</span>
+            <span>🍴 2,369</span>
+            <span class="hot">🔥 +804</span>
+          </div>
+        </div>
+        <p class="repo-desc">面向 AI 智能体的上下文数据库，统一管理 Agent 记忆、知识 RAG 与技能，降低多 Agent 协作时的信息损耗。</p>
+        <div class="repo-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Agent 基础设施</span>
+          <span class="tag">RAG</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/chaitanyagiri/munder-difflin" target="_blank">chaitanyagiri / munder-difflin</a>
+          <div class="repo-stats">
+            <span>⭐ 2,881</span>
+            <span>🍴 335</span>
+            <span class="hot">🔥 +795</span>
+          </div>
+        </div>
+        <p class="repo-desc">本地多智能体运行框架，便于在本地环境编排、调试和评估多个 Agent 的协作流程。</p>
+        <div class="repo-tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Multi-Agent</span>
+          <span class="tag">本地运行</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank">mukul975 / Anthropic-Cybersecurity-Skills</a>
+          <div class="repo-stats">
+            <span>⭐ 30,122</span>
+            <span>🍴 3,575</span>
+            <span class="hot">🔥 +766</span>
+          </div>
+        </div>
+        <p class="repo-desc">面向 AI 编程助手的结构化安全技能集，映射到 MITRE ATT&CK、NIST 等主流框架，覆盖 29 个安全领域，可直接在 Claude Code、Copilot 等平台使用。</p>
+        <div class="repo-tags">
+          <span class="tag">Python</span>
+          <span class="tag">安全技能</span>
+          <span class="tag">AI 辅助开发</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/akitaonrails/ai-memory" target="_blank">akitaonrails / ai-memory</a>
+          <div class="repo-stats">
+            <span>⭐ 3,315</span>
+            <span>🍴 272</span>
+            <span class="hot">🔥 +606</span>
+          </div>
+        </div>
+        <p class="repo-desc">为 AI 编程 CLI 提供长期记忆能力，并支持在不同 Agent 平台间传递上下文，解决多工具协作时的记忆断层问题。</p>
+        <div class="repo-tags">
+          <span class="tag">Rust</span>
+          <span class="tag">Agent 记忆</span>
+          <span class="tag">开发者工具</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/mattpocock/skills" target="_blank">mattpocock / skills</a>
+          <div class="repo-stats">
+            <span>⭐ 224,484</span>
+            <span>🍴 19,298</span>
+            <span class="hot">🔥 +1,894</span>
+          </div>
+        </div>
+        <p class="repo-desc">真实工程师技能集合，直接取自开发者的 .agents 目录，包含可复用的工作流、提示词模板和最佳实践。</p>
+        <div class="repo-tags">
+          <span class="tag">Shell</span>
+          <span class="tag">Skills 框架</span>
+          <span class="tag">工程实践</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/obra/superpowers" target="_blank">obra / superpowers</a>
+          <div class="repo-stats">
+            <span>⭐ 274,542</span>
+            <span>🍴 24,574</span>
+            <span class="hot">🔥 +557</span>
+          </div>
+        </div>
+        <p class="repo-desc">可执行的智能体技能框架与软件开发方法论，强调"能用"而非"理论"，适合构建生产级 Agent 工作流。</p>
+        <div class="repo-tags">
+          <span class="tag">Shell</span>
+          <span class="tag">Agent 框架</span>
+          <span class="tag">开发方法论</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/jundot/omlx" target="_blank">jundot / omlx</a>
+          <div class="repo-stats">
+            <span>⭐ 19,956</span>
+            <span>🍴 1,700</span>
+            <span class="hot">🔥 +472</span>
+          </div>
+        </div>
+        <p class="repo-desc">面向 Apple Silicon 的 LLM 推理服务器，支持连续批处理与 SSD 缓存，通过 macOS 菜单栏即可管理，本地部署轻量首选。</p>
+        <div class="repo-tags">
+          <span class="tag">Python</span>
+          <span class="tag">LLM 推理</span>
+          <span class="tag">Apple Silicon</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/nautechsystems/nautilus_trader" target="_blank">nautechsystems / nautilus_trader</a>
+          <div class="repo-stats">
+            <span>⭐ 26,588</span>
+            <span>🍴 3,430</span>
+            <span class="hot">🔥 +80</span>
+          </div>
+        </div>
+        <p class="repo-desc">生产级 Rust 交易引擎，采用确定性事件驱动架构，适合量化策略研发与高频交易场景。</p>
+        <div class="repo-tags">
+          <span class="tag">Rust</span>
+          <span class="tag">量化交易</span>
+          <span class="tag">事件驱动</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/santifer/career-ops" target="_blank">santifer / career-ops</a>
+          <div class="repo-stats">
+            <span>⭐ 66,090</span>
+            <span>🍴 12,774</span>
+            <span class="hot">🔥 +198</span>
+          </div>
+        </div>
+        <p class="repo-desc">开源 AI 求职助手：自动扫描招聘网站、按结构化评分评估职位、定制简历、追踪申请进度，完全本地运行。</p>
+        <div class="repo-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">AI 求职</span>
+          <span class="tag">本地工具</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <a class="repo-title" href="https://github.com/immich-app/immich" target="_blank">immich-app / immich</a>
+          <div class="repo-stats">
+            <span>⭐ 112,067</span>
+            <span>🍴 6,642</span>
+            <span class="hot">🔥 +128</span>
+          </div>
+        </div>
+        <p class="repo-desc">高性能自托管照片与视频管理方案，支持智能分类、人脸识别和多端同步，是 Google Photos 的开源替代。</p>
+        <div class="repo-tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">自托管</span>
+          <span class="tag">媒体管理</span>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>数据来源：GitHub Trending · 自动生成于 2026-08-21</p>
+    </footer>
+  </div>
+</body>
+</html>
