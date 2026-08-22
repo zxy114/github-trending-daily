@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 开源日报 · 2026-08-22</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --heading: #f0f6fc;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --muted: #8b949e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      color: var(--heading);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .repo-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .repo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .repo-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .repo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), #8b949e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 1.1rem;
+    }
+    .repo-title {
+      color: var(--heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .repo-title a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .repo-title a:hover {
+      text-decoration: underline;
+    }
+    .repo-desc {
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .repo-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .repo-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(88, 166, 255, 0.15);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+    }
+    .tag-lang {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--accent2);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GitHub 开源日报 · 2026-08-22</h1>
+      <p>今日精选 10 个高质量开源项目 · 工具、框架、平台</p>
+    </header>
+
+    <main>
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🔧</div>
+          <div class="repo-title">
+            <a href="https://github.com/AprilNEA/OpenLogi" target="_blank">AprilNEA/OpenLogi</a>
+          </div>
+        </div>
+        <p class="repo-desc">Rust 实现的本地优先罗技鼠标驱动替代方案。可自定义按键映射、DPI 和 SmartShift，无需登录账号，无遥测数据，通过 HID++ 协议直连设备。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">Rust</span>
+          <span>⭐ 12,982</span>
+          <span>🍴 352</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🎯</div>
+          <div class="repo-title">
+            <a href="https://github.com/santifer/career-ops" target="_blank">santifer/career-ops</a>
+          </div>
+        </div>
+        <p class="repo-desc">开源求职助手：自动扫描招聘网站，用结构化评分体系评估职位，量身定制简历，追踪申请进度。本地运行，支持 Claude Code、Codex、OpenCode 等主流 AI 编程工具。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">JavaScript</span>
+          <span>⭐ 67,472</span>
+          <span>🍴 12,872</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">📊</div>
+          <div class="repo-title">
+            <a href="https://github.com/PostHog/posthog" target="_blank">PostHog/posthog</a>
+          </div>
+        </div>
+        <p class="repo-desc">一站式产品分析平台，集成 AI 可观测性、会话回放、功能开关、A/B 实验、错误追踪和日志。支持 Slack、Web、桌面端和 MCP 统一管理，适合构建自驱动产品。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">TypeScript</span>
+          <span>⭐ 热门</span>
+          <span>🏢 企业级</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">📝</div>
+          <div class="repo-title">
+            <a href="https://github.com/microsoft/TypeScript" target="_blank">microsoft/TypeScript</a>
+          </div>
+        </div>
+        <p class="repo-desc">JavaScript 的超集，编译为干净的原生 JavaScript。持续迭代，生态成熟，是前端和全栈开发的基础工具。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">TypeScript</span>
+          <span>⭐ 经典</span>
+          <span>🏢 Microsoft</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🤖</div>
+          <div class="repo-title">
+            <a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a>
+          </div>
+        </div>
+        <p class="repo-desc">智能体技能框架与软件开发方法论。提供结构化方式组织 AI 智能体的能力、记忆和开发流程，适合构建可复用的 AI 工作流。</p>
+        <div class="repo-meta">
+          <span>⭐ 新兴</span>
+          <span>🧩 框架</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🗂️</div>
+          <div class="repo-title">
+            <a href="https://github.com/apache/maka" target="_blank">apache/maka</a>
+          </div>
+        </div>
+        <p class="repo-desc">Apache 孵化项目，本地优先 AI 智能体工作空间。将模型消息、工具调用、权限决策和终止事件记录为追加日志，适合构建可审计的 AI 应用。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">TypeScript</span>
+          <span>⭐ 2,034</span>
+          <span>🏛️ Apache</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🧩</div>
+          <div class="repo-title">
+            <a href="https://github.com/cursor/plugins" target="_blank">cursor/plugins</a>
+          </div>
+        </div>
+        <p class="repo-desc">Cursor 编辑器插件规范与官方插件集合。了解如何扩展 Cursor 功能，或直接使用社区插件提升开发效率。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">TypeScript</span>
+          <span>⭐ 4,418</span>
+          <span>🔌 插件生态</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">⚡</div>
+          <div class="repo-title">
+            <a href="https://github.com/modular/modular" target="_blank">modular/modular</a>
+          </div>
+        </div>
+        <p class="repo-desc">Modular 平台，包含 MAX 推理引擎和 Mojo 编程语言。面向 AI 和高性能计算场景，提供统一的开发与部署体验。</p>
+        <div class="repo-meta">
+          <span>⭐ 新兴</span>
+          <span>🚀 平台</span>
+          <span>💻 Mojo</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">📰</div>
+          <div class="repo-title">
+            <a href="https://github.com/TryGhost/Ghost" target="_blank">TryGhost/Ghost</a>
+          </div>
+        </div>
+        <p class="repo-desc">现代发布平台，支持内容创作、会员管理和订阅功能。独立技术栈，适合搭建博客、新闻通讯和社区站点。</p>
+        <div class="repo-meta">
+          <span class="tag tag-lang">JavaScript</span>
+          <span>⭐ 经典</span>
+          <span>✍️ 发布平台</span>
+        </div>
+      </article>
+
+      <article class="repo-card">
+        <div class="repo-header">
+          <div class="repo-icon">🔄</div>
+          <div class="repo-title">
+            <a href="https://github.com/protocolbuffers/protobuf" target="_blank">protocolbuffers/protobuf</a>
+          </div>
+        </div>
+        <p class="repo-desc">Google 开发的跨语言、跨平台数据序列化格式。高效、可扩展，广泛用于 RPC、存储和通信场景，是后端和分布式系统的基础设施。</p>
+        <div class="repo-meta">
+          <span>⭐ 经典</span>
+          <span>🔧 基础设施</span>
+          <span>🏢 Google</span>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a></p>
+      <p>报告生成时间：2026-08-22 · 自动部署</p>
+    </footer>
+  </div>
+</body>
+</html>
