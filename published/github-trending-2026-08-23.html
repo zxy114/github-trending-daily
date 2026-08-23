@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Trending 日报 — 2026-08-23</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #f0f6fc;
+      margin-bottom: 4px;
+    }
+    .date {
+      font-size: 14px;
+      color: #8b949e;
+      margin-bottom: 24px;
+    }
+    .intro {
+      font-size: 14px;
+      color: #8b949e;
+      margin-bottom: 28px;
+      border-left: 3px solid #58a6ff;
+      padding-left: 12px;
+    }
+    .repo {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+    .repo:hover {
+      border-color: #58a6ff;
+    }
+    .repo-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .rank {
+      font-size: 13px;
+      font-weight: 600;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .rank.top3 {
+      background: #da3633;
+      color: #fff;
+    }
+    .rank.normal {
+      background: #238636;
+      color: #fff;
+    }
+    .repo-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    .repo-name:hover {
+      text-decoration: underline;
+    }
+    .repo-meta {
+      font-size: 12px;
+      color: #8b949e;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .repo-desc {
+      font-size: 14px;
+      color: #c9d1d9;
+      margin: 8px 0;
+    }
+    .repo-summary {
+      font-size: 13px;
+      color: #8b949e;
+      background: #1c2128;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 8px;
+    }
+    .stars {
+      color: #e3b341;
+      font-weight: 600;
+    }
+    .lang-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #484f58;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Trending 日报</h1>
+    <div class="date">2026-08-23（北京时间）</div>
+
+    <div class="intro">
+      📌 本日精选 10 个热门开源项目，按 GitHub Trending 热度排序。收录标准：学习价值优先，排除纯 benchmark/论文/无实质代码的仓库。
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank top3">1</span>
+        <a href="https://github.com/mattpocock/skills" class="repo-name">mattpocock/skills</a>
+      </div>
+      <div class="repo-desc">一套实用的工程技能速查手册，直接从作者的 .agents 目录导出，覆盖常见工程场景的最佳实践。</div>
+      <div class="repo-summary">💡 适合快速查阅工程规范，新人上手也能用，文档化和可复用性都很强。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#e3b341"></span>Shell</span>
+        <span class="stars">⭐ 2,683 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank top3">2</span>
+        <a href="https://github.com/openai/codex" class="repo-name">openai/codex</a>
+      </div>
+      <div class="repo-desc">轻量级终端编程助手，用 Rust 编写，可在本地直接运行，支持代码理解和自动化任务。</div>
+      <div class="repo-summary">💡 Rust 实现的终端 AI 编程助手，性能高、部署简单，值得学习其架构设计。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#dea584"></span>Rust</span>
+        <span class="stars">⭐ 1,544 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank top3">3</span>
+        <a href="https://github.com/AprilNEA/OpenLogi" class="repo-name">AprilNEA/OpenLogi</a>
+      </div>
+      <div class="repo-desc">原生开源外设驱动工具，替代 Logitech Options+，用 Rust 重写，支持 HID++ 协议，无需账号。</div>
+      <div class="repo-summary">💡 Rust 硬件交互的好案例，兼顾安全性与跨平台能力，适合学习设备驱动开发。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#dea584"></span>Rust</span>
+        <span class="stars">⭐ 959 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">4</span>
+        <a href="https://github.com/ripienaar/free-for-dev" class="repo-name">ripienaar/free-for-dev</a>
+      </div>
+      <div class="repo-desc">开发者可用的免费 SaaS / PaaS / IaaS 资源清单，持续更新，覆盖托管、数据库、监控等分类。</div>
+      <div class="repo-summary">💡 实用工具书级别的资源列表，适合快速寻找免费开发环境或替代服务。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#e34c26"></span>HTML</span>
+        <span class="stars">⭐ 829 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">5</span>
+        <a href="https://github.com/obra/superpowers" class="repo-name">obra/superpowers</a>
+      </div>
+      <div class="repo-desc">一个可运行的智能体技能框架和软件开发方法论，致力于让 agent 技能真正落地可用。</div>
+      <div class="repo-summary">💡 方法论+工具链结合的方案，适合研究 AI agent 开发范式和实践框架。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#e3b341"></span>Shell</span>
+        <span class="stars">⭐ 592 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">6</span>
+        <a href="https://github.com/microsoft/TypeScript" class="repo-name">microsoft/TypeScript</a>
+      </div>
+      <div class="repo-desc">JavaScript 的超集，编译为纯净 JavaScript，企业级前端和全栈开发的核心工具语言。</div>
+      <div class="repo-summary">💡 基础但持续演进，关注其最新类型特性对工程实践的影响。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+        <span class="stars">⭐ 104 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">7</span>
+        <a href="https://github.com/makeplane/plane" class="repo-name">makeplane/plane</a>
+      </div>
+      <div class="repo-desc">开源的项目管理平台，可作为 Jira、Linear、Monday、ClickUp 的替代品，支持任务、迭代、文档管理。</div>
+      <div class="repo-summary">💡 现代 SaaS 替代方案，TypeScript 栈，值得研究其产品设计和模块架构。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+        <span class="stars">⭐ 263 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">8</span>
+        <a href="https://github.com/Wei-Shaw/sub2api" class="repo-name">Wei-Shaw/sub2api</a>
+      </div>
+      <div class="repo-desc">一站式开源 API 中转服务，将多家模型订阅统一接入，支持共享分摊成本。</div>
+      <div class="repo-summary">💡 Go 实现，适合学习 API 网关和统一接入层的设计思路。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#00ADD8"></span>Go</span>
+        <span class="stars">⭐ 278 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">9</span>
+        <a href="https://github.com/cursor/plugins" class="repo-name">cursor/plugins</a>
+      </div>
+      <div class="repo-desc">Cursor 编辑器插件规范及官方插件集合，扩展编辑器能力，支持自定义工作流。</div>
+      <div class="repo-summary">💡 编辑器插件生态入门资料，TypeScript 可读，适合想做编辑器扩展的开发者。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+        <span class="stars">⭐ 286 stars 本周</span>
+      </div>
+    </div>
+
+    <div class="repo">
+      <div class="repo-header">
+        <span class="rank normal">10</span>
+        <a href="https://github.com/mahlernim/google-timeline-visualizer" class="repo-name">mahlernim/google-timeline-visualizer</a>
+      </div>
+      <div class="repo-desc">将 Google 位置历史数据可视化，生成年度旅行轨迹图，Kotlin 实现。</div>
+      <div class="repo-summary">💡 数据可视化和地理信息结合的好例子，Kotlin 写法清晰，可学习数据处理与渲染。</div>
+      <div class="repo-meta">
+        <span><span class="lang-dot" style="background:#f1e05a"></span>Kotlin</span>
+        <span class="stars">⭐ 441 stars 本周</span>
+      </div>
+    </div>
+
+    <footer>
+      报告生成时间：2026-08-23 · 数据来源：GitHub Trending · 自动生成
+    </footer>
+  </div>
+</body>
+</html>
