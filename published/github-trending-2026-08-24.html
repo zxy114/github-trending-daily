@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Trending 日报 - 2026-08-24</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #30363d;
+}
+.header h1 {
+  color: #58a6ff;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.header .date {
+  color: #8b949e;
+  font-size: 14px;
+}
+.header .subtitle {
+  color: #8b949e;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.repo-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+.repo-item:hover {
+  transform: translateY(-2px);
+  border-color: #58a6ff;
+}
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.repo-title {
+  flex: 1;
+  min-width: 200px;
+}
+.repo-title a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  word-break: break-all;
+}
+.repo-title a:hover {
+  text-decoration: underline;
+}
+.rank-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  flex-shrink: 0;
+}
+.rank-top3 {
+  background: #da3633;
+}
+.rank-other {
+  background: #238636;
+}
+.repo-desc {
+  color: #8b949e;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.repo-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.language-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #c9d1d9;
+}
+.language-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars-count {
+  color: #c9d1d9;
+  font-size: 13px;
+}
+.stars-count::before {
+  content: "⭐ ";
+}
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 13px;
+}
+.divider {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 24px 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🐙 GitHub Trending 日报</h1>
+    <div class="date">2026-08-24（北京时间）</div>
+    <div class="subtitle">精选当天最具学习价值的开源项目 · 质量优先</div>
+  </div>
+
+  <div class="repo-list">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/openai/codex" target="_blank">openai/codex</a>
+        </div>
+        <span class="rank-badge rank-top3">#1</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>终端里的轻量编程代理。</strong> OpenAI 推出的 Rust 终端编码助手，可直接在命令行里完成文件读写、命令执行、代码重构等任务。它是目前 coding agent 赛道里最受关注的项目之一，适合想了解"AI 如何自主编程"的开发者研究。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #dea584;"></span>
+          Rust
+        </span>
+        <span class="stars-count">2,715 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/AprilNEA/OpenLogi" target="_blank">AprilNEA/OpenLogi</a>
+        </div>
+        <span class="rank-badge rank-top3">#2</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>罗技驱动的 Rust 替代品。</strong> 纯本地运行、无账户、无遥测，支持按键重映射、DPI 调整和 SmartShift 滚轮功能。对 Linux 桌面用户和硬件定制爱好者来说，这是目前最完整的开源方案。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #dea584;"></span>
+          Rust
+        </span>
+        <span class="stars-count">1,009 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/Alishahryar1/free-claude-code" target="_blank">Alishahryar1/free-claude-code</a>
+        </div>
+        <span class="rank-badge rank-top3">#3</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>多模型聚合 CLI 工具。</strong> 把 Claude Code、Codex、Pi、OpenCode 等工具统一成一个入口，并提供免费额度（号称 13 亿+ token）。如果你想比较不同 coding agent 的体验，这个项目是最快的起步方式。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #3572A5;"></span>
+          Python
+        </span>
+        <span class="stars-count">1,081 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/basecamp/omarchy" target="_blank">basecamp/omarchy</a>
+        </div>
+        <span class="rank-badge rank-other">#4</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>Basecamp 出品的现代 Linux 发行版。</strong> 有明确审美偏好的 Arch 衍生版，预装了 hyprland、tmux、neovim、browser 等高效工具链。适合想折腾但不想从零配置的 Linux 用户参考。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #e34c26;"></span>
+          Shell
+        </span>
+        <span class="stars-count">750 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/block/buzz" target="_blank">block/buzz</a>
+        </div>
+        <span class="rank-badge rank-other">#5</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>Jack Dorsey 旗下的蜂群通信平台。</strong> 以"群体智能"为核心设计理念的开源项目，探索多代理协作通信协议。对做分布式 agent 系统或对 p2p 通信感兴趣的开发者有参考价值。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #dea584;"></span>
+          Rust
+        </span>
+        <span class="stars-count">410 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a>
+        </div>
+        <span class="rank-badge rank-other">#6</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>Agent 运行时的性能优化系统。</strong> 为 Claude Code、Codex、OpenCode、Cursor 等工具提供 skills、instincts、memory、security 层。适合想理解"agent 架构该包含哪些模块"的开发者做架构参考。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #f1e05a;"></span>
+          JavaScript
+        </span>
+        <span class="stars-count">427 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/ripienaar/free-for-dev" target="_blank">ripienaar/free-for-dev</a>
+        </div>
+        <span class="rank-badge rank-other">#7</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>开发者免费资源大全。</strong> 收录 SaaS、PaaS、IaaS 等各类有免费层的服务清单，持续维护多年。做 side project 或验证 MVP 时必备的省钱工具书。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #e34c26;"></span>
+          HTML
+        </span>
+        <span class="stars-count">615 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills</a>
+        </div>
+        <span class="rank-badge rank-other">#8</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>真实工程师的技能清单。</strong> 作者从自己的 .agents 目录直接开源，包含实际可用的 agent skills 模板。学习价值在于可以看到"生产环境 skills 长什么样"，而不是概念演示。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #e34c26;"></span>
+          Shell
+        </span>
+        <span class="stars-count">2,447 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/freestylefly/awesome-gpt-image-2" target="_blank">freestylefly/awesome-gpt-image-2</a>
+        </div>
+        <span class="rank-badge rank-other">#9</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>GPT-Image2 工业级提示词库。</strong> 470+ 案例逆向工程 + 20+ 套可复用模板，适合需要稳定输出高质量 AI 图像的设计师或开发者参考。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag">
+          <span class="language-dot" style="background: #f1e05a;"></span>
+          JavaScript
+        </span>
+        <span class="stars-count">401 stars 本周</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="repo-item">
+      <div class="repo-header">
+        <div class="repo-title">
+          <a href="https://github.com/VoltAgent/awesome-agent-skills" target="_blank">VoltAgent/awesome-agent-skills</a>
+        </div>
+        <span class="rank-badge rank-other">#10</span>
+      </div>
+      <div class="repo-desc">
+        💡 <strong>1000+ agent skills 精选合集。</strong> 覆盖 Claude Code、Codex、Gemini CLI、Cursor 等主流工具，官方团队和社区贡献都有。入门 agent 开发者的最佳导航页。
+      </div>
+      <div class="repo-meta">
+        <span class="language-tag" style="color: #8b949e;">
+          <span class="language-dot" style="background: #8b949e;"></span>
+          未标注
+        </span>
+        <span class="stars-count">156 stars 本周</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>数据来源：<a href="https://github.com/trending" style="color: #58a6ff;">GitHub Trending</a> | 生成时间：2026-08-24 10:00 BJT</p>
+    <p style="margin-top: 4px;">本报告由 GitHub Trending 日报自动生成</p>
+  </div>
+</div>
+</body>
+</html>
