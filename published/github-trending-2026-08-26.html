@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 - 2026-08-26</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #e0e0e0;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .header h1 {
+    font-size: 2.2em;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    font-size: 1.1em;
+    color: #aaa;
+  }
+  .header .subtitle {
+    font-size: 0.95em;
+    color: #888;
+    margin-top: 6px;
+  }
+  .repo-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+  }
+  .repo-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+  .repo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .repo-rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1em;
+    flex-shrink: 0;
+  }
+  .rank-1 { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; }
+  .rank-2 { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
+  .rank-3 { background: linear-gradient(135deg, #cd7f32, #b87333); color: #fff; }
+  .rank-other { background: rgba(255,255,255,0.1); color: #ccc; }
+  .repo-title {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .repo-title a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  .repo-title a:hover { text-decoration: underline; }
+  .repo-desc {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin: 8px 0 14px;
+    font-size: 0.95em;
+  }
+  .repo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+  .tag-lang { background: rgba(88,166,255,0.15); color: #58a6ff; }
+  .tag-stars { background: rgba(255,215,0,0.15); color: #ffd700; }
+  .tag-today { background: rgba(0,219,222,0.15); color: #00dbde; }
+  .tag-category { background: rgba(252,0,255,0.12); color: #e879f9; }
+  .repo-summary {
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid #58a6ff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.88em;
+    color: #c0c0c0;
+    line-height: 1.55;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    font-size: 0.85em;
+  }
+  .footer a { color: #888; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>GitHub 开源日报</h1>
+    <div class="date">2026-08-26（北京时间）</div>
+    <div class="subtitle">精选当日 GitHub Trending 高价值开源项目 · 质量优先</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-1">1</div>
+      <div class="repo-title">
+        <a href="https://github.com/basecamp/omarchy" target="_blank">basecamp / omarchy</a>
+      </div>
+    </div>
+    <div class="repo-desc">一个美观、现代且带有明确设计哲学的 Linux 发行版，强调开箱即用的开发体验与一致的视觉风格。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">Shell</span>
+      <span class="tag tag-stars">31.3k ★</span>
+      <span class="tag tag-today">+1,083 今日</span>
+      <span class="tag tag-category">系统工具</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>对想换一套现代化开发环境的 Linux 用户非常实用。项目完整封装了桌面环境、窗口管理和常用开发工具配置，适合追求"一键可用"工作流的开发者参考或直接试用。
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-2">2</div>
+      <div class="repo-title">
+        <a href="https://github.com/DietrichGebert/ponytail" target="_blank">DietrichGebert / ponytail</a>
+      </div>
+    </div>
+    <div class="repo-desc">让 AI 编程代理像资深工程师一样思考：用最少代码解决问题，减少过度工程，提升生成代码的简洁性与可维护性。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">JavaScript</span>
+      <span class="tag tag-stars">111k ★</span>
+      <span class="tag tag-today">+982 今日</span>
+      <span class="tag tag-category">AI 工程化</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>直接针对 AI 辅助编程痛点——生成冗余代码。项目提供可复用的行为规范文件，可集成到主流 AI 编程工具中，帮助团队统一代码质量，降低后续维护成本。
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-3">3</div>
+      <div class="repo-title">
+        <a href="https://github.com/freestylefly/awesome-gpt-image-2" target="_blank">freestylefly / awesome-gpt-image-2</a>
+      </div>
+    </div>
+    <div class="repo-desc">工业级 GPT-Image2 提示词工程模板库，包含 530+ 真实案例逆向分析和 20+ 套可直接复用的专业模板。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">JavaScript</span>
+      <span class="tag tag-stars">18.1k ★</span>
+      <span class="tag tag-today">+1,698 今日</span>
+      <span class="tag tag-category">AI 创意工具</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>对需要稳定生成高质量图片的开发者或设计师很实用。模板按场景分类，支持直接复制到代码中作为 Prompt 调用，大幅降低图像生成工具的落地门槛。
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-other">4</div>
+      <div class="repo-title">
+        <a href="https://github.com/apache/maka" target="_blank">apache / maka</a>
+      </div>
+    </div>
+    <div class="repo-desc">Apache 孵化项目：本地优先的 AI Agent 工作空间，将模型消息、工具调用、权限决策和终止事件记录为只追加日志。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">TypeScript</span>
+      <span class="tag tag-stars">3.4k ★</span>
+      <span class="tag tag-today">+543 今日</span>
+      <span class="tag tag-category">Agent 框架</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>Apache 背书，适合构建可审计、可复现的 AI 代理系统。只追加日志设计便于追踪决策链路，对需要合规或调试 Agent 行为的团队有直接参考价值。
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-other">5</div>
+      <div class="repo-title">
+        <a href="https://github.com/openai/codex" target="_blank">openai / codex</a>
+      </div>
+    </div>
+    <div class="repo-desc">OpenAI 官方出品的轻量级终端编程代理，在本地命令行环境中即可运行，直接面向开发工作流集成。</div>
+    <div class="repo-tags">
+      <span class="tag tag-stars">—</span>
+      <span class="tag tag-today"> Trending</span>
+      <span class="tag tag-category">开发工具</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>OpenAI 官方出品，意味着与模型能力深度绑定且持续维护。对想在终端直接调用 AI 编码能力的开发者来说，是最值得关注的官方工具之一。
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-other">6</div>
+      <div class="repo-title">
+        <a href="https://github.com/asciimoo/hister" target="_blank">asciimoo / hister</a>
+      </div>
+    </div>
+    <div class="repo-desc">用 Go 实现的轻量级自托管搜索引擎，支持私有数据索引与检索，适合个人或小团队搭建内部搜索服务。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">Go</span>
+      <span class="tag tag-stars">2.8k ★</span>
+      <span class="tag tag-today">+98 今日</span>
+      <span class="tag tag-category">基础设施</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>数据隐私越来越受重视，自建搜索是刚需。Go 编写意味着资源占用低、部署简单，是替代第三方搜索 API 的实用方案。
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-other">7</div>
+      <div class="repo-title">
+        <a href="https://github.com/marin-community/marin" target="_blank">marin-community / marin</a>
+      </div>
+    </div>
+    <div class="repo-desc">开源基础模型研发框架，提供从数据预处理到模型训练、评估的统一工作流，支持研究者快速实验新架构。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">Python</span>
+      <span class="tag tag-stars">2.1k ★</span>
+      <span class="tag tag-today">+231 今日</span>
+      <span class="tag tag-category">模型研发</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>降低基础模型实验门槛，适合有定制模型需求的研究或工程团队。框架化设计减少了重复造轮子，是入局模型微调或预训练的实用起点。
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-rank rank-other">8</div>
+      <div class="repo-title">
+        <a href="https://github.com/anthropics/claude-plugins-community" target="_blank">anthropics / claude-plugins-community</a>
+      </div>
+    </div>
+    <div class="repo-desc">Anthropic 官方维护的 Claude 插件社区市场，集中展示社区提交的高质量插件，扩展 Claude Code 能力边界。</div>
+    <div class="repo-tags">
+      <span class="tag tag-lang">Python</span>
+      <span class="tag tag-stars">1.8k ★</span>
+      <span class="tag tag-today">+351 今日</span>
+      <span class="tag tag-category">AI 工具</span>
+    </div>
+    <div class="repo-summary">
+      <strong>精选理由：</strong>使用 Claude Code 的开发者可直接从这里发现并安装社区插件，快速获得领域专用能力，是提升 AI 编程助手生产力的直接入口。
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 生成时间：2026-08-26 10:00 (Beijing)</p>
+    <p style="margin-top:6px;">已过滤纯 benchmark / 学术论文 / 低价值 fork 仓库，保留有实际学习或使用价值的项目</p>
+  </div>
+
+</div>
+</body>
+</html>
