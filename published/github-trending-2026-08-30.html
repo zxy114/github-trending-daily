@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-30</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-html { background: #e34c26; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 8 月 30 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>Agent / 智能体工程</strong>仍是绝对主流：架构图、Skill 库、视频生产线、科研技能几乎占据榜单</li>
+      <li><strong>实用工具复兴</strong>：Tailscale 出品的 <code>tailcat</code>、JetBrains 的 Go 规范、HTMX 等基础设施级项目受关注</li>
+      <li><strong>本地化 & 离线化</strong>：把 PC 变成 AI 服务器、多 Agent 课堂等小成本大用途项目涌现</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/tt-a1i/archify" target="_blank">archify · 自包含的架构图生成器</a></h3>
+      <div class="repo-path"><a href="https://github.com/tt-a1i/archify" target="_blank">tt-a1i/archify</a> · JavaScript</div>
+      <p class="desc">面向 AI Agent 的图表生成技能：架构图、流程图、时序图、数据流图都能产出自包含 HTML，支持动画和高分辨率导出。无需外部依赖，画完即用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+3,902 今日</span></span>
+        <span class="meta-item">总星 31,242</span>
+        <span class="meta-item">🍴 1,940</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">gods-eye-view · 浏览器里的实时地球</a></h3>
+      <div class="repo-path"><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">bilawalsidhu/gods-eye-view</a> · JavaScript</div>
+      <p class="desc">把开源地理空间情报数据投影到照片级 3D 地球上，纯浏览器运行无需后端。可视化效果惊艳，适合做态势感知演示、地理教学与遥感情境练习。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,855 今日</span></span>
+        <span class="meta-item">总星 12,676</span>
+        <span class="meta-item">🍴 2,508</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">scientific-agent-skills · 科学家 Agent 技能库</a></h3>
+      <div class="repo-path"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">K-Dense-AI/scientific-agent-skills</a> · Python</div>
+      <p class="desc">165 个即用型 Agent 技能 + 100+ 科研数据库，覆盖生物、化学、药物发现等领域。被 19 万+ 科研人员使用，兼容 Cursor / Claude Code / Codex 等主流 Agent。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,587 今日</span></span>
+        <span class="meta-item">总星 37,981</span>
+        <span class="meta-item">🍴 3,580</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/tailscale/tailcat" target="_blank">tailcat · 绕开控制平面的 netcat</a></h3>
+      <div class="repo-path"><a href="https://github.com/tailscale/tailcat" target="_blank">tailscale/tailcat</a> · Go</div>
+      <p class="desc">Tailscale 官方出品：像 netcat 一样传数据，但走 Tailscale 数据平面而不走控制平面。私密、点对点、自带加密，是临时调试、跨网段打洞的轻量瑞士军刀。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+789 今日</span></span>
+        <span class="meta-item">总星 3,530</span>
+        <span class="meta-item">🍴 106</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">OpenMAIC · 多智能体互动课堂</a></h3>
+      <div class="repo-path"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">THU-MAIC/OpenMAIC</a> · TypeScript</div>
+      <p class="desc">清华 MAIC 团队出品：一键开启沉浸式多智能体学习体验，多个 Agent 扮演老师/同学/助教角色互动，把 LLM 教学产品化做到开箱即用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+907 今日</span></span>
+        <span class="meta-item">总星 22,329</span>
+        <span class="meta-item">🍴 4,321</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/bigskysoftware/htmx" target="_blank">htmx · HTML 的超能力工具集</a></h3>
+      <div class="repo-path"><a href="https://github.com/bigskysoftware/htmx" target="_blank">bigskysoftware/htmx</a> · JavaScript</div>
+      <p class="desc">无需写 SPA 也能让 HTML 拥有 AJAX、CSS 过渡、WebSocket 等能力。前端返璞归真的代表，5KB 的脚本就能撑起完整动态页面，老项目改造利器。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+32 今日</span></span>
+        <span class="meta-item">总星 49,126</span>
+        <span class="meta-item">🍴 1,640</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/JetBrains/go-modern-guidelines" target="_blank">go-modern-guidelines · 教 AI 写现代 Go</a></h3>
+      <div class="repo-path"><a href="https://github.com/JetBrains/go-modern-guidelines" target="_blank">JetBrains/go-modern-guidelines</a> · Go</div>
+      <p class="desc">JetBrains 出品：把 Go 1.21+ 的现代范式（泛型、errors 包装、slog、context）凝练成 AI coding agent 可消费的规范文档，让 AI 生成的 Go 更地道。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+303 今日</span></span>
+        <span class="meta-item">总星 2,875</span>
+        <span class="meta-item">🍴 81</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/every-app/open-seo" target="_blank">open-seo · Semrush / Ahrefs 的开源替代</a></h3>
+      <div class="repo-path"><a href="https://github.com/every-app/open-seo" target="_blank">every-app/open-seo</a> · TypeScript</div>
+      <p class="desc">自托管的 SEO 分析平台：关键词研究、外链追踪、站点审计全流程一站搞定。免订阅、可控、可二次开发，独立站和中小团队 SEO 工具新选择。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+517 今日</span></span>
+        <span class="meta-item">总星 14,670</span>
+        <span class="meta-item">🍴 1,758</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/calesthio/OpenMontage" target="_blank">OpenMontage · 开源视频制作智能体系统</a></h3>
+      <div class="repo-path"><a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio/OpenMontage</a></div>
+      <p class="desc">世界首个开源、Agentic 视频生产系统：12 条产线、100+ 工具、700+ Agent 技能与制作知识文件，把 AI 编程助手升级为完整的视频工作室。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+ 高热度</span></span>
+        <span class="meta-item">12 production pipelines</span>
+        <span class="meta-item">🍴 700+ 技能文件</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">10</span>
+      <h3 class="card-title"><a href="https://github.com/addyosmani/agent-skills" target="_blank">agent-skills · 生产级 AI 编码技能集</a></h3>
+      <div class="repo-path"><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a> · JavaScript</div>
+      <p class="desc">Google 工程效能负责人 Addy Osmani 主理的工程 Agent 技能库：测试、性能、可访问性、PR 评审等生产场景的"专家"指令集。9 万星的明星资源。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+196 今日</span></span>
+        <span class="meta-item">总星 90,731</span>
+        <span class="meta-item">🍴 9,710</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>📅 数据源：<a href="https://github.com/trending" style="color:#58a6ff;text-decoration:none;">github.com/trending</a> · 自动采集于 2026-08-30 北京时间</p>
+    <p style="margin-top:8px;">精选标准：实用工具 / 框架 / 库优先 · 排除纯学术论文与 fork-only 仓库</p>
+  </footer>
+</div>
+</body>
+</html>
