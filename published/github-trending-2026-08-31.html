@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-08-31</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-java { background: #b07219; }
+  .lang-swift { background: #F05138; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 8 月 31 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>Agent Skill 生态持续扩张</strong>：架构图、科研、视频脚本、舆情研究等多类技能库同时冲榜，"Agent 工具箱"成为新基建</li>
+      <li><strong>大厂主力产品入榜</strong>：清华 MAIC 多智能体课堂、LiveKit 实时语音 Agent、NSA 旗下 Ghidra，工具成熟度明显提升</li>
+      <li><strong>本地优先 / 零服务端</strong>：浏览器端代码知识图谱 GitNexus、自托管 SEO 平台 open-seo，把数据主权交回用户</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/tt-a1i/archify" target="_blank">archify · 自包含的架构图生成器</a></h3>
+      <div class="repo-path"><a href="https://github.com/tt-a1i/archify" target="_blank">tt-a1i/archify</a> · JavaScript</div>
+      <p class="desc">面向 AI Agent 的图表生成技能：架构图、流程图、时序图、数据流图都能产出自包含 HTML，支持动画和高分辨率导出。无需外部依赖，画完即用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+3,722 今日</span></span>
+        <span class="meta-item">总星 34,869</span>
+        <span class="meta-item">🍴 2,222</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">OpenMAIC · 多智能体互动课堂</a></h3>
+      <div class="repo-path"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">THU-MAIC/OpenMAIC</a> · TypeScript</div>
+      <p class="desc">清华 MAIC 团队出品：一键开启沉浸式多智能体学习体验，多个 Agent 扮演老师/同学/助教角色互动，把 LLM 教学产品化做到开箱即用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,370 今日</span></span>
+        <span class="meta-item">总星 24,225</span>
+        <span class="meta-item">🍴 4,490</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">scientific-agent-skills · 科学家 Agent 技能库</a></h3>
+      <div class="repo-path"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">K-Dense-AI/scientific-agent-skills</a> · Python</div>
+      <p class="desc">165 个即用型 Agent 技能 + 100+ 科研数据库，覆盖生物、化学、药物发现等领域。被 19 万+ 科研人员使用，兼容 Cursor / Claude Code / Codex 等主流 Agent。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,114 今日</span></span>
+        <span class="meta-item">总星 39,367</span>
+        <span class="meta-item">🍴 3,663</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/every-app/open-seo" target="_blank">open-seo · Semrush / Ahrefs 的开源替代</a></h3>
+      <div class="repo-path"><a href="https://github.com/every-app/open-seo" target="_blank">every-app/open-seo</a> · TypeScript</div>
+      <p class="desc">自托管的 SEO 分析平台：关键词研究、外链追踪、站点审计全流程一站搞定。免订阅、可控、可二次开发，独立站和中小团队 SEO 工具新选择。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+469 今日</span></span>
+        <span class="meta-item">总星 15,195</span>
+        <span class="meta-item">🍴 1,821</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">last30days-skill · 跨平台舆情研究 Agent</a></h3>
+      <div class="repo-path"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a> · Python</div>
+      <p class="desc">让 AI Agent 自动检索 Reddit、X、YouTube、Hacker News、Polymarket 与开放网页，对任意话题做近 30 天的可信信息汇总，附引用与立场分析。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+230 今日</span></span>
+        <span class="meta-item">总星 60,526</span>
+        <span class="meta-item">🍴 5,298</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/unclecode/crawl4ai" target="_blank">crawl4ai · LLM 友好的开源爬虫</a></h3>
+      <div class="repo-path"><a href="https://github.com/unclecode/crawl4ai" target="_blank">unclecode/crawl4ai</a> · Python</div>
+      <p class="desc">专门为 LLM 数据管线打造的爬虫与抓取框架：智能分块、Markdown / JSON / 结构化抽取、浏览器渲染一体化，RAG 与训练数据采集的瑞士军刀。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+221 今日</span></span>
+        <span class="meta-item">总星 80,263</span>
+        <span class="meta-item">🍴 8,307</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank">ghidra · 美国国安局出品的逆向工程框架</a></h3>
+      <div class="repo-path"><a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank">NationalSecurityAgency/ghidra</a> · Java</div>
+      <p class="desc">开源 SRE 框架：反汇编、反编译、图形化分析与脚本扩展齐备。多年来安全研究、二进制审计、CTF 训练的事实标准之一，社区生态成熟。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+198 今日</span></span>
+        <span class="meta-item">总星 73,919</span>
+        <span class="meta-item">🍴 8,064</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank">GitNexus · 零服务器的代码知识图谱</a></h3>
+      <div class="repo-path"><a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank">abhigyanpatwari/GitNexus</a> · TypeScript</div>
+      <p class="desc">纯浏览器内运行：拖入 GitHub / GitLab / Azure / 本地仓库或 ZIP，自动生成可交互的代码知识图谱，并内置 Graph RAG Agent 做语义问答。代码探索新姿势。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+182 今日</span></span>
+        <span class="meta-item">总星 46,580</span>
+        <span class="meta-item">🍴 5,128</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/livekit/agents" target="_blank">livekit/agents · 实时语音/视频 AI Agent 框架</a></h3>
+      <div class="repo-path"><a href="https://github.com/livekit/agents" target="_blank">livekit/agents</a> · Python</div>
+      <p class="desc">LiveKit 官方出品：构建实时多模态语音 AI Agent 的端到端框架，原生支持语音打断、工具调用、流式 STT / LLM / TTS 串联，开箱即上 WebRTC。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+132 今日</span></span>
+        <span class="meta-item">总星 13,769</span>
+        <span class="meta-item">🍴 3,658</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>📅 数据源：<a href="https://github.com/trending" style="color:#58a6ff;text-decoration:none;">github.com/trending</a> · 自动采集于 2026-08-31 北京时间</p>
+    <p style="margin-top:8px;">精选标准：实用工具 / 框架 / 库优先 · 排除纯学术论文与 fork-only 仓库</p>
+  </footer>
+</div>
+</body>
+</html>
