@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-01</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-rust { background: #dea584; }
+  .lang-powershell { background: #012456; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 9 月 1 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>AI Agent 技能库继续霸榜</strong>：架构图、科研、专利、安全研究等多个技能包同日上榜，"即插即用技能"成 Agent 基建主流形态</li>
+      <li><strong>清华 MAIC 多智能体课堂</strong>冲入前三，把多 Agent 教学场景产品化做到一键即用，LLM 教学类产品持续受关注</li>
+      <li><strong>自托管 / 本地优先工具复苏</strong>：个人 AI 推理服务器 ODS、开源 SEO 平台、PDF 检查库纷纷冒头，数据主权回流的趋势延续</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/tt-a1i/archify" target="_blank">archify · 自包含架构图生成技能</a></h3>
+      <div class="repo-path"><a href="https://github.com/tt-a1i/archify" target="_blank">tt-a1i/archify</a> · JavaScript</div>
+      <p class="desc">专为 AI Agent 准备的图表技能：架构图、流程图、时序图、数据流图、生命周期图全能产出，结果是带动画的自包含 HTML，画完即可分享与高分辨率导出。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+3,991 今日</span></span>
+        <span class="meta-item">总星 38,943</span>
+        <span class="meta-item">🍴 2,490</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">OpenMAIC · 一键开启多智能体互动课堂</a></h3>
+      <div class="repo-path"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">THU-MAIC/OpenMAIC</a> · TypeScript</div>
+      <p class="desc">清华 MAIC 团队出品的多智能体沉浸式教学项目：多个 Agent 扮演老师、同学、助教角色，把 LLM 互动教学做成开箱即用的产品，一键启动即用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+2,824 今日</span></span>
+        <span class="meta-item">总星 27,264</span>
+        <span class="meta-item">🍴 4,772</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">scientific-agent-skills · 科学家级 Agent 技能库</a></h3>
+      <div class="repo-path"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank">K-Dense-AI/scientific-agent-skills</a> · Python</div>
+      <p class="desc">165 个开箱即用的科研 Agent 技能 + 100+ 科学数据库，覆盖生物、化学、医学、药物发现方向。被 19 万+ 科研人员使用，兼容 Cursor / Claude Code / Codex 等主流 Agent 客户端。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,980 今日</span></span>
+        <span class="meta-item">总星 40,781</span>
+        <span class="meta-item">🍴 3,777</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">reverse-skill · 逆向与安全研究技能路由包</a></h3>
+      <div class="repo-path"><a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">zhaoxuya520/reverse-skill</a> · PowerShell</div>
+      <p class="desc">面向授权安全研究场景的 AI 技能路由包：AI 自动选择工具链、按需自举环境、内置可演进的经验库。支持 Claude Code、Kiro、Cursor、Cline 等代码 Agent 客户端。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,401 今日</span></span>
+        <span class="meta-item">总星 33,195</span>
+        <span class="meta-item">🍴 4,509</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/every-app/open-seo" target="_blank">open-seo · Semrush / Ahrefs 的开源替代</a></h3>
+      <div class="repo-path"><a href="https://github.com/every-app/open-seo" target="_blank">every-app/open-seo</a> · TypeScript</div>
+      <p class="desc">自托管的 SEO 分析平台：关键词研究、外链监控、站点审计一体化。免订阅、数据自主、独立站与中小团队做 SEO 不再被 SaaS 绑架，可二次开发。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+610 今日</span></span>
+        <span class="meta-item">总星 15,787</span>
+        <span class="meta-item">🍴 1,901</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/handsomestWei/patent-disclosure-skill" target="_blank">patent-disclosure-skill · 专利交底书 Agent 技能</a></h3>
+      <div class="repo-path"><a href="https://github.com/handsomestWei/patent-disclosure-skill" target="_blank">handsomestWei/patent-disclosure-skill</a> · Python</div>
+      <p class="desc">面向发明、实用、外观三类专利的技能包：自动挖掘技术点、生成结构化交底书、解读公开专利、辅助审查答复。把繁琐的专利写作交由 AI Agent 完成。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+571 今日</span></span>
+        <span class="meta-item">总星 6,269</span>
+        <span class="meta-item">🍴 732</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/majd/ipatool" target="_blank">ipatool · 命令行下载 iOS 应用包</a></h3>
+      <div class="repo-path"><a href="https://github.com/majd/ipatool" target="_blank">majd/ipatool</a> · Go</div>
+      <p class="desc">官方 App Store 的命令行客户端：支持搜索并下载 iOS / iPadOS / tvOS / visionOS 的 .ipa 包，自动化部署、设备农场、测试分发场景的好帮手。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+373 今日</span></span>
+        <span class="meta-item">总星 10,563</span>
+        <span class="meta-item">🍴 897</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/firecrawl/pdf-inspector" target="_blank">pdf-inspector · Firecrawl 出的 PDF 体检库</a></h3>
+      <div class="repo-path"><a href="https://github.com/firecrawl/pdf-inspector" target="_blank">firecrawl/pdf-inspector</a> · Rust</div>
+      <p class="desc">高性能 Rust PDF 检测与分类库：自动识别扫描件 vs 文本型 PDF，输出结构化信息用于后续路由决策。文档处理与数据管线前处理的新基建组件。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="meta-item" style="color:#8b949e;">今日新增</span></span>
+        <span class="meta-item">Rust · 高速</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/kaifcodec/user-scanner" target="_blank">user-scanner · 邮箱 / 用户名一体化排查工具</a></h3>
+      <div class="repo-path"><a href="https://github.com/kaifcodec/user-scanner" target="_blank">kaifcodec/user-scanner</a> · Python</div>
+      <p class="desc">面向安全研究与数字足迹调查的开源 OSINT 工具：仅凭一个邮箱或用户名，自动扫描 465+ 维护中的数据源（175+ 邮箱 + 290+ 用户名），输出关联画像。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+93 今日</span></span>
+        <span class="meta-item">总星 4,277</span>
+        <span class="meta-item">🍴 449</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">10</span>
+      <h3 class="card-title"><a href="https://github.com/Osmantic/ODS" target="_blank">ODS · 把电脑变成个人 AI 服务器</a></h3>
+      <div class="repo-path"><a href="https://github.com/Osmantic/ODS" target="_blank">Osmantic/ODS</a> · Python</div>
+      <p class="desc">一键把 PC / Mac / Linux 变成 AI 服务器：本地 LLM 推理、对话 UI、语音、Agent、工作流、RAG、图像生成全套能力打包，数据完全留在自己机器里。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+77 今日</span></span>
+        <span class="meta-item">总星 5,528</span>
+        <span class="meta-item">🍴 778</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>📅 数据源：<a href="https://github.com/trending" style="color:#58a6ff;text-decoration:none;">github.com/trending</a> · 自动采集于 2026-09-01 北京时间</p>
+    <p style="margin-top:8px;">精选标准：实用工具 / 框架 / 库优先 · 排除纯学术论文与 fork-only 仓库</p>
+  </footer>
+</div>
+</body>
+</html>
