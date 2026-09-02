@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-02</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-rust { background: #dea584; }
+  .lang-crystal { background: #000100; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 9 月 2 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>多智能体课堂持续爆火</strong>：清华 MAIC OpenMAIC 连续两日登顶，单日 3,000+ 星，把 Agent 教学场景产品化推进到一键可用</li>
+      <li><strong>视频 + AI 工具组合</strong>：browser-use 推出 video-use 用代码编辑视频、reclip 自托管视频下载器，视频工作流全面被 Agent 接管</li>
+      <li><strong>数据采集与 PDF 新基建</strong>：crawl4ai 持续走高、firecrawl 推出 Rust 写的 PDF 检测库，文档与网页结构化提取赛道再添两把利器</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">OpenMAIC · 多智能体沉浸式教学课堂</a></h3>
+      <div class="repo-path"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">THU-MAIC/OpenMAIC</a> · TypeScript</div>
+      <p class="desc">清华 MAIC 团队出品的多智能体互动教室：多个 Agent 扮演老师、同学、助教，一键启动即用，把 LLM 互动教学做成了开箱即用的产品，连续两日登顶趋势榜。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+3,128 今日</span></span>
+        <span class="meta-item">总星 29,569</span>
+        <span class="meta-item">🍴 4,979</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/firecrawl/pdf-inspector" target="_blank">pdf-inspector · Firecrawl 出的 Rust PDF 检测库</a></h3>
+      <div class="repo-path"><a href="https://github.com/firecrawl/pdf-inspector" target="_blank">firecrawl/pdf-inspector</a> · Rust</div>
+      <p class="desc">高性能 PDF 解析前的体检库：用 Rust 实现的快速检测、分类与文本提取组件，能智能区分扫描件与文本型 PDF，作为文档管线路由决策的新基建。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">新晋趋势</span></span>
+        <span class="meta-item">Rust · 高性能</span>
+        <span class="meta-item">Firecrawl 出品</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/browser-use/video-use" target="_blank">video-use · 用代码 Agent 编辑视频</a></h3>
+      <div class="repo-path"><a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a> · Python</div>
+      <p class="desc">浏览器自动化头部项目 browser-use 的兄弟作品：让编程 Agent 像写代码一样剪辑视频——分段、拼接、转场、字幕、剪辑逻辑全部以代码驱动，可版本化、可复用。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">新晋趋势</span></span>
+        <span class="meta-item">browser-use 出品</span>
+        <span class="meta-item">视频 + Agent</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/unclecode/crawl4ai" target="_blank">crawl4ai · 为 LLM 而生的开源爬虫</a></h3>
+      <div class="repo-path"><a href="https://github.com/unclecode/crawl4ai" target="_blank">unclecode/crawl4ai</a> · Python</div>
+      <p class="desc">面向大模型友好的网页抓取与解析框架：内置浏览器渲染、智能清洗与 Markdown / JSON 结构化输出，可作为 RAG 与 Agent 数据采集层。社区活跃、文档完善。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">持续走高</span></span>
+        <span class="meta-item">Python · LLM 友好</span>
+        <span class="meta-item">RAG / Agent 基建</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/handsomestWei/patent-disclosure-skill" target="_blank">patent-disclosure-skill · 专利交底书 Agent 技能包</a></h3>
+      <div class="repo-path"><a href="https://github.com/handsomestWei/patent-disclosure-skill" target="_blank">handsomestWei/patent-disclosure-skill</a> · Python</div>
+      <p class="desc">中国专利场景专用 Agent 技能：覆盖发明、实用、外观三类专利的挖掘与交底书编写、公开专利通俗解读、政策动向嗅探、审查答复辅助，研发团队的合规好帮手。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+501 今日</span></span>
+        <span class="meta-item">总星 6,753</span>
+        <span class="meta-item">🍴 761</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/iv-org/invidious" target="_blank">Invidious · 隐私友好的 YouTube 替代前端</a></h3>
+      <div class="repo-path"><a href="https://github.com/iv-org/invidious" target="_blank">iv-org/invidious</a> · Crystal</div>
+      <p class="desc">YouTube 第三方开源前端：无需账号、无广告、无追踪、可自托管。结合 Invidious API 可搭建视频下载与归档服务，长年稳居趋势榜的实用工具。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+577 今日</span></span>
+        <span class="meta-item">总星 23,782</span>
+        <span class="meta-item">🍴 2,674</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/VoltAgent/awesome-design-md" target="_blank">awesome-design-md · 主流设计系统资源合集</a></h3>
+      <div class="repo-path"><a href="https://github.com/VoltAgent/awesome-design-md" target="_blank">VoltAgent/awesome-design-md</a> · Markdown</div>
+      <p class="desc">把一线品牌设计系统提炼为 DESIGN.md 文件，丢进项目即可让 Cursor / Claude Code / Codex 等编码 Agent 自动按风格生成匹配的 UI，前端 vibe-coding 必备素材。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">新晋趋势</span></span>
+        <span class="meta-item">设计系统资源</span>
+        <span class="meta-item">编码 Agent 友好</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/averygan/reclip" target="_blank">reclip · 自托管的视频下载工具</a></h3>
+      <div class="repo-path"><a href="https://github.com/averygan/reclip" target="_blank">averygan/reclip</a> · TypeScript</div>
+      <p class="desc">轻量、自托管的媒体下载器：支持几乎所有主流视频站点，提供简洁的 Web UI。个人媒体库、剪辑素材归档、内容研究都可自建，告别广告与限速。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">新晋趋势</span></span>
+        <span class="meta-item">TypeScript · 自托管</span>
+        <span class="meta-item">Web UI</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/Gitlawb/openclaude" target="_blank">openclaude · 跨模型兼容的 Claude 风格 API</a></h3>
+      <div class="repo-path"><a href="https://github.com/Gitlawb/openclaude" target="_blank">Gitlawb/openclaude</a> · TypeScript</div>
+      <p class="desc">Claude API 的开源兼容层：号称"runs anywhere, uses anything"，可在本地或任意模型后端上跑 Claude 风格接口，方便已有 Claude 接入的业务平滑迁移。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+80 今日</span></span>
+        <span class="meta-item">总星 31,351</span>
+        <span class="meta-item">🍴 8,951</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>📅 数据源：<a href="https://github.com/trending" style="color:#58a6ff;text-decoration:none;">github.com/trending</a> · 自动采集于 2026-09-02 北京时间</p>
+    <p style="margin-top:8px;">精选标准：实用工具 / 框架 / 库优先 · 排除纯学术论文与 fork-only 仓库</p>
+  </footer>
+</div>
+</body>
+</html>
