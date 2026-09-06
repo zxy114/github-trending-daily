@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-06</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-rust { background: #dea584; }
+  .lang-cpp  { background: #f34b7d; }
+  .lang-shell{ background: #89e051; }
+  .lang-html { background: #e34c26; }
+  .lang-hlsl { background: #b07215; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 9 月 6 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>Agent 技能生态继续爆炸</strong>：mattpocock/skills、anthropics/skills、humanlayer/skills 同日霸榜，第三方技能仓库已经从尝鲜走向工程标配，Agent 可组合性成为新共识</li>
+      <li><strong>编程代理从 CLI 走向 IDE 全场景</strong>：anomalyco/opencode 持续热推、magnitudedev/magnitude 把本地推理塞进主流 Agent，"本地化 + 工具链一体化"是这一波最明确的工程方向</li>
+      <li><strong>老牌基建与极简哲学同台</strong>：fmtlib/fmt 与 nvm-sh/nvm 这类"用了十几年还在涨星"的项目仍然在榜，说明底层工具的迁移成本极高；同时 DietrichGebert/ponytail 单日 +2,845 星刷新近月纪录，"少写代码"成为新潮流</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/DietrichGebert/ponytail" target="_blank">ponytail · 让 AI 像资深"懒人"一样写代码</a></h3>
+      <div class="repo-path"><a href="https://github.com/DietrichGebert/ponytail" target="_blank">DietrichGebert/ponytail</a> · JavaScript</div>
+      <p class="desc">一套反共识的 Agent 编码哲学：能不动就不动、能复用就复用、坚决拒绝过度设计，把"不写代码"视为最高目标，单日 +2,845 星刷近期纪录，适合拿来反向约束 AI 的过度工程化倾向。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+2,845 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-js"></span> JavaScript</span>
+        <span class="meta-item">反过度设计</span>
+        <span class="meta-item">单日爆款</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/magnitudedev/magnitude" target="_blank">magnitude · 面向 Agent 的本地推理网关</a></h3>
+      <div class="repo-path"><a href="https://github.com/magnitudedev/magnitude" target="_blank">magnitudedev/magnitude</a> · TypeScript</div>
+      <p class="desc">开源推理服务器：自动挑选最适合本机硬件的本地模型，对接 Pi、OpenCode、Hermes、Codex、Claude Code、Oh My Pi、Cline 等主流 Agent，单日 +674 星，把"本地跑大模型"门槛进一步降低。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+674 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">本地推理</span>
+        <span class="meta-item">多 Agent 兼容</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/humanlayer/skills" target="_blank">humanlayer/skills · 实战派 Agent 技能集</a></h3>
+      <div class="repo-path"><a href="https://github.com/humanlayer/skills" target="_blank">humanlayer/skills</a> · TypeScript</div>
+      <p class="desc">humanlayer 公开的工程级 Agent 技能包，主打"人在回路"协作模式：让 Agent 主动求助、确认、协作，把人的判断嵌入自动化链路，单日 +442 星，是构建高可信 Agent 工作流的现成模板。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+442 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">人在回路</span>
+        <span class="meta-item">技能合集</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/bikini/exploitarium" target="_blank">exploitarium · 漏洞利用 PoC 归档与研究笔记</a></h3>
+      <div class="repo-path"><a href="https://github.com/bikini/exploitarium" target="_blank">bikini/exploitarium</a> · Python</div>
+      <p class="desc">一份公开漏洞利用 PoC 与漏洞研究 writeup 归档，按未公开时间顺序整理，鼓励读者自行上报并争取 CVE 编号，单日 +230 星，是安全研究、蓝队防御、漏洞复现的实战教学资料。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+230 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-py"></span> Python</span>
+        <span class="meta-item">安全研究</span>
+        <span class="meta-item">PoC 归档</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/anomalyco/opencode" target="_blank">opencode · 一款开源的终端编程代理</a></h3>
+      <div class="repo-path"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode</a> · TypeScript</div>
+      <p class="desc">面向终端的开源 AI 编程代理：自然语言驱动，覆盖代码理解、改写、测试、提交全流程，与主流编辑器/Agent 框架松耦合，是喜欢键盘流、不想换 IDE 的人的轻量选择。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">持续热门</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">终端编程</span>
+        <span class="meta-item">开源替代</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills · TypeScript 布道者的 AI 技能集</a></h3>
+      <div class="repo-path"><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills</a> · Shell</div>
+      <p class="desc">TypeScript 布道者 mattpocock 公开的工程级技能包，直接来自他日常使用的 .agents 目录，覆盖代码理解、测试、重构等高频场景，是搭建 Claude/Cursor 等 Agent 工作流的现成"工具箱"。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">高热度</span></span>
+        <span class="meta-item"><span class="lang-dot lang-shell"></span> Shell</span>
+        <span class="meta-item">工程实践</span>
+        <span class="meta-item">Agent 技能集</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/anthropics/skills" target="_blank">anthropics/skills · 官方 Agent 技能仓库</a></h3>
+      <div class="repo-path"><a href="https://github.com/anthropics/skills" target="_blank">anthropics/skills</a> · Shell</div>
+      <p class="desc">Anthropic 官方开放的 Agent Skills 公共仓库，提供可直接复用的提示模板与工具集，是构建 Claude 系 Agent 的"开箱即用"参考，适合新手快速搭起工作流。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">高热度</span></span>
+        <span class="meta-item"><span class="lang-dot lang-shell"></span> Shell</span>
+        <span class="meta-item">官方维护</span>
+        <span class="meta-item">Claude 生态</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/fmtlib/fmt" target="_blank">{fmt} · C++ 格式化的事实标准</a></h3>
+      <div class="repo-path"><a href="https://github.com/fmtlib/fmt" target="_blank">fmtlib/fmt</a> · C++</div>
+      <p class="desc">C++ 社区几乎人手一份的格式化库：API 设计影响了 C++20/23 std::format，安全、高性能、零依赖，是几乎所有现代 C++ 项目的基建常青树，再次登榜证明其不可替代。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">持续热门</span></span>
+        <span class="meta-item"><span class="lang-dot lang-cpp"></span> C++</span>
+        <span class="meta-item">零依赖</span>
+        <span class="meta-item">行业标准</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">diagram-design · 38 套编辑级图表模板</a></h3>
+      <div class="repo-path"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">cathrynlavery/diagram-design</a> · HTML</div>
+      <p class="desc">面向 Claude Code、Codex、Pi 等 Agent 的图表模板合集：38 种编辑级排版类型，全部 HTML + SVG 自包含实现，刻意舍弃阴影与"AI 味"的 Mermaid 套路，输出干净、可印刷的矢量图。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">持续热门</span></span>
+        <span class="meta-item"><span class="lang-dot lang-html"></span> HTML</span>
+        <span class="meta-item">编辑风格</span>
+        <span class="meta-item">SVG 自包含</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">10</span>
+      <h3 class="card-title"><a href="https://github.com/nvm-sh/nvm" target="_blank">nvm · Node.js 版本管理器的事实标准</a></h3>
+      <div class="repo-path"><a href="https://github.com/nvm-sh/nvm" target="_blank">nvm-sh/nvm</a> · Shell</div>
+      <p class="desc">POSIX 兼容的 Bash 脚本：按项目/会话隔离 node.js 版本，是 Node 开发者装机必备，几乎所有前端教程都默认你已经装好它，常年登榜说明底层工具的迁移成本依然极高。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">持续热门</span></span>
+        <span class="meta-item"><span class="lang-dot lang-shell"></span> Shell</span>
+        <span class="meta-item">装机必备</span>
+        <span class="meta-item">Node 生态</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>数据基于 GitHub Trending 当日抓取 · 仅收录有学习与工程价值的项目</p>
+    <p style="margin-top: 8px;">© GitHub 开源日报 · 由 AI 整理</p>
+  </footer>
+</div>
+</body>
+</html>
