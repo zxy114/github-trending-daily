@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-07</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
+    color: #e6edf3;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.7;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(56,139,253,0.15);
+    color: #58a6ff;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: #8b949e; font-size: 15px; }
+  .date-meta { color: #6e7681; font-size: 13px; margin-top: 8px; }
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: rgba(22,27,34,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(88,166,255,0.3);
+  }
+  .rank {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f0f6fc;
+  }
+  .card-title a {
+    color: #f0f6fc;
+    text-decoration: none;
+  }
+  .card-title a:hover { color: #58a6ff; }
+  .repo-path {
+    font-size: 13px;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    margin-bottom: 14px;
+  }
+  .repo-path a { color: #58a6ff; text-decoration: none; }
+  .desc { color: #c9d1d9; margin-bottom: 16px; font-size: 14.5px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #8b949e;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(110,118,129,0.15);
+    border-radius: 6px;
+  }
+  .lang-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .lang-js   { background: #f1e05a; }
+  .lang-go   { background: #00add8; }
+  .lang-ts   { background: #3178c6; }
+  .lang-py   { background: #3572A5; }
+  .lang-rust { background: #dea584; }
+  .lang-cpp  { background: #f34b7d; }
+  .lang-shell{ background: #89e051; }
+  .lang-html { background: #e34c26; }
+  .lang-llvm { background: #b07219; }
+  .stars-today {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  .summary {
+    background: rgba(22,27,34,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .summary h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #f0f6fc;
+  }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 8px; color: #c9d1d9; }
+  footer {
+    text-align: center;
+    color: #6e7681;
+    font-size: 13px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📊 GitHub Trending · Daily Digest</div>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">今日热门开源项目精选</div>
+    <div class="date-meta">2026 年 9 月 7 日 · 北京时间</div>
+  </header>
+
+  <section class="summary">
+    <h2>📌 今日概览</h2>
+    <ul>
+      <li><strong>Agent 技能仓库进入"赛跑"阶段</strong>：mattpocock/skills 单日 +2,207 星登顶，加上 openai/skills、affaan-m/ECC 同台亮相，工程派、开源派、官方派三类技能仓库正面交锋，"谁的可复用资产更多"成为新战场</li>
+      <li><strong>本地推理与端侧工作流持续火热</strong>：magnitudedev/magnitude 把"自动挑模型 + 多 Agent 接入"做成开箱体验，anomalyco/opencode 长期霸榜，推理网关与终端编程代理形成完整的本地化工具链</li>
+      <li><strong>"反 AI 味"和"反过度工程"两条新潮流同框</strong>：blader/humanizer 帮你把 AI 写作痕迹抹平，DietrichGebert/ponytail 主张"能不动就不动"，两类风格都登榜，说明大家开始主动驯化 AI 工具而非被工具驯化</li>
+    </ul>
+  </section>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="rank">1</span>
+      <h3 class="card-title"><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills · 一线工程师的实战技能包</a></h3>
+      <div class="repo-path"><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills</a> · Shell</div>
+      <p class="desc">TypeScript 布道者 mattpocock 直接公开自己日常 .agents 目录里的工程级技能合集，覆盖代码理解、重构、调试等高频场景，单日 +2,207 星拿下榜首，是搭建 Claude Code / Cursor / Codex 工作流最实用的现成"工具箱"。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+2,207 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-shell"></span> Shell</span>
+        <span class="meta-item">工程实践</span>
+        <span class="meta-item">Agent 技能集</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">2</span>
+      <h3 class="card-title"><a href="https://github.com/DietrichGebert/ponytail" target="_blank">DietrichGebert/ponytail · 让 AI 像资深"懒人"那样写代码</a></h3>
+      <div class="repo-path"><a href="https://github.com/DietrichGebert/ponytail" target="_blank">DietrichGebert/ponytail</a> · JavaScript</div>
+      <p class="desc">一套反共识的 Agent 编码哲学：能不动就不动、能复用就复用、坚决拒绝过度设计，把"不写代码"视为最高目标，单日 +1,539 星，适合拿来反向约束 AI 写代码时的过度工程化冲动。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,539 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-js"></span> JavaScript</span>
+        <span class="meta-item">反过度设计</span>
+        <span class="meta-item">提示词工程</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">3</span>
+      <h3 class="card-title"><a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC · 面向多 Agent 的工程化"调度器"</a></h3>
+      <div class="repo-path"><a href="https://github.com/affaan-m/ECC" target="_blank">affaan-m/ECC</a> · JavaScript</div>
+      <p class="desc">一套面向 Claude Code、Codex、OpenCode、Cursor 等多套 Agent 的"性能优化 + 安全 + 记忆 + 技能"统一接入层，强调研究先行的工作流，单日 +1,485 星，适合想给现有 Agent 装一层"企业级外壳"的团队。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+1,485 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-js"></span> JavaScript</span>
+        <span class="meta-item">多 Agent 兼容</span>
+        <span class="meta-item">企业级外壳</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">4</span>
+      <h3 class="card-title"><a href="https://github.com/blader/humanizer" target="_blank">blader/humanizer · 一键抹掉 AI 写作痕迹</a></h3>
+      <div class="repo-path"><a href="https://github.com/blader/humanizer" target="_blank">blader/humanizer</a> · Python</div>
+      <p class="desc">面向 Agent 的"人味"重写技能：自动识别 AI 写作的高频套路（句式、用词、过渡词）并改写为更自然的表达，单日 +748 星，适合内容编辑、运营、自媒体作者接到 AI 草稿后做最后一公里"去 AI 化"。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+748 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-py"></span> Python</span>
+        <span class="meta-item">Agent 技能</span>
+        <span class="meta-item">文本润色</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">5</span>
+      <h3 class="card-title"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">cathrynlavery/diagram-design · 38 套编辑级图表模板</a></h3>
+      <div class="repo-path"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">cathrynlavery/diagram-design</a> · HTML</div>
+      <p class="desc">面向 Claude Code、Codex、Pi 等 Agent 的图表模板合集：38 种编辑级排版类型，全部 HTML + SVG 自包含实现，刻意舍弃阴影与"AI 味"的 Mermaid 套路，输出干净、可印刷的矢量图，单日 +620 星。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+620 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-html"></span> HTML</span>
+        <span class="meta-item">编辑风格</span>
+        <span class="meta-item">SVG 自包含</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">6</span>
+      <h3 class="card-title"><a href="https://github.com/magnitudedev/magnitude" target="_blank">magnitudedev/magnitude · 面向 Agent 的本地推理网关</a></h3>
+      <div class="repo-path"><a href="https://github.com/magnitudedev/magnitude" target="_blank">magnitudedev/magnitude</a> · TypeScript</div>
+      <p class="desc">开源推理服务器：自动挑选最适合本机硬件的本地模型，对接 Pi、OpenCode、Hermes、Codex、Claude Code、Oh My Pi、Cline 等主流 Agent，单日 +604 星，把"本地跑大模型"门槛进一步降低，是想脱网又想跑 Agent 的开发者的优选。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+604 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">本地推理</span>
+        <span class="meta-item">多 Agent 兼容</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">7</span>
+      <h3 class="card-title"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode · 一款开源的终端编程代理</a></h3>
+      <div class="repo-path"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode</a> · TypeScript</div>
+      <p class="desc">面向终端的开源 AI 编程代理：自然语言驱动，覆盖代码理解、改写、测试、提交全流程，与主流编辑器/Agent 框架松耦合，单日 +551 星持续霸榜，是喜欢键盘流、不想换 IDE 的人的轻量选择。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+551 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">终端编程</span>
+        <span class="meta-item">开源替代</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">8</span>
+      <h3 class="card-title"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent · 会随你一起成长的 Agent</a></h3>
+      <div class="repo-path"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a> · Python</div>
+      <p class="desc">来自 Nous Research 的开源 Agent 框架，主打"长期记忆 + 个性化成长"，可以记录你的偏好、习惯、项目上下文，让 Agent 在多次会话中保持连续人格，单日 +520 星，适合做长期助理而不是一次性脚本。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+520 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-py"></span> Python</span>
+        <span class="meta-item">长期记忆</span>
+        <span class="meta-item">个性化助理</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">9</span>
+      <h3 class="card-title"><a href="https://github.com/ruvnet/ruflo" target="_blank">ruvnet/ruflo · "群智"Agent 协作调度平台</a></h3>
+      <div class="repo-path"><a href="https://github.com/ruvnet/ruflo" target="_blank">ruvnet/ruflo</a> · TypeScript</div>
+      <p class="desc">面向多 Agent 协作的开源编排框架：自适应记忆、RAG、子智能体编排与 Claude Code / Codex / Hermes 等主流 Agent 原生互通，单日 +276 星，适合构建"一个 Agent 调度一群 Agent"的多步骤工作流。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+276 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-ts"></span> TypeScript</span>
+        <span class="meta-item">多 Agent 编排</span>
+        <span class="meta-item">RAG 集成</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="rank">10</span>
+      <h3 class="card-title"><a href="https://github.com/openai/skills" target="_blank">openai/skills · Codex 的官方技能目录</a></h3>
+      <div class="repo-path"><a href="https://github.com/openai/skills" target="_blank">openai/skills</a> · Python</div>
+      <p class="desc">OpenAI 官方维护的 Codex 技能目录，收录可在 Codex / CLI 里直接复用的官方与社区技能集，是构建 Codex 工作流的"开箱即用"参考，单日新增 +46 星持续积累，适合想在 Codex 里快速搭起专用工具链的开发者。</p>
+      <div class="meta">
+        <span class="meta-item">⭐ <span class="stars-today">+46 今日</span></span>
+        <span class="meta-item"><span class="lang-dot lang-py"></span> Python</span>
+        <span class="meta-item">官方维护</span>
+        <span class="meta-item">Codex 生态</span>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <p>数据基于 GitHub Trending 当日抓取 · 仅收录有学习与工程价值的项目</p>
+    <p style="margin-top: 8px;">© GitHub 开源日报 · 由 AI 整理</p>
+  </footer>
+</div>
+</body>
+</html>
