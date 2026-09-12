@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-12</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --star: #f0b429;
+  --tag-bg: #1f6feb33;
+  --tag-color: #79c0ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+header h1 { margin: 0 0 6px; font-size: 26px; }
+header .meta { color: var(--muted); font-size: 14px; }
+header .meta span { margin-right: 14px; }
+.summary {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.cards { display: grid; gap: 18px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+.rank {
+  display: inline-block;
+  background: var(--accent);
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.card h2 { margin: 0 0 6px; font-size: 19px; }
+.card h2 a { color: var(--text); text-decoration: none; }
+.card h2 a:hover { color: var(--accent); }
+.card .repo-line { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.card .desc { font-size: 15px; margin: 0 0 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.stars { color: var(--star); font-size: 13px; font-weight: 600; }
+.stars .today { background: #f0b42922; color: var(--star); padding: 2px 8px; border-radius: 6px; margin-left: 6px; font-weight: 600; }
+.why { background: #21262d; border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 14px; color: #c9d1d9; }
+footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 GitHub 开源日报</h1>
+    <div class="meta">
+      <span>📅 2026-09-12</span>
+      <span>🌏 Asia/Shanghai</span>
+      <span>📌 来源: github.com/trending</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    今日 GitHub 趋势热点偏向「本地 AI 编程工具 + 知识管理 + 网络/调试基础设施」。本期精选 8 个对开发者真正可学可用的项目，过滤掉交易机器人、纯学术仓库等噪音。
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="rank">#1</span>
+      <h2><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">gods-eye-view · 浏览器里的实时卫星地图模拟器</a></h2>
+      <div class="repo-line">bilawalsidhu/gods-eye-view · JavaScript · 27,192 ⭐ · +3,680 今日</div>
+      <p class="desc">在浏览器中构建的卫星视角模拟器，把真实的开源地理空间数据渲染到一个照片级真实感的 3D 地球上，等于一个可交互的"上帝之眼"界面。</p>
+      <div class="tags"><span class="tag">可视化</span><span class="tag">WebGL</span><span class="tag">地理空间</span><span class="tag">3D</span></div>
+      <div class="why">亮点：把真实数据源接入 3D 地球，适合做态势感知、地图类项目、应急/物流演示的参考实现。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#2</span>
+      <h2><a href="https://github.com/ayghri/i-have-adhd" target="_blank">i-have-adhd · 让 AI 编程代理回答更"简短直接"</a></h2>
+      <div class="repo-line">ayghri/i-have-adhd · Python · 41,931 ⭐ · +3,463 今日</div>
+      <p class="desc">一个 Agent Skill，用来约束编码代理的输出风格：阻止"长篇大论式"回答，鼓励直奔结论，输出对开发者更友好。</p>
+      <div class="tags"><span class="tag">Agent Skill</span><span class="tag">提示工程</span><span class="tag">工作流</span></div>
+      <div class="why">亮点：通用提示层技巧，可直接套用到 Claude/Cursor 等编码代理，把"先讲思路再讲代码"变成"先给代码再讲要点"。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#3</span>
+      <h2><a href="https://github.com/obra/superpowers" target="_blank">superpowers · 真正能跑起来的 Agent 技能开发框架</a></h2>
+      <div class="repo-line">obra/superpowers · 软件开发方法论 + Agent 技能库</div>
+      <p class="desc">把"Agent Skill"作为一等公民落地的开发框架，配合一套经过验证的软件开发方法论，让智能体能稳定地写出可用代码。</p>
+      <div class="tags"><span class="tag">Agent 框架</span><span class="tag">技能工程</span><span class="tag">方法论</span></div>
+      <div class="why">亮点：解决"Agent 写得爽但跑不通"的问题，适合在团队内部搭建可复用 Agent 工作流时参考。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#4</span>
+      <h2><a href="https://github.com/nashsu/llm_wiki" target="_blank">llm_wiki · 把文档自动变成互联知识库的桌面应用</a></h2>
+      <div class="repo-line">nashsu/llm_wiki · TypeScript · 18,759 ⭐ · +647 今日</div>
+      <p class="desc">跨平台桌面应用，思路区别于传统 RAG：LLM 增量地从你的资料里持续构建并维护一个持久化的 Wiki，节点之间自动互链。</p>
+      <div class="tags"><span class="tag">桌面应用</span><span class="tag">知识管理</span><span class="tag">RAG 替代</span><span class="tag">本地优先</span></div>
+      <div class="why">亮点："持久化 Wiki + 增量构建"是 RAG 的实用化方向，适合做个人/团队第二大脑的参考实现。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#5</span>
+      <h2><a href="https://github.com/vastsa/PI-Desktop" target="_blank">PI-Desktop · 本地优先的 AI 编程代理桌面端</a></h2>
+      <div class="repo-line">vastsa/PI-Desktop · TypeScript · 2,792 ⭐ · +552 今日</div>
+      <p class="desc">Electron + Rust 内核 + pi Agent Harness 组成的本地 AI 编程代理桌面端，强调本地运行和可插拔插件。</p>
+      <div class="tags"><span class="tag">桌面 AI</span><span class="tag">Electron+Rust</span><span class="tag">本地优先</span><span class="tag">可扩展插件</span></div>
+      <div class="why">亮点：把"本地 AI 编程助手 + 插件体系"打包成桌面应用，是 Claude Code/Cursor 之外的一条本地化路线。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#6</span>
+      <h2><a href="https://github.com/github/spec-kit" target="_blank">spec-kit · 规范驱动的开发工具包</a></h2>
+      <div class="repo-line">github/spec-kit · Spec-Driven Development 入门工具</div>
+      <p class="desc">GitHub 官方推出的 Spec-Driven Development（规范先行）入门工具包，帮助团队从需求规格开始往下推进代码生成。</p>
+      <div class="tags"><span class="tag">规范驱动</span><span class="tag">GitHub 官方</span><span class="tag">工程方法</span></div>
+      <div class="why">亮点：在"AI 编程时代如何把需求 → 代码"链路标准化，值得作为团队流程改造的参考样板。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#7</span>
+      <h2><a href="https://github.com/jihe520/MathModelAgent" target="_blank">MathModelAgent · 数学建模一键成稿的智能体</a></h2>
+      <div class="repo-line">jihe520/MathModelAgent · Python · 4,871 ⭐ · +129 今日</div>
+      <p class="desc">专为数学建模场景设计的 Agent + 技能集：自动完成数学建模的全流程，并生成一份可直接提交的完整论文。</p>
+      <div class="tags"><span class="tag">数学建模</span><span class="tag">Agent 工作流</span><span class="tag">论文生成</span></div>
+      <div class="why">亮点：把"垂直领域 Agent + 多技能协同"做到端到端，对其他垂直 Agent（法律/财报/研报）的搭建思路有借鉴价值。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#8</span>
+      <h2><a href="https://github.com/p1neappleXpress/OpenFlux" target="_blank">OpenFlux · 可插拔传输的 TCP 隧道工具</a></h2>
+      <div class="repo-line">p1neappleXpress/OpenFlux · Go · 1,160 ⭐ · +198 今日</div>
+      <p class="desc">网络栈研究型工具，本质是一个可插拔传输层的 TCP 隧道，方便接入自定义传输插件用于网络研究。</p>
+      <div class="tags"><span class="tag">Go</span><span class="tag">网络</span><span class="tag">隧道/代理</span><span class="tag">研究工具</span></div>
+      <div class="why">亮点：把"协议研究"做成可扩展框架，适合做翻墙/混淆/自定义传输层时的实验起点（请遵守当地法规与服务条款）。</div>
+    </div>
+
+  </div>
+
+  <footer>
+    自动生成 · 仅收录对开发者有学习价值的项目，质量优先于数量
+  </footer>
+</div>
+</body>
+</html>
