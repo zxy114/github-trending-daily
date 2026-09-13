@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-13</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --star: #f0b429;
+  --tag-bg: #1f6feb33;
+  --tag-color: #79c0ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+header h1 { margin: 0 0 6px; font-size: 26px; }
+header .meta { color: var(--muted); font-size: 14px; }
+header .meta span { margin-right: 14px; }
+.summary {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.cards { display: grid; gap: 18px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+.rank {
+  display: inline-block;
+  background: var(--accent);
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.card h2 { margin: 0 0 6px; font-size: 19px; }
+.card h2 a { color: var(--text); text-decoration: none; }
+.card h2 a:hover { color: var(--accent); }
+.card .repo-line { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.card .desc { font-size: 15px; margin: 0 0 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.stars { color: var(--star); font-size: 13px; font-weight: 600; }
+.stars .today { background: #f0b42922; color: var(--star); padding: 2px 8px; border-radius: 6px; margin-left: 6px; font-weight: 600; }
+.why { background: #21262d; border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 14px; color: #c9d1d9; }
+footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 GitHub 开源日报</h1>
+    <div class="meta">
+      <span>📅 2026-09-13</span>
+      <span>🌏 Asia/Shanghai</span>
+      <span>📌 来源: github.com/trending</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    今日 GitHub 趋势主题是「真实数据可视化 + 垂直领域 AI 智能体 + 开发者基础设施」。本期精选 8 个对开发者真正可学可用的项目，过滤掉提示词泄露、规避工具、自动化交易等噪音仓库。
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="rank">#1</span>
+      <h2><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">gods-eye-view · 浏览器里的实时卫星视角 3D 地球</a></h2>
+      <div class="repo-line">bilawalsidhu/gods-eye-view · JavaScript · 30,000+ ⭐ · +2,265 今日</div>
+      <p class="desc">在浏览器中构建的"间谍卫星视角"模拟器，把真实的开源地理空间数据渲染到照片级真实感的 3D 地球上，支持实时交互。</p>
+      <div class="tags"><span class="tag">可视化</span><span class="tag">WebGL</span><span class="tag">地理空间</span><span class="tag">3D 地球</span></div>
+      <div class="why">亮点：把真实数据接入 3D 地球，适合做态势感知、地图类产品、应急/物流演示的参考实现；数据来源全部开源可追溯。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#2</span>
+      <h2><a href="https://github.com/max-sixty/worktrunk" target="_blank">worktrunk · 给并行 AI Agent 工作流用的 Git worktree CLI</a></h2>
+      <div class="repo-line">max-sixty/worktrunk · Rust · 7,248 ⭐ · +54 今日</div>
+      <p class="desc">专门为"并行跑多个 AI 编码 Agent"场景设计的命令行工具，把 Git worktree 管理抽成简单的 CLI 调用，解决多分支并行开发痛点。</p>
+      <div class="tags"><span class="tag">Rust</span><span class="tag">CLI 工具</span><span class="tag">Git worktree</span><span class="tag">Agent 工作流</span></div>
+      <div class="why">亮点：在"一个 Agent 改一个 worktree"成为新常态的今天，这种小而专的工具能立刻提升多任务编码体验。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#3</span>
+      <h2><a href="https://github.com/jihe520/MathModelAgent" target="_blank">MathModelAgent · 数学建模一键成稿的垂直智能体</a></h2>
+      <div class="repo-line">jihe520/MathModelAgent · Python · 5,139 ⭐ · +262 今日</div>
+      <p class="desc">专为数学建模场景设计的 Agent + 技能集：自动完成从选题到成稿的全流程，最终输出一份可以直接提交的完整论文。</p>
+      <div class="tags"><span class="tag">数学建模</span><span class="tag">Agent 工作流</span><span class="tag">论文生成</span></div>
+      <div class="why">亮点：把"垂直领域 Agent + 多技能协同"做到端到端，对其他垂直 Agent（法律/财报/研报）的搭建思路有直接借鉴价值。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#4</span>
+      <h2><a href="https://github.com/melgarafael/DeskcommCRM" target="_blank">DeskcommCRM · 自托管 AI 销售操作系统</a></h2>
+      <div class="repo-line">melgarafael/DeskcommCRM · TypeScript · 1,823 ⭐ · +504 今日</div>
+      <p class="desc">开源 AI 销售 OS，自托管 CRM 框架内置 AI Agent + WhatsApp（WAHA）集成，可作为 Kommo / Octadesk / Intercom 等商业方案的替代品。支持 MCP、多租户。</p>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">CRM</span><span class="tag">自托管</span><span class="tag">MCP</span><span class="tag">AI Agent</span></div>
+      <div class="why">亮点：把 AI Agent + 即时通讯 + CRM 串成一个完整业务系统，是私有部署型企业销售工具的成熟参考实现。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#5</span>
+      <h2><a href="https://github.com/armory3d/armorpaint" target="_blank">armorpaint · 开源 3D 材质/纹理创作工具</a></h2>
+      <div class="repo-line">armory3d/armorpaint · C · 4,918 ⭐ · +237 今日</div>
+      <p class="desc">独立开源的 3D 图形创作工具，专注 PBR 材质绘制与纹理编辑，适合作为 DCC 流程中的材质环节使用。</p>
+      <div class="tags"><span class="tag">3D 创作</span><span class="tag">PBR 材质</span><span class="tag">开源替代</span></div>
+      <div class="why">亮点：在 Substance Designer 商业化的背景下，提供一条免费的 PBR 材质工作流选项，对独立游戏/数字资产创作很友好。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#6</span>
+      <h2><a href="https://github.com/p1neappleXpress/OpenFlux" target="_blank">OpenFlux · 可插拔传输层的 TCP 隧道研究工具</a></h2>
+      <div class="repo-line">p1neappleXpress/OpenFlux · Go · 1,409 ⭐ · +355 今日</div>
+      <p class="desc">网络栈研究型工具，核心是一个可插拔传输层的 TCP 隧道，方便挂接自定义传输插件做协议实验。</p>
+      <div class="tags"><span class="tag">Go</span><span class="tag">网络</span><span class="tag">TCP 隧道</span><span class="tag">协议研究</span></div>
+      <div class="why">亮点：把"协议研究"做成可扩展框架，方便学习 TCP/代理/混淆等底层概念（请在合法合规范围内使用）。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#7</span>
+      <h2><a href="https://github.com/nab138/iloader" target="_blank">iloader · 跨平台友好的应用侧载工具</a></h2>
+      <div class="repo-line">nab138/iloader · TypeScript · 3,092 ⭐ · +209 今日</div>
+      <p class="desc">面向普通用户的"侧载"工具，把签名、安装、设备管理这些繁琐步骤封装成简单交互，对自部署/测试场景很实用。</p>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">侧载</span><span class="tag">开发者工具</span><span class="tag">桌面 GUI</span></div>
+      <div class="why">亮点：把过去需要 Xcode/AltStore 折腾才能搞定的流程做成 GUI，适合做内部测试分发或开发自测。</div>
+    </div>
+
+    <div class="card">
+      <span class="rank">#8</span>
+      <h2><a href="https://github.com/Sonarr/Sonarr" target="_blank">Sonarr · 影视资源自动管理与下载的老牌利器</a></h2>
+      <div class="repo-line">Sonarr/Sonarr · C# · 15,932 ⭐ · +227 今日</div>
+      <p class="desc">针对电视剧集的自动下载/整理工具，搜索、下载、重命名、归档一条龙，支持与下载器、索引器联动，是家庭媒体库搭建的经典组件。</p>
+      <div class="tags"><span class="tag">C#</span><span class="tag">家庭媒体库</span><span class="tag">自动化</span><span class="tag">经典开源</span></div>
+      <div class="why">亮点：久经考验的 *arr 套件核心之一，对学习 .NET 桌面服务类项目结构、自动化调度也有参考意义（请遵守当地版权法规）。</div>
+    </div>
+
+  </div>
+
+  <footer>
+    自动生成 · 仅收录对开发者有学习价值的项目，质量优先于数量
+  </footer>
+</div>
+</body>
+</html>
