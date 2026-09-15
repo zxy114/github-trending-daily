@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GitHub 开源日报 · 2026-09-15</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --tag-bg: #1f6feb22;
+    --tag-color: #79c0ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  .subtitle { color: var(--muted); font-size: 14px; }
+  .repo {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+  .repo h2 {
+    font-size: 18px;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .repo h2 a { color: var(--accent); text-decoration: none; }
+  .repo h2 a:hover { text-decoration: underline; }
+  .repo h2 .lang-tag {
+    font-size: 11px;
+    color: var(--tag-color);
+    background: var(--tag-bg);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .repo .meta {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .repo .meta span { margin-right: 14px; }
+  .repo .meta strong { color: var(--text); }
+  .repo p { margin: 8px 0 0; color: #c9d1d9; font-size: 14px; }
+  .repo .why {
+    margin-top: 10px;
+    padding-left: 14px;
+    border-left: 2px solid var(--accent);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>GitHub 开源日报 · 2026-09-15</h1>
+    <div class="subtitle">今日热度榜单精选 · 实用优先 · 北京时间</div>
+  </header>
+
+  <div class="repo">
+    <h2><a href="https://github.com/JustVugg/colibri" target="_blank">colibri · 纯 C 推理引擎，本地跑 MoE 大模型</a><span class="lang-tag">C</span></h2>
+    <div class="meta"><span>新锐项目</span><span>特点: 纯 C 实现 / 零依赖 / 专家从磁盘流式加载</span></div>
+    <p>面向 MoE（混合专家）架构的轻量推理引擎，目标是在消费级硬件上跑前沿大模型。把专家权重按需从磁盘读取，省掉整模型常驻显存的限制，号称"小引擎、大模型"。</p>
+    <div class="why">关注点：本地部署、隐私可控、低成本。如果你在折腾家用机器跑大模型，这是值得跟进的引擎项目。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/alibaba/open-code-review" target="_blank">open-code-review · 阿里开源的代码评审工具</a><span class="lang-tag">Go</span></h2>
+    <div class="meta"><span>企业级</span><span>特点: 确定性流水线 + LLM Agent / 行级注释 / 内置多语言规则</span></div>
+    <p>混合架构的代码评审工具：先用确定性规则扫 NPE、线程安全、XSS、SQL 注入等常见问题，再让 LLM Agent 兜底补齐上下文理解。支持 OpenAI 与 Anthropic 兼容接口。</p>
+    <div class="why">关注点：可落地到现有 CI 流水线。比纯 LLM 评审更可控，比纯规则更聪明。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/multimodal-art-projection/YuE" target="_blank">YuE · 音乐生成新版本</a><span class="lang-tag">Python</span></h2>
+    <div class="meta"><span>⭐ 8,377</span><span>今日 +559</span><span>特点: 符号化规划 / 零样本翻唱 / Agent 化音乐编辑</span></div>
+    <p>面向音乐生成的前沿开源模型，强调"先规划后生成"。可以做零样本翻唱，也支持 Agent 风格的迭代式编辑，更接近"创作工具"而非一次性出曲。</p>
+    <div class="why">关注点：音乐人、独立游戏、短视频配乐场景的可控生成。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/debpalash/VoiceStudio" target="_blank">VoiceStudio · 全本地语音工作室</a><span class="lang-tag">Python</span></h2>
+    <div class="meta"><span>⭐ 29,288</span><span>今日 +2,776</span><span>特点: 全本地 / 支持 646 种语言 / 克隆 / 设计 / 配音 / 转写一体</span></div>
+    <p>开源版本的 ElevenLabs 替代品，覆盖语音克隆、声音设计、视频配音、听写、转写、有声书制作，整套流程本地化。</p>
+    <div class="why">关注点：内容创作、视频本地化、有声书。强调"本地"是它区别于商业 SaaS 的核心卖点。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">Agent-Reach · 给 AI 代理配上的网络眼睛</a><span class="lang-tag">Python</span></h2>
+    <div class="meta"><span>特点: 一个 CLI 覆盖 Twitter / Reddit / YouTube / GitHub / B 站 / 小红书</span><span>免 API 费用</span></div>
+    <p>让 AI Agent 能直接读和搜多个社交与内容平台的统一 CLI。不需要各家 API key，把"调研-读-搜"统一成一个接口，方便接入自动化工作流。</p>
+    <div class="why">关注点：做 Agent 工作流、自动化研究、舆情监控的可以直接拿来用。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/localsend/localsend" target="_blank">localsend · 跨平台 AirDrop 替代</a><span class="lang-tag">Dart</span></h2>
+    <div class="meta"><span>特点: 全平台 / 局域网直传 / 无需互联网</span></div>
+    <p>经典开源工具，跨平台的文件互传方案。在没有 Apple 生态或想要 Linux/Windows/Android 互通时，这是最常用的替代。</p>
+    <div class="why">关注点：日常办公、跨生态文件传输、轻量替代商业方案。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/dani-garcia/vaultwarden" target="_blank">vaultwarden · 用 Rust 自建密码管理器服务</a><span class="lang-tag">Rust</span></h2>
+    <div class="meta"><span>特点: 兼容 Bitwarden 客户端 / 单二进制部署 / 资源占用低</span></div>
+    <p>Bitwarden 官方服务的非官方轻量实现，可以用 Rust 部署一个自有密码库，配合官方客户端使用。</p>
+    <div class="why">关注点：自托管、隐私合规、家庭/团队密码管理。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/ruvnet/RuView" target="_blank">RuView · 把 WiFi 信号变成空间感知</a><span class="lang-tag">Rust</span></h2>
+    <div class="meta"><span>特点: 基于现有 WiFi 信号 / 无需摄像头 / 实时</span></div>
+    <p>利用常见 WiFi 信号的传播特性做空间感知、生命体征监测和存在性检测，号称全程"零像素视频"。</p>
+    <div class="why">关注点：智能家居、安防、健康监测场景，对摄像头有顾虑的隐私友好方案。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/peetzweg/opendisplay" target="_blank">opendisplay · 把 iPad 变成 Mac 的第二显示器</a><span class="lang-tag">Swift</span></h2>
+    <div class="meta"><span>特点: Sidecar/Duet 开源替代 / USB 或 WiFi / H.264 低延迟 / Retina HiDPI / 支持触摸输入</span></div>
+    <p>把闲置的 iPhone/iPad 真正当 Mac 的第二屏用。开源、不收费、低延迟，对不愿意为 Sidecar 买 Mac 苹果全家桶的人尤其友好。</p>
+    <div class="why">关注点：差旅场景、移动办公、给老 Mac 续命一个外接屏。</div>
+  </div>
+
+  <div class="repo">
+    <h2><a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank">project-nomad · 离线知识与教育服务器</a><span class="lang-tag">TypeScript</span></h2>
+    <div class="meta"><span>特点: 离线优先 / 内置维基百科 / 数千本书与课程 / 可选本地 AI</span></div>
+    <p>把维基百科、书籍、课程、地图和可选的本地 AI 全部装进一台自己的硬件，断网也能用。适合教育公平、应急信息、隐私敏感场景。</p>
+    <div class="why">关注点：乡村/欠发达地区教育、家庭离线图书馆、应急备用信息库。</div>
+  </div>
+
+  <footer>
+    收录 10 个 · 实用工具与基础设施优先 · 数据源 github.com/trending · REPORT_DATE = 2026-09-15
+  </footer>
+</div>
+</body>
+</html>
