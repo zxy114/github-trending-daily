@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-16</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-16</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">8 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>AI Agent 工程化与本地化大模型部署依旧是主旋律：阿里的代码审查工具让 LLM Agent 直接进企业研发流程；纯 C 写的 MoE 推理引擎让消费级硬件也能跑前沿模型；Homebrew 官方 GUI 与多款 Agent 开发框架同步登场。</p>
+    </div>
+
+    <!-- 1. alibaba/open-code-review -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review</a></div>
+        <div class="repo-stars">⭐ 代码审查 Agent</div>
+      </div>
+      <div class="repo-desc-cn">面向大规模代码库的智能审查工具，结合规则流水线与 LLM Agent 做行级精准批注，自带 NPE、线程安全、XSS、SQL 注入等多语言规则集。</div>
+      <div class="repo-desc-en">Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, multi-language ruleset.</div>
+      <div class="repo-meta">
+        <span>🏢 阿里巴巴开源</span>
+        <span>🛠️ 研发效能</span>
+        <span>✅ 兼容 OpenAI / Anthropic API</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>中大型团队的 CI 集成代码审查</li>
+          <li>需要兼顾安全规则与 AI 理解的混合工作流</li>
+          <li>把 LLM Agent 嵌入企业研发流水线</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. JustVugg/colibri -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/JustVugg/colibri" target="_blank">JustVugg/colibri</a></div>
+        <div class="repo-stars">⭐ MoE 本地推理</div>
+      </div>
+      <div class="repo-desc-cn">纯 C 实现、零依赖的极简 MoE 推理引擎，专家权重按需从磁盘流式加载，让普通硬件也能跑前沿混合专家模型。</div>
+      <div class="repo-desc-en">Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-C"></span><span>C</span>
+        <span>🚀 轻量引擎</span>
+        <span>💾 流式加载专家</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>本地运行 MoE 架构大模型</li>
+          <li>嵌入式或低算力环境做推理研究</li>
+          <li>学习 MoE 调度与磁盘流式加载的参考实现</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. debpalash/VoiceStudio -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/debpalash/VoiceStudio" target="_blank">debpalash/VoiceStudio</a></div>
+        <div class="repo-stars">⭐ 2,072 stars today</div>
+      </div>
+      <div class="repo-desc-cn">完全本地化的开源语音工作室：支持声音克隆、声音设计、视频配音、听写、转写与有声书制作，覆盖 646 种语言。</div>
+      <div class="repo-desc-en">Open-source, fully-local ElevenLabs alternative — voice cloning, design, dubbing, dictation, transcription & audiobooks in 646 languages.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+        <span>🎙️ 31k+ stars</span>
+        <span>🔒 全本地</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>替代 ElevenLabs 的私有化部署方案</li>
+          <li>多语种配音与有声书生产</li>
+          <li>对数据隐私有要求的语音 AI 项目</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Homebrew/BrewUI -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/Homebrew/BrewUI" target="_blank">Homebrew/BrewUI</a></div>
+        <div class="repo-stars">⭐ 271 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Homebrew 官方推出的 macOS 图形界面，让不熟命令行的用户也能可视化安装、更新与管理软件包。</div>
+      <div class="repo-desc-en">Homebrew's official macOS GUI.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Swift"></span><span>Swift</span>
+        <span>🍺 官方出品</span>
+        <span>💻 仅 macOS</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>macOS 用户的图形化包管理</li>
+          <li>学习 SwiftUI 与原生 macOS 应用开发</li>
+          <li>团队推广 Homebrew 时降低使用门槛</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. alphaXiv/OpenResearch -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/alphaXiv/OpenResearch" target="_blank">alphaXiv/OpenResearch</a></div>
+        <div class="repo-stars">⭐ 531 stars today</div>
+      </div>
+      <div class="repo-desc-cn">把写代码的 AI Agent 升级为研究 Agent，让模型能自主完成文献调研、实验设计与结果整理。</div>
+      <div class="repo-desc-en">Turn your coding agents into research agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+        <span>🔬 研究自动化</span>
+        <span>🤖 Agent 增强</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 LLM Agent 自主完成学术调研</li>
+          <li>构建垂直领域的研究助理</li>
+          <li>Rust + Agent 系统架构学习参考</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. pacifio/atlas -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/pacifio/atlas" target="_blank">pacifio/atlas</a></div>
+        <div class="repo-stars">⭐ Agent 版本控制</div>
+      </div>
+      <div class="repo-desc-cn">面向 AI 编程 Agent 的"代码管理平台"：同时接入多个 Agent，追踪各自的改动并在统一界面查询结果。</div>
+      <div class="repo-desc-en">Source control for agents. Use multiple coding agents, track their changes and query them in one place.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+        <span>🧩 多 Agent 协作</span>
+        <span>📦 变更追踪</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>并行使用多个 AI 编程 Agent 时的协调与审计</li>
+          <li>对比不同 Agent 在同一任务上的产出</li>
+          <li>为 Agent 生成统一可回溯的修改历史</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. addyosmani/agent-skills -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></div>
+        <div class="repo-stars">⭐ 307 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google 工程大牛出品：面向 AI 编程 Agent 的生产级工程技能集，覆盖代码质量、性能、测试与发布等最佳实践。</div>
+      <div class="repo-desc-en">Production-grade engineering skills for AI coding agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>👨‍💻 Addy Osmani 主理</span>
+        <span>📚 94k+ stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>为 Coding Agent 注入工程规范</li>
+          <li>前端性能与质量基线提升</li>
+          <li>团队统一 AI 编程助手的产出标准</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. earendil-works/pi -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/earendil-works/pi" target="_blank">earendil-works/pi</a></div>
+        <div class="repo-stars">⭐ AI Agent 工具箱</div>
+      </div>
+      <div class="repo-desc-cn">一体化 AI Agent 工具箱：统一 LLM API、Agent 主循环、终端 TUI 与命令行编码 Agent，开箱即用。</div>
+      <div class="repo-desc-en">AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI.</div>
+      <div class="repo-meta">
+        <span>🧰 端到端工具集</span>
+        <span>🖥️ TUI + CLI</span>
+        <span>🔌 多模型适配</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>快速搭建自定义 CLI 编码 Agent</li>
+          <li>学习 Agent 主循环与工具调用工程化</li>
+          <li>在终端里交互式使用 LLM 完成开发任务</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank">github.com/trending</a> · 每日北京时间 10:00 更新 · 仅收录具备学习价值的项目
+  </footer>
+</div>
+</body>
+</html>
