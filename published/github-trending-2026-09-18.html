@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-18</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-18</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">8 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>大厂集中输出 Agent 工程化基座：阿里代码审查、Cloudflare 安全审计技能双双刷新周星纪录；腾讯一口气放出浏览器自动化与 RAG 知识平台两个 SDK；经典逆向框架 Ghidra 凭借新版本再次冲榜；macOS 极简原生工具和 Rust 写的科研 Agent 框架继续补齐"最后一公里"，从底层到应用覆盖完整链路。</p>
+    </div>
+
+    <!-- 1. cloudflare/security-audit-skill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/cloudflare/security-audit-skill" target="_blank">cloudflare/security-audit-skill</a></div>
+        <div class="repo-stars">⭐ 3,607 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的安全审计 Skill：给编程 Agent 提供多阶段、可独立验证、机器可读的安全审计输出，方便接入 CI/CD。</div>
+      <div class="repo-desc-en">A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🛡️ 安全审计</span>
+        <span>🤖 Agent Skill</span>
+        <span>🏢 Cloudflare 开源</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 Claude Code / Cursor 等 Agent 具备结构化安全审计能力</li>
+          <li>在 CI 中跑出可机读、可审计的安全报告</li>
+          <li>学习如何把安全流程拆解为 Agent 可执行的阶段</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. alibaba/open-code-review -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review</a></div>
+        <div class="repo-stars">⭐ 3,286 stars today</div>
+      </div>
+      <div class="repo-desc-cn">阿里巴巴开源的智能代码审查工具：规则流水线 + LLM Agent 的混合架构，能输出行级精准批注，内置 NPE、线程安全、XSS、SQL 注入等多语言规则。</div>
+      <div class="repo-desc-en">Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, multi-language ruleset (NPE, thread-safety, XSS, SQLi).</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>🏢 阿里巴巴开源</span>
+        <span>🛠️ 研发效能</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>中大型团队的 CI 集成代码审查</li>
+          <li>把"确定性规则 + AI 灵活理解"组合起来的工作流</li>
+          <li>把 LLM Agent 嵌入企业研发流水线</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Tencent/BrowserSkill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/Tencent/BrowserSkill" target="_blank">Tencent/BrowserSkill</a></div>
+        <div class="repo-stars">⭐ 1,302 stars today</div>
+      </div>
+      <div class="repo-desc-cn">腾讯开源的浏览器自动化中间层（CLI + 扩展），让任意支持 Shell 的 AI Agent 复用你"已登录的真实浏览器"，操作时也不会打断你当前的工作。</div>
+      <div class="repo-desc-en">Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>🏢 腾讯开源</span>
+        <span>🌐 浏览器自动化</span>
+        <span>🔌 Agent 中间层</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 Agent 直接操作已登录的网页后台、企业内网</li>
+          <li>替代脆弱的脚本化浏览器自动化</li>
+          <li>为任意 CLI Agent 注入视觉/点击能力</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Tencent/WeKnora -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/Tencent/WeKnora" target="_blank">Tencent/WeKnora</a></div>
+        <div class="repo-stars">⭐ 1,125 stars today</div>
+      </div>
+      <div class="repo-desc-cn">腾讯开源的 LLM 知识平台一站式框架：把资料自动构建为可检索的 RAG、能自治的工具 Agent，以及可持续维护的内部 Wiki。</div>
+      <div class="repo-desc-en">Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>🏢 腾讯开源</span>
+        <span>📚 RAG + Wiki</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>企业/团队私有知识库问答</li>
+          <li>作为知识类 Agent 的后端</li>
+          <li>学习工程化的 RAG 流水线实现</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. alphaXiv/OpenResearch -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/alphaXiv/OpenResearch" target="_blank">alphaXiv/OpenResearch</a></div>
+        <div class="repo-stars">⭐ 939 stars today</div>
+      </div>
+      <div class="repo-desc-cn">用 Rust 写的小型科研 Agent 框架：在编程 Agent 基础上叠加论文检索、文献阅读、实验设计与数据分析能力，把 Coding Agent 升级为科研 Agent。</div>
+      <div class="repo-desc-en">Turn your coding agents into research agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+        <span>🧪 科研 Agent</span>
+        <span>📚 文献 + 实验</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>研究人员做文献综述、实验复现</li>
+          <li>把 Claude Code / Cursor 改造为科研助手</li>
+          <li>探索 Agent 在科研流程中的实际边界</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. NationalSecurityAgency/ghidra -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank">NationalSecurityAgency/ghidra</a></div>
+        <div class="repo-stars">⭐ 912 stars today</div>
+      </div>
+      <div class="repo-desc-cn">经典开源软件逆向工程（SRE）框架：集成反汇编、反编译、脚本化分析与多平台支持，是 IDA Pro 的开源替代方案。</div>
+      <div class="repo-desc-en">Ghidra is a software reverse engineering (SRE) framework.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Java"></span><span>Java</span>
+        <span>🛰️ NSA 出品</span>
+        <span>🔍 逆向分析</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>二进制逆向分析、样本研究</li>
+          <li>作为 IDA 的开源替代方案</li>
+          <li>学习反编译器和反汇编器的实现原理</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. abue-ammar/tinycast -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/abue-ammar/tinycast" target="_blank">abue-ammar/tinycast</a></div>
+        <div class="repo-stars">⭐ 739 stars today</div>
+      </div>
+      <div class="repo-desc-cn">完全原生 Swift 写的 macOS 启动器 + 全局快捷键 + 剪贴板历史工具，体积小巧、开箱即用，是 Alfred/Raycast 的极简替代方案。</div>
+      <div class="repo-desc-en">A tiny, fully native macOS launcher, hotkeys, and clipboard history.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Swift"></span><span>Swift</span>
+        <span>🍎 macOS 原生</span>
+        <span>⚡ 启动器 + 剪贴板</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>替代 Alfred/Raycast 的轻量启动方案</li>
+          <li>学习 macOS 原生应用开发的示例项目</li>
+          <li>希望统一管理快捷键与剪贴板历史的用户</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. addyosmani/agent-skills -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></div>
+        <div class="repo-stars">⭐ 680 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google Chrome 团队 Addy Osmani 维护的"生产级" AI 编程 Agent Skills 集合，覆盖前端工程、性能优化、代码审查与发布流程等高频场景。</div>
+      <div class="repo-desc-en">Production-grade engineering skills for AI coding agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>👤 大牛维护</span>
+        <span>🤖 Agent Skills</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>直接复用到 Claude Code / Cursor / Codex 等 Agent</li>
+          <li>学习"工程化 Skill"该怎么写、怎么组合</li>
+          <li>建立团队的标准化 Agent 工作流</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 由 GitHub 开源日报自动整理 · 仅收录有学习与使用价值的仓库
+  </footer>
+</div>
+</body>
+</html>
