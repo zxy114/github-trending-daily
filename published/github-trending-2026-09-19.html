@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-19</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-19</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">9 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>今日 Trending 被"AI Agent 工程化"主题占据：Coding Agent 的安全审计、技能、记忆、规格化等周边工具持续高热。Cloudflare、阿里巴巴、腾讯三连发，加上独立开发者的 ECC、自托管多 Agent 平台 Octop、企业级 SDD 框架 OpenSpec 与老牌自托管开发环境 Coder，从安全、协作、记忆、规约到基础设施形成完整闭环。</p>
+    </div>
+
+    <!-- 1. cloudflare/security-audit-skill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/cloudflare/security-audit-skill" target="_blank">cloudflare/security-audit-skill</a></div>
+        <div class="repo-stars">⭐ 3,006 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的安全审计 Skill：把"代码安全审查"拆成多个独立阶段，让 Coding Agent 输出可机器验证、可被 CI 消费的审计报告，适配主流 Agent 框架。</div>
+      <div class="repo-desc-en">A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🛡️ 安全审计</span>
+        <span>🤖 Agent Skill</span>
+        <span>🏢 Cloudflare 开源</span>
+        <span>📦 13,810 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 Claude Code / Cursor / Codex 具备结构化安全审查能力</li>
+          <li>在 CI 中跑出可审计、可机读的安全报告</li>
+          <li>学习如何把安全流程拆解为 Agent 可执行的阶段</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. alibaba/open-code-review -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review</a></div>
+        <div class="repo-stars">⭐ 2,704 stars today</div>
+      </div>
+      <div class="repo-desc-cn">阿里巴巴开源的智能代码审查工具：把"确定性规则流水线 + LLM Agent"组合起来，给出行级精准批注，内置 NPE、并发安全、XSS、SQL 注入等多语言规则，兼容 OpenAI/Anthropic 模型。</div>
+      <div class="repo-desc-en">Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>🏢 阿里巴巴开源</span>
+        <span>🛠️ 研发效能</span>
+        <span>🔍 行级审查</span>
+        <span>📦 36,721 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>中大型团队 CI 集成代码审查</li>
+          <li>把"规则引擎 + AI 灵活理解"组合起来的工作流范式</li>
+          <li>把 LLM Agent 嵌入企业研发流水线</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Tencent/BrowserSkill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/Tencent/BrowserSkill" target="_blank">Tencent/BrowserSkill</a></div>
+        <div class="repo-stars">⭐ 1,306 stars today</div>
+      </div>
+      <div class="repo-desc-cn">腾讯开源的浏览器自动化中间层：CLI + 浏览器扩展，让任意支持 Shell 的 AI Agent 直接复用"已登录的真实浏览器"，操作时不会打断你当前工作。</div>
+      <div class="repo-desc-en">Let AI agents use your real, logged-in browser without interrupting your work.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>🏢 腾讯开源</span>
+        <span>🌐 浏览器自动化</span>
+        <span>🔌 Agent 中间层</span>
+        <span>📦 5,334 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 Agent 直接操作已登录的网页后台 / 企业内网</li>
+          <li>替代脆弱的脚本化浏览器自动化方案</li>
+          <li>为任意 CLI Agent 注入视觉感知与点击能力</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. affaan-m/ECC -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/affaan-m/everything-claude-code" target="_blank">affaan-m/everything-claude-code</a></div>
+        <div class="repo-stars">⭐ 958 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向 Coding Agent 的"性能优化套装"：整合 Skills、Instincts、Memory、安全策略、研究优先的开发流程，可用于 Claude Code、Codex、Cursor、OpenCode 等多种 Agent。</div>
+      <div class="repo-desc-en">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🤖 Agent Harness</span>
+        <span>⚙️ 性能优化</span>
+        <span>🧠 记忆 + 技能</span>
+        <span>📦 262,103 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>为多个 Coding Agent 提供一致的 Skills/Memory 配置</li>
+          <li>把"研究优先 / 安全优先"的工作流沉淀到 Agent 中</li>
+          <li>学习开源社区对 Agent 上下文的组织方式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. asciimoo/hister -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/asciimoo/hister" target="_blank">asciimoo/hister</a></div>
+        <div class="repo-stars">⭐ 889 stars today</div>
+      </div>
+      <div class="repo-desc-cn">asciimoo 开源的"自托管全文搜索引擎"：支持 HTTP 抓取、增量索引、布尔与排名查询，可作为隐私友好的个人/团队知识检索后端。</div>
+      <div class="repo-desc-en">Your own search engine.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>🔍 自托管搜索</span>
+        <span>🧰 工具</span>
+        <span>📦 4,976 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>为博客 / 文档站 / 内网 wiki 自建搜索引擎</li>
+          <li>学习一个完整的"爬虫 + 倒排索引 + 查询服务"参考实现</li>
+          <li>作为小型 RAG 系统的检索后端</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. addyosmani/agent-skills -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></div>
+        <div class="repo-stars">⭐ 675 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google Chrome 团队 Addy Osmani 维护的"生产级 Agent 技能集"：沉淀了一线工程团队对 AI 编程 Agent 的最佳实践，含 Prompt 模板、工作流规范与示例。</div>
+      <div class="repo-desc-en">Production-grade engineering skills for AI coding agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🧑‍💻 工程实践</span>
+        <span>🤖 Agent Skills</span>
+        <span>📦 96,425 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>导入大厂一线团队的 Coding Agent 实践</li>
+          <li>学习如何为 Agent 设计可复用的 Skill 单元</li>
+          <li>作为企业内部 Agent 规范文档的参考</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. TencentCloud/Octop -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/TencentCloud/Octop" target="_blank">TencentCloud/Octop</a></div>
+        <div class="repo-stars">⭐ 569 stars today</div>
+      </div>
+      <div class="repo-desc-cn">腾讯云开源的多用户、多 Agent 自托管 AI 助手平台：把对话、知识库、Agent 编排统一封装，适合团队/企业内部部署的"私有 ChatGPT 平台"。</div>
+      <div class="repo-desc-en">A smarter, self-hosted AI assistant — multi-user, multi-agent.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+        <span>🏢 腾讯云开源</span>
+        <span>🤖 自托管助手</span>
+        <span>👥 多用户 + 多 Agent</span>
+        <span>📦 3,974 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>企业内部署私有 AI 助手平台</li>
+          <li>搭建带知识库与多 Agent 编排的客户支持系统</li>
+          <li>学习一个完整的"AI 应用平台"工程结构</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. coder/coder -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/coder/coder" target="_blank">coder/coder</a></div>
+        <div class="repo-stars">⭐ 478 stars today</div>
+      </div>
+      <div class="repo-desc-cn">老牌开源"云端开发环境"平台：用 Kubernetes 为开发者和 AI Agent 提供安全、可复现的远程开发工作区，告别"本地环境不一致"。</div>
+      <div class="repo-desc-en">Secure environments for developers and their agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>🧑‍💻 远程开发环境</span>
+        <span>☁️ 云端工作区</span>
+        <span>📦 15,307 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>为远程团队提供统一、可复现的开发环境</li>
+          <li>把 Coding Agent 跑在隔离的云工作区里</li>
+          <li>学习基于 K8s 的开发基础设施架构</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. Fission-AI/OpenSpec -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">9. <a href="https://github.com/Fission-AI/OpenSpec" target="_blank">Fission-AI/OpenSpec</a></div>
+        <div class="repo-stars">⭐ 296 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向 AI 编程助手的"规格驱动开发（SDD）"框架：在写代码前先把需求写成机器可读的 Spec，让 Agent 按 Spec 实现并自校验，减少"AI 跑偏"。</div>
+      <div class="repo-desc-en">Spec-driven development (SDD) for AI coding assistants.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>📐 SDD 规格驱动</span>
+        <span>🤖 AI 编程助手</span>
+        <span>📦 69,374 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>用 Spec 约束 Agent 的实现路径，提升一致性</li>
+          <li>为复杂项目建立"先 Spec 后 Code"的协作流程</li>
+          <li>学习如何为 AI 编程助手设计前置约束</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 由 GitHub 开源日报自动整理 · 仅收录有学习与使用价值的仓库
+  </footer>
+</div>
+</body>
+</html>
