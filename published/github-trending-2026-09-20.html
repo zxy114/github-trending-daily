@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-20</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .lang-Ruby { background: #701516; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-20</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">8 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>今天 Trending 围绕「AI Agent 落地」与「端侧 / 跨端基础设施」两大主题：Coding Agent 安全审计、Agent 技能库、计算机使用代理框架、端侧 2-bit 小模型密集上榜；同时 Cloudflare 的 QUIC/HTTP3 实现、IBM 老牌文档解析工具、Codex 可视化管理等工程化项目也持续高热。学习重点：如何把 Agent 能力拆成可审计的工程模块。</p>
+    </div>
+
+    <!-- 1. cloudflare/security-audit-skill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/cloudflare/security-audit-skill" target="_blank">cloudflare/security-audit-skill</a></div>
+        <div class="repo-stars">⭐ 3,155 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的 Coding Agent 安全审计技能：把"代码安全审查"拆成多阶段流水线，每阶段输出独立可验证、可被 CI 消费的机器可读报告，适配主流 Agent 框架。</div>
+      <div class="repo-desc-en">A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🛡️ 安全审计</span>
+        <span>🤖 Agent Skill</span>
+        <span>🏢 Cloudflare 开源</span>
+        <span>📦 16,454 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 Claude Code / Cursor / Codex 获得结构化安全审查能力</li>
+          <li>在 CI 中跑出可审计、可机读的安全报告</li>
+          <li>学习如何把安全流程拆解为 Agent 可执行的阶段</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. addyosmani/agent-skills -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></div>
+        <div class="repo-stars">⭐ 556 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google 工程团队维护的"AI 编程 Agent 技能库"：汇集生产级工程实践，覆盖代码评审、性能优化、测试、依赖升级等高频场景的 Skills，可直接挂载到 Claude Code 等 Agent 上。</div>
+      <div class="repo-desc-en">Production-grade engineering skills for AI coding agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🧰 Agent Skills 合集</span>
+        <span>🏢 Google Addy Osmani</span>
+        <span>📦 97,069 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>为 Coding Agent 引入工程最佳实践模板</li>
+          <li>学习如何把团队规范沉淀为 Agent 可消费的资源</li>
+          <li>研究大厂工程团队对 Agent 技能的组织方式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. trycua/cua -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/trycua/cua" target="_blank">trycua/cua</a></div>
+        <div class="repo-stars">⭐ 热门趋势</div>
+      </div>
+      <div class="repo-desc-cn">开源"计算机使用"代理框架：提供跨 macOS / Linux / Windows 的虚拟设备与统一驱动，配合训练数据生成与评测工具，让 Agent 能像人一样操作 GUI 完成任务。</div>
+      <div class="repo-desc-en">Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.</div>
+      <div class="repo-meta">
+        <span>💻 计算机使用 Agent</span>
+        <span>🖥️ 跨 OS 虚拟设备</span>
+        <span>📊 训练 + 评测闭环</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>构建可操作桌面软件的 GUI Agent</li>
+          <li>批量生成 GUI 操作轨迹用于模型训练 / 评测</li>
+          <li>搭建跨操作系统的自动化测试基础设施</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. coder/coder -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/coder/coder" target="_blank">coder/coder</a></div>
+        <div class="repo-stars">⭐ 老牌持续高热</div>
+      </div>
+      <div class="repo-desc-cn">Coder 开源平台：为开发者与 AI 编码 Agent 在云端一键拉起安全、可复现的远程开发环境，统一管理模板、工作区与访问策略。</div>
+      <div class="repo-desc-en">Secure environments for developers and their agents.</div>
+      <div class="repo-meta">
+        <span>☁️ 云端开发环境</span>
+        <span>🤖 Agent + 开发者协作</span>
+        <span>🏢 Coder 官方</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>团队标准化"开箱即用"的开发环境</li>
+          <li>让 Coding Agent 在隔离的远程沙盒中执行任务</li>
+          <li>管理 GPU / 大内存等特殊算力需求的工作区</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. docling-project/docling -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/docling-project/docling" target="_blank">docling-project/docling</a></div>
+        <div class="repo-stars">⭐ 持续走高</div>
+      </div>
+      <div class="repo-desc-cn">IBM 开源的文档解析工具：把 PDF、Word、PPT 等异构文档一键转成结构化数据与 AI 友好的格式，内置 OCR、表格识别、版式理解，可直接喂给 RAG / Agent 流水线。</div>
+      <div class="repo-desc-en">Get your documents ready for gen AI.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+        <span>📄 文档解析</span>
+        <span>🧠 RAG / 知识库</span>
+        <span>🏢 IBM / LF AI</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>把企业 PDF / 合同 / 票据转结构化数据</li>
+          <li>为 RAG 系统提供干净、保留版式的文档块</li>
+          <li>替代传统 OCR + 解析的多工具拼接方案</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. cloudflare/quiche -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/cloudflare/quiche" target="_blank">cloudflare/quiche</a></div>
+        <div class="repo-stars">⭐ 协议层热度</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的 QUIC 与 HTTP/3 实现：覆盖 Rust 核心库、FFI 绑定以及与 nginx / Caddy 等服务器的集成，可作为研究下一代传输协议或自建高性能代理的参考。</div>
+      <div class="repo-desc-en">🥧 Savoury implementation of the QUIC transport protocol and HTTP/3.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+        <span>🌐 QUIC / HTTP/3</span>
+        <span>🏢 Cloudflare 开源</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>学习 QUIC / HTTP/3 协议栈的真实工程实现</li>
+          <li>在 Rust 服务中嵌入高性能 QUIC 传输</li>
+          <li>研究连接迁移、0-RTT、多路复用等特性</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. cactus-compute/needle -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/cactus-compute/needle" target="_blank">cactus-compute/needle</a></div>
+        <div class="repo-stars">⭐ 234 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向手机、可穿戴、智能家居、机器人等微型设备的端侧自动化模型：2-bit 量化、8–29 MB 体积，支持工具调用、结构化抽取和本地嵌入，离线也能跑 Agent。</div>
+      <div class="repo-desc-en">Automation foundation model for tiny devices: 2-bit, 8-29 MB, tool calls, structured extraction and embeddings on phones, wearables, smart homes, robots, cars and microcontrollers.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+        <span>📱 端侧小模型</span>
+        <span>🤖 本地 Agent</span>
+        <span>📦 11,621 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>在手机 / 树莓派 / MCU 上跑轻量 LLM Agent</li>
+          <li>对延迟或隐私敏感场景做本地化推理</li>
+          <li>学习超低比特量化与端侧工具调用的工程实践</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. yynxxxxx/Codex-X -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/yynxxxxx/Codex-X" target="_blank">yynxxxxx/Codex-X</a></div>
+        <div class="repo-stars">⭐ 32 stars today</div>
+      </div>
+      <div class="repo-desc-cn">OpenAI Codex 桌面 / CLI 的可视化伴侣：跨平台图形界面统一管理 Provider、API Key、会话同步、提示词注入、Skills/MCP 与 TOML 配置，让 Codex 的高阶玩法更顺手。</div>
+      <div class="repo-desc-en">OpenAI Codex desktop/CLI visual management tool with Provider/API switching, session sync, prompt injection, Skills/MCP management, and TOML config visualization.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+        <span>🪟 桌面 GUI</span>
+        <span>🛠️ 工具配置中心</span>
+        <span>📦 3,410 stars</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>在 GUI 中切换 Codex 的模型 / Provider / API Key</li>
+          <li>统一管理 Skills、MCP、提示词模板</li>
+          <li>学习 Rust 跨平台桌面应用的实用架构</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    📮 自动生成 · 数据来源 <a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 由 OpenClaw 每日推送
+  </footer>
+</div>
+</body>
+</html>
