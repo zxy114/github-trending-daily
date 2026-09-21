@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-21</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .lang-Ruby { background: #701516; }
+  .lang-HTML { background: #e34c26; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-21</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">9 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>今天的 Trending 全面押注「Agent 工程的工程化」：从性能优化、安全审计、技能库，到 GUI 自动化、开源交易平台、生成式 UI 框架，主题高度集中在「让 Coding Agent 更可靠、更可观测、更可生产」。学习重点：把 Agent 当成软件工程管线来构建——分层、技能化、可审计。</p>
+    </div>
+
+    <!-- 1. cloudflare/security-audit-skill -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/cloudflare/security-audit-skill" target="_blank">cloudflare/security-audit-skill</a></div>
+        <div class="repo-stars">⭐ 2,428 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的 Coding Agent 安全审计技能：把代码安全审查拆成多阶段流水线，每阶段输出独立可验证、可被 CI 直接消费的机器可读报告。专为 Claude Code、Codex 等 Agent 设计，填补了「Agent 写代码 → 没有人审代码」的真空。</div>
+      <div class="repo-desc-en">A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🛡️ 安全审计</span>
+        <span>🤖 Agent 工具链</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>把安全审计接入 Claude Code / Cursor 的 skill 体系</li>
+          <li>CI 流水线中自动拦截有漏洞的 PR</li>
+          <li>学习「Agent 任务可审计化」的标准拆解方式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. sponsors/trycua -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/sponsors/trycua" target="_blank">trycua / cua</a></div>
+        <div class="repo-stars">⭐ 1,018 stars today</div>
+      </div>
+      <div class="repo-desc-cn">开源「Computer-Use 2.0」基础设施：跨操作系统（macOS / Linux / Windows）的虚拟化算力池、GUI 自动化驱动，以及训练 / 评估用的标准化基准。适合想自建 GUI Agent、数据采集或桌面自动化的团队。</div>
+      <div class="repo-desc-en">Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-HTML"></span><span>Python / 多端</span>
+        <span>🖥️ 计算机使用</span>
+        <span>📊 训练 / 评测</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>搭建 GUI Agent 的训练数据采集环境</li>
+          <li>跨平台桌面自动化（RPA、UI 测试）</li>
+          <li>本地部署多 OS 虚拟算力池</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. sponsors/affaan-m -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/sponsors/affaan-m" target="_blank">affaan-m / everything-claude-code</a></div>
+        <div class="repo-stars">⭐ 826 stars today</div>
+      </div>
+      <div class="repo-desc-cn">一站式 Coding Agent 性能优化系统：skills（技能）、instincts（经验模式）、memory（持久记忆）、security（安全约束）和 research-first（研究优先）开发流程，覆盖 Claude Code、Codex、OpenCode、Cursor 等主流 Agent 环境。</div>
+      <div class="repo-desc-en">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>⚡ Agent 性能</span>
+        <span>🧠 记忆 / 技能</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>参考构建「Agent 上下文管理体系」</li>
+          <li>把领域经验沉淀为可复用的 skills / instincts</li>
+          <li>给任意 Coding Agent 加装结构化记忆层</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Open-Dev-Society/OpenStock -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/Open-Dev-Society/OpenStock" target="_blank">Open-Dev-Society / OpenStock</a></div>
+        <div class="repo-stars">⭐ 755 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向散户的开源股票 / 金融市场平台：实时行情、自定义价格提醒、深度公司基本面数据，终身免费。Bloomberg / 付费终端的开源替代品，适合做量化研究或个人投资仪表盘。</div>
+      <div class="repo-desc-en">Open-source alternative to expensive market platforms — real-time prices, alerts, company insights, free forever.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>📈 金融数据</span>
+        <span>📊 投资工具</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>二次开发搭建个人 / 团队投资工作台</li>
+          <li>学习实时金融数据接入与可视化</li>
+          <li>量化策略的行情数据底座</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. addyosmani/agent-skills -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani / agent-skills</a></div>
+        <div class="repo-stars">⭐ 736 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google Chrome 团队 Addy Osmani 主理的「生产级 AI Coding Agent 技能库」：覆盖性能优化、可访问性、SEO、代码评审、依赖升级等工程最佳实践，每条 skill 都可直接挂载到 Claude Code / Cursor。</div>
+      <div class="repo-desc-en">Production-grade engineering skills for AI coding agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-JavaScript"></span><span>JavaScript</span>
+        <span>🧰 技能库</span>
+        <span>🏗️ 工程实践</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>作为团队 Coding Agent 的「开箱即用」skill 起点</li>
+          <li>学习如何把工程 SOP 翻译成 Agent 可消费的结构化指令</li>
+          <li>前端性能 / a11y / SEO 的标准动作清单</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. anthropics/claude-code -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/anthropics/claude-code" target="_blank">anthropics / claude-code</a></div>
+        <div class="repo-stars">⭐ 419 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Anthropic 官方开源的「终端原生 Agentic 编程工具」：直接在你的命令行里读懂整个代码库、执行常规任务、解释复杂代码、接管 Git 工作流。是当前 Agent 编程体验的事实标准之一。</div>
+      <div class="repo-desc-en">An agentic coding tool that lives in your terminal.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>💻 终端 Agent</span>
+        <span>🔧 Git 工作流</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>替换 IDE 重操作（重构 / 迁移 / 大规模重命名）</li>
+          <li>命令行里直接驱动 PR、commit、code review</li>
+          <li>学习 Agent 与 Git 工具链的集成模式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. coder/coder -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/coder/coder" target="_blank">coder / coder</a></div>
+        <div class="repo-stars">⭐ 379 stars today</div>
+      </div>
+      <div class="repo-desc-cn">为开发者和 AI Agent 设计的「安全云端开发环境」：基于 Kubernetes 的远程工作空间，统一策略、可审计、可一键销毁。是把 Coding Agent 放进隔离沙箱的最佳底座之一。</div>
+      <div class="repo-desc-en">Secure environments for developers and their agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+        <span>☁️ 云端 IDE</span>
+        <span>🔒 沙箱 / 安全</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>给 Coding Agent 提供隔离、可审计的执行环境</li>
+          <li>企业内统一开发者工作空间</li>
+          <li>远程团队标准化开发环境</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. vercel-labs/json-render -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/vercel-labs/json-render" target="_blank">vercel-labs / json-render</a></div>
+        <div class="repo-stars">⭐ 291 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Vercel Labs 出品的「生成式 UI 框架」：用结构化 JSON 描述界面组件，由 AI 模型实时渲染出可交互的 React 组件。适合把 LLM 接入业务后台 / 仪表盘 / 表单，让模型直接产出可用的 UI。</div>
+      <div class="repo-desc-en">The Generative UI framework.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>🎨 生成式 UI</span>
+        <span>⚛️ React</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>让 LLM 输出可交互组件而非纯文本</li>
+          <li>构建 AI 驱动的内部工具 / 控制台</li>
+          <li>研究结构化输出到 UI 的中间表示</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. BuilderIO/agent-native -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">9. <a href="https://github.com/BuilderIO/agent-native" target="_blank">BuilderIO / agent-native</a></div>
+        <div class="repo-stars">⭐ 98 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向「Agentic App」的应用框架：把 AI Agent 当成应用的一等公民，从路由、状态、工具调用到 UI 渲染都围绕 Agent 设计，是 Vercel json-render 的应用层补充，适合做完整 AI 产品 MVP。</div>
+      <div class="repo-desc-en">A framework for building agentic apps.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+        <span>🤖 Agent 框架</span>
+        <span>🚀 应用层</span>
+      </div>
+      <div class="use-cases">
+        <h4>适用场景</h4>
+        <ul>
+          <li>快速搭建 Agent 为核心的全栈应用</li>
+          <li>学习 Agent 与前端路由 / 状态管理的整合模式</li>
+          <li>作为新一代 AI 产品的脚手架起点</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 北京时间 · 自动生成
+    </footer>
+  </main>
+</div>
+</body>
+</html>
