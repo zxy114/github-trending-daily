@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-22</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .lang-Ruby { background: #701516; }
+  .lang-HTML { background: #e34c26; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-22</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">9 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>今天的 Trending 呈现两条主线：一是「Agent 的工程化配套」——跨 OS 驱动、长期记忆、桌面 GUI 桥接、可视化配置器都在补齐 Agent 落地最后一公里；二是「本地化/去云化基础设施」——离线优先知识站、本地视频剪辑流水线、QUIC 协议栈。学习这两类项目能直接放进自己的工具栈。</p>
+    </div>
+
+    <!-- 1. BuilderIO/agent-native -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/BuilderIO/agent-native" target="_blank">BuilderIO/agent-native</a></div>
+        <div class="repo-stars">⭐ 607 stars today</div>
+      </div>
+      <div class="repo-desc-cn">构建 Agent 应用的 TypeScript 框架。把 Agent 行为抽象成声明式原语，强调「Agent 即组件」的复用思路，适合做内部 Copilot、流程自动化产线。</div>
+      <div class="repo-desc-en">A framework for building agentic apps.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>研究如何把 Agent 编排从脚本升级为可复用框架</li>
+          <li>看 BuilderIO 怎么把工具调用、状态管理封装成原语</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. trycua/cua -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/trycua/cua" target="_blank">trycua/cua</a></div>
+        <div class="repo-stars">⭐ 609 stars today</div>
+      </div>
+      <div class="repo-desc-cn">开源的「电脑使用」基础设施：跨 macOS/Windows/Linux 的虚拟化驱动与编排层，让 Agent 真正可以驱动真实 OS 跑任务。比单纯 benchmark 框架更工程化。</div>
+      <div class="repo-desc-en">Open-source drivers and cross-OS fleets for computer-use agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-HTML"></span><span>HTML / 多语言 SDK</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>看跨 OS 虚拟化驱动如何在开源协议下落地</li>
+          <li>研究 Agent 任务在沙箱 OS 中执行的隔离方案</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Open-Dev-Society/OpenStock -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/Open-Dev-Society/OpenStock" target="_blank">Open-Dev-Society/OpenStock</a></div>
+        <div class="repo-stars">⭐ 844 stars today</div>
+      </div>
+      <div class="repo-desc-cn">免费开源的股市行情与告警平台，替代 Bloomberg/TradingView 等付费方案。实时报价、自定 alert、公司基本面一站搞定。</div>
+      <div class="repo-desc-en">Open-source alternative to expensive market platforms — real-time prices, alerts, and company insights.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>金融数据源接入、实时推送、WebSocket 行情系统的实战范本</li>
+          <li>可作为 Next.js 全栈项目的参考实现</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. akitaonrails/ai-memory -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/akitaonrails/ai-memory" target="_blank">akitaonrails/ai-memory</a></div>
+        <div class="repo-stars">⭐ 167 stars today</div>
+      </div>
+      <div class="repo-desc-cn">给 Coding Agent CLI 加装「长期记忆」：持久化会话上下文，支持不同 Agent 厂商之间交接。把 Agent 当成「有记忆的工程师」来用。</div>
+      <div class="repo-desc-en">Long-term memory solution for agent coding CLIs, with cross-vendor handoff.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>学习 Agent 记忆层的 schema 设计（向量/摘要/事实三层）</li>
+          <li>看 Rust 写 CLI 工具如何兼顾性能与跨平台分发</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. coder/coder -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/coder/coder" target="_blank">coder/coder</a></div>
+        <div class="repo-stars">⭐ 460 stars today</div>
+      </div>
+      <div class="repo-desc-cn">为开发者和 Agent 提供「远程安全开发环境」：云端/自托管的 Workspaces，本地浏览器直接 IDE，天然适合 Agent 在隔离沙箱里跑长任务。</div>
+      <div class="repo-desc-en">Secure environments for developers and their agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>参考企业级远程开发平台的架构与权限模型</li>
+          <li>Agent 任务沙箱化部署的现成解法</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. cloudflare/quiche -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/cloudflare/quiche" target="_blank">cloudflare/quiche</a></div>
+        <div class="repo-stars">⭐ 32 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Cloudflare 开源的 QUIC 与 HTTP/3 协议栈 Rust 实现，业界成熟方案之一。生产环境稳定，已为大规模 CDN 验证。</div>
+      <div class="repo-desc-en">Savoury implementation of the QUIC transport protocol and HTTP/3.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Rust"></span><span>Rust</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>读 QUIC/HTTP3 协议规范的工程实现</li>
+          <li>学习 Rust 在高性能网络协议栈中的常见模式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. mvt-project/mvt -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/mvt-project/mvt" target="_blank">mvt-project/mvt</a></div>
+        <div class="repo-stars">⭐ 169 stars today</div>
+      </div>
+      <div class="repo-desc-cn">电子前哨基金会（EFF）维护的移动设备取证工具，用于检测手机是否被间谍软件入侵。安全/取证从业者必备。</div>
+      <div class="repo-desc-en">Mobile Verification Toolkit — forensic tool for detecting mobile device compromise.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>学习 iOS/Android 取证分析中的 IOC（入侵指标）建模</li>
+          <li>CLI 工具 + 大数据集扫描的 Python 工程范式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. zhouxiaoka/autoclip -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">8. <a href="https://github.com/zhouxiaoka/autoclip" target="_blank">zhouxiaoka/autoclip</a></div>
+        <div class="repo-stars">⭐ 250 stars today</div>
+      </div>
+      <div class="repo-desc-cn">AI 驱动的视频自动高光提取与剪辑工具，二创/口播/播客场景的本地化流水线。一键从长视频剪出可发布短片。</div>
+      <div class="repo-desc-en">AI-powered video clipping and highlight generation.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>视频分段 + 字幕/语音特征 + 视觉显著性 的多模态融合范式</li>
+          <li>可参考其本地 GPU 推理与剪辑管线</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. Crosstalk-Solutions/project-nomad -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">9. <a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank">Crosstalk-Solutions/project-nomad</a></div>
+        <div class="repo-stars">⭐ 394 stars today</div>
+      </div>
+      <div class="repo-desc-cn">离线优先的知识与教育服务器：把 Wikipedia、万本电子书、课程、地图打包放进一台离线设备，断网照常使用，可选本地 AI 助手。</div>
+      <div class="repo-desc-en">Offline-first knowledge and education server with optional local AI.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>看本地化知识库的打包与检索工程</li>
+          <li>研究「边缘 AI + 离线优先」的应用架构</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank">github.com/trending</a> · 自动生成于 2026-09-22（北京时间）<br>
+    由 <a href="https://zxy114.github.io/github-trending-daily/" target="_blank">GitHub 开源日报</a> 编排
+  </footer>
+</div>
+</body>
+</html>
