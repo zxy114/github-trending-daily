@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-23</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1f2937; line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; }
+  header { background: linear-gradient(135deg, #24292e 0%, #1a1f24 100%); color: #fff; padding: 32px 36px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: 0.85; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 12px; margin-right: 8px; font-size: 12px; }
+  main { padding: 28px 36px 36px; }
+  .intro { background: #f0f4f8; border-left: 4px solid #4a90e2; padding: 14px 18px; margin-bottom: 28px; border-radius: 6px; font-size: 14px; color: #4a5568; }
+  .repo { border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; margin-bottom: 20px; transition: box-shadow 0.2s; }
+  .repo:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+  .repo-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .repo-title { font-size: 18px; font-weight: 700; color: #1a1f24; }
+  .repo-title a { color: #1a1f24; text-decoration: none; border-bottom: 2px solid transparent; }
+  .repo-title a:hover { border-bottom-color: #4a90e2; color: #4a90e2; }
+  .repo-stars { font-size: 13px; color: #8b949e; background: #fff8e1; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .repo-desc-cn { font-size: 15px; color: #2d3748; margin: 8px 0 12px; font-weight: 500; }
+  .repo-desc-en { font-size: 13px; color: #6b7280; margin-bottom: 12px; font-style: italic; }
+  .repo-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #6b7280; }
+  .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .lang-Go { background: #00add8; }
+  .lang-Rust { background: #dea584; }
+  .lang-TypeScript { background: #3178c6; }
+  .lang-Python { background: #3572a5; }
+  .lang-JavaScript { background: #f1e05a; }
+  .lang-Swift { background: #ffac45; }
+  .lang-C { background: #555; }
+  .lang-Java { background: #b07219; }
+  .lang-Ruby { background: #701516; }
+  .lang-HTML { background: #e34c26; }
+  .use-cases { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0; }
+  .use-cases h4 { font-size: 13px; color: #4a5568; margin-bottom: 6px; font-weight: 600; }
+  .use-cases ul { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .use-cases li { margin-bottom: 3px; }
+  footer { text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  footer a { color: #4a90e2; text-decoration: none; }
+  .summary { background: linear-gradient(135deg, #fff7e6 0%, #fff3d6 100%); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; border: 1px solid #ffe0a3; }
+  .summary h2 { font-size: 16px; color: #b7791f; margin-bottom: 8px; }
+  .summary p { font-size: 14px; color: #5a4a1f; }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } .repo { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="meta">
+      <span class="badge">2026-09-23</span>
+      <span class="badge">北京时间</span>
+      <span class="badge">7 个精选仓库</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      每日精选 GitHub Trending 上值得关注的开源项目。聚焦实际可用的工具、库与框架，剔除纯学术论文和大模型 baseline 仓库，强调学习价值与上手友好度。
+    </div>
+
+    <div class="summary">
+      <h2>📌 今日速览</h2>
+      <p>今天的 Trending 几乎是「Agent 基础设施」专场：Google 开源的 ax/Substrate 把 Agent 当成「可声明式编排的工作负载」来跑集群；Univer 把整套 Office 套件（表格/文档/幻灯片/PDF）封装成可嵌入的 SDK；video-use 让你用自然语言剪辑视频；treg 把「订阅制 API 工具」聚合成单点调用。对工程同学来说，今天值得花时间读 README 的是 ax 的 YAML 声明式语义和 Substrate 的 actor/worker 多路复用模型。</p>
+    </div>
+
+    <!-- 1. google/ax -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">1. <a href="https://github.com/google/ax" target="_blank">google/ax</a></div>
+        <div class="repo-stars">⭐ 2,305 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Google 开源的 Agent 编排运行时：声明式 YAML 描述 Agent 任务，自动构建隔离沙箱、挂载工作区、限制网络出口，集群级运行数十亿级任务。用过 Kubernetes 的人会非常眼熟。</div>
+      <div class="repo-desc-en">Google's open agentic orchestration runtime — declarative YAML, sandboxed workspaces, gated networking, cluster-scale.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>研究 Agent 工作负载如何借鉴 K8s 的声明式 API + 控制器模式</li>
+          <li>看「Workspace / Task / Gateway / Network fencing」四大原语的边界划分</li>
+          <li>适合做内部 Agent 平台的同学直接借鉴其任务描述规范</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. agent-substrate/substrate -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">2. <a href="https://github.com/agent-substrate/substrate" target="_blank">agent-substrate/substrate</a></div>
+        <div class="repo-stars">⭐ 245 stars today</div>
+      </div>
+      <div class="repo-desc-cn">面向 Agent 时代的「执行底座」运行时。基于 microVM/gVisor 的安全沙箱，将大量 actor 复用到少量 worker 上，500ms 内完成 resume，每秒可支撑 500+ 次挂起/恢复。ax 跑在它之上。</div>
+      <div class="repo-desc-en">Secure-by-default agent execution runtime — multiplexes millions of sandboxes onto a small worker pool with sub-500ms resume.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Go"></span><span>Go</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>看 actor/worker 多路复用 + 全状态快照的具体实现</li>
+          <li>理解「30x+ 超额订阅」如何在安全沙箱里既保隔离又提密度</li>
+          <li>与 ax 搭配读，可以完整理解 Google 给 Agent 设计的全栈方案</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. dream-num/univer -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">3. <a href="https://github.com/dream-num/univer" target="_blank">dream-num/univer</a></div>
+        <div class="repo-stars">⭐ 255 stars today</div>
+      </div>
+      <div class="repo-desc-cn">同构（浏览器 + Node.js）的 Office SDK，把电子表格、文档、幻灯片、PDF 全部装进一套插件化框架。一套 Facade API 在前后端复用，Canvas 渲染 + 公式引擎开箱即用。</div>
+      <div class="repo-desc-en">Full-stack isomorphic office SDK — spreadsheets, docs, slides, PDF, canvas, and relational tables in one runtime.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-TypeScript"></span><span>TypeScript</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>想给 SaaS 内嵌可编辑表格/文档，直接用插件机制就能搭</li>
+          <li>研究前后端同构的渲染层架构与公式引擎的隔离设计</li>
+          <li>作为 AI Agent 操作 Office 文件的「被控端 SDK」很合适</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. browser-use/video-use -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">4. <a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a></div>
+        <div class="repo-stars">⭐ 191 stars today</div>
+      </div>
+      <div class="repo-desc-cn">把「剪辑视频」变成跟 Claude Code/Codex 对话：丢一堆原始素材进去，Agent 自己删口水话、自动调色、加字幕、生成动效覆盖层，最后给你 final.mp4。底层走 ffmpeg + ElevenLabs + HyperFrames。</div>
+      <div class="repo-desc-en">Edit videos with coding agents — drop raw footage, chat, get final.mp4. ffmpeg + ElevenLabs + parallel animation sub-agents.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>看 Agent + ffmpeg + ElevenLabs TTS 怎么串成一条本地剪辑流水线</li>
+          <li>每个 cut 边界做「自评」再返回，是个不错的 Agent 质量门模式</li>
+          <li>可作为「用 Coding Agent 改造传统媒体工具」的最小可行范式</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. superdesigndev/treg -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">5. <a href="https://github.com/superdesigndev/treg" target="_blank">superdesigndev/treg</a></div>
+        <div class="repo-stars">⭐ 230 stars today</div>
+      </div>
+      <div class="repo-desc-cn">「Agent 工具版的 OpenRouter」：统一一个 base URL + token，就能调用 60+ 服务商、3000+ 接口（SEO、社媒、富化、抓取、生图生视频等）。按次计费，分起几分钱。团队自带的 key 与 SKILL.md 也可以挂上去统一调度。</div>
+      <div class="repo-desc-en">OpenRouter for agent tools — 3,000+ catalogued endpoints across 60+ providers, priced per call.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>代理/中转层 + 凭据注入 的设计：转发但不模型化上游，密钥不出服务器</li>
+          <li>把团队 SKILL.md / CLI / OAuth 统一挂在一个 registry，Agent 跨人复用</li>
+          <li>适合在公司内搭一个「Agent 工具网关」时直接参考</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. davila7/claude-code-templates -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">6. <a href="https://github.com/davila7/claude-code-templates" target="_blank">davila7/claude-code-templates</a></div>
+        <div class="repo-stars">⭐ 64 stars today</div>
+      </div>
+      <div class="repo-desc-cn">Claude Code 的「配置器 + 监控器」CLI：一键装组件、看会话指标、管 skills/MCP。给 Coding Agent 加装可观测性的小工具，省去手动改 JSON 配置的麻烦。</div>
+      <div class="repo-desc-en">CLI tool for configuring and monitoring Claude Code — components, settings, and usage metrics.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>看 Coding Agent 的「插件/组件/配置」生态如何被一个 CLI 统一管理</li>
+          <li>借鉴其对 MCP、skills、命令的注册/发现机制</li>
+          <li>给其他 Agent 做同款「可视化管理面板」的现成模板</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. mvt-project/mvt -->
+    <div class="repo">
+      <div class="repo-header">
+        <div class="repo-title">7. <a href="https://github.com/mvt-project/mvt" target="_blank">mvt-project/mvt</a></div>
+        <div class="repo-stars">⭐ 441 stars today</div>
+      </div>
+      <div class="repo-desc-cn">安全/取证领域的移动设备取证工具箱：扫描 Android/iOS 取证痕迹，对照公开 IOC 检测是否被知名间谍软件链感染。来自国际特赦组织安全实验室持续维护。</div>
+      <div class="repo-desc-en">MVT (Mobile Verification Toolkit) — forensic tool for Android/iOS compromise detection.</div>
+      <div class="repo-meta">
+        <span class="lang-dot lang-Python"></span><span>Python</span>
+      </div>
+      <div class="use-cases">
+        <h4>学习/上手点</h4>
+        <ul>
+          <li>研究 iOS/Android 取证分析中的 IOC（入侵指标）建模</li>
+          <li>CLI + 大数据集扫描的 Python 工程范式（pip / uv 两种安装路径）</li>
+          <li>安全/合规岗位做内部审计时可直接拿来当基线工具</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    数据来源：<a href="https://github.com/trending" target="_blank">github.com/trending</a> · 自动生成于 2026-09-23（北京时间）<br>
+    由 <a href="https://zxy114.github.io/github-trending-daily/" target="_blank">GitHub 开源日报</a> 编排
+  </footer>
+</div>
+</body>
+</html>
