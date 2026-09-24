@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-24</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+header {
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+h1 {
+  color: #f0f6fc;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.subtitle {
+  color: #8b949e;
+  font-size: 14px;
+}
+.summary {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 30px;
+  color: #c9d1d9;
+}
+.repo-list { list-style: none; }
+.repo-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.repo-item:hover { border-color: #58a6ff; }
+.repo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 8px;
+}
+.rank.top { background: #da3633; color: #fff; }
+.rank.normal { background: #238636; color: #fff; }
+.repo-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.repo-title a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+.repo-title a:hover { text-decoration: underline; }
+.lang-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #8b949e;
+}
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stars {
+  font-size: 12px;
+  color: #8b949e;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+.stars strong { color: #f0f6fc; font-weight: 600; }
+.repo-desc {
+  color: #8b949e;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.repo-interpret {
+  color: #c9d1d9;
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #0d1117;
+  border-left: 3px solid #58a6ff;
+  border-radius: 0 4px 4px 0;
+}
+.interpret-label {
+  color: #58a6ff;
+  font-weight: 600;
+}
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #30363d;
+  text-align: center;
+  color: #8b949e;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>GitHub 开源日报</h1>
+    <div class="subtitle">2026-09-24 · 今日趋势 · 每日精选</div>
+  </header>
+
+  <div class="summary">
+    本日 GitHub Trending 热点以 Agent 工程化为主线：Google 开源的 agent 编排运行时 Ax、AI 时代的办公套件 Univer 持续走高，浏览器自动化延伸到视频编辑领域；底层基础设施与跨语言工具也在快速涌现。下面整理了 8 个真正可上手的开源项目，质量优先于数量。
+  </div>
+
+  <ol class="repo-list">
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank top">1</span>
+        <span class="repo-title"><a href="https://github.com/google/ax" target="_blank">google/ax</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#00ADD8"></span>Go</span>
+        <span class="stars">⭐ +<strong>1543</strong> 本周</span>
+      </div>
+      <div class="repo-desc">Google's open agentic orchestration runtime</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> Google 官方开源的 Agent 编排运行时，Go 写的高性能底座。本周狂揽 1500+ star，是当下 Agent 工程化方向最值得关注的基建之一，适合做多 Agent 调度的内核。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank top">2</span>
+        <span class="repo-title"><a href="https://github.com/dream-num/univer" target="_blank">dream-num/univer</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+        <span class="stars">⭐ +<strong>1142</strong> 本周</span>
+      </div>
+      <div class="repo-desc">The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> 把表格、文档、幻灯片、画布、关系型表、PDF 统一到同一运行时的 Office Harness，是为 AI Agent 量身打造的办公底座。要做"Agent 时代办公套件"的产品，这是必看参考实现。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank top">3</span>
+        <span class="repo-title"><a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+        <span class="stars">⭐ +<strong>746</strong> 本周</span>
+      </div>
+      <div class="repo-desc">Edit videos with coding agents</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> browser-use 团队把 Agent 控制从浏览器延伸到视频编辑，用代码 Agent 就能剪辑视频。对想做"AI 视频助手"或"自然语言剪辑"的团队非常值得 fork 学习。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank normal">4</span>
+        <span class="repo-title"><a href="https://github.com/anthropics/financial-services" target="_blank">anthropics/financial-services</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+        <span class="stars">⭐ +<strong>664</strong> 本周</span>
+      </div>
+      <div class="repo-desc">Anthropic 开源的金融服务 Agent 示例集</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> Anthropic 官方开源的金融服务场景示例库，覆盖合规、风控、报告等高频金融 Agent 工作流。是企业级 Claude 应用落地的优质参考。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank normal">5</span>
+        <span class="repo-title"><a href="https://github.com/agent-substrate/substrate" target="_blank">agent-substrate/substrate</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#00ADD8"></span>Go</span>
+        <span class="stars">⭐ +<strong>558</strong> 本周</span>
+      </div>
+      <div class="repo-desc">Agent Substrate: the core system</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> 定位 Agent 运行时"基质"的开源核心系统，Go 实现，强调可作为 Agent 系统的底座层。如果你想自己搭一套多 Agent 平台，这是值得研究的架构样板。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank normal">6</span>
+        <span class="repo-title"><a href="https://github.com/mvt-project/mvt" target="_blank">mvt-project/mvt</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+        <span class="stars">⭐ +<strong>543</strong> 本周</span>
+      </div>
+      <div class="repo-desc">MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices to find signs of a potential compromise.</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> 老牌移动设备取证工具，由 Amnesty International 安全实验室持续维护，用于检测手机是否被入侵。安全研究、记者调查、个人隐私自检都能用上。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank normal">7</span>
+        <span class="repo-title"><a href="https://github.com/superdesigndev/treg" target="_blank">superdesigndev/treg</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+        <span class="stars">⭐ +<strong>506</strong> 本周</span>
+      </div>
+      <div class="repo-desc">OpenRouter for agent tools. Join community here: discord</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> 把自己定位成"Agent 工具的 OpenRouter"，给 Agent 提供统一的工具/MCP 路由层。做 Agent 中间件、聚合多种工具的团队很值得借鉴其设计。
+      </div>
+    </li>
+
+    <li class="repo-item">
+      <div class="repo-header">
+        <span class="rank normal">8</span>
+        <span class="repo-title"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></span>
+        <span class="lang-tag"><span class="lang-dot" style="background:#e34c26"></span>Shell</span>
+        <span class="stars">⭐ +<strong>474</strong> 本周</span>
+      </div>
+      <div class="repo-desc">An agentic skills framework & software development methodology that works.</div>
+      <div class="repo-interpret">
+        <span class="interpret-label">💡</span> 把"Agent Skills"框架化的工作流与工程方法论，强调可落地的开发流程。给 Coding Agent 配一套"超能力"技能集，想规范 Agent 协作流程可以一读。
+      </div>
+    </li>
+
+  </ol>
+
+  <footer>
+    数据基于 https://github.com/trending · 由自动化脚本整理 · 仅收录有实际学习价值的内容
+  </footer>
+</div>
+</body>
+</html>
