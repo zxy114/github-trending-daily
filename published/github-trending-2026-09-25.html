@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-09-25</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --border:#30363d;
+    --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff;
+    --tag-bg:#1f6feb33; --green:#3fb950; --orange:#d29922;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 16px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6;
+  }
+  .container{max-width:980px; margin:0 auto}
+  header{
+    border-bottom:1px solid var(--border); padding-bottom:20px; margin-bottom:28px;
+  }
+  h1{font-size:28px; margin:0 0 8px; color:var(--accent)}
+  .subtitle{color:var(--muted); margin:0; font-size:14px}
+  .badge{
+    display:inline-block; background:var(--tag-bg); color:var(--accent);
+    padding:2px 10px; border-radius:12px; font-size:12px; margin-right:6px;
+  }
+  .repo-card{
+    background:var(--card); border:1px solid var(--border);
+    border-radius:10px; padding:20px 24px; margin-bottom:18px;
+    transition:transform .15s ease;
+  }
+  .repo-card:hover{transform:translateY(-2px); border-color:var(--accent)}
+  .repo-title{
+    font-size:18px; margin:0 0 6px;
+  }
+  .repo-title a{color:var(--accent); text-decoration:none}
+  .repo-title a:hover{text-decoration:underline}
+  .repo-rank{
+    display:inline-block; background:var(--accent); color:#fff;
+    width:26px; height:26px; border-radius:50%; text-align:center;
+    line-height:26px; font-size:13px; margin-right:10px; font-weight:600;
+  }
+  .repo-desc{color:var(--muted); font-size:14px; margin:8px 0 12px}
+  .repo-meta{display:flex; flex-wrap:wrap; gap:14px; font-size:13px; color:var(--muted)}
+  .repo-meta span{display:inline-flex; align-items:center; gap:4px}
+  .stars-today{color:var(--green); font-weight:600}
+  .lang-dot{
+    display:inline-block; width:10px; height:10px; border-radius:50%;
+    background:var(--orange); margin-right:4px;
+  }
+  .highlights{
+    background:linear-gradient(135deg,#1f6feb22,#58a6ff11);
+    border:1px solid var(--accent); border-radius:10px;
+    padding:18px 22px; margin-bottom:28px;
+  }
+  .highlights h2{margin:0 0 12px; color:var(--accent); font-size:18px}
+  .highlights ol{margin:0; padding-left:20px}
+  .highlights li{margin-bottom:8px}
+  footer{
+    text-align:center; color:var(--muted); font-size:13px;
+    margin-top:32px; padding-top:20px; border-top:1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📊 GitHub 开源日报</h1>
+    <p class="subtitle">2026-09-25 · 基于 github.com/trending 当日数据精选</p>
+    <p style="margin-top:8px">
+      <span class="badge">Agent / AI</span>
+      <span class="badge">开发框架</span>
+      <span class="badge">工具链</span>
+      <span class="badge">本地推理</span>
+    </p>
+  </header>
+
+  <section class="highlights">
+    <h2>✨ 今日精选速览</h2>
+    <ol>
+      <li><strong>Google 出品</strong>：ax —— 开源智能体编排运行时，让 Agent 任务沙箱化、模型无关</li>
+      <li><strong>记忆层突破</strong>：Hindsight —— 能"自我学习"的 Agent 长期记忆框架，今日 +1,668 ⭐</li>
+      <li><strong>Office SDK</strong>：Univer —— 表格/文档/幻灯片一体的可嵌入 Office 运行时，给 Agent 用</li>
+      <li><strong>工具路由</strong>：Treg —— Agent 工具界的 OpenRouter，60+ 提供商一站接入</li>
+      <li><strong>技能方法论</strong>：Superpowers —— 让编码 Agent 真正可复用的"技能+流程"框架</li>
+    </ol>
+  </section>
+
+  <main>
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">1</span>
+        <a href="https://github.com/vectorize-io/hindsight" target="_blank">vectorize-io/hindsight</a>
+      </h3>
+      <p class="repo-desc">Hindsight：让 Agent 拥有能"自我学习"的长期记忆。基于向量数据库之上的智能记忆层，支持跨会话知识沉淀与回溯召回，配套云服务、文档站点和 Cookbook，今日爆款 +1,668 ⭐。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +1,668 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">2</span>
+        <a href="https://github.com/google/ax" target="_blank">google/ax</a>
+      </h3>
+      <p class="repo-desc">Google 开源的智能体编排运行时 AX。声明式描述 Agent 任务（workspace + model spec），自动完成沙箱隔离、工作区装配和调度执行，模型无关、可本地部署，是 Google 在 Agent Infra 层的又一手牌。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Go</span>
+        <span class="stars-today">⭐ +1,373 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">3</span>
+        <a href="https://github.com/dream-num/univer" target="_blank">dream-num/univer</a>
+      </h3>
+      <p class="repo-desc">Univer：面向 AI Agent 的 Office 运行时。一套 SDK 同时承载电子表格、文档、演示文稿、关系表和 PDF（即将到来），基于 Canvas 渲染 + 公式引擎 + Facade API，可深度嵌入到自己的产品里。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>TypeScript</span>
+        <span class="stars-today">⭐ +1,082 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">4</span>
+        <a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a>
+      </h3>
+      <p class="repo-desc">Superpowers：一套给"编码 Agent"使用的方法论 + 可组合技能库。不只是 prompt 模板，而是一整套让 Claude Code、Antigravity 等 Agent 真正按工程化流程开发软件的技能框架。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Shell</span>
+        <span class="stars-today">⭐ +611 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">5</span>
+        <a href="https://github.com/anthropics/financial-services" target="_blank">anthropics/financial-services</a>
+      </h3>
+      <p class="repo-desc">Anthropic 官方发布的金融服务参考实现：投行、行研、私募、财富管理四大场景的参考 Agent、技能模块和数据连接器，可作为 Claude Cowork 插件或托管 Agent 直接部署。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +509 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">6</span>
+        <a href="https://github.com/superdesigndev/treg" target="_blank">superdesigndev/treg</a>
+      </h3>
+      <p class="repo-desc">Treg：Agent 工具版的 OpenRouter。一个 Base URL + 一个 Token，就能让 Agent 调用 60+ 提供商的 3,000+ 工具接口（SEO、社媒、富化、爬虫、生图生视频等），按调用计费。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +468 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">7</span>
+        <a href="https://github.com/strands-agents/harness-sdk" target="_blank">strands-agents/harness-sdk</a>
+      </h3>
+      <p class="repo-desc">Strands Agents Harness SDK：模型驱动的 Agent 构建方案，提供 Python 与 TypeScript 双端 SDK，专注"生产级 Agent"端到端可控——从任务拆解到执行闭环到观测。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +455 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">8</span>
+        <a href="https://github.com/HKUDS/CLI-Anything" target="_blank">HKUDS/CLI-Anything</a>
+      </h3>
+      <p class="repo-desc">港大 Data Science Lab 开源项目 CLI-Anything：让任意软件都"Agent 原生化"，自动给 GUI 软件生成 LLM/Agent 可调用的 CLI 入口，背后配套 CLI-Hub 在线服务。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +413 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">9</span>
+        <a href="https://github.com/mvt-project/mvt" target="_blank">mvt-project/mvt</a>
+      </h3>
+      <p class="repo-desc">MVT（Mobile Verification Toolkit）：开源移动设备取证工具，用于检测手机是否被商业间谍软件入侵。v3 版本重构完成，是关注隐私安全与数字取证同学的有力工具。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>Python</span>
+        <span class="stars-today">⭐ +272 today</span>
+      </div>
+    </article>
+
+    <article class="repo-card">
+      <h3 class="repo-title">
+        <span class="repo-rank">10</span>
+        <a href="https://github.com/leejet/stable-diffusion.cpp" target="_blank">leejet/stable-diffusion.cpp</a>
+      </h3>
+      <p class="repo-desc">stable-diffusion.cpp：纯 C/C++ 实现的扩散模型推理引擎，支持 SD / Flux / Wan / Qwen-Image / Z-Image 等主流模型，无 Python 依赖，适合边缘设备、本地部署和嵌入场景。</p>
+      <div class="repo-meta">
+        <span><span class="lang-dot"></span>C++</span>
+        <span class="stars-today">⭐ +36 today</span>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>📅 数据来源：<a href="https://github.com/trending" style="color:var(--accent)">github.com/trending</a> · 北京时间 2026-09-25 抓取</p>
+    <p>由 GitHub 开源日报自动生成 · 仅收录有学习价值的项目</p>
+  </footer>
+</div>
+</body>
+</html>
