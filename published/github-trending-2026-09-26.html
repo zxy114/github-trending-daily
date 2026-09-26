@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 开源日报 - 2026-09-26</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      min-height: 100vh;
+      color: #e0e0e0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(56, 239, 125, 0.3);
+    }
+    .header h1 { font-size: 2.2em; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .header .subtitle { font-size: 1em; color: rgba(255,255,255,0.9); }
+    .header .date-badge {
+      display: inline-block; margin-top: 12px;
+      background: rgba(255,255,255,0.2); padding: 6px 20px;
+      border-radius: 20px; font-size: 0.9em; backdrop-filter: blur(10px);
+    }
+    .meta-bar {
+      display: flex; justify-content: space-between; flex-wrap: wrap;
+      gap: 12px; padding: 16px 20px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 12px; margin-bottom: 24px;
+      font-size: 0.85em;
+    }
+    .meta-bar span { color: #aaa; }
+    .meta-bar strong { color: #4dffd4; }
+    .section-title {
+      font-size: 0.78em; text-transform: uppercase; letter-spacing: 3px;
+      color: #4dffd4; margin: 32px 0 18px; padding-bottom: 8px;
+      border-bottom: 1px solid rgba(77, 255, 212, 0.3);
+    }
+    .repo-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .repo-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(77, 255, 212, 0.4);
+    }
+    .repo-card .rank-badge {
+      display: inline-block;
+      width: 32px; height: 32px; line-height: 32px;
+      text-align: center;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: #0a0e27; font-weight: 800; font-size: 0.95em;
+      border-radius: 8px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .repo-card h2 {
+      display: inline-block;
+      font-size: 1.18em; font-weight: 600;
+      color: #f0f0f0;
+      vertical-align: middle;
+    }
+    .repo-card .path {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.82em; color: #888;
+      margin: 6px 0 10px 44px;
+    }
+    .repo-card .path a { color: #4dffd4; text-decoration: none; }
+    .repo-card .path a:hover { text-decoration: underline; }
+    .repo-card .summary {
+      color: #d0d0d0;
+      font-size: 0.96em;
+      margin: 8px 0 12px 0;
+      line-height: 1.7;
+    }
+    .tag-row {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-left: 0; margin-top: 10px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 11px;
+      border-radius: 12px;
+      font-size: 0.72em; font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+    .tag-lang {
+      background: rgba(100, 149, 237, 0.18);
+      color: #82b1ff;
+      border: 1px solid rgba(100, 149, 237, 0.3);
+    }
+    .tag-cat {
+      background: rgba(255, 165, 0, 0.18);
+      color: #ffb84d;
+      border: 1px solid rgba(255, 165, 0, 0.3);
+    }
+    .tag-cat-ai {
+      background: rgba(56, 239, 125, 0.18);
+      color: #4dffd4;
+      border: 1px solid rgba(56, 239, 125, 0.3);
+    }
+    .tag-cat-infra {
+      background: rgba(180, 130, 255, 0.18);
+      color: #c69cff;
+      border: 1px solid rgba(180, 130, 255, 0.3);
+    }
+    .tag-cat-tool {
+      background: rgba(255, 99, 132, 0.18);
+      color: #ff8a9e;
+      border: 1px solid rgba(255, 99, 132, 0.3);
+    }
+    .stats-row {
+      display: flex; gap: 18px;
+      margin-top: 10px;
+      font-size: 0.84em;
+      color: #aaa;
+    }
+    .stats-row strong { color: #f0f0f0; }
+    .footer {
+      text-align: center; padding: 30px 20px;
+      color: #888; font-size: 0.82em;
+    }
+    .footer a { color: #4dffd4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📡 GitHub 开源日报</h1>
+      <div class="subtitle">今日热门开源项目速览</div>
+      <div class="date-badge">2026-09-26 · 北京时间</div>
+    </div>
+
+    <div class="meta-bar">
+      <span>📅 数据日期: <strong>2026-09-26</strong></span>
+      <span>🔥 收录项目: <strong>8</strong> 个</span>
+      <span>📊 来源: <strong>github.com/trending</strong></span>
+    </div>
+
+    <div class="section-title">今日精选项目</div>
+
+    <!-- 1 -->
+    <div class="repo-card">
+      <span class="rank-badge">1</span>
+      <h2>开源 Agent 工作台：Paperclip</h2>
+      <div class="path"><a href="https://github.com/paperclipai/paperclip">paperclipai/paperclip</a></div>
+      <p class="summary">用于团队中管理与调度 AI 智能体的开源应用。聚焦"让多个 Agent 协同完成工作"这一场景，提供了任务派发、监控、协作等工程化能力，是把多 Agent 系统落到日常业务的一种实践参考。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-ai">Agent 编排</span>
+        <span class="tag tag-cat-tool">生产力工具</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>2,109</strong> ⭐</span>
+        <span>累计 <strong>85,033</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="repo-card">
+      <span class="rank-badge">2</span>
+      <h2>可学习的 Agent 记忆层：Hindsight</h2>
+      <div class="path"><a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight</a></div>
+      <p class="summary">面向 AI Agent 的记忆系统，主打"会学习"的长期记忆能力。适合给多轮对话、长任务执行、跨会话的 Agent 加上类似人类经验的记忆检索与归纳机制。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-ai">Agent 记忆</span>
+        <span class="tag tag-cat-infra">基础设施</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>1,653</strong> ⭐</span>
+        <span>累计 <strong>29,848</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="repo-card">
+      <span class="rank-badge">3</span>
+      <h2>Google 开源的 Agent 编排运行时：AX</h2>
+      <div class="path"><a href="https://github.com/google/ax">google/ax</a></div>
+      <p class="summary">由 Google 开源的智能体编排运行时（agentic orchestration runtime），用于把工具、模型、子智能体组合成可调度的工作流。Go 语言实现，适合做高并发、可观测的后端编排层。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Go</span>
+        <span class="tag tag-cat-ai">Agent 编排</span>
+        <span class="tag tag-cat-infra">运行时</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>1,379</strong> ⭐</span>
+        <span>累计 <strong>11,521</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="repo-card">
+      <span class="rank-badge">4</span>
+      <h2>面向 Agent 的办公套件引擎：Univer</h2>
+      <div class="path"><a href="https://github.com/dream-num/univer">dream-num/univer</a></div>
+      <p class="summary">把电子表格、文档、幻灯片、画布、关系型表格和 PDF 装进同一个运行时，作为 AI Agent 操作办公内容的"承载层"。前端可嵌入到自己的应用里，给 Agent 提供结构化的办公数据交互能力。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-ai">Agent 工具</span>
+        <span class="tag tag-cat-tool">办公 SDK</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>1,050</strong> ⭐</span>
+        <span>累计 <strong>18,461</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="repo-card">
+      <span class="rank-badge">5</span>
+      <h2>Agent 技能框架与工程方法论：Superpowers</h2>
+      <div class="path"><a href="https://github.com/obra/superpowers">obra/superpowers</a></div>
+      <p class="summary">围绕"技能（skills）"组织 AI 智能体的一套框架与开发方法论，主打让 Agent 在工程实践里更稳定地完成任务。可作为设计 Agent 工具调用体系时的一份参考实现。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Shell</span>
+        <span class="tag tag-cat-ai">Agent 框架</span>
+        <span class="tag tag-cat-tool">工程方法论</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>468</strong> ⭐</span>
+        <span>累计 <strong>291,680</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="repo-card">
+      <span class="rank-badge">6</span>
+      <h2>NVIDIA 模型优化库：Model-Optimizer</h2>
+      <div class="path"><a href="https://github.com/NVIDIA/Model-Optimizer">NVIDIA/Model-Optimizer</a></div>
+      <p class="summary">整合了量化、蒸馏、剪枝、神经架构搜索、推测解码等多种主流模型压缩与加速技术，输出可被 TensorRT-LLM、TensorRT、vLLM 等推理框架直接消费的优化模型，是把大模型部署到生产环境的一条工程化路径。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-tool">模型压缩</span>
+        <span class="tag tag-cat-infra">推理加速</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>359</strong> ⭐</span>
+        <span>累计 <strong>4,486</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="repo-card">
+      <span class="rank-badge">7</span>
+      <h2>让 AI 更懂设计的语言：Impeccable</h2>
+      <div class="path"><a href="https://github.com/pbakaus/impeccable">pbakaus/impeccable</a></div>
+      <p class="summary">一套用于打磨 AI 生成界面观感的设计规范与资源集合，帮助 AI 编程助手在产出前端时遵循更系统的设计原则，减少"AI 味"重的页面风格。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">JavaScript</span>
+        <span class="tag tag-cat-tool">设计规范</span>
+        <span class="tag tag-cat-ai">前端工程</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>306</strong> ⭐</span>
+        <span>累计 <strong>71,218</strong> ⭐</span>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="repo-card">
+      <span class="rank-badge">8</span>
+      <h2>无线网络审计工具：Wifit3</h2>
+      <div class="path"><a href="https://github.com/derv82/wifit3">derv82/wifit3</a></div>
+      <p class="summary">经典 WiFi 自动化审计工具 Wifite 的衍生版本，专注 USB 网卡并做跨平台支持。面向安全研究、渗透测试、网络运维自查等场景，是 WiFi 安全检测的轻量化工具。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-tool">安全审计</span>
+        <span class="tag tag-cat-infra">命令行工具</span>
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>183</strong> ⭐</span>
+        <span>累计 <strong>939</strong> ⭐</span>
+      </div>
+    </div>
+
+    <div class="section-title">编辑点评</div>
+    <div class="repo-card" style="background: rgba(77,255,212,0.04);">
+      <p class="summary">
+        本日的 Trending 几乎被「AI Agent 工程化」一统天下：从前端办公套件承载（Univer）、记忆系统（Hindsight）、编排运行时（AX）、技能框架（Superpowers），到多智能体协作平台（Paperclip），形成了一条从"单个 Agent 能做什么"到"一群 Agent 如何协作"的完整链路。对在做 Agent 落地、想用现成框架拼接业务的工程师来说，今天是个值得收藏的日子。
+        <br><br>
+        同时上榜的 NVIDIA Model-Optimizer 与 Impeccable 分别对应"模型侧"和"界面侧"两个常被忽视的工程细节：前者把模型压缩与推理加速做成一站式工具，后者则尝试规范 AI 生成前端的设计语言，都是把"AI 能跑"升级到"AI 能用且好看"的桥梁。
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>本日报由自动抓取 github.com/trending 生成 · 内容仅作开源资讯整理，不构成投资或安全建议</p>
+      <p>仓库: <a href="https://github.com/zxy114/github-trending-daily">zxy114/github-trending-daily</a></p>
+    </div>
+  </div>
+</body>
+</html>
