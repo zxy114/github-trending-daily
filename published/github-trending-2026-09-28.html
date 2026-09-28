@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 开源日报 - 2026-09-28</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      min-height: 100vh;
+      color: #e0e0e0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(56, 239, 125, 0.3);
+    }
+    .header h1 { font-size: 2.2em; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .header .subtitle { font-size: 1em; color: rgba(255,255,255,0.9); }
+    .header .date-badge {
+      display: inline-block; margin-top: 12px;
+      background: rgba(255,255,255,0.2); padding: 6px 20px;
+      border-radius: 20px; font-size: 0.9em; backdrop-filter: blur(10px);
+    }
+    .meta-bar {
+      display: flex; justify-content: space-between; flex-wrap: wrap;
+      gap: 12px; padding: 16px 20px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 12px; margin-bottom: 24px;
+      font-size: 0.85em;
+    }
+    .meta-bar span { color: #aaa; }
+    .meta-bar strong { color: #4dffd4; }
+    .section-title {
+      font-size: 0.78em; text-transform: uppercase; letter-spacing: 3px;
+      color: #4dffd4; margin: 32px 0 18px; padding-bottom: 8px;
+      border-bottom: 1px solid rgba(77, 255, 212, 0.3);
+    }
+    .repo-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .repo-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(77, 255, 212, 0.4);
+    }
+    .repo-card .rank-badge {
+      display: inline-block;
+      width: 32px; height: 32px; line-height: 32px;
+      text-align: center;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: #0a0e27; font-weight: 800; font-size: 0.95em;
+      border-radius: 8px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .repo-card h2 {
+      display: inline-block;
+      font-size: 1.18em; font-weight: 600;
+      color: #f0f0f0;
+      vertical-align: middle;
+    }
+    .repo-card .path {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.82em; color: #888;
+      margin: 6px 0 10px 44px;
+    }
+    .repo-card .path a { color: #4dffd4; text-decoration: none; }
+    .repo-card .path a:hover { text-decoration: underline; }
+    .repo-card .summary {
+      color: #d0d0d0;
+      font-size: 0.96em;
+      margin: 8px 0 12px 0;
+      line-height: 1.7;
+    }
+    .tag-row {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-left: 0; margin-top: 10px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 11px;
+      border-radius: 12px;
+      font-size: 0.72em; font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+    .tag-lang {
+      background: rgba(100, 149, 237, 0.18);
+      color: #82b1ff;
+      border: 1px solid rgba(100, 149, 237, 0.3);
+    }
+    .tag-cat {
+      background: rgba(255, 165, 0, 0.18);
+      color: #ffb84d;
+      border: 1px solid rgba(255, 165, 0, 0.3);
+    }
+    .tag-cat-ai {
+      background: rgba(56, 239, 125, 0.18);
+      color: #4dffd4;
+      border: 1px solid rgba(56, 239, 125, 0.3);
+    }
+    .tag-cat-infra {
+      background: rgba(180, 130, 255, 0.18);
+      color: #c69cff;
+      border: 1px solid rgba(180, 130, 255, 0.3);
+    }
+    .tag-cat-tool {
+      background: rgba(255, 99, 132, 0.18);
+      color: #ff8a9e;
+      border: 1px solid rgba(255, 99, 132, 0.3);
+    }
+    .stats-row {
+      display: flex; gap: 18px;
+      margin-top: 10px;
+      font-size: 0.84em;
+      color: #aaa;
+    }
+    .stats-row strong { color: #f0f0f0; }
+    .footer {
+      text-align: center; padding: 30px 20px;
+      color: #888; font-size: 0.82em;
+    }
+    .footer a { color: #4dffd4; text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📡 GitHub 开源日报</h1>
+      <div class="subtitle">今日热门开源项目速览</div>
+      <div class="date-badge">2026-09-28 · 北京时间</div>
+    </div>
+
+    <div class="meta-bar">
+      <span>📅 数据日期: <strong>2026-09-28</strong></span>
+      <span>🔥 收录项目: <strong>8</strong> 个</span>
+      <span>📊 来源: <strong>github.com/trending</strong></span>
+    </div>
+
+    <div class="section-title">今日精选项目</div>
+
+
+    <!-- 1 -->
+    <div class="repo-card">
+      <span class="rank-badge">1</span>
+      <h2>可自我学习的 Agent 记忆层：Hindsight</h2>
+      <div class="path"><a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight</a></div>
+      <p class="summary">为 AI Agent 提供会"自我学习"的长期记忆能力，定位 Agent Memory That Learns。覆盖多轮对话、长任务执行、跨会话知识沉淀等场景，给 Agent 加上类似人类经验的检索、归纳与演化机制，是构建真正"用得久"的 Agent 的关键拼图。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-ai">Agent 记忆</span>
+        <span class="tag tag-cat-infra">基础设施</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>4,520</strong> ⭐</span>
+        <span>累计 <strong>37,453</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="repo-card">
+      <span class="rank-badge">2</span>
+      <h2>本地化语音 AI 套件：VoiceStudio</h2>
+      <div class="path"><a href="https://github.com/debpalash/VoiceStudio">debpalash/VoiceStudio</a></div>
+      <p class="summary">定位为"完全本地化"的语音生成开源替代方案，覆盖声音克隆、声音设计、视频配音、口述听写、语音转写、有声书生成等场景。支持 646 种语言。对不想把音频数据上传第三方平台、又需要专业级语音能力的开发者与内容创作者来说，是一套可自托管的端到端方案。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-tool">语音 AI</span>
+        <span class="tag tag-cat-tool">本地部署</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>3,086</strong> ⭐</span>
+        <span>累计 <strong>40,287</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="repo-card">
+      <span class="rank-badge">3</span>
+      <h2>团队级 Agent 管理平台：Paperclip</h2>
+      <div class="path"><a href="https://github.com/paperclipai/paperclip">paperclipai/paperclip</a></div>
+      <p class="summary">面向工作场景的 Agent 管理开源应用，强调"把多个智能体像同事一样管理"。覆盖任务派发、状态跟踪、协作沟通等核心能力，适合需要把多 Agent 系统落到日常业务流程里的团队作为参考与改造起点，连续两日稳居 Trending 头部。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-ai">Agent 编排</span>
+        <span class="tag tag-cat-tool">生产力工具</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>2,401</strong> ⭐</span>
+        <span>累计 <strong>90,059</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="repo-card">
+      <span class="rank-badge">4</span>
+      <h2>面向 Agent 的全办公套件引擎：Univer</h2>
+      <div class="path"><a href="https://github.com/dream-num/univer">dream-num/univer</a></div>
+      <p class="summary">把电子表格、文档、幻灯片、画布、关系型表格和 PDF 装进同一个运行时，作为 AI Agent 操作办公内容的"承载层"。前端可嵌入自有产品，给 Agent 提供结构化的办公数据交互与编辑能力，是把 Agent 接进企业办公场景的关键中间件。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-ai">Agent 工具</span>
+        <span class="tag tag-cat-tool">办公 SDK</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>895</strong> ⭐</span>
+        <span>累计 <strong>20,395</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="repo-card">
+      <span class="rank-badge">5</span>
+      <h2>TypeScript 转原生二进制编译器：scriptc</h2>
+      <div class="path"><a href="https://github.com/vercel-labs/scriptc">vercel-labs/scriptc</a></div>
+      <p class="summary">Vercel Labs 出品的 TypeScript-to-Native Compiler，把 TypeScript 直接编译成原生可执行文件，让前端工程师无需切换语言栈就能产出可在桌面 / 服务器 / CLI 场景独立运行的二进制程序，是连接 Web 工程与原生分发链路的一次有意思尝试。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-infra">编译器</span>
+        <span class="tag tag-cat-tool">开发工具</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>102</strong> ⭐</span>
+        <span>累计 <strong>5,424</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="repo-card">
+      <span class="rank-badge">6</span>
+      <h2>多编码 Agent 协同框架：openrig</h2>
+      <div class="path"><a href="https://github.com/mvschwarz/openrig">mvschwarz/openrig</a></div>
+      <p class="summary">把 Claude Code 与 Codex 等多个编码 Agent 串成"一个系统"的多 Agent 调度框架（harness），让不同模型分工协作完成编码任务。适合研究多 Agent 协作模式、或希望用多家模型互为兜底来提升代码产出稳定性的工程团队参考使用。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">TypeScript</span>
+        <span class="tag tag-cat-ai">多 Agent</span>
+        <span class="tag tag-cat-tool">编码工具</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>114</strong> ⭐</span>
+        <span>累计 <strong>1,018</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 7 -->
+    <div class="repo-card">
+      <span class="rank-badge">7</span>
+      <h2>从零搭建 AI 工程的实战教程：ai-engineering-from-scratch</h2>
+      <div class="path"><a href="https://github.com/rohitg00/ai-engineering-from-scratch">rohitg00/ai-engineering-from-scratch</a></div>
+      <p class="summary">一份"学-做-交付"一体化的 AI 工程实践教程，覆盖从基础到能上线给真实用户使用的完整路径。适合想系统学习 AI 应用工程化、而不是只看论文和 API 文档的开发者作为路线图参考，连续两日稳居 Trending。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Python</span>
+        <span class="tag tag-cat-ai">AI 工程</span>
+        <span class="tag tag-cat-tool">学习教程</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>790</strong> ⭐</span>
+        <span>累计 <strong>59,377</strong> ⭐</span>
+      </div>
+    </div>
+    <!-- 8 -->
+    <div class="repo-card">
+      <span class="rank-badge">8</span>
+      <h2>Android 第三方视频客户端：PipePipe</h2>
+      <div class="path"><a href="https://github.com/InfinityLoop1308/PipePipe">InfinityLoop1308/PipePipe</a></div>
+      <p class="summary">开源 Android 视频浏览应用，支持 YouTube 等多种视频服务，强调无广告、可自托管订阅与隐私可控。对于不想被算法推荐绑架、又需要跨平台统一观看体验的 Android 用户，是 NewPipe 生态里一个值得关注的活跃分支。</p>
+      <div class="tag-row">
+        <span class="tag tag-lang">Shell</span>
+        <span class="tag tag-cat-tool">Android 客户端</span>
+        <span class="tag tag-cat-tool">隐私工具</span>
+        
+      </div>
+      <div class="stats-row">
+        <span>今日 +<strong>242</strong> ⭐</span>
+        <span>累计 <strong>6,600</strong> ⭐</span>
+      </div>
+    </div>
+
+    
+    <div class="section-title">编辑点评</div>
+    <div class="repo-card" style="background: rgba(77,255,212,0.04);">
+      <p class="summary">
+        今天的 Trending 主线继续是"AI Agent 工程化"，但视角从昨天的"办公承载层"明显转向"本地化与多模型协同"：VoiceStudio 把 ElevenLabs 级别的语音能力做到完全本地化、Hindsight 把"会学习"的记忆层做到可独立部署、openrig 把 Claude Code 与 Codex 串成多 Agent 团队，呈现出社区对"少依赖云端、多模型可替换"的偏好。
+        <br><br>
+        工具侧也有亮点：Vercel Labs 的 scriptc 让 TypeScript 直接编译成原生二进制，是前端工程延伸到桌面 / CLI / 服务端分发的一次基础设施级探索；PipePipe 则代表 Trending 中难得的"非 AI"实用工具持续上榜，说明用户侧的真实需求依然有空间。
+        <br><br>
+        横向看，paperclip、univer、ai-engineering-from-scratch 连续两日出现在榜单前列，说明这一波 Agent 浪潮已经从"新概念尝鲜"过渡到"工程化沉淀"，是值得长期收藏的方向。
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>本日报由自动抓取 github.com/trending 生成 · 内容仅作开源资讯整理，不构成投资或安全建议</p>
+      <p>仓库: <a href="https://github.com/zxy114/github-trending-daily">zxy114/github-trending-daily</a></p>
+    </div>
+  </div>
+</body>
+</html>
